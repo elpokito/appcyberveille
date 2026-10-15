@@ -54,6 +54,15 @@ SHORT_PAUSE = 0.6         # secondes entre deux passages (si pas de jingle)
 LONG_PAUSE = 1.3          # secondes entre deux rubriques (si pas de jingle)
 JINGLE_GAP = 0.35         # petit silence de part et d'autre d'un jingle, pour qu'il « respire »
 
+# Rythme pédagogique (voir pedagogie.py) : l'essentiel est lu un peu plus lentement et suivi d'un
+# silence, le temps que le cerveau « range » l'information ; au quiz, un vrai temps pour répondre.
+RATE_KEY = os.environ.get("TTS_RATE_KEY", "-4%")   # fil rouge, à retenir, questions et réponses
+KEY_PAUSE = 0.9           # silence après une information-clé
+BREVE_PAUSE = 0.8         # entre deux brèves (un violon toutes les 10 secondes deviendrait pesant)
+QUIZ_PAUSE = 4.0          # temps pour répondre dans sa tête : c'est l'effort de rappel qui fait retenir
+# Pendant ce temps, un tic-tac discret : sans lui, 4 s de silence dans le métro font croire à une coupure.
+QUIZ_TICKS = os.environ.get("QUIZ_TICKS", "1") != "0"
+
 # Jingles au violon, générés par ffmpeg (aucun fichier externe, aucun droit d'auteur).
 # Pour utiliser ton propre son, dépose assets/jingle_news.mp3
 # (libre de droits, ex. licence CC0) : il remplace automatiquement celui généré.
@@ -193,11 +202,11 @@ async def french_is_accepted(text: str, path: Path, voice: str = VOICE) -> bool:
         set_french(False)
     return ok
 
-async def synthesize(text: str, path: Path, voice: str = VOICE) -> None:
+async def synthesize(text: str, path: Path, voice: str = VOICE, rate: str = RATE) -> None:
     """Fait lire un passage ; réessaie en cas de coupure ; refuse un fichier vide."""
     for attempt in range(1, TTS_RETRIES + 1):
         try:
-            await edge_tts.Communicate(text, voice, rate=RATE).save(str(path))
+            await edge_tts.Communicate(text, voice, rate=rate).save(str(path))
             if path.exists() and path.stat().st_size > 1000:   # un échec peut laisser un fichier vide
                 return
             raise RuntimeError("fichier audio vide")
@@ -208,18 +217,18 @@ async def synthesize(text: str, path: Path, voice: str = VOICE) -> None:
             await asyncio.sleep(2 * attempt)   # on laisse respirer le service avant de réessayer
 
 
-async def synthesize_all(jobs: list[tuple[str, Path]]) -> None:
+async def synthesize_all(jobs: list[dict]) -> None:
     limit = asyncio.Semaphore(PARALLEL)
     done = 0
 
-    async def one(text: str, path: Path) -> None:
+    async def one(job: dict) -> None:
         nonlocal done
         async with limit:
-            await synthesize(text, path)
+            await synthesize(job["text"], job["path"], rate=job["rate"])
         done += 1
         print(f"\r   voix : {done}/{len(jobs)} passages", end="", flush=True)
 
-    await asyncio.gather(*(one(t, p) for t, p in jobs))
+    await asyncio.gather(*(one(job) for job in jobs))
     print()
 
 
@@ -255,6 +264,14 @@ def to_wav(mp3: Path) -> Path:
 def make_silence(seconds: float, path: Path) -> None:
     run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", f"anullsrc=r={SAMPLE_RATE}:cl=mono",
          "-t", str(seconds), *WAV_ARGS, str(path)])
+
+
+def make_ticks(seconds: float, path: Path) -> None:
+    """Tic-tac discret (un « tic » par seconde) pour la pause du quiz, généré par ffmpeg."""
+    expr = "0.16*sin(2*PI*1500*t)*exp(-70*mod(t+0.5,1))"     # tics à 0,5 s, 1,5 s, 2,5 s…
+    run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi",
+         "-i", f"aevalsrc='{expr}':s={SAMPLE_RATE}:d={seconds}",
+         "-af", "lowpass=f=3000", "-t", str(seconds), *WAV_ARGS, str(path)])
 
 
 def make_jingle(kind: str, path: Path) -> None:
@@ -320,25 +337,53 @@ def check_ffmpeg() -> bool:
     return False
 
 
-def build_jobs(script: dict) -> tuple[list[tuple[str, Path, str | None]], int]:
-    """Liste ordonnée des passages à lire : (texte, fichier, titre de chapitre s'il commence ici),
-    et le nombre de phrases raccourcies parce qu'elles auraient été lues en anglais."""
-    jobs, n, softened = [], 0, 0
+def build_jobs(script: dict) -> tuple[list[dict], int]:
+    """Liste ordonnée des passages à lire, et le nombre de phrases raccourcies (sinon lues en anglais).
+    Chaque passage : texte, fichier, chapitre qui commence ici, type de chapitre, style, débit."""
+    jobs, softened = [], 0
 
-    def add(text: str, chapter: str | None = None) -> None:
-        nonlocal n, softened
-        n += 1
+    def add(text: str, chapter: str | None = None, kind: str = "news",
+            style: str | None = None, is_title: bool = False) -> None:
+        nonlocal softened
         text, fixed = soften_english(text)          # listes de noms anglais → « A, B et plusieurs autres »
         softened += fixed
-        jobs.append((clean_for_speech(text), PARTS_DIR / f"{n:03d}.mp3", chapter))
+        jobs.append({"text": clean_for_speech(text), "path": PARTS_DIR / f"{len(jobs) + 1:03d}.mp3",
+                     "chapter": chapter, "kind": kind, "style": style, "is_title": is_title,
+                     "rate": RATE_KEY if style in ("cle", "question") else RATE})
 
-    add(script["intro"], "Introduction")
+    for i, seg in enumerate(script.get("intro_segments") or [{"text": script["intro"]}]):
+        add(seg["text"], "Introduction" if i == 0 else None, "intro", seg.get("style"))
     for chapter in script["chapters"]:
-        add(f"{chapter['title']}.", chapter["title"])        # la voix annonce la rubrique
+        kind = chapter.get("kind", "news")
+        # La voix annonce le chapitre (« À la une. », « Le quiz : je pose la question… »)
+        add(chapter.get("announce") or f"{chapter['title']}.", chapter["title"], kind, is_title=True)
         for seg in chapter["segments"]:
-            add(seg["text"])
-    add(script["outro"], "Conclusion")
+            add(seg["text"], None, kind, seg.get("style"))
+    for i, seg in enumerate(script.get("outro_segments") or [{"text": script["outro"]}]):
+        add(seg["text"], "Conclusion" if i == 0 else None, "outro", seg.get("style"))
     return jobs, softened
+
+
+def separator(previous: dict, job: dict) -> str:
+    """Ce qu'on entend entre deux passages :
+    - nouveau chapitre : silence long (l'annonce du chapitre suffit) ;
+    - après l'annonce d'un chapitre : silence court ;
+    - après une question : temps de réponse avec tic-tac ;
+    - après une information-clé : silence pour la « ranger » ;
+    - entre deux articles : le violon ; entre deux brèves : un court silence."""
+    if job["chapter"]:
+        return "long"
+    if previous["is_title"]:
+        return "after_title"
+    if previous["style"] == "question":
+        return "quiz"
+    if previous["style"] == "cle":
+        return "key"
+    if job["kind"] == "news":
+        return "news"
+    if job["kind"] == "breves":
+        return "breve"
+    return "short"
 
 
 def make_samples() -> int:
@@ -399,44 +444,44 @@ def main() -> int:
     PARTS_DIR.mkdir(parents=True)
 
     jobs, softened = build_jobs(script)
-    french = FORCE_FRENCH and asyncio.run(french_is_accepted(jobs[0][0], PARTS_DIR / "essai_langue.mp3"))
+    french = FORCE_FRENCH and asyncio.run(french_is_accepted(jobs[0]["text"], PARTS_DIR / "essai_langue.mp3"))
     language = "français forcé" if french else "choisie par la voix" + (
         f" (français forcé refusé : {FRENCH_REFUSAL[0]})" if FRENCH_REFUSAL else "")
     print(f"Voix : {VOICE} ({RATE}) — {len(jobs)} passages — langue {language}"
           + (f" — {softened} phrase(s) raccourcie(s)" if softened else ""))
     try:
-        asyncio.run(synthesize_all([(text, path) for text, path, _ in jobs]))
+        asyncio.run(synthesize_all(jobs))
     except RuntimeError as exc:
         print(f"\n✗ {exc}", file=sys.stderr)
         return 1   # job en échec → mail d'alerte (on ne publie jamais un épisode à trous)
 
-    # Ce qui sépare deux passages : le jingle violon UNIQUEMENT entre deux articles d'une même rubrique.
-    # Changement de rubrique (l'annonce « Alertes… » suffit), intro et conclusion : simple silence.
-    make_silence(SHORT_PAUSE, PARTS_DIR / "pause_courte.wav")
-    make_silence(LONG_PAUSE, PARTS_DIR / "pause_longue.wav")
-    after_title = [PARTS_DIR / "pause_courte.wav"]       # entre « Nom de la rubrique. » et son 1er article
-    between_rubrics = [PARTS_DIR / "pause_longue.wav"]
-    if JINGLES:
-        gap = PARTS_DIR / "souffle.wav"
-        make_silence(JINGLE_GAP, gap)
-        make_jingle("news", PARTS_DIR / "jingle_news.wav")
-        between_news = [gap, PARTS_DIR / "jingle_news.wav", gap]
+    # Les sons qui séparent les passages (voir separator()).
+    sounds = {"long": LONG_PAUSE, "after_title": SHORT_PAUSE, "short": SHORT_PAUSE, "key": KEY_PAUSE,
+              "breve": BREVE_PAUSE}
+    separators = {}
+    for name, seconds in sounds.items():
+        make_silence(seconds, PARTS_DIR / f"pause_{name}.wav")
+        separators[name] = [PARTS_DIR / f"pause_{name}.wav"]
+    gap = PARTS_DIR / "souffle.wav"
+    make_silence(JINGLE_GAP, gap)
+    if QUIZ_TICKS:
+        make_ticks(QUIZ_PAUSE, PARTS_DIR / "tic_tac.wav")
+        separators["quiz"] = [gap, PARTS_DIR / "tic_tac.wav", gap]
     else:
-        between_news = [PARTS_DIR / "pause_courte.wav"]
+        make_silence(QUIZ_PAUSE, PARTS_DIR / "pause_quiz.wav")
+        separators["quiz"] = [PARTS_DIR / "pause_quiz.wav"]
+    if JINGLES:
+        make_jingle("news", PARTS_DIR / "jingle_news.wav")
+        separators["news"] = [gap, PARTS_DIR / "jingle_news.wav", gap]
+    else:
+        separators["news"] = separators["short"]
 
     # Ordre d'écoute : passage, séparateur, passage…
     timeline: list[tuple[Path, str | None]] = []
-    for i, (_, path, chapter) in enumerate(jobs):
+    for i, job in enumerate(jobs):
         if i > 0:
-            previous = jobs[i - 1][2]
-            if chapter:
-                separator = between_rubrics
-            elif previous and previous != "Introduction":   # on sort d'une annonce de rubrique
-                separator = after_title
-            else:
-                separator = between_news
-            timeline += [(p, None) for p in separator]
-        timeline.append((to_wav(path), chapter))
+            timeline += [(p, None) for p in separators[separator(jobs[i - 1], job)]]
+        timeline.append((to_wav(job["path"]), job["chapter"]))
 
     print("   assemblage et normalisation du volume…")
     chapters = assemble(timeline, script.get("meta", {}))
@@ -445,7 +490,9 @@ def main() -> int:
     minutes = duration(EPISODE_FILE) / 60
     size = EPISODE_FILE.stat().st_size / 1_000_000
     print(f"→ build/episode.mp3 : {minutes:.1f} min, {size:.1f} Mo, {len(chapters)} chapitres")
-    job_summary(f"### Audio\n- Voix : {VOICE} ({RATE}), langue {language}\n"
+    quiz = sum(1 for job in jobs if job["style"] == "question")
+    job_summary(f"### Audio\n- Voix : {VOICE} ({RATE}, essentiel à {RATE_KEY}), langue {language}\n"
+                f"- Questions avec temps de réponse : {quiz}\n"
                 f"- Listes de noms raccourcies (sinon lues en anglais) : {softened}\n"
                 f"- {minutes:.1f} min, {size:.1f} Mo, {len(chapters)} chapitres")
     return 0

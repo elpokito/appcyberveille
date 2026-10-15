@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/33504094/README.md)
 <div align="center">
 
 <img src="docs/icons/icon-192.png" alt="Logo CyberVeille" width="96" height="96">
@@ -15,6 +14,7 @@
 [**Ouvrir l'app**](https://elpokito.github.io/appcyberveille/) ·
 [Flux podcast](https://elpokito.github.io/appcyberveille/feed.xml) ·
 [Fonctionnement](#fonctionnement) ·
+[Pensé pour retenir](#pensé-pour-retenir) ·
 [Sécurité](#sécurité) ·
 [Problèmes rencontrés](#problèmes-rencontrés)
 
@@ -51,8 +51,8 @@ Contrainte fixée dès le départ : **0 € de budget**. Tout tourne sur des off
     <td align="center"><b>8</b><br><sub>sources suivies</sub></td>
     <td align="center"><b>50 – 70</b><br><sub>news analysées / jour</sub></td>
     <td align="center"><b>~20</b><br><sub>sujets par épisode</sub></td>
-    <td align="center"><b>15 – 20 min</b><br><sub>d'écoute</sub></td>
-    <td align="center"><b>~7 min</b><br><sub>d'exécution</sub></td>
+    <td align="center"><b>~20 min</b><br><sub>d'écoute</sub></td>
+    <td align="center"><b>~12 min</b><br><sub>d'exécution</sub></td>
     <td align="center"><b>0 €</b><br><sub>de coût</sub></td>
   </tr>
 </table>
@@ -81,10 +81,31 @@ flowchart LR
 | Étape | Fichier | Ce qu'elle fait |
 | :-- | :-- | :-- |
 | **1. Collecte** | `src/collect.py` | Lit les flux des dernières 48 h, nettoie le HTML, retire le tracking des URL, dédoublonne par URL et par titre. `data/seen.json` évite de réentendre une news. |
-| **2. Rédaction** | `src/generate.py` | Un « rédacteur en chef » (LLM) regroupe les articles d'un même événement, écarte la pub et l'opinion, note chaque sujet de 1 à 5. Le texte est ensuite rédigé rubrique par rubrique. |
-| **3. Voix** | `src/tts.py` | Adapte le texte à l'oral (CVE, sigles, scores CVSS), synthèse avec edge-tts, assemblage ffmpeg, chapitres dans le MP3, volume normalisé à -16 LUFS. |
+| **2. Rédaction** | `src/generate.py` | Un « rédacteur en chef » (LLM) regroupe les articles d'un même événement, écarte la pub et l'opinion, note chaque sujet de 1 à 5. Le sujet le plus important passe « à la une », les mineurs en brèves, le reste est rédigé rubrique par rubrique. |
+| **2 bis. Pédagogie** | `src/pedagogie.py` | Un « expert pédagogique » prépare le fil rouge, les 3 choses à retenir, le concept du jour et le quiz, vérifiés comme le reste. Les questions des jours passés reviennent en rappel. |
+| **3. Voix** | `src/tts.py` | Adapte le texte à l'oral (CVE, sigles, scores CVSS, listes de noms anglais), synthèse avec edge-tts, essentiel lu plus lentement, tic-tac pendant le quiz, chapitres dans le MP3, volume à -16 LUFS. |
 | **4. Publication** | `src/publish.py` | Envoie le MP3 dans une Release GitHub, régénère le flux RSS, met à jour la liste des épisodes. |
-| **5. App** | `docs/` | PWA en JavaScript sans framework : lecteur, chapitres, vitesse, reprise, et 7 derniers épisodes disponibles hors ligne. |
+| **5. App** | `docs/` | PWA en JavaScript sans framework : lecteur, chapitres, vitesse, reprise, 7 derniers épisodes hors ligne, fiche du jour et révisions espacées. |
+
+<br>
+
+## Pensé pour retenir
+
+Écouter dans le métro, c'est écouter sans prendre de notes ni revenir en arrière. Une information entendue une
+seule fois s'oublie vite : je voulais retenir au moins une chose de chaque épisode. Chaque partie de l'épisode
+s'appuie donc sur un résultat connu des sciences cognitives.
+
+| Dans l'épisode | Pourquoi |
+| :-- | :-- |
+| **Fil rouge** annoncé au début et redit à la fin | On retient mieux ce qu'on entend en premier et en dernier (effet de position sérielle). |
+| **Sommaire** lu après l'intro | Connaître le plan aide à ranger ce qu'on va entendre. |
+| **Rappel** des questions d'hier, d'il y a 3 jours et d'une semaine | Revoir à intervalles croissants est la méthode la plus efficace pour la mémoire à long terme (effet d'espacement). |
+| **À la une** développé, puis **brèves** | Dix sujets survolés se mélangent, un sujet compris en profondeur reste. |
+| **Concept du jour** relié à MITRE ATT&CK ou à l'OWASP | On retient mieux une information nouvelle en l'accrochant à ce qu'on sait déjà (élaboration). |
+| **3 choses à retenir**, lues plus lentement | La mémoire de travail garde environ 4 éléments, et le cerveau a besoin d'un silence pour ranger une information. |
+| **Quiz** avec 4 secondes de tic-tac pour répondre | Chercher la réponse ancre bien mieux que réécouter (effet de test). Le tic-tac évite de croire à une coupure. |
+| **Fiche du jour** et **révisions** dans l'app | Relire après avoir écouté, puis se re-tester à 1, 3, 7, 14 et 30 jours (boîtes de Leitner, comme Anki). |
+| **La semaine en bref** le dimanche | Révision espacée à J+7 et liens entre les sujets de la semaine. |
 
 <br>
 
@@ -96,7 +117,7 @@ flowchart LR
 | IA | Groq (`gpt-oss-120b`), OpenRouter en secours |
 | Audio | edge-tts, ffmpeg |
 | Infrastructure | GitHub Actions, GitHub Releases, GitHub Pages |
-| Qualité | pytest (20 tests), Dependabot |
+| Qualité | pytest (54 tests, dont la logique de l'app via Node), Dependabot |
 
 <br>
 
@@ -175,6 +196,28 @@ Une vulnérabilité remontée à la fois par la CISA et par la presse finissait 
 </details>
 
 <details>
+<summary><b>La voix lisait une phrase en anglais</b></summary>
+<br>
+
+Un jour, 18 secondes de l'épisode sont parties en anglais. J'ai passé le MP3 dans un modèle de reconnaissance
+vocale (Whisper) phrase par phrase pour trouver le passage : le texte était bien en français, mais il listait huit
+produits « Data Center » d'Atlassian. La voix multilingue devine la langue de chaque phrase, et avec autant de
+mots anglais, elle a tout lu à l'anglaise.
+**Solution :** détection des phrases trop chargées en mots anglais, reformulation demandée au LLM, et listes de
+noms raccourcies juste avant la lecture.
+</details>
+
+<details>
+<summary><b>Un épisode de 3 minutes au lieu de 11</b></summary>
+<br>
+
+En relançant l'épisode le soir pour tester une correction, il n'y avait plus que 4 news : celles du matin étaient
+déjà marquées « vues ». Et la version courte avait remplacé la bonne.
+**Solution :** une news vue le jour même reste utilisable pour refaire l'épisode, et une version deux fois plus
+courte ne remplace plus celle déjà publiée.
+</details>
+
+<details>
 <summary><b>Quota de Groq dépassé (HTTP 429)</b></summary>
 <br>
 
@@ -207,10 +250,12 @@ appcyberveille/
 ├── src/
 │   ├── collect.py        collecte et dédoublonnage
 │   ├── generate.py       sélection des sujets et rédaction (LLM)
+│   ├── pedagogie.py      fil rouge, à retenir, concept, quiz, rappels espacés
+│   ├── langue.py         garde la voix en français
 │   ├── tts.py            synthèse vocale et montage audio
 │   ├── publish.py        Release GitHub, flux RSS, liste des épisodes
 │   └── common.py         utilitaires partagés
-├── docs/                 l'app : HTML, CSS, JS, service worker, icônes
+├── docs/                 l'app : HTML, CSS, JS, révisions, service worker, icônes
 ├── tests/                tests automatiques (sans réseau ni clé API)
 ├── data/                 mémoire du pipeline
 └── .github/              workflows et Dependabot
@@ -269,7 +314,8 @@ ci-dessus, c'est moi. Je peux expliquer chaque partie du code.
 - [ ] Améliorer la prononciation des noms de produits et des sigles
 - [ ] Voix de secours hors ligne (Piper) si edge-tts tombe
 - [ ] Enrichir les CVE avec le score officiel de la NVD
-- [ ] Un récap hebdomadaire le samedi
+- [x] Un récap de la semaine (le dimanche) et des révisions espacées
+- [ ] Un duo de voix : une animatrice qui explique, une seconde voix qui pose les questions
 - [ ] Épingler les GitHub Actions par empreinte (SHA)
 
 <br>

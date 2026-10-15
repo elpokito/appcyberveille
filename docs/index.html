@@ -20,6 +20,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="CyberVeille">
   <link rel="stylesheet" href="style.css">
+  <script src="revision.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -47,6 +48,27 @@
       <span>Télécharger automatiquement le dernier épisode à l'ouverture</span>
     </label>
     <p class="hint" id="storage-info"></p>
+  </section>
+
+  <!-- Révisions espacées : les questions des quiz reviennent à 1, 3, 7, 14 puis 30 jours -->
+  <section id="revise-entry" class="revise-entry" hidden>
+    <button type="button" id="btn-revise" class="primary"></button>
+    <p class="hint" id="revise-info"></p>
+  </section>
+
+  <section id="revision" class="revision" hidden aria-label="Révision" aria-live="polite">
+    <div class="rev-head">
+      <h2>Révision</h2>
+      <button type="button" id="rev-close" class="ghost">Fermer</button>
+    </div>
+    <p id="rev-progress" class="hint"></p>
+    <p id="rev-question" class="rev-question"></p>
+    <p id="rev-answer" class="rev-answer" hidden></p>
+    <div class="rev-actions">
+      <button type="button" id="rev-show" class="primary">Voir la réponse</button>
+      <button type="button" id="rev-again" hidden>À revoir</button>
+      <button type="button" id="rev-good" class="primary" hidden>Je savais</button>
+    </div>
   </section>
 
   <main>

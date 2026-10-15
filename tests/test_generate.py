@@ -51,7 +51,7 @@ def test_plan_de_secours_regroupe_un_meme_evenement():
 def test_duree_maximale_respectee():
     plan = [{"rubric": generate.RUBRICS[0], "items": [], "importance": 5, "suite": False} for _ in range(40)]
     kept = generate.fit_to_length(plan)
-    assert sum(generate.WORDS_BY_IMPORTANCE[s["importance"]] for s in kept) <= generate.MAX_EPISODE_WORDS
+    assert sum(generate.subject_cost(s) for s in kept) <= generate.MAX_EPISODE_WORDS
 
 
 def test_delai_429_lu_dans_le_message_de_groq():
@@ -112,3 +112,67 @@ def test_redacteur_trop_selectif_complete_sans_ia():
     ids = [i["id"] for s in plan for i in s["items"]]
     assert len(plan) > 1 and "i1" not in ids          # complété, sans reprendre la news écartée exprès
     assert generate.EDITOR_STATS["ids_inconnus"] == 1
+
+
+def test_sommaire_avec_la_partie_memorisation():
+    chapitres = [{"title": "Rappel", "segments": [{}, {}]}, {"title": "À la une", "segments": [{}]},
+                 {"title": "Alertes et failles critiques", "segments": [{}, {}]},
+                 {"title": "En bref", "segments": [{}, {}, {}]},
+                 {"title": "Le concept du jour", "segments": [{}]}, {"title": "À retenir", "segments": [{}]},
+                 {"title": "Quiz", "segments": [{}]}]
+    assert generate.summary_sentence(chapitres) == (
+        "Au sommaire aujourd'hui : le rappel des jours passés, le sujet à la une, deux alertes de sécurité "
+        "et trois brèves, puis le concept du jour, l'essentiel à retenir et le quiz. C'est parti !")
+
+
+def test_sujet_phare_et_breves():
+    plan = [{"rubric": generate.RUBRICS[0], "items": [news("a", "x")], "importance": 4, "suite": False},
+            {"rubric": generate.RUBRICS[0], "items": [news("b", "y"), news("c", "z")], "importance": 4, "suite": False},
+            {"rubric": generate.RUBRICS[1], "items": [news("d", "w")], "importance": 2, "suite": False}]
+    roles = {s["items"][0]["id"]: s["role"] for s in generate.fit_to_length(plan)}
+    assert roles == {"b": "phare", "a": "normal", "d": "breve"}     # le phare = le plus important ET le mieux sourcé
+
+
+class FakeLLM:
+    """Remplace le vrai LLM : répond selon la consigne reçue, sans réseau ni clé."""
+    def __init__(self, client=None):
+        self.providers, self.used = [{"name": "Faux"}], ["Faux (test)"]
+
+    def ask(self, messages):
+        system, user = messages[0]["content"], messages[-1]["content"]
+        if system == generate.EDITOR_PROMPT:
+            return ('{"sujets":[{"rubrique":"Alertes et failles critiques","ids":["a","b"],"importance":5},'
+                    '{"rubrique":"Alertes et failles critiques","ids":["c"],"importance":4},'
+                    '{"rubrique":"Incidents et fuites de données","ids":["d"],"importance":2}],"ecartes":[]}')
+        if system == generate.WRITE_PROMPT:
+            import json as _json
+            block = _json.loads(user[user.index("<news>") + 6:user.index("</news>")])
+            return "\n".join(f"### SOURCES: {', '.join(n['id'] for n in s['news'])}\n"
+                             f"Passage sur {s['news'][0]['titre']}. Il faut mettre à jour sans attendre."
+                             for s in block)
+        if system == generate.FRAME_PROMPT:
+            return "INTRO: Bonjour et bienvenue !\nOUTRO: Bonne journée, à demain !"
+        return ("FIL_ROUGE: Les équipements exposés sur Internet se corrigent en priorité, sans attendre.\n"
+                "RETENIR: Il faut mettre à jour sans attendre les passerelles exposées.\n"
+                "RETENIR: Les correctifs urgents passent avant le reste.\n"
+                "RETENIR: Une fuite touche un hôpital ce jour.\n"
+                "QUESTION: Que faut-il faire sans attendre ?\nREPONSE: Mettre à jour.\n"
+                "QUESTION: Qu'est-ce qui passe avant le reste ?\nREPONSE: Les correctifs urgents.")
+
+
+def test_episode_complet_dans_le_bon_ordre(monkeypatch):
+    from datetime import date
+    monkeypatch.setattr(generate, "LLM", FakeLLM)
+    monkeypatch.setattr(generate, "PAUSE_BETWEEN_CALLS", 0)
+    items = [news("a", "Ivanti zero-day exploited", "CISA KEV", 3), news("b", "Ivanti patches VPN flaw"),
+             news("c", "Chrome zero-day patched"), news("d", "Hospital data breach")]
+    hier = {"date": "2026-10-14", "memo": {"fil_rouge": "Hier.", "a_retenir": [],
+                                           "quiz": [{"question": "Q d'hier ?", "reponse": "R."}]}}
+    review = generate.review_chapter(generate.review_items([hier], date(2026, 10, 15)))
+    script, used, memo, secours = generate.build_script(items, [hier], date(2026, 10, 15), review)
+    titres = [c["title"] for c in script["chapters"]]
+    assert titres == ["Rappel", "À la une", "Alertes et failles critiques", "En bref", "À retenir", "Quiz"]
+    assert script["intro_segments"][1] == {"text": "Le fil rouge du jour : Les équipements exposés sur Internet "
+                                                   "se corrigent en priorité, sans attendre.", "style": "cle"}
+    assert script["outro_segments"][0]["text"].startswith("Si vous ne deviez retenir qu'une chose")
+    assert secours == ["concept"]                     # pas de concept proposé → simplement absent

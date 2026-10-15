@@ -129,9 +129,22 @@ def notes_to_html(md: str) -> str:
         if m:
             out.append(f'<p>• <a href="{html.escape(m[2], quote=True)}">{html.escape(m[1])}</a>'
                        f"{html.escape(m[3])}</p>")
+        elif line.startswith("- "):
+            out.append(f"<p>• {html.escape(line[2:])}</p>")
         else:
             out.append(f"<p>{html.escape(line.strip('_'))}</p>")
     return "\n".join(out)
+
+
+def public_fiche(memo: dict | None) -> dict | None:
+    """Fiche du jour pour l'app : uniquement du texte, dans une forme fixe (l'app l'affiche sans HTML)."""
+    if not memo or not memo.get("fil_rouge"):
+        return None
+    concept = memo.get("concept") or None
+    return {"fil_rouge": str(memo["fil_rouge"]),
+            "a_retenir": [str(x) for x in memo.get("a_retenir", [])],
+            "concept": {"nom": str(concept["nom"]), "explication": str(concept["explication"])} if concept else None,
+            "quiz": [{"question": str(q["question"]), "reponse": str(q["reponse"])} for q in memo.get("quiz", [])]}
 
 
 def mp3_duration(path: Path) -> int:
@@ -249,6 +262,8 @@ def main() -> int:
         "pub_date": format_datetime(datetime.now(timezone.utc)),
         "chapters_path": chapters_path, "asset": asset,
         "sources": script["meta"].get("sources", []),
+        # Fiche du jour (fil rouge, à retenir, concept, quiz) : relue par les rappels des jours suivants.
+        "memo": script["meta"].get("memo"),
         "description_html": notes_to_html(NOTES_FILE.read_text(encoding="utf-8")),
     })
     episodes.sort(key=lambda ep: ep["date"], reverse=True)
@@ -261,6 +276,7 @@ def main() -> int:
     # Version publique pour l'app : uniquement des données, aucun HTML (l'app construit l'affichage elle-même).
     public = [{"date": ep["date"], "title": ep["title"], "guid": ep["guid"], "seconds": ep["seconds"],
                "bytes": ep["bytes"], "chapters": ep["chapters_path"], "sources": ep.get("sources", []),
+               "fiche": public_fiche(ep.get("memo")),
                "audio": f"audio/{ep['asset']}" if i < OFFLINE_EPISODES and "asset" in ep else None,
                "stream": ep["url"]}
               for i, ep in enumerate(episodes)]

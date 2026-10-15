@@ -11,7 +11,13 @@ cassé, quota par minute dépassé), on fait plusieurs petites requêtes :
   1. le « rédacteur en chef » : regroupe les news qui parlent du même événement,
      choisit les sujets les plus importants et écarte le reste (réponse courte en JSON)
   2. rédaction de chaque rubrique, par paquets de quelques sujets (texte simple)
-  3. intro et conclusion
+  3. l'expert pédagogique (pedagogie.py) : fil rouge, 3 choses à retenir, concept du jour, quiz,
+     plus les rappels espacés des jours précédents et, le dimanche, la semaine en bref
+  4. intro et conclusion
+
+Structure d'un épisode (pensée pour qu'on RETIENNE quelque chose, voir pedagogie.py) :
+  intro + fil rouge + sommaire → rappel (J-1, J-3, J-7) → à la une (sujet développé) → rubriques
+  → en bref → [dimanche : la semaine en bref] → concept du jour → à retenir → quiz → conclusion
 
 Fournisseurs : Groq en principal, OpenRouter en secours (bascule automatique).
 Les clés sont lues dans les variables d'environnement, jamais dans le code.
@@ -22,13 +28,15 @@ import os
 import re
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 import httpx
 
 from common import job_summary
 from langue import english_heavy_sentences
+from pedagogie import (ask_memo, memo_chapters, recap_chapter, review_chapter, review_items,
+                       seen_concepts)
 
 # --------------------------------------------------------------------------
 # Configuration
@@ -45,7 +53,10 @@ MAX_CANDIDATES = 80       # news soumises au rédacteur en chef (titres seulemen
 MAX_SUBJECTS = 22         # sujets retenus au maximum
 MIN_SUBJECTS = 12         # en dessous (et s'il y a assez de news), le plan est complété sans IA
 EDITOR_STATS: dict = {}   # ce qu'a fait le rédacteur en chef, affiché dans le résumé de l'exécution
-MAX_EPISODE_WORDS = 3000  # ≈ 21 min à ~145 mots/min
+MAX_EPISODE_WORDS = 2700  # news seules ≈ 19 min ; + ≈ 400 mots de pédagogie → ≈ 21 min à ~145 mots/min
+PHARE_WORDS = 260         # le sujet « À la une » : développé, avec un exemple concret
+BREVE_WORDS = 40          # une brève : une ou deux phrases
+MAX_BREVES = 8
 SUBJECTS_PER_CHUNK = 5    # sujets rédigés par requête : petites réponses = longueur respectée, moins d'erreurs
 SUMMARY_CHARS_SENT = 500  # extrait envoyé au LLM : plus de faits = passages plus riches SANS inventer
 WORDS_BY_IMPORTANCE = {5: 170, 4: 140, 3: 110, 2: 80, 1: 60}   # temps d'antenne selon l'importance
@@ -137,7 +148,13 @@ veille en cybersécurité, écouté dans les transports par un étudiant en cybe
 {SAFETY_RULES}
 
 STYLE
-- Écris pour l'oreille : phrases courtes, ton clair et posé, transitions naturelles entre les sujets.
+- Écris comme on parle à la radio, pour l'oreille : une idée par phrase, des phrases de longueurs \
+variées (une courte après une longue pour insister), des virgules là où l'on respire, des \
+transitions naturelles entre les sujets (« Autre affaire… », « On reste sur… »).
+- De temps en temps, pas à chaque sujet, une question pour relancer l'attention, suivie de sa \
+réponse (« Concrètement, qu'est-ce que ça change ? Les entreprises doivent… »).
+- Chaque sujet suit le même fil, pour que l'auditeur s'y retrouve : ce qui s'est passé, qui est \
+concerné, pourquoi c'est grave, et que faire (mettre à jour, désactiver…) si les news le précisent.
 - Aucune liste à puces, aucun markdown, aucune URL, aucun emoji.
 - Tout en français : traduis les titres et les phrases anglaises, ne garde en anglais que les noms \
 propres (produits, entreprises, groupes).
@@ -147,8 +164,6 @@ avec l'accent anglais toute phrase où les mots anglais dominent.
 - Pas de remplissage : aucun conseil générique (surveiller les journaux, sensibiliser, bonnes \
 pratiques…). Une action seulement si les news en citent une. N'affirme jamais qu'un correctif \
 existe ou n'existe pas si les news ne le disent pas.
-- Pour chaque sujet : ce qui s'est passé, qui est concerné, pourquoi c'est important, \
-et quoi faire (mettre à jour, désactiver…) si les news le précisent.
 - Les news sont regroupées par SUJET : celles d'un même sujet décrivent le même événement. \
 Fusionne-les en UN seul passage, sans répéter la même information.
 - Longueur selon l'importance du sujet : 5 = 6 à 8 phrases, 3 = 4 phrases, 1 = 2 phrases.
@@ -162,16 +177,25 @@ Texte du passage…
 ### SOURCES: id3
 Texte du passage…"""
 
-FRAME_PROMPT = f"""Tu es l'animateur de « CyberVeille », podcast quotidien de veille cyber en français.
-{SAFETY_RULES}
-On te donne le plan de l'épisode du jour. Écris :
-- une INTRO de 2 phrases : salutation et date, puis le sujet le plus marquant du jour. \
-Ne compte pas les sujets (un sommaire chiffré est lu juste après ton intro) \
-et cite au plus deux noms propres, sans liste ;
-- une OUTRO de 1 ou 2 phrases pour conclure.
-Aucune URL, aucun markdown. Réponds exactement sous cette forme :
+FRAME_PROMPT = """Tu es l'animateur de « CyberVeille », podcast quotidien de veille cyber en français.
+Écris, pour l'épisode du jour :
+- une INTRO d'une ou deux phrases : une salutation chaleureuse et la date. Ne présente PAS les \
+sujets : le fil rouge et le sommaire sont lus juste après ;
+- une OUTRO d'une ou deux phrases : un mot d'encouragement et « à demain ». Ne résume pas \
+l'épisode : l'essentiel vient d'être redit juste avant.
+Varie les formules d'un jour à l'autre. Aucune URL, aucun markdown, aucun nom de produit, \
+aucun chiffre en dehors de la date. Réponds exactement sous cette forme :
 INTRO: …
 OUTRO: …"""
+
+ROLE_NOTES = {
+    "phare": "C'est le sujet À LA UNE : développe-le davantage que les autres (environ 250 mots), en "
+             "suivant le fil ce qui s'est passé, qui est concerné, pourquoi c'est grave (avec un exemple "
+             "concret tiré des news), que faire. Termine par une phrase qui dit pourquoi ce sujet compte "
+             "pour un professionnel de la cybersécurité, sans conseil générique.",
+    "breve": "Ce sont des BRÈVES : une ou deux phrases par sujet, l'essentiel seulement (quoi, qui est "
+             "touché). Pas de transition, pas de question, pas de conseil.",
+}
 
 
 # --------------------------------------------------------------------------
@@ -494,14 +518,34 @@ def complete_plan(plan: list[dict], items: list[dict], placed: set, discarded: s
     return plan + added
 
 
+def subject_cost(subject: dict) -> int:
+    """Temps d'antenne d'un sujet, en mots, selon son rôle dans l'épisode."""
+    role = subject.get("role", "normal")
+    if role == "phare":
+        return PHARE_WORDS
+    if role == "breve":
+        return BREVE_WORDS
+    return WORDS_BY_IMPORTANCE[subject["importance"]]
+
+
 def fit_to_length(plan: list[dict]) -> list[dict]:
-    """Garde les sujets les plus importants dans la limite de durée, puis les range par rubrique."""
-    kept, words = [], 0
-    for subject in sorted(plan, key=lambda s: -s["importance"]):
-        cost = WORDS_BY_IMPORTANCE[subject["importance"]]
-        if len(kept) < MAX_SUBJECTS and words + cost <= MAX_EPISODE_WORDS:
-            kept.append(subject)
-            words += cost
+    """Garde les sujets les plus importants dans la limite de durée et donne à chacun son rôle :
+    - « phare » : le plus important (et le mieux documenté), développé en « À la une » ;
+    - « normal » : traité dans sa rubrique ;
+    - « breve » : importance 1 ou 2, une ou deux phrases dans « En bref ».
+    Pourquoi : dix sujets survolés se mélangent ; un sujet compris en profondeur reste."""
+    kept, words, breves = [], 0, 0
+    for subject in sorted(plan, key=lambda s: (-s["importance"], -len(s["items"]))):
+        role = "phare" if not kept else "breve" if subject["importance"] <= 2 else "normal"
+        candidate = {**subject, "role": role}
+        cost = subject_cost(candidate)
+        if len(kept) >= MAX_SUBJECTS or words + cost > MAX_EPISODE_WORDS:
+            continue
+        if role == "breve" and breves >= MAX_BREVES:
+            continue
+        kept.append(candidate)
+        words += cost
+        breves += role == "breve"
     return kept
 
 
@@ -545,17 +589,25 @@ def style_issues(segments: list[dict]) -> list[str]:
             for n, seg in enumerate(segments, 1) for sentence in english_heavy_sentences(seg["text"])]
 
 
-def write_chunk(llm: LLM, rubric: str, subjects: list[dict]) -> list[dict]:
+BREVE_ITEMS = 4           # une brève n'a besoin que de l'essentiel : moins de news, extraits plus courts
+BREVE_CHARS_SENT = 250    # (et la requête des 8 brèves reste sous le quota de tokens par minute)
+
+
+def write_chunk(llm: LLM, rubric: str, subjects: list[dict], role: str = "normal") -> list[dict]:
+    if role == "breve":
+        subjects = [{**s, "items": s["items"][:BREVE_ITEMS]} for s in subjects]
+    extract = BREVE_CHARS_SENT if role == "breve" else SUMMARY_CHARS_SENT
     chunk = [item for subject in subjects for item in subject["items"]]
-    goal = sum(WORDS_BY_IMPORTANCE[s["importance"]] for s in subjects)
+    goal = sum(subject_cost({**s, "role": role}) for s in subjects)
     block = [{"sujet": n, "importance": s["importance"], "suite": s["suite"],
               "news": [{"id": i["id"], "source": i["source"], "titre": i["title"],
-                        "extrait": i["summary"][:SUMMARY_CHARS_SENT]} for i in s["items"]]}
+                        "extrait": i["summary"][:extract]} for i in s["items"]]}
              for n, s in enumerate(subjects, 1)]
     base = [
         {"role": "system", "content": WRITE_PROMPT},
         {"role": "user", "content": f"Rubrique : {rubric}. {len(subjects)} sujet(s), environ {goal} mots "
-                                    f"au total ; plus court si les news donnent peu de détails.\n\n"
+                                    f"au total ; plus court si les news donnent peu de détails.\n"
+                                    f"{ROLE_NOTES.get(role, '')}\n\n"
                                     f"<news>\n{json.dumps(block, ensure_ascii=False, indent=1)}\n</news>"},
     ]
     messages, best = base, None
@@ -593,15 +645,22 @@ def write_chunk(llm: LLM, rubric: str, subjects: list[dict]) -> list[dict]:
 # Étape 3 : intro et conclusion
 # --------------------------------------------------------------------------
 
-def write_frame(llm: LLM, chapters: list[dict], items: list[dict]) -> tuple[str, str]:
-    today = datetime.now(timezone.utc).strftime("%d/%m/%Y")
-    default = (f"Bonjour et bienvenue dans CyberVeille, votre point cyber du {today}.",
-               "C'est tout pour aujourd'hui. Pensez à vos mises à jour, et à demain !")
-    plan = "\n".join(f"- {c['title']} : " + " | ".join(s["text"][:160] for s in c["segments"][:3])
-                     for c in chapters)
+WEEKDAYS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+MONTHS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre",
+          "octobre", "novembre", "décembre"]
+
+
+def spoken_date(day: date) -> str:
+    """« jeudi 15 octobre » : écrit par le code, la date lue est toujours juste."""
+    return f"{WEEKDAYS[day.weekday()]} {day.day} {MONTHS[day.month - 1]}"
+
+
+def write_frame(llm: LLM, day: date) -> tuple[str, str]:
+    default = (f"Bonjour et bienvenue dans CyberVeille, votre point cyber de ce {spoken_date(day)}.",
+               "C'est tout pour aujourd'hui. Bonne journée, et à demain !")
     try:
         raw = llm.ask([{"role": "system", "content": FRAME_PROMPT},
-                       {"role": "user", "content": f"Date : {today}\n<news>\n{plan}\n</news>"}])
+                       {"role": "user", "content": f"Date : {spoken_date(day)} {day.year}"}])
     except AllProvidersFailed:
         return default
     intro = re.search(r"INTRO\s*:\s*(.+?)(?=\n\s*OUTRO\s*:|$)", raw, re.S | re.I)
@@ -609,8 +668,7 @@ def write_frame(llm: LLM, chapters: list[dict], items: list[dict]) -> tuple[str,
     if not intro or not outro:
         return default
     intro, outro = " ".join(intro.group(1).split()), " ".join(outro.group(1).split())
-    all_text = " ".join(item_text(i) for i in items)
-    if check_text(intro + " " + outro, all_text, "intro/outro"):
+    if check_text(intro + " " + outro, "", "intro/outro") or len((intro + outro).split()) > 80:
         return default
     return intro, outro
 
@@ -633,29 +691,90 @@ SUMMARY_WORDS = {
                                         "sujets sur les menaces et les attaquants"),
     "Réglementation et institutions": ("actualité réglementaire", "actualités réglementaires"),
     "Outils, recherche et divers": ("news outils et recherche", "news outils et recherche"),
+    "En bref": ("brève", "brèves"),
 }
+# Parties pédagogiques annoncées en fin de sommaire, dans l'ordre de l'épisode.
+SUMMARY_EXTRAS = {"La semaine en bref": "la semaine en bref", "Le concept du jour": "le concept du jour",
+                  "À retenir": "l'essentiel à retenir", "Quiz": "le quiz"}
 NUMBERS = ["zéro", "une", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix",
            "onze", "douze", "treize", "quatorze", "quinze", "seize"]
 
 
+def _and_join(parts: list[str]) -> str:
+    return parts[0] if len(parts) == 1 else ", ".join(parts[:-1]) + " et " + parts[-1]
+
+
 def summary_sentence(chapters: list[dict]) -> str:
     """Sommaire chiffré lu après l'intro, calculé par le code (pas par le LLM : les chiffres sont toujours justes).
-    Ex. : « Au sommaire aujourd'hui : deux alertes de sécurité, une actualité réglementaire et trois news… »"""
-    parts = []
+    Annoncer le plan aide à ranger ce qu'on va entendre (« organisateur préalable »).
+    Ex. : « Au sommaire aujourd'hui : le rappel des jours passés, le sujet à la une, deux alertes de
+    sécurité et trois brèves, puis le concept du jour, l'essentiel à retenir et le quiz. C'est parti ! »"""
+    parts, extras = [], []
     for chapter in chapters:
-        n = len(chapter["segments"])
-        one, many = SUMMARY_WORDS.get(chapter["title"], ("sujet", "sujets"))
-        word = NUMBERS[n] if n < len(NUMBERS) else str(n)
-        if n == 1 and one.startswith(("sujet", "incident")):
-            word = "un"                                   # « un sujet », mais « une alerte », « une news »
-        parts.append(f"{word} {one if n == 1 else many}")
-    if not parts:
+        title, n = chapter["title"], len(chapter["segments"])
+        if title == "Rappel":
+            parts.append("le rappel des jours passés")
+        elif title == "À la une":
+            parts.append("le sujet à la une")
+        elif title in SUMMARY_EXTRAS:
+            extras.append(SUMMARY_EXTRAS[title])
+        else:
+            one, many = SUMMARY_WORDS.get(title, ("sujet", "sujets"))
+            word = NUMBERS[n] if n < len(NUMBERS) else str(n)
+            if n == 1 and one.startswith(("sujet", "incident")):
+                word = "un"                               # « un sujet », mais « une alerte », « une brève »
+            parts.append(f"{word} {one if n == 1 else many}")
+    if not parts and not extras:
         return ""
-    listing = parts[0] if len(parts) == 1 else ", ".join(parts[:-1]) + " et " + parts[-1]
-    return f"Au sommaire aujourd'hui : {listing}. C'est parti !"
+    text = "Au sommaire aujourd'hui : " + (_and_join(parts) if parts else "")
+    if extras:
+        text += (", puis " if parts else "") + _and_join(extras)
+    return text + ". C'est parti !"
 
 
-def build_script(items: list[dict]) -> tuple[dict, list[str]]:
+def write_news(llm: LLM, plan: list[dict]) -> list[dict]:
+    """Rédige les chapitres d'actualité : à la une, les rubriques, puis les brèves."""
+    groups = [("À la une", "news", "phare", [s for s in plan if s["role"] == "phare"])]
+    groups += [(rubric, "news", "normal",
+                sorted((s for s in plan if s["role"] == "normal" and s["rubric"] == rubric),
+                       key=lambda s: -s["importance"])) for rubric in RUBRICS]
+    groups.append(("En bref", "breves", "breve", [s for s in plan if s["role"] == "breve"]))
+    chapters = []
+    for title, kind, role, subjects in groups:
+        if not subjects:
+            continue
+        print(f"→ {title} ({len(subjects)} sujet(s))")
+        size = MAX_BREVES if role == "breve" else SUBJECTS_PER_CHUNK
+        segments = []
+        for start in range(0, len(subjects), size):
+            segments += write_chunk(llm, title, subjects[start:start + size], role)
+        if segments:
+            chapters.append({"title": title, "kind": kind, "segments": segments})
+    return chapters
+
+
+def assemble_script(news: list[dict], memo: dict | None, intro: str, outro: str,
+                    review: dict | None = None, recap: dict | None = None) -> dict:
+    """Ordre de l'épisode, pensé pour la mémoire : le fil rouge au début ET à la fin (on retient mieux
+    ce qui est entendu en premier et en dernier), le rappel avant les nouvelles, le quiz en dernier."""
+    chapters = ([review] if review else []) + news + ([recap] if recap else []) \
+        + (memo_chapters(memo) if memo else [])
+    fil = (memo or {}).get("fil_rouge", "")
+    intro_segments = [{"text": intro}]
+    if fil:
+        intro_segments.append({"text": f"Le fil rouge du jour : {fil}", "style": "cle"})
+    summary = summary_sentence(chapters)
+    if summary:
+        intro_segments.append({"text": summary})
+    outro_segments = ([{"text": f"Si vous ne deviez retenir qu'une chose : {fil}", "style": "cle"}] if fil else []) \
+        + [{"text": outro}]
+    return {"intro": " ".join(s["text"] for s in intro_segments), "intro_segments": intro_segments,
+            "chapters": chapters,
+            "outro": " ".join(s["text"] for s in outro_segments), "outro_segments": outro_segments}
+
+
+def build_script(items: list[dict], episodes: list[dict], today: date,
+                 review: dict | None) -> tuple[dict, list[str], dict | None, list[str]]:
     with httpx.Client(timeout=180) as client:
         llm = LLM(client)
         if not llm.providers:
@@ -663,32 +782,27 @@ def build_script(items: list[dict]) -> tuple[dict, list[str]]:
         plan = fit_to_length(plan_episode(llm, items))
         merged = sum(1 for s in plan if len(s["items"]) > 1)
         print(f"✓ plan : {len(plan)} sujets retenus sur {len(items)} news "
-              f"({merged} sujet(s) regroupant plusieurs sources)")
-        chapters = []
-        for rubric in RUBRICS:
-            subjects = sorted((s for s in plan if s["rubric"] == rubric), key=lambda s: -s["importance"])
-            if not subjects:
-                continue
-            print(f"→ {rubric} ({len(subjects)} sujets)")
-            segments = []
-            for start in range(0, len(subjects), SUBJECTS_PER_CHUNK):
-                segments += write_chunk(llm, rubric, subjects[start:start + SUBJECTS_PER_CHUNK])
-            if segments:
-                chapters.append({"title": rubric, "segments": segments})
-        if not chapters:
+              f"({merged} sujet(s) regroupant plusieurs sources, "
+              f"{sum(1 for s in plan if s['role'] == 'breve')} brève(s))")
+        news = write_news(llm, plan)
+        if not news:
             raise AllProvidersFailed("aucun chapitre n'a passé les vérifications")
-        intro, outro = write_frame(llm, chapters, items)
-    return {"intro": f"{intro} {summary_sentence(chapters)}", "chapters": chapters, "outro": outro}, llm.used
+        print("→ Expert pédagogique : fil rouge, à retenir, concept du jour, quiz")
+        memo, replaced = ask_memo(llm, news, seen_concepts(episodes))
+        recap = recap_chapter(llm, episodes, today)
+        intro, outro = write_frame(llm, today)
+    script = assemble_script(news, memo, intro, outro, review, recap)
+    return script, llm.used, memo, replaced
 
 
-def quiet_day_script() -> dict:
-    """Jour sans news : épisode flash, sans appeler le LLM (on économise le quota)."""
-    return {
-        "intro": "Bonjour et bienvenue dans CyberVeille. Journée calme : aucune nouvelle "
-                 "publication marquante dans nos sources depuis le dernier épisode.",
-        "chapters": [],
-        "outro": "Profitez-en pour faire vos mises à jour. À demain !",
-    }
+def quiet_day_script(review: dict | None = None, recap: dict | None = None) -> dict:
+    """Jour sans news : épisode flash, sans appeler le LLM (on économise le quota).
+    Les rappels des jours passés et, le dimanche, la semaine en bref sont tout de même lus."""
+    return assemble_script(
+        [], None,
+        "Bonjour et bienvenue dans CyberVeille. Journée calme : aucune nouvelle publication "
+        "marquante dans nos sources depuis le dernier épisode.",
+        "Profitez-en pour faire vos mises à jour. À demain !", review, recap)
 
 
 def all_texts(script: dict) -> list[str]:
@@ -703,30 +817,42 @@ def sources_by_chapter(script: dict, items: list[dict]) -> list[dict]:
     by_id = {i["id"]: i for i in items}
     out = []
     for chapter in script["chapters"]:
-        ids = list(dict.fromkeys(s for seg in chapter["segments"] for s in seg["sources"]))
-        out.append({"rubric": chapter["title"],
-                    "links": [{"title": by_id[x]["title"], "url": by_id[x]["url"], "source": by_id[x]["source"]}
-                              for x in ids]})
+        ids = list(dict.fromkeys(s for seg in chapter["segments"] for s in seg.get("sources", []) if s in by_id))
+        if ids:
+            out.append({"rubric": chapter["title"],
+                        "links": [{"title": by_id[x]["title"], "url": by_id[x]["url"],
+                                   "source": by_id[x]["source"]} for x in ids]})
     return out
 
 
-def write_notes(script: dict, items: list[dict]) -> str:
-    by_id = {i["id"]: i for i in items}
-    date = datetime.now(timezone.utc).strftime("%d/%m/%Y")
-    lines = [f"# CyberVeille — {date}", ""]
-    for chapter in script["chapters"]:
-        lines.append(f"## {chapter['title']}")
-        listed = []
-        for seg in chapter["segments"]:
-            for src in seg["sources"]:
-                if src not in listed:
-                    listed.append(src)
-                    item = by_id[src]
-                    lines.append(f"- [{item['title']}]({item['url']}) — {item['source']}")
+def write_notes(script: dict, items: list[dict], memo: dict | None) -> str:
+    """Notes d'épisode (flux podcast) : la fiche du jour, puis les sources."""
+    date_fr = datetime.now(timezone.utc).strftime("%d/%m/%Y")
+    lines = [f"# CyberVeille — {date_fr}", ""]
+    if memo and memo.get("fil_rouge"):
+        lines += ["## L'essentiel à retenir", f"Fil rouge : {memo['fil_rouge']}"]
+        lines += [f"- {point}" for point in memo.get("a_retenir", [])]
+        if memo.get("concept"):
+            lines += ["", "## Le concept du jour", f"{memo['concept']['nom']} : {memo['concept']['explication']}"]
+        if memo.get("quiz"):
+            lines += ["", "## Quiz"]
+            lines += [f"- {qa['question']} → {qa['reponse']}" for qa in memo["quiz"]]
+        lines.append("")
+    for block in sources_by_chapter(script, items):
+        lines.append(f"## {block['rubric']}")
+        lines += [f"- [{link['title']}]({link['url']}) — {link['source']}" for link in block["links"]]
         lines.append("")
     lines.append("_Résumés générés automatiquement par IA à partir des sources ci-dessus : "
                  "vérifiez toujours l'information à la source._")
     return "\n".join(lines)
+
+
+def load_episodes() -> list[dict]:
+    try:
+        episodes = json.loads(EPISODES_FILE.read_text(encoding="utf-8"))
+        return episodes if isinstance(episodes, list) else []
+    except (OSError, ValueError):
+        return []
 
 
 def main() -> int:
@@ -737,18 +863,23 @@ def main() -> int:
     items = select_candidates(json.loads(ITEMS_FILE.read_text(encoding="utf-8")))
     print(f"{len(items)} news soumises au rédacteur en chef")
 
+    today = datetime.now(timezone.utc).date()
+    episodes = [ep for ep in load_episodes() if ep.get("date") != today.isoformat()]   # relance : pas soi-même
+    reviews = review_items(episodes, today)
+    review = review_chapter(reviews)
+    memo, replaced = None, []
     if not items:
-        script, used = quiet_day_script(), []
+        script, used = quiet_day_script(review, recap_chapter(None, episodes, today)), []
     else:
         try:
-            script, used = build_script(items)
+            script, used, memo, replaced = build_script(items, episodes, today, review)
         except AllProvidersFailed as exc:
             print(f"✗ {exc}", file=sys.stderr)
             return 1  # job en échec → mail d'alerte GitHub
 
-    used_ids = {s for c in script["chapters"] for seg in c["segments"] for s in seg["sources"]}
+    used_ids = {s for c in script["chapters"] for seg in c["segments"] for s in seg.get("sources", [])}
     script["meta"] = {
-        "date": datetime.now(timezone.utc).date().isoformat(),
+        "date": today.isoformat(),
         "providers": used,
         "item_ids": sorted(used_ids),            # news lues dans l'épisode
         # News examinées par le rédacteur (retenues OU écartées) : marquées « vues » après publication,
@@ -757,20 +888,29 @@ def main() -> int:
         "words": sum(len(t.split()) for t in all_texts(script)),
         "english_heavy": sum(len(english_heavy_sentences(t)) for t in all_texts(script)),
         "sources": sources_by_chapter(script, items),
+        # La « fiche du jour » : relue par les rappels des jours suivants et affichée dans l'app.
+        "memo": memo,
+        "reviews": len(reviews),
     }
     BUILD_DIR.mkdir(exist_ok=True)
     SCRIPT_FILE.write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
-    NOTES_FILE.write_text(write_notes(script, items), encoding="utf-8")
+    NOTES_FILE.write_text(write_notes(script, items, memo), encoding="utf-8")
     minutes = script["meta"]["words"] / 145
     print(f"→ {script['meta']['words']} mots (≈ {minutes:.0f} min), {len(used_ids)} news couvertes "
           f"→ build/script.json + build/notes.md")
+    pedago = "aucune (journée calme)"
+    if memo:
+        pedago = (f"fil rouge ✓, {len(memo['a_retenir'])} à retenir, concept : "
+                  f"{(memo.get('concept') or {}).get('nom', 'aucun')}, {len(memo['quiz'])} question(s)"
+                  + (f" — version de secours pour : {', '.join(replaced)}" if replaced else ""))
     job_summary(f"### Script\n- {script['meta']['words']} mots (≈ {minutes:.0f} min), "
                 f"{sum(len(c['segments']) for c in script['chapters'])} passages, {len(used_ids)} news citées\n"
                 f"- Fournisseur : {', '.join(used) or 'aucun (journée calme)'}\n"
                 f"- Rédacteur en chef : {', '.join(f'{k} {v}' for k, v in EDITOR_STATS.items()) or 'plan de secours'}\n"
                 f"- {len(items)} news candidates · phrases trop chargées en anglais restantes : "
                 f"{script['meta']['english_heavy']} (raccourcies à la lecture)\n"
-                + "".join(f"- {c['title']} : {len(c['segments'])} sujet(s)\n" for c in script["chapters"]))
+                f"- Pédagogie : {pedago} · rappels des jours passés : {len(reviews)}\n"
+                + "".join(f"- {c['title']} : {len(c['segments'])} passage(s)\n" for c in script["chapters"]))
     return 0
 
 

@@ -13,7 +13,8 @@ const SPEEDS = [1, 1.15, 1.3, 1.5, 1.75, 2];
 
 const $ = (id) => document.getElementById(id);
 const audio = $("audio");
-const state = { episodes: [], current: null, chapters: [], cached: new Set(), downloading: new Map() };
+const state = { episodes: [], current: null, chapters: [], cached: new Set(), downloading: new Map(), openFiches: new Set() };
+const CARDS_KEY = "cv:cards";              // progression des révisions (boîtes de Leitner), sur l'appareil
 
 // ---------- Stockage local (progression, réglages) : peut être indisponible, on ne plante jamais ----------
 const store = {
@@ -123,6 +124,34 @@ function progressBar(pct) {
   return el("div", { class: "progress" }, fill);
 }
 
+// ---------- Fiche du jour : fil rouge, à retenir, concept, quiz ----------
+// Relire après avoir écouté = deux portes d'entrée pour la même information (on retient mieux).
+function ficheBlock(ep) {
+  const f = ep.fiche;
+  if (!f || !f.fil_rouge) return null;
+  const box = el("details", { class: "fiche", ontoggle: () => {
+    if (box.open) state.openFiches.add(ep.guid); else state.openFiches.delete(ep.guid);
+  } }, el("summary", {}, "Fiche du jour : à retenir et quiz"));
+  box.open = state.openFiches.has(ep.guid);
+  box.append(el("p", { class: "fil-rouge" }, el("strong", {}, "Fil rouge"), String(f.fil_rouge)));
+  if (Array.isArray(f.a_retenir) && f.a_retenir.length) {
+    box.append(el("h3", {}, "À retenir"), el("ol", {}, ...f.a_retenir.map((t) => el("li", {}, String(t)))));
+  }
+  if (f.concept && f.concept.nom) {
+    box.append(el("h3", {}, `Le concept du jour : ${f.concept.nom}`), el("p", {}, String(f.concept.explication || "")));
+  }
+  if (Array.isArray(f.quiz) && f.quiz.length) {
+    box.append(el("h3", {}, "Quiz"));
+    for (const qa of f.quiz) {
+      const answer = el("p", { class: "answer", hidden: true }, String(qa.reponse));
+      const show = el("button", { type: "button", onclick: () => { answer.hidden = false; show.hidden = true; } },
+        "Voir la réponse");
+      box.append(el("div", { class: "qa" }, el("p", {}, String(qa.question)), answer, show));
+    }
+  }
+  return box;
+}
+
 function render() {
   const list = $("episodes");
   list.replaceChildren();
@@ -167,6 +196,7 @@ function render() {
         badges),
       progressBar(pct),
       actions,
+      ficheBlock(ep),
       (ep.sources || []).length ? sources : null));
   }
   $("offline-banner").hidden = online;
@@ -272,6 +302,65 @@ function setupMediaSession(ep) {
   set("seekto", (d) => { audio.currentTime = d.seekTime; });
 }
 
+// ---------- Révisions espacées (logique dans revision.js) ----------
+const rev = { cards: [], i: 0 };
+
+function updateReviseEntry() {
+  const R = window.CVRevision;
+  // Pendant une mise à jour de l'app, une ancienne page peut charger le nouveau script : on ne plante pas.
+  if (!$("revise-entry") || !$("revision")) return;
+  if (!R) { $("revise-entry").hidden = true; return; }
+  const progress = R.prune(store.get(CARDS_KEY, {}), state.episodes);   // oublie les épisodes disparus
+  store.set(CARDS_KEY, progress);
+  const total = R.cardsFrom(state.episodes).length;
+  const due = R.dueCards(state.episodes, progress, R.todayISO());
+  $("revise-entry").hidden = total === 0 || !$("revision").hidden;
+  $("btn-revise").hidden = due.length === 0;
+  $("btn-revise").textContent = `Réviser · ${due.length} carte${due.length > 1 ? "s" : ""}`;
+  $("revise-info").textContent = due.length
+    ? "Quelques questions des épisodes passés : deux minutes pour ne pas oublier."
+    : "Rien à réviser aujourd'hui ✓ Les questions reviennent après 1, 3, 7, 14 puis 30 jours.";
+}
+
+function showCard() {
+  const card = rev.cards[rev.i];
+  $("rev-progress").textContent = card ? `Carte ${rev.i + 1} sur ${rev.cards.length} · épisode du ${fmtDate(card.date)}` : "";
+  $("rev-question").textContent = card ? card.question : "Révision terminée ✓ À demain pour la suite.";
+  $("rev-answer").textContent = card ? card.reponse : "";
+  $("rev-answer").hidden = true;
+  $("rev-show").hidden = !card;
+  $("rev-again").hidden = true;
+  $("rev-good").hidden = true;
+}
+
+function startRevision() {
+  const R = window.CVRevision;
+  rev.cards = R.dueCards(state.episodes, store.get(CARDS_KEY, {}), R.todayISO());
+  rev.i = 0;
+  $("revision").hidden = false;
+  $("revise-entry").hidden = true;
+  showCard();
+  $("revision").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function gradeCard(knew) {
+  const R = window.CVRevision;
+  const card = rev.cards[rev.i];
+  if (!card) return;
+  store.set(CARDS_KEY, R.grade(store.get(CARDS_KEY, {}), card.id, knew, R.todayISO()));
+  rev.i += 1;
+  showCard();
+}
+
+const on = (id, fn) => { const node = $(id); if (node) node.addEventListener("click", fn); };
+on("btn-revise", startRevision);
+on("rev-show", () => {
+  $("rev-answer").hidden = false; $("rev-show").hidden = true; $("rev-again").hidden = false; $("rev-good").hidden = false;
+});
+on("rev-good", () => gradeCard(true));
+on("rev-again", () => gradeCard(false));
+on("rev-close", () => { $("revision").hidden = true; updateReviseEntry(); });
+
 // ---------- Installation sur iPhone ----------
 function installHint() {
   const ios = /iPhone|iPad|iPod/.test(navigator.userAgent);
@@ -307,6 +396,7 @@ async function start() {
   await loadEpisodes();
   if ("caches" in window) { await cleanupOldDownloads(); await refreshCachedList(); }
   render();
+  updateReviseEntry();
   showStorage();
 
   // Téléchargement auto du dernier épisode : iOS ne permet pas de le faire en arrière-plan,

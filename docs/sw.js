@@ -5,11 +5,11 @@
  *  - fichiers audio téléchargés : servis depuis le cache, y compris par morceaux (requêtes « Range »),
  *    indispensable car Safari lit l'audio morceau par morceau
  */
-const VERSION = "2026-10-16";               // à changer quand on modifie l'app → force la mise à jour
+const VERSION = "2026-10-16-memo";               // à changer quand on modifie l'app → force la mise à jour
 const SHELL = `cv-shell-${VERSION}`;
 const DATA = "cv-data";
 const AUDIO = "cv-audio";                   // partagé avec app.js (téléchargements)
-const SHELL_FILES = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest",
+const SHELL_FILES = ["./", "index.html", "style.css", "app.js", "revision.js", "manifest.webmanifest",
                      "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png"];
 
 self.addEventListener("install", (event) => {
