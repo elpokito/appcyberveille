@@ -47,8 +47,39 @@ SAMPLE_VOICES = ["fr-FR-DeniseNeural", "fr-FR-HenriNeural",
 
 SAMPLE_RATE = 24000       # fréquence de sortie d'edge-tts : inutile de monter plus haut
 BITRATE = "64k"           # mono 64 kbit/s ≈ 14 Mo pour 30 min : léger pour le téléphone, clair pour la voix
-SHORT_PAUSE = 0.6         # secondes entre deux passages
-LONG_PAUSE = 1.3          # secondes entre deux rubriques
+SHORT_PAUSE = 0.6         # secondes entre deux passages (si pas de jingle)
+LONG_PAUSE = 1.3          # secondes entre deux rubriques (si pas de jingle)
+JINGLE_GAP = 0.35         # petit silence de part et d'autre d'un jingle, pour qu'il « respire »
+
+# Jingles au violon, générés par ffmpeg (aucun fichier externe, aucun droit d'auteur).
+# Pour utiliser ton propre son, dépose assets/jingle_news.mp3
+# (libre de droits, ex. licence CC0) : il remplace automatiquement celui généré.
+# Mettre JINGLES=0 dans l'environnement pour revenir aux simples silences.
+JINGLES = os.environ.get("JINGLES", "1") != "0"
+ASSETS_DIR = ROOT / "assets"
+
+
+# Violon synthétisé : une corde riche en harmoniques, jouée à l'archet (attaque progressive,
+# vibrato qui arrive après l'attaque, relâchement doux), avec une légère réverbération.
+VIOLIN_HARMONICS = [1, 0.55, 0.4, 0.28, 0.22, 0.15, 0.12, 0.08, 0.06, 0.04]
+G4, C5, E5 = 392.0, 523.25, 659.25
+
+
+def _bowed(freq: float, start: float, length: float, gain: float) -> str:
+    """Une note de violon à l'archet, sous forme d'expression ffmpeg (aevalsrc)."""
+    t = f"(t-{start})"
+    vibrato = f"(min({t},0.25)/0.25)*{0.006 * freq / 5.5:.4f}*sin(2*PI*5.5*{t})"   # 5,5 Hz, ±0,6 %
+    tone = "+".join(f"{a}*sin(2*PI*{freq * n}*{t}+{n}*{vibrato})" for n, a in enumerate(VIOLIN_HARMONICS, 1))
+    envelope = f"(1-exp(-14*{t}))*if(lt({t},{length}),1,exp(-9*({t}-{length})))"
+    return f"{gain}*gte(t,{start})*{envelope}*({tone})"
+
+
+# Entre deux news : sol - do - mi, liés (1,8 s).
+NEWS_JINGLE = (" + ".join([_bowed(G4, 0, 0.22, 0.12), _bowed(C5, 0.24, 0.22, 0.12),
+                           _bowed(E5, 0.48, 0.5, 0.12)]), 1.8)
+VIOLIN_FX = ("highpass=f=180,lowpass=f=4500,"                                   # couleur « bois »
+             "aecho=0.8:0.8:60|120|190|260:0.4|0.3|0.2|0.12,"                    # réverbération légère
+             "loudnorm=I=-21:TP=-3")                                             # un peu sous la voix
 TTS_RETRIES = 3           # le service est en ligne : une coupure réseau ne doit pas tout faire échouer
 PARALLEL = 4              # passages synthétisés en même temps (plus rapide, sans abuser du service)
 
@@ -172,6 +203,19 @@ def make_silence(seconds: float, path: Path) -> None:
          "-t", str(seconds), *WAV_ARGS, str(path)])
 
 
+def make_jingle(kind: str, path: Path) -> None:
+    """Crée le jingle en WAV : fichier personnel s'il existe dans assets/, sinon synthèse ffmpeg."""
+    custom = ASSETS_DIR / f"jingle_{kind}.mp3"
+    if custom.exists():
+        run(["ffmpeg", "-y", "-v", "error", "-i", str(custom), *WAV_ARGS, str(path)])
+        return
+    expr, seconds = NEWS_JINGLE
+    run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi",
+         "-i", f"aevalsrc='{expr}':s={SAMPLE_RATE}:d={seconds}",
+         "-af", f"{VIOLIN_FX},afade=t=out:st={seconds - 0.4}:d=0.4",
+         "-t", str(seconds), *WAV_ARGS, str(path)])   # coupe la traîne de l'écho : durée exacte
+
+
 def assemble(timeline: list[tuple[Path, str | None]], meta: dict) -> list[dict]:
     """
     timeline : liste de (fichier, titre_de_chapitre_ou_None), dans l'ordre d'écoute.
@@ -276,15 +320,32 @@ def main() -> int:
         print(f"\n✗ {exc}", file=sys.stderr)
         return 1   # job en échec → mail d'alerte (on ne publie jamais un épisode à trous)
 
-    short, long_ = PARTS_DIR / "pause_courte.wav", PARTS_DIR / "pause_longue.wav"
-    make_silence(SHORT_PAUSE, short)
-    make_silence(LONG_PAUSE, long_)
+    # Ce qui sépare deux passages : le jingle violon UNIQUEMENT entre deux articles d'une même rubrique.
+    # Changement de rubrique (l'annonce « Alertes… » suffit), intro et conclusion : simple silence.
+    make_silence(SHORT_PAUSE, PARTS_DIR / "pause_courte.wav")
+    make_silence(LONG_PAUSE, PARTS_DIR / "pause_longue.wav")
+    after_title = [PARTS_DIR / "pause_courte.wav"]       # entre « Nom de la rubrique. » et son 1er article
+    between_rubrics = [PARTS_DIR / "pause_longue.wav"]
+    if JINGLES:
+        gap = PARTS_DIR / "souffle.wav"
+        make_silence(JINGLE_GAP, gap)
+        make_jingle("news", PARTS_DIR / "jingle_news.wav")
+        between_news = [gap, PARTS_DIR / "jingle_news.wav", gap]
+    else:
+        between_news = [PARTS_DIR / "pause_courte.wav"]
 
-    # Ordre d'écoute : passage, pause, passage… (pause longue avant chaque nouvelle rubrique)
+    # Ordre d'écoute : passage, séparateur, passage…
     timeline: list[tuple[Path, str | None]] = []
     for i, (_, path, chapter) in enumerate(jobs):
         if i > 0:
-            timeline.append((long_ if chapter else short, None))
+            previous = jobs[i - 1][2]
+            if chapter:
+                separator = between_rubrics
+            elif previous and previous != "Introduction":   # on sort d'une annonce de rubrique
+                separator = after_title
+            else:
+                separator = between_news
+            timeline += [(p, None) for p in separator]
         timeline.append((to_wav(path), chapter))
 
     print("   assemblage et normalisation du volume…")

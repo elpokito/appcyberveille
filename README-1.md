@@ -1,20 +1,26 @@
-### Salut, moi c'est NI 👋
+## Salut, moi c'est NI 👋
 
-Étudiant en **2e année de bachelor cybersécurité et ethical hacking**, je cherche un **stage ou une alternance**
-en cybersécurité (SOC, pentest, sécurité cloud ou DevSecOps).
+Étudiant en **2e année de bachelor cybersécurité & ethical hacking**, curieux de comprendre comment les choses
+fonctionnent… et surtout comment elles cassent.
 
-J'aime comprendre comment les choses fonctionnent, et surtout comment elles cassent. Je construis des projets
-qui me servent au quotidien, et j'essaie d'y appliquer ce que j'apprends en cours.
+- 🔭 Je travaille sur [**CyberVeille**](https://github.com/elpokito/appcyberveille) : un podcast de veille cyber en
+  français, généré automatiquement chaque nuit, que j'écoute dans le métro
+- 🌱 J'apprends le pentest web, l'analyse réseau et l'automatisation de la sécurité dans les pipelines CI/CD
+- 🎯 Je cherche un **stage ou une alternance** en cybersécurité : SOC, pentest, DevSecOps… je suis ouvert à tout !
+- 👯 Partant pour des CTF, des labs ou des projets open source à plusieurs
+- 💬 Parlez-moi de veille cyber, d'automatisation ou de vos meilleurs write-ups
+- 🏅 Certifié Cisco Junior Cybersecurity Analyst
+- 📸 Quand je ne suis pas derrière un terminal, je suis derrière un appareil photo
+- 📫 Me joindre : [LinkedIn](https://www.linkedin.com/in/TON-PROFIL) · [E-mail](mailto:TON-EMAIL)
 
-**En ce moment**
-- 🎧 [**CyberVeille**](https://github.com/elpokito/appcyberveille) : un podcast de veille cyber en français, généré
-  automatiquement chaque nuit (Python, GitHub Actions, LLM) et écouté hors ligne dans une app que j'ai faite.
-- 📚 Je révise l'ethical hacking : OSINT, vulnérabilités web (XSS, injections SQL), méthodologie de pentest.
+### 🧰 Ma boîte à outils
 
-**Certification**
-- Cisco Junior Cybersecurity Analyst
+**Offensif & web** : Burp Suite · OWASP ZAP · sqlmap · Metasploit · Hydra · John the Ripper · Gobuster · Nikto
 
-**Outils que j'utilise**
-Python · Linux · Git & GitHub Actions · JavaScript · Burp Suite · Wireshark · Nmap
+**Réseau** : Wireshark · Nmap · tcpdump · Netcat
 
-📫 [LinkedIn](https://www.linkedin.com/in/TON-PROFIL) · [E-mail](mailto:TON-EMAIL)
+**Systèmes** : Kali Linux · Ubuntu · Windows · VirtualBox · VMware · Bash · PowerShell
+
+**Défense & CTI** : MITRE ATT&CK · OWASP Top 10 · Exploit-DB · CVE / NVD · VirusTotal · Shodan · OSINT Framework
+
+**Dev & automatisation** : Python · JavaScript · Git · GitHub Actions · Docker

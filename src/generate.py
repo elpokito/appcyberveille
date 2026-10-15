@@ -145,7 +145,8 @@ Texte du passage…"""
 FRAME_PROMPT = f"""Tu es l'animateur de « CyberVeille », podcast quotidien de veille cyber en français.
 {SAFETY_RULES}
 On te donne le plan de l'épisode du jour. Écris :
-- une INTRO de 2 ou 3 phrases : salutation, date, puis les 2 ou 3 sujets les plus marquants ;
+- une INTRO de 2 phrases : salutation et date, puis le sujet le plus marquant du jour. \
+Ne compte pas les sujets : un sommaire chiffré est lu juste après ton intro ;
 - une OUTRO de 1 ou 2 phrases pour conclure.
 Aucune URL, aucun markdown. Réponds exactement sous cette forme :
 INTRO: …
@@ -566,6 +567,36 @@ def select_candidates(items: list[dict]) -> list[dict]:
     return sorted(items, key=score, reverse=True)[:MAX_CANDIDATES]
 
 
+# Comment annoncer chaque rubrique dans le sommaire : (singulier, pluriel).
+SUMMARY_WORDS = {
+    "Alertes et failles critiques": ("alerte de sécurité", "alertes de sécurité"),
+    "Incidents et fuites de données": ("incident ou fuite de données", "incidents et fuites de données"),
+    "Menaces et groupes d'attaquants": ("sujet sur les menaces et les attaquants",
+                                        "sujets sur les menaces et les attaquants"),
+    "Réglementation et institutions": ("actualité réglementaire", "actualités réglementaires"),
+    "Outils, recherche et divers": ("news outils et recherche", "news outils et recherche"),
+}
+NUMBERS = ["zéro", "une", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix",
+           "onze", "douze", "treize", "quatorze", "quinze", "seize"]
+
+
+def summary_sentence(chapters: list[dict]) -> str:
+    """Sommaire chiffré lu après l'intro, calculé par le code (pas par le LLM : les chiffres sont toujours justes).
+    Ex. : « Au sommaire aujourd'hui : deux alertes de sécurité, une actualité réglementaire et trois news… »"""
+    parts = []
+    for chapter in chapters:
+        n = len(chapter["segments"])
+        one, many = SUMMARY_WORDS.get(chapter["title"], ("sujet", "sujets"))
+        word = NUMBERS[n] if n < len(NUMBERS) else str(n)
+        if n == 1 and one.startswith(("sujet", "incident")):
+            word = "un"                                   # « un sujet », mais « une alerte », « une news »
+        parts.append(f"{word} {one if n == 1 else many}")
+    if not parts:
+        return ""
+    listing = parts[0] if len(parts) == 1 else ", ".join(parts[:-1]) + " et " + parts[-1]
+    return f"Au sommaire aujourd'hui : {listing}. C'est parti !"
+
+
 def build_script(items: list[dict]) -> tuple[dict, list[str]]:
     with httpx.Client(timeout=180) as client:
         llm = LLM(client)
@@ -589,7 +620,7 @@ def build_script(items: list[dict]) -> tuple[dict, list[str]]:
         if not chapters:
             raise AllProvidersFailed("aucun chapitre n'a passé les vérifications")
         intro, outro = write_frame(llm, chapters, items)
-    return {"intro": intro, "chapters": chapters, "outro": outro}, llm.used
+    return {"intro": f"{intro} {summary_sentence(chapters)}", "chapters": chapters, "outro": outro}, llm.used
 
 
 def quiet_day_script() -> dict:

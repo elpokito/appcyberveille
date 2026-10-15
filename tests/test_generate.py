@@ -70,3 +70,12 @@ def test_budget_par_minute_attend_avant_de_deborder(monkeypatch):
         budget.wait_for(3000)
         budget.spent(3000)
     assert len(pauses) == 1          # la 3e requête attend que la minute se libère, au lieu d'un refus 429
+
+
+def test_sommaire_chiffre_et_accorde():
+    chapitres = [{"title": "Alertes et failles critiques", "segments": [{}, {}]},
+                 {"title": "Incidents et fuites de données", "segments": [{}]},
+                 {"title": "Outils, recherche et divers", "segments": [{}]}]
+    phrase = generate.summary_sentence(chapitres)
+    assert phrase.startswith("Au sommaire aujourd'hui : deux alertes de sécurité, un incident")
+    assert "une news outils et recherche" in phrase
