@@ -1,0 +1,68 @@
+# Mise en ligne de l'app CyberVeille et du flux podcast sur GitHub Pages.
+# Se lance : après chaque épisode réussi, quand tu modifies l'app (docs/), ou à la main.
+
+name: Mise en ligne du site
+
+on:
+  workflow_run:
+    workflows: ["Épisode quotidien"]
+    types: [completed]
+  push:
+    branches: [main]
+    paths: ["docs/**"]
+  workflow_dispatch:
+
+# Rien par défaut ; chaque job déclare ce dont il a besoin (moindre privilège).
+permissions: {}
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    # Après un épisode : seulement s'il a réussi.
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read          # lire le code et télécharger les MP3 des Releases
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main           # dernière version, y compris le commit du robot
+
+      - name: Assembler le site (app + flux + 7 derniers épisodes)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p _site/audio
+          cp -r docs/. _site/
+          # Les MP3 récents sont copiés sur le site pour que l'app puisse les garder hors ligne
+          # (même origine que l'app = mise en cache possible par le navigateur).
+          python3 - <<'PY'
+          import json, os, subprocess
+          episodes = json.load(open("docs/episodes.json")) if os.path.exists("docs/episodes.json") else []
+          for ep in episodes:
+              if ep.get("audio"):   # seuls les 7 plus récents ont un champ "audio"
+                  subprocess.run(["gh", "release", "download", f"ep-{ep['date']}", "--pattern", "*.mp3",
+                                  "--dir", "_site/audio", "--clobber"], check=True)
+          PY
+          du -sh _site
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write            # publier sur GitHub Pages
+      id-token: write         # prouver à GitHub Pages que c'est bien ce workflow qui publie
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

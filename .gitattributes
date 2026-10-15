@@ -1,6 +1,7 @@
-   # Fins de ligne LF pour tous les fichiers texte (le pipeline tourne sous Linux)
-   * text=auto eol=lf
+# Fins de ligne LF pour tous les fichiers texte (le pipeline tourne sous Linux)
+* text=auto eol=lf
 
-   # Fichiers binaires : ne jamais convertir
-   *.mp3 binary
-   *.png binary
+# Fichiers binaires : ne jamais convertir
+*.mp3 binary
+*.png binary
+*.wav binary

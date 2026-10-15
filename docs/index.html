@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Politique de sécurité : seuls nos propres fichiers peuvent s'exécuter (aucun script externe,
+       aucun script en ligne). L'audio peut aussi venir des Releases GitHub (épisodes anciens). -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;
+                 media-src 'self' blob: https://github.com https://*.githubusercontent.com;
+                 connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>CyberVeille</title>
+  <meta name="description" content="La veille cybersécurité du jour, en audio et en français.">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CyberVeille">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <img src="icons/icon-192.png" alt="" class="logo" width="40" height="40">
+    <div>
+      <h1>CyberVeille</h1>
+      <p class="tagline">La veille cyber du jour, en audio</p>
+    </div>
+  </header>
+
+  <section id="install-hint" class="notice" hidden>
+    <strong>Installer l'app :</strong> dans Safari, touchez <span aria-label="Partager">⬆︎ Partager</span>
+    puis « Sur l'écran d'accueil ». Indispensable pour l'écoute hors ligne.
+    <button type="button" class="link" id="install-dismiss">Plus tard</button>
+  </section>
+
+  <section id="offline-banner" class="notice warn" hidden>
+    Hors connexion : seuls les épisodes téléchargés sont disponibles.
+  </section>
+
+  <section class="settings">
+    <label class="switch">
+      <input type="checkbox" id="auto-download">
+      <span>Télécharger automatiquement le dernier épisode à l'ouverture</span>
+    </label>
+    <p class="hint" id="storage-info"></p>
+  </section>
+
+  <main>
+    <h2 class="visually-hidden">Épisodes</h2>
+    <p id="status" class="status">Chargement des épisodes…</p>
+    <ol id="episodes" class="episodes"></ol>
+  </main>
+
+  <footer class="about">
+    <p>Résumés générés automatiquement par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée).
+      Des erreurs sont possibles : vérifiez toujours l'information à la source, dont le lien est donné sous chaque épisode.</p>
+    <p>Aucun compte, aucun cookie, aucun traceur : votre progression reste sur cet appareil.</p>
+    <p><a href="feed.xml">Flux podcast</a> · <a href="https://github.com/elpokito/appcyberveille" rel="noopener">Code source (AGPL-3.0)</a></p>
+  </footer>
+
+  <!-- Lecteur fixé en bas de l'écran -->
+  <section id="player" class="player" hidden aria-label="Lecteur">
+    <div class="player-head">
+      <div>
+        <p id="player-title" class="player-title"></p>
+        <p id="player-chapter" class="player-chapter"></p>
+      </div>
+      <button type="button" id="btn-chapters" class="ghost" aria-expanded="false">Chapitres</button>
+    </div>
+    <ol id="chapter-list" class="chapter-list" hidden></ol>
+    <input type="range" id="seek" min="0" max="100" step="1" value="0" aria-label="Position">
+    <div class="times"><span id="t-cur">0:00</span><span id="t-left">-0:00</span></div>
+    <div class="controls">
+      <button type="button" id="btn-speed" class="ghost speed" aria-label="Vitesse">1×</button>
+      <button type="button" id="btn-back" aria-label="Reculer de 15 secondes">↺ 15</button>
+      <button type="button" id="btn-play" class="play" aria-label="Lecture">▶</button>
+      <button type="button" id="btn-fwd" aria-label="Avancer de 30 secondes">30 ↻</button>
+      <button type="button" id="btn-next" class="ghost" aria-label="Chapitre suivant">⇥</button>
+    </div>
+    <audio id="audio" preload="metadata"></audio>
+  </section>
+</body>
+</html>

@@ -1,0 +1,38 @@
+# Tests automatiques : à chaque modification du code, on vérifie que rien n'est cassé
+# AVANT que le pipeline nocturne ne tourne avec.
+
+name: Tests
+
+on:
+  push:
+    branches: [main]
+    paths: ["src/**", "tests/**", "docs/**", "requirements*.txt", ".github/workflows/tests.yml"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read            # lecture seule : les tests n'ont besoin de rien d'autre
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Tests Python (sans réseau, sans clé API)
+        run: python -m pytest -q tests
+
+      - name: Vérifier la syntaxe de l'app
+        run: |
+          node --check docs/app.js
+          node --check docs/sw.js
+          python -c "import json; json.load(open('docs/manifest.webmanifest'))"

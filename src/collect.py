@@ -11,8 +11,10 @@ Ce script ne parle à aucun LLM et n'utilise aucune clé API.
 import hashlib
 import html
 import json
+import os
 import re
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from pathlib import Path
@@ -20,6 +22,8 @@ from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 import feedparser
 import httpx
+
+from common import gh_warning, job_summary
 
 # --------------------------------------------------------------------------
 # Configuration
@@ -36,7 +40,8 @@ WINDOW_HOURS = 48
 SEEN_RETENTION_DAYS = 14   # au-delà, on oublie qu'on a déjà traité un sujet
 MAX_SUMMARY_CHARS = 600    # extrait max envoyé au LLM (économie de tokens + droit d'auteur)
 TITLE_SIMILARITY = 0.85    # au-dessus, deux titres sont considérés comme le même sujet
-MAX_FAILED_RATIO = 0.30    # si plus de 30 % des flux échouent, on signale une panne
+MAX_FAILED_RATIO = 0.50    # plus de la moitié des sources en panne = problème réseau : on arrête
+                           # (en dessous : simple avertissement, l'épisode se fait avec les autres)
 
 # Priorité : sert à trier, puis à décider quoi garder si l'épisode est trop long.
 SOURCES = [
@@ -51,7 +56,9 @@ SOURCES = [
 
 KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
 
-HEADERS = {"User-Agent": "CyberVeille/0.1 (podcast perso de veille; +https://github.com)"}
+# On s'identifie honnêtement auprès des sites (bonne pratique de scraping poli).
+REPO_URL = f"https://github.com/{os.environ.get('GITHUB_REPOSITORY', 'elpokito/appcyberveille')}"
+HEADERS = {"User-Agent": f"CyberVeille/1.0 (podcast perso de veille cyber; +{REPO_URL})"}
 
 
 # --------------------------------------------------------------------------
@@ -197,36 +204,47 @@ def deduplicate(items: list[dict], seen: dict) -> list[dict]:
     return kept
 
 
+def with_retry(fetch, *args):
+    """Un seul nouvel essai après 3 s : beaucoup de pannes réseau ne durent qu'un instant."""
+    try:
+        return fetch(*args)
+    except Exception:
+        time.sleep(3)
+        return fetch(*args)
+
+
 def main() -> int:
     since = datetime.now(timezone.utc) - timedelta(hours=WINDOW_HOURS)
-    collected, failures = [], []
+    collected, failures, counts = [], [], {}
 
     with httpx.Client(headers=HEADERS, timeout=20, follow_redirects=True) as client:
-        for source in SOURCES:
+        jobs = [(s["name"], fetch_feed, (client, s, since)) for s in SOURCES]
+        jobs.append(("CISA KEV", fetch_kev, (client, since)))
+        for name, fetch, args in jobs:
             try:
-                news = fetch_feed(client, source, since)
-                print(f"✓ {source['name']:<20} {len(news):>3} news")
+                news = with_retry(fetch, *args)
+                print(f"✓ {name:<20} {len(news):>3} news")
+                counts[name] = len(news)
                 collected += news
             except Exception as exc:  # un flux en panne ne doit pas bloquer les autres
-                print(f"✗ {source['name']:<20} échec : {exc}", file=sys.stderr)
-                failures.append(source["name"])
-        try:
-            kev = fetch_kev(client, since)
-            print(f"✓ {'CISA KEV':<20} {len(kev):>3} failles")
-            collected += kev
-        except Exception as exc:
-            print(f"✗ {'CISA KEV':<20} échec : {exc}", file=sys.stderr)
-            failures.append("CISA KEV")
+                print(f"✗ {name:<20} échec : {exc}", file=sys.stderr)
+                counts[name] = "échec"
+                failures.append(name)
 
     items = deduplicate(collected, load_seen())
     ITEMS_FILE.parent.mkdir(parents=True, exist_ok=True)
     ITEMS_FILE.write_text(json.dumps(items, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\n→ {len(collected)} news collectées, {len(items)} gardées après dédoublonnage → {ITEMS_FILE.name}")
+    job_summary("### Collecte\n| Source | News |\n|---|---|\n"
+                + "".join(f"| {n} | {c} |\n" for n, c in counts.items())
+                + f"\n**{len(items)}** news nouvelles après dédoublonnage.")
 
-    failed_ratio = len(failures) / (len(SOURCES) + 1)
+    failed_ratio = len(failures) / len(jobs)
     if failed_ratio > MAX_FAILED_RATIO:
-        print(f"⚠️  {len(failures)} sources en échec ({failed_ratio:.0%}) : {', '.join(failures)}", file=sys.stderr)
+        print(f"✗ {len(failures)} sources en échec ({failed_ratio:.0%}) : {', '.join(failures)}", file=sys.stderr)
         return 1  # code de sortie ≠ 0 → GitHub Actions marque le job en échec et t'envoie un mail
+    if failures:
+        gh_warning(f"Sources en échec aujourd'hui : {', '.join(failures)} (l'épisode est fait avec les autres)")
     return 0
 
 

@@ -1,0 +1,54 @@
+"""Tests de generate.py : vérifications anti-hallucination et plan de secours (aucun appel au LLM)."""
+import generate
+
+
+def news(id_, title, source="The Hacker News", priority=2, summary="", cve=None):
+    n = {"id": id_, "title": title, "source": source, "priority": priority, "summary": summary,
+         "published": "2026-10-15T10:00:00+00:00", "url": f"https://ex.com/{id_}"}
+    if cve:
+        n["cve"] = cve
+    return n
+
+
+def test_cve_inventee_detectee():
+    chunk = [news("a", "Faille Acme", summary="CVE-2026-1111 corrigée")]
+    segments = [{"text": "La CVE-2026-9999 touche Acme.", "sources": ["a"]}]
+    errors = generate.validate_segments(segments, chunk)
+    assert any("CVE-2026-9999" in e for e in errors)
+
+
+def test_cve_presente_dans_la_source_acceptee():
+    chunk = [news("a", "Faille Acme", summary="CVE-2026-1111 corrigée")]
+    assert generate.validate_segments([{"text": "La CVE-2026-1111 est corrigée.", "sources": ["a"]}], chunk) == []
+
+
+def test_source_inconnue_et_url_refusees():
+    chunk = [news("a", "Faille Acme")]
+    assert generate.validate_segments([{"text": "Texte", "sources": ["zzz"]}], chunk)
+    assert generate.validate_segments([{"text": "Voir https://ex.com", "sources": ["a"]}], chunk)
+
+
+def test_parse_segments():
+    raw = "Préambule ignoré\n### SOURCES: a, b\nPremier passage.\n### SOURCES: c\nSecond passage."
+    assert generate.parse_segments(raw) == [{"text": "Premier passage.", "sources": ["a", "b"]},
+                                            {"text": "Second passage.", "sources": ["c"]}]
+
+
+def test_articles_d_opinion_penalises():
+    assert generate.score(news("a", "Why AI Confidence Is Not Validation")) < 0
+    assert generate.score(news("b", "Cisco patches zero-day exploited in attacks")) > 20
+
+
+def test_plan_de_secours_regroupe_un_meme_evenement():
+    items = [news("k", "CVE-2026-1 — Ivanti Connect Secure exploitée activement", "CISA KEV", 3, cve="CVE-2026-1"),
+             news("t", "Attacker Chains Ivanti Connect Secure Zero-Days for Root Access"),
+             news("o", "How to Run a Deepfake Drill")]
+    plan = generate.fallback_plan(items)
+    assert len(plan) == 1 and {i["id"] for i in plan[0]["items"]} == {"k", "t"}
+    assert plan[0]["rubric"] == generate.RUBRICS[0]
+
+
+def test_duree_maximale_respectee():
+    plan = [{"rubric": generate.RUBRICS[0], "items": [], "importance": 5, "suite": False} for _ in range(40)]
+    kept = generate.fit_to_length(plan)
+    assert sum(generate.WORDS_BY_IMPORTANCE[s["importance"]] for s in kept) <= generate.MAX_EPISODE_WORDS

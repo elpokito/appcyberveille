@@ -1,0 +1,93 @@
+# Épisode quotidien CyberVeille
+# Chaque nuit : collecte → script (LLM) → voix → publication → commit de l'état.
+
+name: Épisode quotidien
+
+on:
+  schedule:
+    # 1 h UTC = 3 h à Paris en heure d'été, 2 h en heure d'hiver.
+    # GitHub peut lancer un cron avec 5 à 30 min de retard : on garde de la marge avant le réveil.
+    - cron: "0 1 * * *"
+  workflow_dispatch:        # bouton « Run workflow » pour lancer à la main (tests, rattrapage)
+
+# Moindre privilège : le jeton du job peut seulement écrire le contenu du dépôt
+# (Releases + commit de data/ et docs/). Rien d'autre.
+permissions:
+  contents: write
+
+# Jamais deux épisodes en parallèle (ex. lancement manuel pendant le cron).
+concurrency:
+  group: daily-episode
+  cancel-in-progress: false
+
+jobs:
+  episode:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45     # si quelque chose bloque, on coupe au lieu de consommer des heures
+    env:
+      PYTHONUNBUFFERED: "1" # journaux affichés en direct et dans l'ordre
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Installer ffmpeg
+        run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+
+      - name: Installer les dépendances Python
+        run: pip install -r requirements.txt
+
+      - name: 1 · Collecter les news
+        run: python src/collect.py
+
+      - name: 2 · Écrire le script
+        run: python src/generate.py
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+
+      - name: 3 · Synthèse vocale
+        run: python src/tts.py
+
+      - name: 4 · Publier l'épisode
+        run: python src/publish.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sauvegarder la mémoire et le flux
+        run: |
+          git config user.name "cyberveille-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seen.json data/episodes.json docs/
+          git commit -m "Épisode du $(date -u +%F)" || echo "Rien à commiter"
+          # Si tu as poussé un commit pendant que le job tournait, on se remet à jour avant d'envoyer.
+          git pull --rebase
+          git push
+
+      - name: Garder le résultat du jour en cas de souci
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-${{ github.run_id }}
+          path: |
+            data/items.json
+            build/script.json
+            build/notes.md
+          retention-days: 7
+
+      - name: Alerte sur le téléphone (ntfy)
+        if: failure()
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: |
+          if [ -n "$NTFY_TOPIC" ]; then
+            curl -s -H "Title: CyberVeille en échec" -H "Priority: high" \
+              -d "L'épisode du $(date -u +%F) n'a pas été publié. Détails : ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+              "https://ntfy.sh/$NTFY_TOPIC"
+          fi

@@ -1,0 +1,12 @@
+# Dependabot propose (par Pull Request, jamais automatiquement) les mises à jour
+# des actions GitHub et des bibliothèques Python, dont les correctifs de sécurité.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "monthly"
