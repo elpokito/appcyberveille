@@ -52,3 +52,21 @@ def test_duree_maximale_respectee():
     plan = [{"rubric": generate.RUBRICS[0], "items": [], "importance": 5, "suite": False} for _ in range(40)]
     kept = generate.fit_to_length(plan)
     assert sum(generate.WORDS_BY_IMPORTANCE[s["importance"]] for s in kept) <= generate.MAX_EPISODE_WORDS
+
+
+def test_delai_429_lu_dans_le_message_de_groq():
+    import httpx
+    resp = httpx.Response(429, json={"error": {"message": "Rate limit reached ... Please try again in 14.325s."}})
+    assert generate.retry_delay(resp) == 14.325
+
+
+def test_budget_par_minute_attend_avant_de_deborder(monkeypatch):
+    clock = {"t": 0.0}
+    pauses = []
+    monkeypatch.setattr(generate.time, "monotonic", lambda: clock["t"])
+    monkeypatch.setattr(generate.time, "sleep", lambda s: (pauses.append(s), clock.__setitem__("t", clock["t"] + s)))
+    budget = generate.TokenBudget(7000)
+    for _ in range(3):
+        budget.wait_for(3000)
+        budget.spent(3000)
+    assert len(pauses) == 1          # la 3e requête attend que la minute se libère, au lieu d'un refus 429

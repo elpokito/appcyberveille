@@ -49,7 +49,8 @@ WORDS_BY_IMPORTANCE = {5: 170, 4: 140, 3: 110, 2: 80, 1: 60}   # temps d'antenne
 URGENT_SOURCES = ("CISA KEV", "CERT-FR Alertes")                 # jamais oubliées silencieusement
 MAX_ATTEMPTS = 2          # essais par morceau (le 2e reçoit la liste des erreurs à corriger)
 MAX_WAIT_SECONDS = 90     # sur un 429, on attend si le service dit « réessaie dans X s » et que X est court
-PAUSE_BETWEEN_CALLS = 3   # petite pause entre deux requêtes pour ménager le quota par minute
+MAX_RATE_RETRIES = 5      # nombre de 429 tolérés d'affilée avant de déclarer le fournisseur indisponible
+PAUSE_BETWEEN_CALLS = 2   # petite pause entre deux requêtes
 
 RUBRICS = [
     "Alertes et failles critiques",
@@ -59,22 +60,33 @@ RUBRICS = [
     "Outils, recherche et divers",
 ]
 
+def _models(env: str, default: str) -> list[str]:
+    """Liste de modèles séparés par des virgules (réglable par variable, sans toucher au code)."""
+    return [m.strip() for m in os.environ.get(env, default).split(",") if m.strip()]
+
+
 PROVIDERS = [
     {
         "name": "Groq",
         "url": "https://api.groq.com/openai/v1/chat/completions",
         "key_env": "GROQ_API_KEY",
-        "model": os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b"),
+        "models": _models("GROQ_MODEL", "openai/gpt-oss-120b"),
         # reasoning_effort « low » : la réflexion du modèle consomme aussi le quota de tokens par minute.
         "extra": {"reasoning_effort": "low"},
+        # Palier gratuit : 8 000 tokens PAR MINUTE pour ce modèle. On reste un peu en dessous
+        # et on attend avant d'envoyer une requête qui ferait déborder (au lieu de se faire refuser).
+        "tpm": int(os.environ.get("GROQ_TPM", "7000")),
     },
     {
         "name": "OpenRouter",
         "url": "https://openrouter.ai/api/v1/chat/completions",
         "key_env": "OPENROUTER_API_KEY",
-        # Les modèles gratuits changent souvent : on le règle sans toucher au code.
-        "model": os.environ.get("OPENROUTER_MODEL", "openai/gpt-oss-120b:free"),
+        # Les modèles gratuits changent souvent : plusieurs choix, essayés dans l'ordre.
+        # « openrouter/free » laisse OpenRouter choisir un modèle gratuit disponible.
+        "models": _models("OPENROUTER_MODEL",
+                          "google/gemma-4-31b-it:free,nvidia/nemotron-3-super-120b-a12b:free,openrouter/free"),
         "extra": {},
+        "tpm": None,
     },
 ]
 
@@ -172,50 +184,106 @@ def error_detail(response: httpx.Response) -> str:
         return response.text[:300]
 
 
-def post_once(client: httpx.Client, provider: dict, messages: list[dict]) -> str:
-    payload = {"model": provider["model"], "messages": messages, "temperature": 0.4, **provider["extra"]}
-    headers = {"Authorization": f"Bearer {os.environ[provider['key_env']]}"}
-    response = client.post(provider["url"], headers=headers, json=payload)
-    if response.status_code == 429:
-        # Quota PAR MINUTE dépassé : le service indique souvent combien de secondes attendre.
-        wait = float(response.headers.get("retry-after", MAX_WAIT_SECONDS + 1))
-        if wait <= MAX_WAIT_SECONDS:
-            print(f"   … {provider['name']} : quota par minute atteint, pause de {wait:.0f} s")
-            time.sleep(wait + 1)
-            response = client.post(provider["url"], headers=headers, json=payload)
-    response.raise_for_status()
-    return response.json()["choices"][0]["message"]["content"] or ""
+def retry_delay(response: httpx.Response) -> float:
+    """Combien de secondes attendre après un 429 : en-tête Retry-After, sinon le message
+    (« Please try again in 14.325s »), sinon 20 s."""
+    header = response.headers.get("retry-after")
+    if header:
+        try:
+            return float(header)
+        except ValueError:
+            pass
+    found = re.search(r"try again in ([\d.]+)\s*s", response.text)
+    return float(found.group(1)) if found else 20.0
+
+
+class TokenBudget:
+    """Respecte un quota de tokens par minute : mémorise la consommation des 60 dernières
+    secondes et attend avant une requête qui ferait déborder."""
+
+    def __init__(self, per_minute: int | None):
+        self.per_minute = per_minute
+        self.history: list[tuple[float, int]] = []
+
+    def wait_for(self, tokens: int) -> None:
+        if not self.per_minute:
+            return
+        while True:
+            now = time.monotonic()
+            self.history = [(t, n) for t, n in self.history if now - t < 60]
+            used = sum(n for _, n in self.history)
+            if used + tokens <= self.per_minute or not self.history:
+                return
+            pause = 60 - (now - self.history[0][0]) + 0.5
+            print(f"   … pause de {pause:.0f} s pour rester sous le quota par minute")
+            time.sleep(pause)
+
+    def spent(self, tokens: int) -> None:
+        self.history.append((time.monotonic(), tokens))
+
+
+def estimate_tokens(messages: list[dict]) -> int:
+    # ≈ 1 token pour 3 caractères en français, + la réponse et la réflexion du modèle
+    return sum(len(m["content"]) for m in messages) // 3 + 1800
 
 
 class LLM:
-    """Envoie une requête au premier fournisseur disponible ; en cas de panne, passe au suivant."""
+    """Envoie une requête au premier fournisseur/modèle disponible ; en cas de panne, passe au suivant."""
 
     def __init__(self, client: httpx.Client):
         self.client = client
-        self.providers = [p for p in PROVIDERS if os.environ.get(p["key_env"])]
+        # Copies : on retire les modèles en panne au fil de l'exécution sans toucher à la configuration.
+        self.providers = [dict(p, models=list(p["models"])) for p in PROVIDERS if os.environ.get(p["key_env"])]
         for p in PROVIDERS:
-            if p not in self.providers:
+            if not os.environ.get(p["key_env"]):
                 print(f"– {p['name']} : pas de clé {p['key_env']}, ignoré")
-        self.used = []
+        self.budgets = {p["name"]: TokenBudget(p["tpm"]) for p in self.providers}
+        self.used: list[str] = []
+
+    def _post(self, provider: dict, model: str, messages: list[dict]) -> str:
+        payload = {"model": model, "messages": messages, "temperature": 0.4, **provider["extra"]}
+        headers = {"Authorization": f"Bearer {os.environ[provider['key_env']]}"}
+        budget = self.budgets[provider["name"]]
+        for _ in range(MAX_RATE_RETRIES):
+            budget.wait_for(estimate_tokens(messages))
+            response = self.client.post(provider["url"], headers=headers, json=payload)
+            if response.status_code != 429:
+                break
+            wait = retry_delay(response)
+            if wait > MAX_WAIT_SECONDS:      # quota du JOUR épuisé : inutile d'attendre
+                break
+            print(f"   … {provider['name']} : quota par minute atteint, pause de {wait:.0f} s")
+            time.sleep(wait + 1)
+        response.raise_for_status()
+        data = response.json()
+        budget.spent(int(data.get("usage", {}).get("total_tokens") or estimate_tokens(messages)))
+        return data["choices"][0]["message"]["content"] or ""
 
     def ask(self, messages: list[dict]) -> str:
         while self.providers:
             provider = self.providers[0]
-            try:
-                text = post_once(self.client, provider, messages)
-                if provider["name"] not in self.used:
-                    self.used.append(provider["name"])
-                time.sleep(PAUSE_BETWEEN_CALLS)
-                return text
-            except httpx.HTTPStatusError as exc:
-                code = exc.response.status_code
-                reason = {401: "clé refusée", 413: "requête trop grosse",
-                          429: "quota atteint"}.get(code, "erreur du service")
-                print(f"✗ {provider['name']} : HTTP {code} ({reason}) → fournisseur suivant\n"
-                      f"   détail : {error_detail(exc.response)}", file=sys.stderr)
-            except (httpx.HTTPError, KeyError, IndexError, ValueError) as exc:
-                print(f"✗ {provider['name']} : {exc!r} → fournisseur suivant", file=sys.stderr)
-            # Ce fournisseur est en panne pour aujourd'hui : on ne le réessaie pas à chaque morceau.
+            while provider["models"]:
+                model = provider["models"][0]
+                try:
+                    text = self._post(provider, model, messages)
+                    label = f"{provider['name']} ({model})"
+                    if label not in self.used:
+                        self.used.append(label)
+                    time.sleep(PAUSE_BETWEEN_CALLS)
+                    return text
+                except httpx.HTTPStatusError as exc:
+                    code = exc.response.status_code
+                    reason = {401: "clé refusée", 404: "modèle indisponible", 413: "requête trop grosse",
+                              429: "quota atteint"}.get(code, "erreur du service")
+                    print(f"✗ {provider['name']} / {model} : HTTP {code} ({reason})\n"
+                          f"   détail : {error_detail(exc.response)}", file=sys.stderr)
+                    if code in (401, 403):        # clé refusée : aucun modèle de ce fournisseur ne marchera
+                        provider["models"] = []
+                        break
+                except (httpx.HTTPError, KeyError, IndexError, ValueError) as exc:
+                    print(f"✗ {provider['name']} / {model} : {exc!r}", file=sys.stderr)
+                provider["models"].pop(0)         # ce modèle est en panne aujourd'hui : modèle suivant
+            print(f"   → {provider['name']} indisponible, fournisseur suivant", file=sys.stderr)
             self.providers.pop(0)
         raise AllProvidersFailed("aucun fournisseur LLM disponible")
 
@@ -442,13 +510,13 @@ def write_chunk(llm: LLM, rubric: str, subjects: list[dict]) -> list[dict]:
         segments = parse_segments(raw)
         errors = validate_segments(segments, chunk)
         words = sum(len(s["text"].split()) for s in segments)
-        too_short = words < 0.6 * goal
-        if not errors and (not too_short or attempt == MAX_ATTEMPTS):
-            if too_short:  # trop court n'est pas dangereux : on garde, avec un avertissement
+        if not errors:
+            # Trop court n'est pas dangereux : on garde, sans redemander (un nouvel essai coûte
+            # autant de quota que le premier, et le quota par minute est le facteur limitant).
+            if words < 0.6 * goal:
                 print(f"   ⚠️  passage plus court que prévu ({words}/{goal} mots), conservé")
             return segments
-        problems = errors + ([f"trop court : {words} mots, il en faut au moins {int(goal * 0.8)}"]
-                             if too_short else [])
+        problems = errors
         print(f"   ⚠️  essai {attempt} rejeté : {problems[:4]}", file=sys.stderr)
         messages = base + [
             {"role": "assistant", "content": raw},
