@@ -96,3 +96,19 @@ def test_relance_du_jour_n_ecarte_pas_ses_propres_sujets(tmp_path, monkeypatch):
     path.write_text(__import__("json").dumps(episodes), encoding="utf-8")
     monkeypatch.setattr(generate, "EPISODES_FILE", path)
     assert generate.recent_titles(today="2026-10-15") == ["Sujet d'hier"]
+
+
+def test_redacteur_trop_selectif_complete_sans_ia():
+    # Le 15/10 : 3 sujets retenus sur 62 news → épisode de 2 min. Le plan est maintenant complété.
+    titres = ["Cisco patches zero-day exploited", "Ransomware hits hospital", "Police takedown botnet",
+              "Chrome zero-day patched", "New Android malware", "Data breach at retailer"]
+    items = [news(f"i{n}", t) for n, t in enumerate(titres)]
+
+    class LLM:
+        def ask(self, messages):
+            return '{"sujets":[{"rubrique":"Alertes et failles critiques","ids":["i0","faux"],"importance":5}],' \
+                   '"ecartes":["i1"]}'
+    plan = generate.plan_episode(LLM(), items)
+    ids = [i["id"] for s in plan for i in s["items"]]
+    assert len(plan) > 1 and "i1" not in ids          # complété, sans reprendre la news écartée exprès
+    assert generate.EDITOR_STATS["ids_inconnus"] == 1

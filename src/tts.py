@@ -149,6 +149,7 @@ def clean_for_speech(text: str) -> str:
 # xml:lang='en-US' et sans moyen de choisir la langue. On remplace sa fonction mkssml par une version
 # qui ajoute <lang xml:lang='fr-FR'> : la voix multilingue lit alors TOUT en français.
 _EDGE_MKSSML = getattr(edge_communicate, "mkssml", None)
+FRENCH_REFUSAL: list[str] = []   # pourquoi le français forcé n'a pas marché (affiché dans le résumé)
 
 
 def _mkssml_french(tc, escaped_text) -> str:
@@ -183,7 +184,10 @@ async def french_is_accepted(text: str, path: Path, voice: str = VOICE) -> bool:
         ok = path.stat().st_size > 1000 and duration(path) >= 0.3 * expected_seconds(text)
     except Exception as exc:                  # noqa: BLE001 — n'importe quel refus = on revient au mode normal
         print(f"   (langue forcée refusée par le service : {exc!r})")
+        FRENCH_REFUSAL.append(repr(exc)[:150])
         ok = False
+    if not ok and not FRENCH_REFUSAL and path.exists():
+        FRENCH_REFUSAL.append(f"son trop court ({duration(path):.1f} s pour {len(text.split())} mots)")
     path.unlink(missing_ok=True)
     if not ok:
         set_french(False)
@@ -396,7 +400,8 @@ def main() -> int:
 
     jobs, softened = build_jobs(script)
     french = FORCE_FRENCH and asyncio.run(french_is_accepted(jobs[0][0], PARTS_DIR / "essai_langue.mp3"))
-    language = "français forcé" if french else "choisie par la voix"
+    language = "français forcé" if french else "choisie par la voix" + (
+        f" (français forcé refusé : {FRENCH_REFUSAL[0]})" if FRENCH_REFUSAL else "")
     print(f"Voix : {VOICE} ({RATE}) — {len(jobs)} passages — langue {language}"
           + (f" — {softened} phrase(s) raccourcie(s)" if softened else ""))
     try:

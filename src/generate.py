@@ -43,6 +43,8 @@ NOTES_FILE = BUILD_DIR / "notes.md"
 
 MAX_CANDIDATES = 80       # news soumises au rédacteur en chef (titres seulement : très léger)
 MAX_SUBJECTS = 22         # sujets retenus au maximum
+MIN_SUBJECTS = 12         # en dessous (et s'il y a assez de news), le plan est complété sans IA
+EDITOR_STATS: dict = {}   # ce qu'a fait le rédacteur en chef, affiché dans le résumé de l'exécution
 MAX_EPISODE_WORDS = 3000  # ≈ 21 min à ~145 mots/min
 SUBJECTS_PER_CHUNK = 5    # sujets rédigés par requête : petites réponses = longueur respectée, moins d'erreurs
 SUMMARY_CHARS_SENT = 500  # extrait envoyé au LLM : plus de faits = passages plus riches SANS inventer
@@ -448,10 +450,11 @@ def plan_episode(llm: LLM, items: list[dict]) -> list[dict]:
         print("⚠️  plan du rédacteur illisible → plan de secours", file=sys.stderr)
         return fallback_plan(items)
 
-    plan, placed = [], set()
+    plan, placed, unknown = [], set(), 0
     for prop in proposals:
         if not isinstance(prop, dict) or not isinstance(prop.get("ids"), list):
             continue
+        unknown += sum(1 for x in prop["ids"] if x not in by_id)     # id mal recopié par le LLM
         ids = [x for x in prop["ids"] if isinstance(x, str) and x in by_id and x not in placed]
         if not ids:
             continue
@@ -463,13 +466,32 @@ def plan_episode(llm: LLM, items: list[dict]) -> list[dict]:
         plan.append({"rubric": prop.get("rubrique") if prop.get("rubrique") in RUBRICS else RUBRICS[-1],
                      "items": [by_id[x] for x in ids], "importance": importance,
                      "suite": prop.get("suite") is True})
+    EDITOR_STATS.update(proposes=len(proposals), retenus=len(plan), ecartes=len(discarded & set(by_id)),
+                        ids_inconnus=unknown)
     if not plan:
         return fallback_plan(items)
     # Une alerte officielle OUBLIÉE par le LLM (ni retenue ni écartée) est rattrapée.
     for item in items:
         if item["source"] in URGENT_SOURCES and item["id"] not in placed and item["id"] not in discarded:
             plan.append({"rubric": RUBRICS[0], "items": [item], "importance": 4, "suite": False})
-    return plan
+            placed.add(item["id"])
+    return complete_plan(plan, items, placed, discarded)
+
+
+def complete_plan(plan: list[dict], items: list[dict], placed: set, discarded: set) -> list[dict]:
+    """Filet de sécurité : si le rédacteur retient trop peu de sujets alors qu'il y a de la matière
+    (le 15/10 : 3 sujets sur 62 news), on complète avec le plan sans IA, en évitant les news qu'il
+    a volontairement écartées et les doublons de sujets déjà retenus."""
+    if len(plan) >= MIN_SUBJECTS:
+        return plan
+    taken = [i for s in plan for i in s["items"]]
+    rest = [i for i in items if i["id"] not in placed and i["id"] not in discarded
+            and not any(same_event(i, t) for t in taken)]
+    added = fallback_plan(rest)[:MIN_SUBJECTS - len(plan)]
+    if added:
+        print(f"   ⚠️  rédacteur trop sélectif ({len(plan)} sujets) : {len(added)} sujet(s) ajoutés sans IA")
+    EDITOR_STATS["completes"] = len(added)
+    return plan + added
 
 
 def fit_to_length(plan: list[dict]) -> list[dict]:
@@ -745,6 +767,7 @@ def main() -> int:
     job_summary(f"### Script\n- {script['meta']['words']} mots (≈ {minutes:.0f} min), "
                 f"{sum(len(c['segments']) for c in script['chapters'])} passages, {len(used_ids)} news citées\n"
                 f"- Fournisseur : {', '.join(used) or 'aucun (journée calme)'}\n"
+                f"- Rédacteur en chef : {', '.join(f'{k} {v}' for k, v in EDITOR_STATS.items()) or 'plan de secours'}\n"
                 f"- {len(items)} news candidates · phrases trop chargées en anglais restantes : "
                 f"{script['meta']['english_heavy']} (raccourcies à la lecture)\n"
                 + "".join(f"- {c['title']} : {len(c['segments'])} sujet(s)\n" for c in script["chapters"]))
