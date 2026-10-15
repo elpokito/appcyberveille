@@ -28,7 +28,7 @@ jobs:
     permissions:
       contents: read          # lire le code et télécharger les MP3 des Releases
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: main           # dernière version, y compris le commit du robot
 
