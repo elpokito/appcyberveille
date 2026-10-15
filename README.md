@@ -284,7 +284,7 @@ Vérifiez toujours l'information à la source, dont le lien accompagne chaque é
 <br><br>
 
 Projet réalisé pendant ma 2e année de bachelor cybersécurité.<br>
-**Je cherche un stage ou une alternance** · [LinkedIn](https://www.linkedin.com/in/TON-PROFIL) · [Contact](mailto:TON-EMAIL)
+[LinkedIn](https://www.linkedin.com/in/charles-sana/)
 
 <sub>Licence [AGPL-3.0](LICENSE)</sub>
 
