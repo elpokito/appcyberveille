@@ -9,7 +9,7 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Thu, 15 Oct 2026 20:01:54 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 20:12:25 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
@@ -18,13 +18,27 @@
     <item>
       <title>CyberVeille du 15/10/2026</title>
       <guid isPermaLink="false">cyberveille-2026-10-15</guid>
-      <pubDate>Thu, 15 Oct 2026 20:01:54 +0000</pubDate>
-      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-15/cyberveille-2026-10-15.mp3" length="337310" type="audio/mpeg"/>
-      <itunes:duration>00:00:42</itunes:duration>
+      <pubDate>Thu, 15 Oct 2026 20:12:25 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-15/cyberveille-2026-10-15.mp3" length="1094559" type="audio/mpeg"/>
+      <itunes:duration>00:02:17</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-15.json" type="application/json+chapters"/>
-      <description><![CDATA[<h3>Outils, recherche et divers</h3>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/android-gets-ai-defenses-against-messaging-scams-fake-calls/">Android gets AI defenses against messaging scams, fake calls</a> — BleepingComputer</p>
+      <description><![CDATA[<h3>Alertes et failles critiques</h3>
+<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104935">CVE-2026-104935 — Ivanti Connect Secure exploitée activement</a> — CISA KEV</p>
+<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-96951">CVE-2026-96951 — Microsoft Windows exploitée activement</a> — CISA KEV</p>
+<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-105134">CVE-2026-105134 — Ahsay AhsayCBS exploitée activement</a> — CISA KEV</p>
+<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76519">CVE-2026-76519 — Cisco Secure Email Gateway exploitée activement</a> — CISA KEV</p>
+<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0322">CVE-2026-0322 — Palo Alto Networks PAN-OS exploitée activement</a> — CISA KEV</p>
+<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21589">CVE-2026-21589 — Atlassian Multiple Products exploitée activement</a> — CISA KEV</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/">Cisco patches new Secure Email Gateway zero-day exploited in attacks</a> — BleepingComputer</p>
+<p>• <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-013/">Vulnérabilité dans Ivanti Connect Secure (ICS) (14 octobre 2026)</a> — CERT-FR Alertes</p>
+<p>• <a href="https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html">Microsoft Patches Record 1,413 Flaws, Including Exploited Windows Shell Bug</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html">AhsayCBS Flaws Exploited to Deploy Web Shells Get New Fixes After Incomplete Patches</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/">Palo Alto Networks warns of PAN-OS RCE flaw exploited in attacks</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/10/cisco-warns-of-active-attacks.html">Cisco Warns of Active Attacks Exploiting New Critical Secure Email Gateway Vulnerability</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/cisa-urges-immediate-ivanti-connect.html">CISA Urges Immediate Ivanti Connect Secure Updates as Honeypots Log 105 Exploit Attempts</a> — The Hacker News</p>
+<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1325/">Vulnérabilité dans Cisco AsyncOS Software pour Secure Email Gateway (15 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html">Palo Alto Networks Patches PAN-OS Authenticated RCE Flaw Amid Active Exploitation</a> — The Hacker News</p>
 <p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
     </item>
   </channel>

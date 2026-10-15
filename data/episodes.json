@@ -4,23 +4,93 @@
   "title": "CyberVeille du 15/10/2026",
   "guid": "cyberveille-2026-10-15",
   "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-15/cyberveille-2026-10-15.mp3",
-  "bytes": 337310,
-  "seconds": 42,
-  "pub_date": "Thu, 15 Oct 2026 20:01:54 +0000",
+  "bytes": 1094559,
+  "seconds": 137,
+  "pub_date": "Thu, 15 Oct 2026 20:12:25 +0000",
   "chapters_path": "chapters/2026-10-15.json",
   "asset": "cyberveille-2026-10-15.mp3",
   "sources": [
    {
-    "rubric": "Outils, recherche et divers",
+    "rubric": "Alertes et failles critiques",
     "links": [
      {
-      "title": "Android gets AI defenses against messaging scams, fake calls",
-      "url": "https://www.bleepingcomputer.com/news/security/android-gets-ai-defenses-against-messaging-scams-fake-calls/",
+      "title": "CVE-2026-104935 — Ivanti Connect Secure exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-96951 — Microsoft Windows exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-105134 — Ahsay AhsayCBS exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-76519 — Cisco Secure Email Gateway exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-0322 — Palo Alto Networks PAN-OS exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0322",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-21589 — Atlassian Multiple Products exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21589",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "Cisco patches new Secure Email Gateway zero-day exploited in attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/",
       "source": "BleepingComputer"
+     },
+     {
+      "title": "Vulnérabilité dans Ivanti Connect Secure (ICS) (14 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-013/",
+      "source": "CERT-FR Alertes"
+     },
+     {
+      "title": "Microsoft Patches Record 1,413 Flaws, Including Exploited Windows Shell Bug",
+      "url": "https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "AhsayCBS Flaws Exploited to Deploy Web Shells Get New Fixes After Incomplete Patches",
+      "url": "https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Palo Alto Networks warns of PAN-OS RCE flaw exploited in attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Cisco Warns of Active Attacks Exploiting New Critical Secure Email Gateway Vulnerability",
+      "url": "https://thehackernews.com/2026/10/cisco-warns-of-active-attacks.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "CISA Urges Immediate Ivanti Connect Secure Updates as Honeypots Log 105 Exploit Attempts",
+      "url": "https://thehackernews.com/2026/10/cisa-urges-immediate-ivanti-connect.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Vulnérabilité dans Cisco AsyncOS Software pour Secure Email Gateway (15 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1325/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Palo Alto Networks Patches PAN-OS Authenticated RCE Flaw Amid Active Exploitation",
+      "url": "https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html",
+      "source": "The Hacker News"
      }
     ]
    }
   ],
-  "description_html": "<h3>Outils, recherche et divers</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/android-gets-ai-defenses-against-messaging-scams-fake-calls/\">Android gets AI defenses against messaging scams, fake calls</a> — BleepingComputer</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+  "description_html": "<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-104935\">CVE-2026-104935 — Ivanti Connect Secure exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-96951\">CVE-2026-96951 — Microsoft Windows exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-105134\">CVE-2026-105134 — Ahsay AhsayCBS exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-76519\">CVE-2026-76519 — Cisco Secure Email Gateway exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-0322\">CVE-2026-0322 — Palo Alto Networks PAN-OS exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-21589\">CVE-2026-21589 — Atlassian Multiple Products exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/\">Cisco patches new Secure Email Gateway zero-day exploited in attacks</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-013/\">Vulnérabilité dans Ivanti Connect Secure (ICS) (14 octobre 2026)</a> — CERT-FR Alertes</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html\">Microsoft Patches Record 1,413 Flaws, Including Exploited Windows Shell Bug</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html\">AhsayCBS Flaws Exploited to Deploy Web Shells Get New Fixes After Incomplete Patches</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/\">Palo Alto Networks warns of PAN-OS RCE flaw exploited in attacks</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/cisco-warns-of-active-attacks.html\">Cisco Warns of Active Attacks Exploiting New Critical Secure Email Gateway Vulnerability</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/cisa-urges-immediate-ivanti-connect.html\">CISA Urges Immediate Ivanti Connect Secure Updates as Honeypots Log 105 Exploit Attempts</a> — The Hacker News</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1325/\">Vulnérabilité dans Cisco AsyncOS Software pour Secure Email Gateway (15 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html\">Palo Alto Networks Patches PAN-OS Authenticated RCE Flaw Amid Active Exploitation</a> — The Hacker News</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
  }
 ]
