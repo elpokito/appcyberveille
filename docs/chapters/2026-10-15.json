@@ -6,11 +6,23 @@
    "title": "Introduction"
   },
   {
-   "startTime": 18.41,
+   "startTime": 23.36,
    "title": "Alertes et failles critiques"
   },
   {
-   "startTime": 132.16,
+   "startTime": 379.85,
+   "title": "Incidents et fuites de données"
+  },
+  {
+   "startTime": 429.18,
+   "title": "Menaces et groupes d'attaquants"
+  },
+  {
+   "startTime": 543.61,
+   "title": "Outils, recherche et divers"
+  },
+  {
+   "startTime": 627.16,
    "title": "Conclusion"
   }
  ]
