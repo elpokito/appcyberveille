@@ -3,31 +3,16 @@
   "date": "2026-10-15",
   "title": "CyberVeille du 15/10/2026",
   "guid": "cyberveille-2026-10-15",
-  "seconds": 159,
-  "bytes": 1269164,
+  "seconds": 42,
+  "bytes": 337310,
   "chapters": "chapters/2026-10-15.json",
   "sources": [
    {
-    "rubric": "Alertes et failles critiques",
+    "rubric": "Outils, recherche et divers",
     "links": [
      {
-      "title": "CVE-2026-21589 — Atlassian Multiple Products exploitée activement",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21589",
-      "source": "CISA KEV"
-     }
-    ]
-   },
-   {
-    "rubric": "Menaces et groupes d'attaquants",
-    "links": [
-     {
-      "title": "Hackers hijack D-Link, Ubiquiti devices to resell your stolen bandwidth",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-d-link-ubiquiti-devices-to-resell-your-stolen-bandwidth/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "Fake Arch Linux packages push malware with root privileges",
-      "url": "https://www.bleepingcomputer.com/news/security/fake-arch-linux-packages-push-malware-with-root-privileges/",
+      "title": "Android gets AI defenses against messaging scams, fake calls",
+      "url": "https://www.bleepingcomputer.com/news/security/android-gets-ai-defenses-against-messaging-scams-fake-calls/",
       "source": "BleepingComputer"
      }
     ]

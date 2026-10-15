@@ -4,38 +4,23 @@
   "title": "CyberVeille du 15/10/2026",
   "guid": "cyberveille-2026-10-15",
   "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-15/cyberveille-2026-10-15.mp3",
-  "bytes": 1269164,
-  "seconds": 159,
-  "pub_date": "Thu, 15 Oct 2026 19:24:11 +0000",
+  "bytes": 337310,
+  "seconds": 42,
+  "pub_date": "Thu, 15 Oct 2026 20:01:54 +0000",
   "chapters_path": "chapters/2026-10-15.json",
   "asset": "cyberveille-2026-10-15.mp3",
   "sources": [
    {
-    "rubric": "Alertes et failles critiques",
+    "rubric": "Outils, recherche et divers",
     "links": [
      {
-      "title": "CVE-2026-21589 — Atlassian Multiple Products exploitée activement",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21589",
-      "source": "CISA KEV"
-     }
-    ]
-   },
-   {
-    "rubric": "Menaces et groupes d'attaquants",
-    "links": [
-     {
-      "title": "Hackers hijack D-Link, Ubiquiti devices to resell your stolen bandwidth",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-d-link-ubiquiti-devices-to-resell-your-stolen-bandwidth/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "Fake Arch Linux packages push malware with root privileges",
-      "url": "https://www.bleepingcomputer.com/news/security/fake-arch-linux-packages-push-malware-with-root-privileges/",
+      "title": "Android gets AI defenses against messaging scams, fake calls",
+      "url": "https://www.bleepingcomputer.com/news/security/android-gets-ai-defenses-against-messaging-scams-fake-calls/",
       "source": "BleepingComputer"
      }
     ]
    }
   ],
-  "description_html": "<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-21589\">CVE-2026-21589 — Atlassian Multiple Products exploitée activement</a> — CISA KEV</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/hackers-hijack-d-link-ubiquiti-devices-to-resell-your-stolen-bandwidth/\">Hackers hijack D-Link, Ubiquiti devices to resell your stolen bandwidth</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/fake-arch-linux-packages-push-malware-with-root-privileges/\">Fake Arch Linux packages push malware with root privileges</a> — BleepingComputer</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+  "description_html": "<h3>Outils, recherche et divers</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/android-gets-ai-defenses-against-messaging-scams-fake-calls/\">Android gets AI defenses against messaging scams, fake calls</a> — BleepingComputer</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
  }
 ]

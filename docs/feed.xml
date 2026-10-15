@@ -9,7 +9,7 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Thu, 15 Oct 2026 19:24:11 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 20:01:54 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
@@ -18,16 +18,13 @@
     <item>
       <title>CyberVeille du 15/10/2026</title>
       <guid isPermaLink="false">cyberveille-2026-10-15</guid>
-      <pubDate>Thu, 15 Oct 2026 19:24:11 +0000</pubDate>
-      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-15/cyberveille-2026-10-15.mp3" length="1269164" type="audio/mpeg"/>
-      <itunes:duration>00:02:39</itunes:duration>
+      <pubDate>Thu, 15 Oct 2026 20:01:54 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-15/cyberveille-2026-10-15.mp3" length="337310" type="audio/mpeg"/>
+      <itunes:duration>00:00:42</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-15.json" type="application/json+chapters"/>
-      <description><![CDATA[<h3>Alertes et failles critiques</h3>
-<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21589">CVE-2026-21589 — Atlassian Multiple Products exploitée activement</a> — CISA KEV</p>
-<h3>Menaces et groupes d&#x27;attaquants</h3>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/hackers-hijack-d-link-ubiquiti-devices-to-resell-your-stolen-bandwidth/">Hackers hijack D-Link, Ubiquiti devices to resell your stolen bandwidth</a> — BleepingComputer</p>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/fake-arch-linux-packages-push-malware-with-root-privileges/">Fake Arch Linux packages push malware with root privileges</a> — BleepingComputer</p>
+      <description><![CDATA[<h3>Outils, recherche et divers</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/android-gets-ai-defenses-against-messaging-scams-fake-calls/">Android gets AI defenses against messaging scams, fake calls</a> — BleepingComputer</p>
 <p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
     </item>
   </channel>
