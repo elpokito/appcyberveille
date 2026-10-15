@@ -79,3 +79,20 @@ def test_sommaire_chiffre_et_accorde():
     phrase = generate.summary_sentence(chapitres)
     assert phrase.startswith("Au sommaire aujourd'hui : deux alertes de sécurité, un incident")
     assert "une news outils et recherche" in phrase
+
+
+def test_phrase_trop_anglaise_signalee_sans_bloquer():
+    chunk = [news("a", "Atlassian flaw", summary="CVE-2026-21589")]
+    seg = [{"text": "Elle touche Bitbucket Data Center, Confluence Data Center, Jira Software Data Center "
+                    "et Bamboo Data Center.", "sources": ["a"]}]
+    assert generate.validate_segments(seg, chunk) == []      # pas une erreur bloquante…
+    assert generate.style_issues(seg)                         # … mais une reformulation est demandée
+
+
+def test_relance_du_jour_n_ecarte_pas_ses_propres_sujets(tmp_path, monkeypatch):
+    episodes = [{"date": "2026-10-15", "sources": [{"links": [{"title": "Sujet du jour"}]}]},
+                {"date": "2026-10-14", "sources": [{"links": [{"title": "Sujet d'hier"}]}]}]
+    path = tmp_path / "episodes.json"
+    path.write_text(__import__("json").dumps(episodes), encoding="utf-8")
+    monkeypatch.setattr(generate, "EPISODES_FILE", path)
+    assert generate.recent_titles(today="2026-10-15") == ["Sujet d'hier"]

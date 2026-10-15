@@ -12,8 +12,9 @@ Sorties :
   - build/chapters.json  : début de chaque rubrique (servira au flux RSS)
 
 Usage :
-  py src/tts.py            → génère l'épisode
-  py src/tts.py --samples  → génère un court extrait avec chaque voix, pour choisir
+  py src/tts.py                → génère l'épisode
+  py src/tts.py --samples      → génère un court extrait avec chaque voix, pour choisir
+  py src/tts.py --test-langue  → la phrase qui passait en anglais, lue avec et sans le français forcé
 """
 
 import asyncio
@@ -26,8 +27,10 @@ import sys
 from pathlib import Path
 
 import edge_tts
+import edge_tts.communicate as edge_communicate
 
 from common import job_summary
+from langue import soften_english
 
 # --------------------------------------------------------------------------
 # Configuration
@@ -80,6 +83,9 @@ NEWS_JINGLE = (" + ".join([_bowed(G4, 0, 0.22, 0.12), _bowed(C5, 0.24, 0.22, 0.1
 VIOLIN_FX = ("highpass=f=180,lowpass=f=4500,"                                   # couleur « bois »
              "aecho=0.8:0.8:60|120|190|260:0.4|0.3|0.2|0.12,"                    # réverbération légère
              "loudnorm=I=-21:TP=-3")                                             # un peu sous la voix
+# Les voix « Multilingual » devinent la langue de chaque phrase et peuvent basculer en anglais.
+# On leur impose le français (balise SSML <lang>) ; si le service refuse, retour automatique au mode normal.
+FORCE_FRENCH = os.environ.get("TTS_FORCE_FR", "1") != "0"
 TTS_RETRIES = 3           # le service est en ligne : une coupure réseau ne doit pas tout faire échouer
 PARALLEL = 4              # passages synthétisés en même temps (plus rapide, sans abuser du service)
 
@@ -138,6 +144,50 @@ def clean_for_speech(text: str) -> str:
 # --------------------------------------------------------------------------
 # 2. Synthèse vocale
 # --------------------------------------------------------------------------
+
+# edge-tts fabrique lui-même le SSML (le « mode d'emploi » envoyé au service de synthèse) avec
+# xml:lang='en-US' et sans moyen de choisir la langue. On remplace sa fonction mkssml par une version
+# qui ajoute <lang xml:lang='fr-FR'> : la voix multilingue lit alors TOUT en français.
+_EDGE_MKSSML = getattr(edge_communicate, "mkssml", None)
+
+
+def _mkssml_french(tc, escaped_text) -> str:
+    if isinstance(escaped_text, bytes):
+        escaped_text = escaped_text.decode("utf-8")
+    return ("<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='fr-FR'>"
+            f"<voice name='{tc.voice}'><lang xml:lang='fr-FR'>"
+            f"<prosody pitch='{tc.pitch}' rate='{tc.rate}' volume='{tc.volume}'>{escaped_text}</prosody>"
+            "</lang></voice></speak>")
+
+
+def set_french(enabled: bool) -> bool:
+    """Active/désactive le français forcé. Renvoie False si ce n'est pas possible
+    (voix non multilingue, ou version d'edge-tts qui ne fonctionne plus pareil)."""
+    if _EDGE_MKSSML is None:
+        return False
+    edge_communicate.mkssml = _mkssml_french if enabled else _EDGE_MKSSML
+    return enabled
+
+
+def expected_seconds(text: str) -> float:
+    return len(text.split()) / 2.6       # ≈ 155 mots par minute
+
+
+async def french_is_accepted(text: str, path: Path, voice: str = VOICE) -> bool:
+    """Essai sur un passage : le service accepte-t-il la langue forcée, et le son a-t-il une durée normale ?
+    (Un service qui refuse la balise renvoie une erreur ou un son vide : on le détecte ici, une seule fois.)"""
+    if "Multilingual" not in voice or not set_french(True):
+        return False
+    try:
+        await edge_tts.Communicate(text, voice, rate=RATE).save(str(path))
+        ok = path.stat().st_size > 1000 and duration(path) >= 0.3 * expected_seconds(text)
+    except Exception as exc:                  # noqa: BLE001 — n'importe quel refus = on revient au mode normal
+        print(f"   (langue forcée refusée par le service : {exc!r})")
+        ok = False
+    path.unlink(missing_ok=True)
+    if not ok:
+        set_french(False)
+    return ok
 
 async def synthesize(text: str, path: Path, voice: str = VOICE) -> None:
     """Fait lire un passage ; réessaie en cas de coupure ; refuse un fichier vide."""
@@ -266,13 +316,16 @@ def check_ffmpeg() -> bool:
     return False
 
 
-def build_jobs(script: dict) -> list[tuple[str, Path, str | None]]:
-    """Liste ordonnée des passages à lire : (texte, fichier, titre de chapitre s'il commence ici)."""
-    jobs, n = [], 0
+def build_jobs(script: dict) -> tuple[list[tuple[str, Path, str | None]], int]:
+    """Liste ordonnée des passages à lire : (texte, fichier, titre de chapitre s'il commence ici),
+    et le nombre de phrases raccourcies parce qu'elles auraient été lues en anglais."""
+    jobs, n, softened = [], 0, 0
 
     def add(text: str, chapter: str | None = None) -> None:
-        nonlocal n
+        nonlocal n, softened
         n += 1
+        text, fixed = soften_english(text)          # listes de noms anglais → « A, B et plusieurs autres »
+        softened += fixed
         jobs.append((clean_for_speech(text), PARTS_DIR / f"{n:03d}.mp3", chapter))
 
     add(script["intro"], "Introduction")
@@ -281,7 +334,7 @@ def build_jobs(script: dict) -> list[tuple[str, Path, str | None]]:
         for seg in chapter["segments"]:
             add(seg["text"])
     add(script["outro"], "Conclusion")
-    return jobs
+    return jobs, softened
 
 
 def make_samples() -> int:
@@ -299,9 +352,38 @@ def make_samples() -> int:
     return 0
 
 
+# La phrase de l'épisode du 15/10/2026 que la voix a lue en anglais (trop de noms de produits).
+LANGUAGE_TEST = ("Une vulnérabilité, identifiée sous le numéro CVE-2026-21589, touche plusieurs produits "
+                 "Atlassian : Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, "
+                 "Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible et Fisheye.")
+
+
+def make_language_test() -> int:
+    """Trois versions de la même phrase, à comparer à l'oreille :
+    1. comme avant (la voix choisit la langue)  2. français forcé  3. français forcé + liste raccourcie."""
+    if not check_ffmpeg():
+        return 1
+    BUILD_DIR.mkdir(exist_ok=True)
+    raw = clean_for_speech(LANGUAGE_TEST)
+    short = clean_for_speech(soften_english(LANGUAGE_TEST)[0])
+    set_french(False)
+    asyncio.run(synthesize(raw, BUILD_DIR / "test_langue_1_avant.mp3"))
+    accepted = asyncio.run(french_is_accepted(raw, BUILD_DIR / "probe.mp3"))
+    if accepted:
+        asyncio.run(synthesize(raw, BUILD_DIR / "test_langue_2_francais_force.mp3"))
+        asyncio.run(synthesize(short, BUILD_DIR / "test_langue_3_force_et_raccourci.mp3"))
+    else:
+        asyncio.run(synthesize(short, BUILD_DIR / "test_langue_3_raccourci.mp3"))
+    print("Langue forcée acceptée par le service :", "oui ✓" if accepted else "non (retour au mode normal)")
+    print("Écoute les fichiers build/test_langue_*.mp3 et compare.")
+    return 0
+
+
 def main() -> int:
     if "--samples" in sys.argv:
         return make_samples()
+    if "--test-langue" in sys.argv:
+        return make_language_test()
     if not check_ffmpeg():
         return 1
     if not SCRIPT_FILE.exists():
@@ -312,8 +394,11 @@ def main() -> int:
     shutil.rmtree(PARTS_DIR, ignore_errors=True)       # repartir propre : pas de vieux morceaux mélangés
     PARTS_DIR.mkdir(parents=True)
 
-    jobs = build_jobs(script)
-    print(f"Voix : {VOICE} ({RATE}) — {len(jobs)} passages")
+    jobs, softened = build_jobs(script)
+    french = FORCE_FRENCH and asyncio.run(french_is_accepted(jobs[0][0], PARTS_DIR / "essai_langue.mp3"))
+    language = "français forcé" if french else "choisie par la voix"
+    print(f"Voix : {VOICE} ({RATE}) — {len(jobs)} passages — langue {language}"
+          + (f" — {softened} phrase(s) raccourcie(s)" if softened else ""))
     try:
         asyncio.run(synthesize_all([(text, path) for text, path, _ in jobs]))
     except RuntimeError as exc:
@@ -355,7 +440,9 @@ def main() -> int:
     minutes = duration(EPISODE_FILE) / 60
     size = EPISODE_FILE.stat().st_size / 1_000_000
     print(f"→ build/episode.mp3 : {minutes:.1f} min, {size:.1f} Mo, {len(chapters)} chapitres")
-    job_summary(f"### Audio\n- Voix : {VOICE} ({RATE})\n- {minutes:.1f} min, {size:.1f} Mo, {len(chapters)} chapitres")
+    job_summary(f"### Audio\n- Voix : {VOICE} ({RATE}), langue {language}\n"
+                f"- Listes de noms raccourcies (sinon lues en anglais) : {softened}\n"
+                f"- {minutes:.1f} min, {size:.1f} Mo, {len(chapters)} chapitres")
     return 0
 
 

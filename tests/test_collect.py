@@ -25,4 +25,11 @@ def test_dedoublonnage_garde_la_source_prioritaire():
 
 def test_un_sujet_deja_traite_bloque_aussi_ses_doublons():
     items = [item("a", "Faille critique dans FortiOS"), item("b", "Faille critique dans FortiOS !")]
-    assert collect.deduplicate(items, seen={"a": "2026-10-14"}) == []
+    assert collect.deduplicate(items, seen={"a": "2026-10-14"}, today="2026-10-15") == []
+
+
+def test_relance_le_meme_jour_reprend_les_news_du_matin():
+    # Bug du 15/10/2026 : la relance du soir n'avait plus que 4 news → épisode de 3 min.
+    items = [item("a", "Faille critique dans FortiOS"), item("b", "Fuite de données chez Acme")]
+    kept = collect.deduplicate(items, seen={"a": "2026-10-15", "b": "2026-10-14"}, today="2026-10-15")
+    assert [i["id"] for i in kept] == ["a"]

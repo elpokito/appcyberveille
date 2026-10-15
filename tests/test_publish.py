@@ -23,3 +23,10 @@ def test_flux_rss_valide():
     item = root.find("channel/item")
     assert item.find("enclosure").get("type") == "audio/mpeg"
     assert item.find("guid").text == "cv-1"
+
+
+def test_une_relance_courte_n_ecrase_pas_le_bon_episode():
+    assert publish.keeps_existing(654, 159)                # 10:54 publié, relance de 2:39 → on garde
+    assert not publish.keeps_existing(159, 654)            # l'inverse : on remplace
+    assert not publish.keeps_existing(None, 159)           # premier épisode du jour
+    assert not publish.keeps_existing(654, 159, force=True)

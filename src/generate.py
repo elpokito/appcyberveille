@@ -28,6 +28,7 @@ from pathlib import Path
 import httpx
 
 from common import job_summary
+from langue import english_heavy_sentences
 
 # --------------------------------------------------------------------------
 # Configuration
@@ -44,7 +45,7 @@ MAX_CANDIDATES = 80       # news soumises au rédacteur en chef (titres seulemen
 MAX_SUBJECTS = 22         # sujets retenus au maximum
 MAX_EPISODE_WORDS = 3000  # ≈ 21 min à ~145 mots/min
 SUBJECTS_PER_CHUNK = 5    # sujets rédigés par requête : petites réponses = longueur respectée, moins d'erreurs
-SUMMARY_CHARS_SENT = 350  # extrait envoyé au LLM : assez pour résumer, léger pour le quota
+SUMMARY_CHARS_SENT = 500  # extrait envoyé au LLM : plus de faits = passages plus riches SANS inventer
 WORDS_BY_IMPORTANCE = {5: 170, 4: 140, 3: 110, 2: 80, 1: 60}   # temps d'antenne selon l'importance
 URGENT_SOURCES = ("CISA KEV", "CERT-FR Alertes")                 # jamais oubliées silencieusement
 MAX_ATTEMPTS = 2          # essais par morceau (le 2e reçoit la liste des erreurs à corriger)
@@ -116,6 +117,15 @@ grosses fuites de données, rançongiciels, opérations policières, réglementa
 une importance de 1 (anecdotique) à 5 (critique, à traiter en premier) ; \
 et « suite » = true s'il prolonge un sujet de la liste <deja> avec un élément nouveau.
 
+Les rubriques :
+- « {RUBRICS[0]} » : toute faille ou correctif (y compris les avis et alertes du CERT-FR et le catalogue KEV) ;
+- « {RUBRICS[1]} » : une victime précise (cyberattaque subie, fuite de données, rançongiciel) ;
+- « {RUBRICS[2]} » : campagnes, logiciels malveillants, groupes d'attaquants, arrestations et démantèlements ;
+- « {RUBRICS[3]} » : lois, sanctions, décisions et rapports d'autorités (jamais un avis de vulnérabilité) ;
+- « {RUBRICS[4]} » : recherche, nouveaux outils et le reste.
+Beaucoup d'avis du CERT-FR sur des produits différents : garde à part les plus graves, regroupe \
+les autres en UN sujet récapitulatif d'importance 2.
+
 Réponds UNIQUEMENT par un objet JSON, sujets du plus important au moins important :
 {{"sujets": [{{"rubrique": "Alertes et failles critiques", "ids": ["a1b2", "c3d4"], "importance": 5, "suite": false}}],
  "ecartes": ["e5f6"]}}"""
@@ -126,7 +136,15 @@ veille en cybersécurité, écouté dans les transports par un étudiant en cybe
 
 STYLE
 - Écris pour l'oreille : phrases courtes, ton clair et posé, transitions naturelles entre les sujets.
-- Aucune liste à puces, aucun markdown, aucune URL, aucun emoji. Traduis en français.
+- Aucune liste à puces, aucun markdown, aucune URL, aucun emoji.
+- Tout en français : traduis les titres et les phrases anglaises, ne garde en anglais que les noms \
+propres (produits, entreprises, groupes).
+- Jamais d'énumération de noms : au plus deux noms de produits par phrase, regroupe le reste \
+(« plusieurs produits Data Center d'Atlassian, dont Jira et Confluence »). La voix de synthèse lit \
+avec l'accent anglais toute phrase où les mots anglais dominent.
+- Pas de remplissage : aucun conseil générique (surveiller les journaux, sensibiliser, bonnes \
+pratiques…). Une action seulement si les news en citent une. N'affirme jamais qu'un correctif \
+existe ou n'existe pas si les news ne le disent pas.
 - Pour chaque sujet : ce qui s'est passé, qui est concerné, pourquoi c'est important, \
 et quoi faire (mettre à jour, désactiver…) si les news le précisent.
 - Les news sont regroupées par SUJET : celles d'un même sujet décrivent le même événement. \
@@ -146,7 +164,8 @@ FRAME_PROMPT = f"""Tu es l'animateur de « CyberVeille », podcast quotidien de 
 {SAFETY_RULES}
 On te donne le plan de l'épisode du jour. Écris :
 - une INTRO de 2 phrases : salutation et date, puis le sujet le plus marquant du jour. \
-Ne compte pas les sujets : un sommaire chiffré est lu juste après ton intro ;
+Ne compte pas les sujets (un sommaire chiffré est lu juste après ton intro) \
+et cite au plus deux noms propres, sans liste ;
 - une OUTRO de 1 ou 2 phrases pour conclure.
 Aucune URL, aucun markdown. Réponds exactement sous cette forme :
 INTRO: …
@@ -397,12 +416,16 @@ def fallback_plan(items: list[dict]) -> list[dict]:
     return plan
 
 
-def recent_titles(limit: int = 60) -> list[str]:
-    """Titres des sources des 2 derniers épisodes publiés : le rédacteur évite les redites."""
+def recent_titles(limit: int = 60, today: str | None = None) -> list[str]:
+    """Titres des sources des 2 derniers épisodes publiés : le rédacteur évite les redites.
+    L'épisode du jour même est ignoré : si on relance la génération, c'est pour le REFAIRE,
+    pas pour écarter ses sujets comme « déjà traités »."""
+    today = today or datetime.now(timezone.utc).date().isoformat()
     try:
         episodes = json.loads(EPISODES_FILE.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return []
+    episodes = [ep for ep in episodes if ep.get("date") != today]
     titles = [link["title"] for ep in episodes[:2] for block in ep.get("sources", [])
               for link in block.get("links", []) if isinstance(link, dict) and "title" in link]
     return titles[:limit]
@@ -492,6 +515,14 @@ def validate_segments(segments: list[dict], chunk: list[dict]) -> list[str]:
     return errors
 
 
+def style_issues(segments: list[dict]) -> list[str]:
+    """Phrases que la voix lirait en anglais (trop de noms anglais) : on demande une reformulation,
+    mais ce n'est pas bloquant (tts.py raccourcira de toute façon les listes de noms)."""
+    return [f"passage {n} : trop de mots anglais, la voix lirait cette phrase en anglais : "
+            f"« {sentence[:90]}… » → reformule en français, au plus deux noms de produits par phrase"
+            for n, seg in enumerate(segments, 1) for sentence in english_heavy_sentences(seg["text"])]
+
+
 def write_chunk(llm: LLM, rubric: str, subjects: list[dict]) -> list[dict]:
     chunk = [item for subject in subjects for item in subject["items"]]
     goal = sum(WORDS_BY_IMPORTANCE[s["importance"]] for s in subjects)
@@ -502,28 +533,33 @@ def write_chunk(llm: LLM, rubric: str, subjects: list[dict]) -> list[dict]:
     base = [
         {"role": "system", "content": WRITE_PROMPT},
         {"role": "user", "content": f"Rubrique : {rubric}. {len(subjects)} sujet(s), environ {goal} mots "
-                                    f"au total (au moins {int(goal * 0.8)}).\n\n"
+                                    f"au total ; plus court si les news donnent peu de détails.\n\n"
                                     f"<news>\n{json.dumps(block, ensure_ascii=False, indent=1)}\n</news>"},
     ]
-    messages = base
+    messages, best = base, None
     for attempt in range(1, MAX_ATTEMPTS + 1):
         raw = llm.ask(messages)
         segments = parse_segments(raw)
         errors = validate_segments(segments, chunk)
-        words = sum(len(s["text"].split()) for s in segments)
+        style = [] if errors else style_issues(segments)
         if not errors:
-            # Trop court n'est pas dangereux : on garde, sans redemander (un nouvel essai coûte
-            # autant de quota que le premier, et le quota par minute est le facteur limitant).
-            if words < 0.6 * goal:
-                print(f"   ⚠️  passage plus court que prévu ({words}/{goal} mots), conservé")
-            return segments
-        problems = errors
-        print(f"   ⚠️  essai {attempt} rejeté : {problems[:4]}", file=sys.stderr)
+            best = segments                       # texte juste : on le garde en réserve
+            if not style or attempt == MAX_ATTEMPTS:
+                # Trop court n'est pas dangereux : on garde, sans redemander (un nouvel essai coûte
+                # autant de quota que le premier, et le quota par minute est le facteur limitant).
+                words = sum(len(s["text"].split()) for s in segments)
+                if words < 0.6 * goal:
+                    print(f"   ⚠️  passage plus court que prévu ({words}/{goal} mots), conservé")
+                return segments
+        problems = errors + style
+        print(f"   ⚠️  essai {attempt} à revoir : {problems[:4]}", file=sys.stderr)
         messages = base + [
             {"role": "assistant", "content": raw},
             {"role": "user", "content": "Corrige ces problèmes et renvoie le texte complet, "
                                         "au même format :\n- " + "\n- ".join(problems)},
         ]
+    if best is not None:
+        return best   # 1er essai juste mais trop chargé en anglais, 2e essai fautif : on garde le 1er
     # Erreurs persistantes : on ne garde que les passages sains, on écarte les fautifs
     # (mieux vaut une news en moins qu'une information fausse).
     kept = [s for s in segments if not validate_segments([s], chunk)]
@@ -697,6 +733,7 @@ def main() -> int:
         # pour ne pas revenir demain comme si elles étaient nouvelles.
         "seen_ids": sorted(i["id"] for i in items),
         "words": sum(len(t.split()) for t in all_texts(script)),
+        "english_heavy": sum(len(english_heavy_sentences(t)) for t in all_texts(script)),
         "sources": sources_by_chapter(script, items),
     }
     BUILD_DIR.mkdir(exist_ok=True)
@@ -708,6 +745,8 @@ def main() -> int:
     job_summary(f"### Script\n- {script['meta']['words']} mots (≈ {minutes:.0f} min), "
                 f"{sum(len(c['segments']) for c in script['chapters'])} passages, {len(used_ids)} news citées\n"
                 f"- Fournisseur : {', '.join(used) or 'aucun (journée calme)'}\n"
+                f"- {len(items)} news candidates · phrases trop chargées en anglais restantes : "
+                f"{script['meta']['english_heavy']} (raccourcies à la lecture)\n"
                 + "".join(f"- {c['title']} : {len(c['segments'])} sujet(s)\n" for c in script["chapters"]))
     return 0
 

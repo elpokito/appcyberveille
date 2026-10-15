@@ -120,9 +120,9 @@ def mark_seen(items: list[dict]) -> None:
     elles seraient perdues pour l'épisode du lendemain.
     """
     seen = load_seen()
-    today = datetime.now(timezone.utc).date().isoformat()
+    today = today_utc()
     for item in items:
-        seen[item["id"]] = today
+        seen.setdefault(item["id"], today)   # garde la date du PREMIER passage (relance le même jour)
     limit = (datetime.now(timezone.utc) - timedelta(days=SEEN_RETENTION_DAYS)).date().isoformat()
     seen = {k: d for k, d in seen.items() if d >= limit}  # purge des vieilles entrées
     SEEN_FILE.write_text(json.dumps(seen, indent=2, sort_keys=True), encoding="utf-8")
@@ -182,14 +182,24 @@ def fetch_kev(client: httpx.Client, since: datetime) -> list[dict]:
     return items
 
 
-def deduplicate(items: list[dict], seen: dict) -> list[dict]:
-    """Retire les sujets déjà traités les jours précédents et les doublons entre sources."""
+def today_utc() -> str:
+    return datetime.now(timezone.utc).date().isoformat()
+
+
+def deduplicate(items: list[dict], seen: dict, today: str | None = None) -> list[dict]:
+    """Retire les sujets déjà traités les jours PRÉCÉDENTS et les doublons entre sources.
+
+    Une news marquée « vue » AUJOURD'HUI reste disponible : si on relance l'épisode le même jour
+    (après une correction, par exemple), il doit être refait avec les mêmes news, et non avec
+    les 3 ou 4 arrivées depuis — c'est ce qui avait produit l'épisode de 3 min du 15/10/2026.
+    """
+    today = today or today_utc()
     # Les plus prioritaires d'abord : en cas de doublon, c'est la meilleure source qui reste.
     items = sorted(items, key=lambda i: (-i["priority"], i["published"]))
     kept, kept_titles, kept_ids = [], [], set()
     for item in items:
         title = normalize_title(item["title"])
-        if item["id"] in seen:
+        if item["id"] in seen and seen[item["id"]] < today:
             # Déjà traité un autre jour : on garde son titre en mémoire pour bloquer
             # aussi ses doublons venant d'autres sites (sinon ils reviendraient demain).
             kept_titles.append(title)
@@ -231,13 +241,18 @@ def main() -> int:
                 counts[name] = "échec"
                 failures.append(name)
 
-    items = deduplicate(collected, load_seen())
+    seen = load_seen()
+    items = deduplicate(collected, seen)
+    reused = sum(1 for i in items if seen.get(i["id"]) == today_utc())
     ITEMS_FILE.parent.mkdir(parents=True, exist_ok=True)
     ITEMS_FILE.write_text(json.dumps(items, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\n→ {len(collected)} news collectées, {len(items)} gardées après dédoublonnage → {ITEMS_FILE.name}")
+    if reused:
+        print(f"   (relance du jour : {reused} news déjà examinées ce matin sont reprises)")
     job_summary("### Collecte\n| Source | News |\n|---|---|\n"
                 + "".join(f"| {n} | {c} |\n" for n, c in counts.items())
-                + f"\n**{len(items)}** news nouvelles après dédoublonnage.")
+                + f"\n**{len(items)}** news après dédoublonnage"
+                + (f" (dont {reused} reprises : relance du même jour)." if reused else "."))
 
     failed_ratio = len(failures) / len(jobs)
     if failed_ratio > MAX_FAILED_RATIO:

@@ -29,7 +29,7 @@ import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from collect import mark_seen  # noqa: E402  (même logique de mémoire que la collecte)
-from common import job_summary  # noqa: E402
+from common import gh_warning, job_summary  # noqa: E402
 
 # --------------------------------------------------------------------------
 # Configuration
@@ -45,6 +45,9 @@ EPISODES_FILE = ROOT / "data" / "episodes.json"   # index des épisodes publiés
 SITE_DIR = ROOT / "docs"                          # dossier servi par GitHub Pages
 
 KEEP_EPISODES = 30
+# Relance le même jour : on ne remplace PAS un épisode déjà publié par une version bien plus courte
+# (ex. une source en panne lors de la relance). FORCE_PUBLISH=1 pour passer outre.
+MIN_REPLACE_RATIO = 0.5
 OFFLINE_EPISODES = 7      # les 7 plus récents sont aussi copiés sur GitHub Pages (écoute hors ligne dans l'app)
 API = "https://api.github.com"
 UPLOADS = "https://uploads.github.com"
@@ -185,6 +188,11 @@ def build_feed(episodes: list[dict]) -> str:
 # Programme principal
 # --------------------------------------------------------------------------
 
+def keeps_existing(existing_seconds: int | None, new_seconds: int, force: bool = False) -> bool:
+    """Vrai si l'épisode déjà publié ce jour doit être gardé (le nouveau fait moins de la moitié)."""
+    return bool(existing_seconds) and not force and new_seconds < MIN_REPLACE_RATIO * existing_seconds
+
+
 def main() -> int:
     dry_run = "--dry-run" in sys.argv
     for f in (EPISODE_FILE, SCRIPT_FILE, NOTES_FILE, CHAPTERS_FILE):
@@ -203,6 +211,18 @@ def main() -> int:
     date = script["meta"]["date"]
     tag, asset = f"ep-{date}", f"cyberveille-{date}.mp3"
     title = f"CyberVeille du {datetime.fromisoformat(date).strftime('%d/%m/%Y')}"
+    episodes = json.loads(EPISODES_FILE.read_text(encoding="utf-8")) if EPISODES_FILE.exists() else []
+    seconds = mp3_duration(EPISODE_FILE)
+
+    # 0. Garde-fou : une relance ratée ne doit pas écraser le bon épisode du jour
+    existing = next((ep.get("seconds") for ep in episodes if ep["date"] == date), None)
+    if keeps_existing(existing, seconds, os.environ.get("FORCE_PUBLISH") == "1"):
+        message = (f"Épisode du {date} déjà publié ({hms(existing)}) : la nouvelle version ne dure que "
+                   f"{hms(seconds)}, on garde l'ancienne. Pour forcer : variable FORCE_PUBLISH=1.")
+        print(f"⚠️  {message}")
+        gh_warning(message)
+        job_summary(f"### Publication\n⚠️ {message}")
+        return 0
 
     # 1. Envoi du MP3
     if dry_run:
@@ -222,11 +242,10 @@ def main() -> int:
         ensure_ascii=False, indent=1), encoding="utf-8")
 
     # 3. Index des épisodes : on remplace celui du jour s'il existe, on garde les 30 plus récents
-    episodes = json.loads(EPISODES_FILE.read_text(encoding="utf-8")) if EPISODES_FILE.exists() else []
     episodes = [ep for ep in episodes if ep["date"] != date]
     episodes.insert(0, {
         "date": date, "title": title, "guid": f"cyberveille-{date}", "url": url,
-        "bytes": EPISODE_FILE.stat().st_size, "seconds": mp3_duration(EPISODE_FILE),
+        "bytes": EPISODE_FILE.stat().st_size, "seconds": seconds,
         "pub_date": format_datetime(datetime.now(timezone.utc)),
         "chapters_path": chapters_path, "asset": asset,
         "sources": script["meta"].get("sources", []),
