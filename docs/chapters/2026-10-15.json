@@ -6,23 +6,39 @@
    "title": "Introduction"
   },
   {
-   "startTime": 23.36,
+   "startTime": 25.36,
+   "title": "À la une"
+  },
+  {
+   "startTime": 102.72,
    "title": "Alertes et failles critiques"
   },
   {
-   "startTime": 379.85,
+   "startTime": 404.53,
    "title": "Incidents et fuites de données"
   },
   {
-   "startTime": 429.18,
+   "startTime": 516.33,
    "title": "Menaces et groupes d'attaquants"
   },
   {
-   "startTime": 543.61,
-   "title": "Outils, recherche et divers"
+   "startTime": 603.34,
+   "title": "En bref"
   },
   {
-   "startTime": 627.16,
+   "startTime": 671.12,
+   "title": "Le concept du jour"
+  },
+  {
+   "startTime": 702.49,
+   "title": "À retenir"
+  },
+  {
+   "startTime": 731.46,
+   "title": "Quiz"
+  },
+  {
+   "startTime": 765.89,
    "title": "Conclusion"
   }
  ]

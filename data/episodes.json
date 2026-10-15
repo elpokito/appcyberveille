@@ -4,40 +4,15 @@
   "title": "CyberVeille du 15/10/2026",
   "guid": "cyberveille-2026-10-15",
   "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-15/cyberveille-2026-10-15.mp3",
-  "bytes": 5051554,
-  "seconds": 631,
-  "pub_date": "Thu, 15 Oct 2026 20:30:24 +0000",
+  "bytes": 6205892,
+  "seconds": 776,
+  "pub_date": "Thu, 15 Oct 2026 21:34:10 +0000",
   "chapters_path": "chapters/2026-10-15.json",
   "asset": "cyberveille-2026-10-15.mp3",
   "sources": [
    {
-    "rubric": "Alertes et failles critiques",
+    "rubric": "À la une",
     "links": [
-     {
-      "title": "CVE-2026-104935 — Ivanti Connect Secure exploitée activement",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
-      "source": "CISA KEV"
-     },
-     {
-      "title": "Vulnérabilité dans Ivanti Connect Secure (ICS) (14 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-013/",
-      "source": "CERT-FR Alertes"
-     },
-     {
-      "title": "CISA Urges Immediate Ivanti Connect Secure Updates as Honeypots Log 105 Exploit Attempts",
-      "url": "https://thehackernews.com/2026/10/cisa-urges-immediate-ivanti-connect.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "CVE-2026-96951 — Microsoft Windows exploitée activement",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951",
-      "source": "CISA KEV"
-     },
-     {
-      "title": "Microsoft Patches Record 1,413 Flaws, Including Exploited Windows Shell Bug",
-      "url": "https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html",
-      "source": "The Hacker News"
-     },
      {
       "title": "CVE-2026-76519 — Cisco Secure Email Gateway exploitée activement",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519",
@@ -57,6 +32,46 @@
       "title": "Vulnérabilité dans Cisco AsyncOS Software pour Secure Email Gateway (15 octobre 2026)",
       "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1325/",
       "source": "CERT-FR Avis"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "CVE-2026-96951 — Microsoft Windows exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "Microsoft Patches Record 1,413 Flaws, Including Exploited Windows Shell Bug",
+      "url": "https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Microsoft fixes VPN issues caused by September Windows updates",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-vpn-issues-caused-by-september-windows-updates/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Microsoft fixes bug causing Windows black screens, Explorer crashes",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-causing-windows-black-screens-explorer-crashes/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "CVE-2026-104935 — Ivanti Connect Secure exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "Vulnérabilité dans Ivanti Connect Secure (ICS) (14 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-013/",
+      "source": "CERT-FR Alertes"
+     },
+     {
+      "title": "CISA Urges Immediate Ivanti Connect Secure Updates as Honeypots Log 105 Exploit Attempts",
+      "url": "https://thehackernews.com/2026/10/cisa-urges-immediate-ivanti-connect.html",
+      "source": "The Hacker News"
      },
      {
       "title": "CVE-2026-0322 — Palo Alto Networks PAN-OS exploitée activement",
@@ -84,9 +99,9 @@
       "source": "The Hacker News"
      },
      {
-      "title": "Microsoft Patches More Than 1,400 Security Flaws",
-      "url": "https://krebsonsecurity.com/2026/10/microsoft-patches-more-than-1400-security-flaws/",
-      "source": "Krebs on Security"
+      "title": "Silent Lynx Exploits WinRAR Flaw to Deploy Reverse Shell in CIS Government Attacks",
+      "url": "https://thehackernews.com/2026/10/silent-lynx-exploits-winrar-flaw-to.html",
+      "source": "The Hacker News"
      },
      {
       "title": "CVE-2026-21589 — Atlassian Multiple Products exploitée activement",
@@ -104,53 +119,8 @@
       "source": "The Hacker News"
      },
      {
-      "title": "Multiples vulnérabilités dans les produits Adobe (14 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1301/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Multiples vulnérabilités dans Microsoft Office (14 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1312/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Vulnérabilité dans Symantec Endpoint Detection and Response (14 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1303/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Vulnérabilité dans Zabbix (14 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1309/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Vulnérabilité dans PostgreSQL psqlODBC (15 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1319/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Multiples vulnérabilités dans Sonicwall Network Security Manager (15 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1320/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Multiples vulnérabilités dans les produits Juniper Networks (15 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1322/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Vulnérabilité dans les produits Microsoft (15 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1323/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Microsoft fixes VPN issues caused by September Windows updates",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-vpn-issues-caused-by-september-windows-updates/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "NGINX Fixes 5 Flaws, Including Possible RCE and a TLS Bug That May Skip Client-Cert Checks",
-      "url": "https://thehackernews.com/2026/10/nginx-fixes-5-flaws-including-possible.html",
+      "title": "Langflow's Critical Authenticated RCE Flaw Targeted in 1,423 Honeypot Exploit Attempts",
+      "url": "https://thehackernews.com/2026/10/langflows-critical-authenticated-rce.html",
       "source": "The Hacker News"
      }
     ]
@@ -158,6 +128,11 @@
    {
     "rubric": "Incidents et fuites de données",
     "links": [
+     {
+      "title": "GhostAction Compromises About 1,900 GitHub Accounts, Targets Over 30,000 Repositories",
+      "url": "https://thehackernews.com/2026/10/ghostaction-compromises-about-1900.html",
+      "source": "The Hacker News"
+     },
      {
       "title": "UK Legal Aid Agency: Hackers stole records dating back to 1978",
       "url": "https://www.bleepingcomputer.com/news/security/uk-legal-aid-agency-hackers-stole-records-dating-back-to-1978/",
@@ -174,28 +149,8 @@
     "rubric": "Menaces et groupes d'attaquants",
     "links": [
      {
-      "title": "Silent Lynx Exploits WinRAR Flaw to Deploy Reverse Shell in CIS Government Attacks",
-      "url": "https://thehackernews.com/2026/10/silent-lynx-exploits-winrar-flaw-to.html",
-      "source": "The Hacker News"
-     },
-     {
       "title": "FBI raids DPRK IT worker laptop farms in Texas, US nationals arrested",
       "url": "https://www.bleepingcomputer.com/news/security/fbi-raids-dprk-it-worker-laptop-farms-in-texas-us-nationals-arrested/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "U.S. Shuts Down Over 40 Laptop Farms, Charges 14 in North Korean IT Worker Fraud",
-      "url": "https://thehackernews.com/2026/10/us-shuts-down-over-40-laptop-farms.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "GhostAction Compromises About 1,900 GitHub Accounts, Targets Over 30,000 Repositories",
-      "url": "https://thehackernews.com/2026/10/ghostaction-compromises-about-1900.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "Hackers hijack D-Link, Ubiquiti devices to resell your stolen bandwidth",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-d-link-ubiquiti-devices-to-resell-your-stolen-bandwidth/",
       "source": "BleepingComputer"
      },
      {
@@ -206,11 +161,41 @@
     ]
    },
    {
-    "rubric": "Outils, recherche et divers",
+    "rubric": "En bref",
     "links": [
      {
-      "title": "Researchers Used a Public OpenAI Model to Build a $250,000 Chrome Full-Chain Exploit in Six Days",
-      "url": "https://thehackernews.com/2026/10/researchers-used-public-openai-model-to.html",
+      "title": "Multiples vulnérabilités dans les produits Adobe (14 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1301/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Xen (14 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1302/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans Symantec Endpoint Detection and Response (14 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1303/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans Zabbix (14 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1309/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Hackers Backdoor Nextcloud Servers Through Critical Flaw in Collabora’s Built-in CODE App",
+      "url": "https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Hackers exploit Collabora RCE flaw to backdoor Nextcloud servers",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-collabora-rce-flaw-to-backdoor-nextcloud-servers/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory",
+      "url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html",
       "source": "The Hacker News"
      },
      {
@@ -219,13 +204,50 @@
       "source": "The Hacker News"
      },
      {
+      "title": "The Blind Spots of Agentic Pentesting and How to Close Them",
+      "url": "https://www.bleepingcomputer.com/news/security/the-blind-spots-of-agentic-pentesting-and-how-to-close-them/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Is AI pentesting as good as a human pentester?",
+      "url": "https://www.bleepingcomputer.com/news/security/is-ai-pentesting-as-good-as-a-human-pentester/",
+      "source": "BleepingComputer"
+     },
+     {
       "title": "Fake Arch Linux packages push malware with root privileges",
       "url": "https://www.bleepingcomputer.com/news/security/fake-arch-linux-packages-push-malware-with-root-privileges/",
       "source": "BleepingComputer"
+     },
+     {
+      "title": "Citizen Lab Traces Zero-Click Candiru Spyware Infections at Al Jazeera to Targeted Online Ads",
+      "url": "https://thehackernews.com/2026/10/citizen-lab-traces-zero-click-candiru.html",
+      "source": "The Hacker News"
      }
     ]
    }
   ],
-  "description_html": "<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-104935\">CVE-2026-104935 — Ivanti Connect Secure exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-013/\">Vulnérabilité dans Ivanti Connect Secure (ICS) (14 octobre 2026)</a> — CERT-FR Alertes</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/cisa-urges-immediate-ivanti-connect.html\">CISA Urges Immediate Ivanti Connect Secure Updates as Honeypots Log 105 Exploit Attempts</a> — The Hacker News</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-96951\">CVE-2026-96951 — Microsoft Windows exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html\">Microsoft Patches Record 1,413 Flaws, Including Exploited Windows Shell Bug</a> — The Hacker News</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-76519\">CVE-2026-76519 — Cisco Secure Email Gateway exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/\">Cisco patches new Secure Email Gateway zero-day exploited in attacks</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/cisco-warns-of-active-attacks.html\">Cisco Warns of Active Attacks Exploiting New Critical Secure Email Gateway Vulnerability</a> — The Hacker News</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1325/\">Vulnérabilité dans Cisco AsyncOS Software pour Secure Email Gateway (15 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-0322\">CVE-2026-0322 — Palo Alto Networks PAN-OS exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/\">Palo Alto Networks warns of PAN-OS RCE flaw exploited in attacks</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html\">Palo Alto Networks Patches PAN-OS Authenticated RCE Flaw Amid Active Exploitation</a> — The Hacker News</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-105134\">CVE-2026-105134 — Ahsay AhsayCBS exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html\">AhsayCBS Flaws Exploited to Deploy Web Shells Get New Fixes After Incomplete Patches</a> — The Hacker News</p>\n<p>• <a href=\"https://krebsonsecurity.com/2026/10/microsoft-patches-more-than-1400-security-flaws/\">Microsoft Patches More Than 1,400 Security Flaws</a> — Krebs on Security</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-21589\">CVE-2026-21589 — Atlassian Multiple Products exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html\">Drupal Patches Critical Field UI Flaw With Unauthenticated RCE Path via Contributed Modules</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html\">Next.js Ships Out-of-Band Patch for Two Critical RCE Flaws in Caching and SVG Processing</a> — The Hacker News</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1301/\">Multiples vulnérabilités dans les produits Adobe (14 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1312/\">Multiples vulnérabilités dans Microsoft Office (14 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1303/\">Vulnérabilité dans Symantec Endpoint Detection and Response (14 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1309/\">Vulnérabilité dans Zabbix (14 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1319/\">Vulnérabilité dans PostgreSQL psqlODBC (15 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1320/\">Multiples vulnérabilités dans Sonicwall Network Security Manager (15 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1322/\">Multiples vulnérabilités dans les produits Juniper Networks (15 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1323/\">Vulnérabilité dans les produits Microsoft (15 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-vpn-issues-caused-by-september-windows-updates/\">Microsoft fixes VPN issues caused by September Windows updates</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/nginx-fixes-5-flaws-including-possible.html\">NGINX Fixes 5 Flaws, Including Possible RCE and a TLS Bug That May Skip Client-Cert Checks</a> — The Hacker News</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/uk-legal-aid-agency-hackers-stole-records-dating-back-to-1978/\">UK Legal Aid Agency: Hackers stole records dating back to 1978</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/ledger-asks-sellers-across-asia-to-halt-sales-after-supply-chain-attack/\">Ledger asks sellers across Asia to halt sales after supply-chain attack</a> — BleepingComputer</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/silent-lynx-exploits-winrar-flaw-to.html\">Silent Lynx Exploits WinRAR Flaw to Deploy Reverse Shell in CIS Government Attacks</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/fbi-raids-dprk-it-worker-laptop-farms-in-texas-us-nationals-arrested/\">FBI raids DPRK IT worker laptop farms in Texas, US nationals arrested</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/us-shuts-down-over-40-laptop-farms.html\">U.S. Shuts Down Over 40 Laptop Farms, Charges 14 in North Korean IT Worker Fraud</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/ghostaction-compromises-about-1900.html\">GhostAction Compromises About 1,900 GitHub Accounts, Targets Over 30,000 Repositories</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/hackers-hijack-d-link-ubiquiti-devices-to-resell-your-stolen-bandwidth/\">Hackers hijack D-Link, Ubiquiti devices to resell your stolen bandwidth</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/police-arrests-95-suspects-in-child-sexual-abuse-material-crackdown/\">Police arrests 95 suspects in international CSAM crackdown action</a> — BleepingComputer</p>\n<h3>Outils, recherche et divers</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/researchers-used-public-openai-model-to.html\">Researchers Used a Public OpenAI Model to Build a $250,000 Chrome Full-Chain Exploit in Six Days</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html\">AI-Found Linux Kernel Flaw Gives Local Users Root, and Can Break a Guest Out to the Host</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/fake-arch-linux-packages-push-malware-with-root-privileges/\">Fake Arch Linux packages push malware with root privileges</a> — BleepingComputer</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+  "memo": {
+   "fil_rouge": "Patchez sans délai les filtres de messagerie critiques, sinon ils deviennent porte d’entrée.",
+   "a_retenir": [
+    "Les appliances Cisco Secure Email Gateway peuvent être compromises via une traversée de chemin relatif, appliquez le correctif sans tarder.",
+    "Ivanti Connect Secure et PAN‑OS sont exploités pour exécution de commandes à distance, mettez à jour ces passerelles d’accès.",
+    "Les vulnérabilités d’injection de commandes affectent Windows, Ahsay et d’autres produits, activez les correctifs dès le Patch Tuesday."
+   ],
+   "concept": {
+    "nom": "Escalade de privilèges",
+    "explication": "L’injection de commandes consiste à insérer du code malveillant dans une requête que le système exécute sans le filtrer. Imaginez un formulaire où l’on peut ajouter « ; rm -rf / » qui serait exécuté comme une commande système. Dans les alertes du jour, plusieurs produits (Windows shell, Ivanti, PAN‑OS, Ahsay) permettent à un attaquant non authentifié d’obtenir des droits root grâce à cette faille. Cette technique correspond à la tactique Exécution de code du framework MITRE ATT&CK et à la catégorie Injection du Top 10 OWASP."
+   },
+   "quiz": [
+    {
+     "question": "Quel produit de messagerie a été compromis par une traversée de chemin relatif?",
+     "reponse": "Cisco Secure Email Gateway."
+    },
+    {
+     "question": "Quelle tactique MITRE ATT&CK décrit l’injection de commandes permettant d’obtenir des privilèges élevés?",
+     "reponse": "Exécution de code."
+    }
+   ]
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Patchez sans délai les filtres de messagerie critiques, sinon ils deviennent porte d’entrée.</p>\n<p>• Les appliances Cisco Secure Email Gateway peuvent être compromises via une traversée de chemin relatif, appliquez le correctif sans tarder.</p>\n<p>• Ivanti Connect Secure et PAN‑OS sont exploités pour exécution de commandes à distance, mettez à jour ces passerelles d’accès.</p>\n<p>• Les vulnérabilités d’injection de commandes affectent Windows, Ahsay et d’autres produits, activez les correctifs dès le Patch Tuesday.</p>\n<h3>Le concept du jour</h3>\n<p>Escalade de privilèges : L’injection de commandes consiste à insérer du code malveillant dans une requête que le système exécute sans le filtrer. Imaginez un formulaire où l’on peut ajouter « ; rm -rf / » qui serait exécuté comme une commande système. Dans les alertes du jour, plusieurs produits (Windows shell, Ivanti, PAN‑OS, Ahsay) permettent à un attaquant non authentifié d’obtenir des droits root grâce à cette faille. Cette technique correspond à la tactique Exécution de code du framework MITRE ATT&amp;CK et à la catégorie Injection du Top 10 OWASP.</p>\n<h3>Quiz</h3>\n<p>• Quel produit de messagerie a été compromis par une traversée de chemin relatif? → Cisco Secure Email Gateway.</p>\n<p>• Quelle tactique MITRE ATT&amp;CK décrit l’injection de commandes permettant d’obtenir des privilèges élevés? → Exécution de code.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-76519\">CVE-2026-76519 — Cisco Secure Email Gateway exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/\">Cisco patches new Secure Email Gateway zero-day exploited in attacks</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/cisco-warns-of-active-attacks.html\">Cisco Warns of Active Attacks Exploiting New Critical Secure Email Gateway Vulnerability</a> — The Hacker News</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1325/\">Vulnérabilité dans Cisco AsyncOS Software pour Secure Email Gateway (15 octobre 2026)</a> — CERT-FR Avis</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-96951\">CVE-2026-96951 — Microsoft Windows exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html\">Microsoft Patches Record 1,413 Flaws, Including Exploited Windows Shell Bug</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-vpn-issues-caused-by-september-windows-updates/\">Microsoft fixes VPN issues caused by September Windows updates</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-causing-windows-black-screens-explorer-crashes/\">Microsoft fixes bug causing Windows black screens, Explorer crashes</a> — BleepingComputer</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-104935\">CVE-2026-104935 — Ivanti Connect Secure exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-013/\">Vulnérabilité dans Ivanti Connect Secure (ICS) (14 octobre 2026)</a> — CERT-FR Alertes</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/cisa-urges-immediate-ivanti-connect.html\">CISA Urges Immediate Ivanti Connect Secure Updates as Honeypots Log 105 Exploit Attempts</a> — The Hacker News</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-0322\">CVE-2026-0322 — Palo Alto Networks PAN-OS exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/\">Palo Alto Networks warns of PAN-OS RCE flaw exploited in attacks</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html\">Palo Alto Networks Patches PAN-OS Authenticated RCE Flaw Amid Active Exploitation</a> — The Hacker News</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-105134\">CVE-2026-105134 — Ahsay AhsayCBS exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html\">AhsayCBS Flaws Exploited to Deploy Web Shells Get New Fixes After Incomplete Patches</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/silent-lynx-exploits-winrar-flaw-to.html\">Silent Lynx Exploits WinRAR Flaw to Deploy Reverse Shell in CIS Government Attacks</a> — The Hacker News</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-21589\">CVE-2026-21589 — Atlassian Multiple Products exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html\">Drupal Patches Critical Field UI Flaw With Unauthenticated RCE Path via Contributed Modules</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html\">Next.js Ships Out-of-Band Patch for Two Critical RCE Flaws in Caching and SVG Processing</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/langflows-critical-authenticated-rce.html\">Langflow&#x27;s Critical Authenticated RCE Flaw Targeted in 1,423 Honeypot Exploit Attempts</a> — The Hacker News</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/ghostaction-compromises-about-1900.html\">GhostAction Compromises About 1,900 GitHub Accounts, Targets Over 30,000 Repositories</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/uk-legal-aid-agency-hackers-stole-records-dating-back-to-1978/\">UK Legal Aid Agency: Hackers stole records dating back to 1978</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/ledger-asks-sellers-across-asia-to-halt-sales-after-supply-chain-attack/\">Ledger asks sellers across Asia to halt sales after supply-chain attack</a> — BleepingComputer</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/fbi-raids-dprk-it-worker-laptop-farms-in-texas-us-nationals-arrested/\">FBI raids DPRK IT worker laptop farms in Texas, US nationals arrested</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/police-arrests-95-suspects-in-child-sexual-abuse-material-crackdown/\">Police arrests 95 suspects in international CSAM crackdown action</a> — BleepingComputer</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1301/\">Multiples vulnérabilités dans les produits Adobe (14 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1302/\">Multiples vulnérabilités dans Xen (14 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1303/\">Vulnérabilité dans Symantec Endpoint Detection and Response (14 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1309/\">Vulnérabilité dans Zabbix (14 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html\">Hackers Backdoor Nextcloud Servers Through Critical Flaw in Collabora’s Built-in CODE App</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/hackers-exploit-collabora-rce-flaw-to-backdoor-nextcloud-servers/\">Hackers exploit Collabora RCE flaw to backdoor Nextcloud servers</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html\">Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html\">AI-Found Linux Kernel Flaw Gives Local Users Root, and Can Break a Guest Out to the Host</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/the-blind-spots-of-agentic-pentesting-and-how-to-close-them/\">The Blind Spots of Agentic Pentesting and How to Close Them</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/is-ai-pentesting-as-good-as-a-human-pentester/\">Is AI pentesting as good as a human pentester?</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/fake-arch-linux-packages-push-malware-with-root-privileges/\">Fake Arch Linux packages push malware with root privileges</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/citizen-lab-traces-zero-click-candiru.html\">Citizen Lab Traces Zero-Click Candiru Spyware Infections at Al Jazeera to Targeted Online Ads</a> — The Hacker News</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
  }
 ]
