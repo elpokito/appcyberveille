@@ -1,0 +1,37 @@
+{
+ "version": "1.2.0",
+ "chapters": [
+  {
+   "startTime": 0.0,
+   "title": "Introduction"
+  },
+  {
+   "startTime": 25.12,
+   "title": "Rappel"
+  },
+  {
+   "startTime": 46.1,
+   "title": "À la une"
+  },
+  {
+   "startTime": 102.57,
+   "title": "Alertes et failles critiques"
+  },
+  {
+   "startTime": 144.98,
+   "title": "Le concept du jour"
+  },
+  {
+   "startTime": 171.82,
+   "title": "À retenir"
+  },
+  {
+   "startTime": 200.02,
+   "title": "Quiz"
+  },
+  {
+   "startTime": 236.3,
+   "title": "Conclusion"
+  }
+ ]
+}

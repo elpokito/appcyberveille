@@ -9,12 +9,36 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Thu, 15 Oct 2026 21:34:10 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 05:19:39 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 16/10/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 05:19:39 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-16/cyberveille-2026-10-16.mp3" length="1993993" type="audio/mpeg"/>
+      <itunes:duration>00:04:09</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-16.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Appliquez les correctifs dès qu’ils sont disponibles et désactivez les fonctions non essentielles pour protéger les composants d’infrastructure critiques.</p>
+<p>• Les failles F5 permettent l’exécution de code à distance et la compromission du trafic réseau, il faut patcher immédiatement.</p>
+<p>• Les vulnérabilités Moodle sont des XSS qui peuvent modifier les cours et voler les données des étudiants, il faut désactiver les entrées non filtrées.</p>
+<p>• Le vecteur d’attaque des deux produits ne nécessite aucun accès préalable, donc sécurisez l’exposition depuis l’extérieur.</p>
+<h3>Le concept du jour</h3>
+<p>Cross‑Site Scripting (XSS) : Le XSS est une faille qui permet à un attaquant d’injecter du code JavaScript dans une page affichée à d’autres utilisateurs, comme un graffiti numérique sur un tableau blanc partagé. Dans le cas de Moodle, l’injection permet de modifier l’affichage des cours ou de voler des informations d’étudiants. Cette technique correspond à la catégorie « Injection » du OWASP Top 10 et à la tactique « Execution » du framework MITRE ATT&amp;CK.</p>
+<h3>Quiz</h3>
+<p>• Quel produit F5 expose les organisations à une exécution de code à distance depuis l’extérieur du réseau ? → Les dispositifs de répartition de trafic de la gamme F5.</p>
+<p>• Quelle faille Moodle exploite‑t‑elle pour injecter du code à distance ? → Une faille de type injection de script côté client.</p>
+<h3>À la une</h3>
+<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1317/">Multiples vulnérabilités dans les produits F5 (15 octobre 2026)</a> — CERT-FR Avis</p>
+<h3>Alertes et failles critiques</h3>
+<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1318/">Multiples vulnérabilités dans Moodle (15 octobre 2026)</a> — CERT-FR Avis</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 15/10/2026</title>
       <guid isPermaLink="false">cyberveille-2026-10-15</guid>
