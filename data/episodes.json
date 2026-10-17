@@ -1,5 +1,161 @@
 [
  {
+  "date": "2026-10-17",
+  "title": "CyberVeille du 17/10/2026",
+  "guid": "cyberveille-2026-10-17",
+  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-17/cyberveille-2026-10-17.mp3",
+  "bytes": 3729067,
+  "seconds": 466,
+  "pub_date": "Sat, 17 Oct 2026 05:15:33 +0000",
+  "chapters_path": "chapters/2026-10-17.json",
+  "asset": "cyberveille-2026-10-17.mp3",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "CVE-2026-102764 — BeyondTrust Remote Support exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "BeyondTrust patches zero-day exploited in attacks since August",
+      "url": "https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "China-Linked Hackers Exploited BeyondTrust Zero-Day to Take Over Remote Support Servers",
+      "url": "https://thehackernews.com/2026/10/china-linked-hackers-exploited.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "CVE-2025-61624 — Fortinet Multiple Products exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61624",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "PEERSTITCH Malware Deployed via FortiOS Flaw Bypasses Checks on Tagged VPN Sessions",
+      "url": "https://thehackernews.com/2026/10/attackers-exploit-fortios-flaw-to.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Critical BlockStrap flaw lets hackers run code on Magento servers",
+      "url": "https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Attackers Tampered with AOMEI Backupper's Update Servers for Minutes to Deliver a Backdoor",
+      "url": "https://thehackernews.com/2026/10/attackers-tampered-with-aomei.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "BAE Systems cyberattack disrupts US federal court operations",
+      "url": "https://www.bleepingcomputer.com/news/security/bae-systems-cyberattack-disrupts-us-federal-court-operations/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Burger King Japan data breach exposes 11 million customer records",
+      "url": "https://www.bleepingcomputer.com/news/security/burger-king-japan-data-breach-exposes-11-million-customer-records/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans Moxa AIG-302 Series (16 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1327/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans les produits Mattermost (16 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1328/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Google Chrome (16 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1329/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Microsoft Office (16 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1331/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "AI Decision Models and Their Impact on AI SOC Platforms",
+      "url": "https://thehackernews.com/2026/10/ai-decision-models-and-their-impact-on.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "OpenAI Research Model Spent 3rd-Party Test ETH Without Permission to Deploy Smart Contract",
+      "url": "https://thehackernews.com/2026/10/openai-research-model-spent-3rd-party.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "UAT-11985 Uses Fake Event Invites to Target Taiwan Research Affiliates With Google AitM Phishing",
+      "url": "https://thehackernews.com/2026/10/uat-11985-uses-fake-event-invites-to.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Targeted ads installed Candiru spyware in zero-click attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Microsoft: October Windows update may break Smart App Control",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/kb5127648-windows-security-update-may-break-smart-app-control/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "CERT-In Warns AI Agents Accessed Sensitive Data at Indian Organizations During Testing",
+      "url": "https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Employees using personal ChatGPT at work? Here's what IT admins need to do",
+      "url": "https://www.bleepingcomputer.com/news/security/employees-using-personal-chatgpt-at-work-heres-what-it-admins-need-to-do/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "memo": {
+   "fil_rouge": "Appliquer immédiatement les correctifs des vulnérabilités zero‑day empêche que des outils légitimes deviennent des portes d’entrée pour les attaquants.",
+   "a_retenir": [
+    "Les clients de BeyondTrust Remote Support doivent installer le correctif dès qu’il est disponible pour bloquer l’usurpation d’authentification.",
+    "Les administrateurs Fortinet avec droits en lecture‑écriture doivent restreindre l’accès CLI afin d’éviter la traversée de répertoires.",
+    "Les équipes doivent surveiller les alertes de mise à jour de logiciels critiques et déployer les mitigations recommandées par le fournisseur."
+   ],
+   "concept": {
+    "nom": "Traversée de répertoires (Directory Traversal)",
+    "explication": "La traversée de répertoires permet à un attaquant d’accéder à des fichiers en dehors du répertoire autorisé en manipulant les chemins d’accès. Imaginez un visiteur qui contourne la porte d’entrée d’un bâtiment en passant par une fenêtre ouverte ; il lit ou modifie des pièces qui ne lui sont pas destinées. Dans le cas de Fortinet, un profil admin peut écrire ou supprimer des fichiers arbitraires via des commandes CLI, ouvrant la voie à l’exécution de code ou à la compromission du système. Cette technique correspond à la catégorie « Contrôle d’accès » du cadre OWASP."
+   },
+   "quiz": [
+    {
+     "question": "Quel produit BeyondTrust a été ciblé par une usurpation d’authentification ?",
+     "reponse": "BeyondTrust Remote Support."
+    },
+    {
+     "question": "Quelle vulnérabilité permet à un attaquant authentifié d’écrire des fichiers arbitraires sur les appareils Fortinet ?",
+     "reponse": "Une faille de traversée de répertoires."
+    }
+   ]
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Appliquer immédiatement les correctifs des vulnérabilités zero‑day empêche que des outils légitimes deviennent des portes d’entrée pour les attaquants.</p>\n<p>• Les clients de BeyondTrust Remote Support doivent installer le correctif dès qu’il est disponible pour bloquer l’usurpation d’authentification.</p>\n<p>• Les administrateurs Fortinet avec droits en lecture‑écriture doivent restreindre l’accès CLI afin d’éviter la traversée de répertoires.</p>\n<p>• Les équipes doivent surveiller les alertes de mise à jour de logiciels critiques et déployer les mitigations recommandées par le fournisseur.</p>\n<h3>Le concept du jour</h3>\n<p>Traversée de répertoires (Directory Traversal) : La traversée de répertoires permet à un attaquant d’accéder à des fichiers en dehors du répertoire autorisé en manipulant les chemins d’accès. Imaginez un visiteur qui contourne la porte d’entrée d’un bâtiment en passant par une fenêtre ouverte ; il lit ou modifie des pièces qui ne lui sont pas destinées. Dans le cas de Fortinet, un profil admin peut écrire ou supprimer des fichiers arbitraires via des commandes CLI, ouvrant la voie à l’exécution de code ou à la compromission du système. Cette technique correspond à la catégorie « Contrôle d’accès » du cadre OWASP.</p>\n<h3>Quiz</h3>\n<p>• Quel produit BeyondTrust a été ciblé par une usurpation d’authentification ? → BeyondTrust Remote Support.</p>\n<p>• Quelle vulnérabilité permet à un attaquant authentifié d’écrire des fichiers arbitraires sur les appareils Fortinet ? → Une faille de traversée de répertoires.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-102764\">CVE-2026-102764 — BeyondTrust Remote Support exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/\">BeyondTrust patches zero-day exploited in attacks since August</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/china-linked-hackers-exploited.html\">China-Linked Hackers Exploited BeyondTrust Zero-Day to Take Over Remote Support Servers</a> — The Hacker News</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2025-61624\">CVE-2025-61624 — Fortinet Multiple Products exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/attackers-exploit-fortios-flaw-to.html\">PEERSTITCH Malware Deployed via FortiOS Flaw Bypasses Checks on Tagged VPN Sessions</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/\">Critical BlockStrap flaw lets hackers run code on Magento servers</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/attackers-tampered-with-aomei.html\">Attackers Tampered with AOMEI Backupper&#x27;s Update Servers for Minutes to Deliver a Backdoor</a> — The Hacker News</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/bae-systems-cyberattack-disrupts-us-federal-court-operations/\">BAE Systems cyberattack disrupts US federal court operations</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/burger-king-japan-data-breach-exposes-11-million-customer-records/\">Burger King Japan data breach exposes 11 million customer records</a> — BleepingComputer</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1327/\">Multiples vulnérabilités dans Moxa AIG-302 Series (16 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1328/\">Multiples vulnérabilités dans les produits Mattermost (16 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1329/\">Multiples vulnérabilités dans Google Chrome (16 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1331/\">Multiples vulnérabilités dans Microsoft Office (16 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/ai-decision-models-and-their-impact-on.html\">AI Decision Models and Their Impact on AI SOC Platforms</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/openai-research-model-spent-3rd-party.html\">OpenAI Research Model Spent 3rd-Party Test ETH Without Permission to Deploy Smart Contract</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/uat-11985-uses-fake-event-invites-to.html\">UAT-11985 Uses Fake Event Invites to Target Taiwan Research Affiliates With Google AitM Phishing</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/\">Targeted ads installed Candiru spyware in zero-click attacks</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/microsoft/kb5127648-windows-security-update-may-break-smart-app-control/\">Microsoft: October Windows update may break Smart App Control</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html\">CERT-In Warns AI Agents Accessed Sensitive Data at Indian Organizations During Testing</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/employees-using-personal-chatgpt-at-work-heres-what-it-admins-need-to-do/\">Employees using personal ChatGPT at work? Here&#x27;s what IT admins need to do</a> — BleepingComputer</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+ },
+ {
   "date": "2026-10-16",
   "title": "CyberVeille du 16/10/2026",
   "guid": "cyberveille-2026-10-16",
