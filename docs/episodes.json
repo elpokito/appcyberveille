@@ -1,5 +1,104 @@
 [
  {
+  "date": "2026-10-18",
+  "title": "CyberVeille du 18/10/2026",
+  "guid": "cyberveille-2026-10-18",
+  "seconds": 420,
+  "bytes": 3358424,
+  "chapters": "chapters/2026-10-18.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Hackers Use Compromised ConnectWise Credential to Sign In to 173 Microsoft 365 Tenants",
+      "url": "https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "Drupal patches critical RCE flaws, warns exploits may emerge soon",
+      "url": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Phishing : une opération frappe trois kits pirate",
+      "url": "https://www.zataz.com/phishing-une-operation-frappe-trois-kits-pirate/",
+      "source": "Zataz"
+     }
+    ]
+   },
+   {
+    "rubric": "Outils, recherche et divers",
+    "links": [
+     {
+      "title": "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in Windows Native Addon",
+      "url": "https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Leboncoin et Vinted : des notifications suspectes",
+      "url": "https://www.zataz.com/leboncoin-et-vinted-des-notifications-suspectes/",
+      "source": "Zataz"
+     },
+     {
+      "title": "Cyberattaques : les supermarchés européens perturbés",
+      "url": "https://www.zataz.com/cyberattaques-les-supermarches-europeens-perturbes/",
+      "source": "Zataz"
+     },
+     {
+      "title": "Cyberattaques : des sites français ciblés par des pirates",
+      "url": "https://www.zataz.com/cyberattaques-des-sites-francais-cibles-par-des-pirates/",
+      "source": "Zataz"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Compromettre un compte de service cloud suffit à infiltrer des centaines de locataires M365 ; sécuriser les identités d’application est prioritaire.",
+   "a_retenir": [
+    "Les fournisseurs de services managés qui utilisent ConnectWise Cloud Backup et leurs clients sont potentiellement exposés.",
+    "Les hackers utilisent des identités d’application légitimes pour accéder aux boîtes aux lettres, SharePoint et Teams des locataires M365.",
+    "Bloquez immédiatement l’accès au service Cloud Backup et vérifiez les comptes Microsoft 365 pour toute activité suspecte."
+   ],
+   "concept": {
+    "nom": "Usurpation d’identité d’application",
+    "explication": "L’usurpation d’identité d’application consiste à prendre le contrôle d’un compte de service légitime pour agir comme l’application elle‑même. Imaginez un employé qui obtient la carte d’accès d’un collègue et entre dans son bureau ; il peut alors lire et modifier tout ce qui s’y trouve. Dans l’incident ConnectWise, les attaquants ont détourné ces comptes pour se connecter à 173 locataires M365 et explorer les données. Cette technique relève de la catégorie « Valid Accounts » du framework MITRE ATT&CK, sous la tactique d’accès persistant."
+   },
+   "quiz": [
+    {
+     "question": "Quel service cloud a été compromis pour toucher les locataires M365 ?",
+     "reponse": "Le service de sauvegarde cloud de ConnectWise."
+    },
+    {
+     "question": "Quelle mesure immédiate doit être appliquée aux comptes Microsoft 365 ?",
+     "reponse": "Bloquer l’accès au service compromis et vérifier les comptes pour toute activité anormale."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-10-18.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-18/cyberveille-2026-10-18.mp3"
+ },
+ {
   "date": "2026-10-17",
   "title": "CyberVeille du 17/10/2026",
   "guid": "cyberveille-2026-10-17",

@@ -1,0 +1,53 @@
+{
+ "version": "1.2.0",
+ "chapters": [
+  {
+   "startTime": 0.0,
+   "title": "Introduction"
+  },
+  {
+   "startTime": 31.77,
+   "title": "Rappel"
+  },
+  {
+   "startTime": 55.89,
+   "title": "À la une"
+  },
+  {
+   "startTime": 151.65,
+   "title": "Alertes et failles critiques"
+  },
+  {
+   "startTime": 178.39,
+   "title": "Menaces et groupes d'attaquants"
+  },
+  {
+   "startTime": 198.84,
+   "title": "Outils, recherche et divers"
+  },
+  {
+   "startTime": 228.66,
+   "title": "En bref"
+  },
+  {
+   "startTime": 252.34,
+   "title": "La semaine en bref"
+  },
+  {
+   "startTime": 308.65,
+   "title": "Le concept du jour"
+  },
+  {
+   "startTime": 339.88,
+   "title": "À retenir"
+  },
+  {
+   "startTime": 368.27,
+   "title": "Quiz"
+  },
+  {
+   "startTime": 405.41,
+   "title": "Conclusion"
+  }
+ ]
+}

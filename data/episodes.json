@@ -1,5 +1,106 @@
 [
  {
+  "date": "2026-10-18",
+  "title": "CyberVeille du 18/10/2026",
+  "guid": "cyberveille-2026-10-18",
+  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-18/cyberveille-2026-10-18.mp3",
+  "bytes": 3358424,
+  "seconds": 420,
+  "pub_date": "Sun, 18 Oct 2026 05:21:00 +0000",
+  "chapters_path": "chapters/2026-10-18.json",
+  "asset": "cyberveille-2026-10-18.mp3",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Hackers Use Compromised ConnectWise Credential to Sign In to 173 Microsoft 365 Tenants",
+      "url": "https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "Drupal patches critical RCE flaws, warns exploits may emerge soon",
+      "url": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Phishing : une opération frappe trois kits pirate",
+      "url": "https://www.zataz.com/phishing-une-operation-frappe-trois-kits-pirate/",
+      "source": "Zataz"
+     }
+    ]
+   },
+   {
+    "rubric": "Outils, recherche et divers",
+    "links": [
+     {
+      "title": "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in Windows Native Addon",
+      "url": "https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Leboncoin et Vinted : des notifications suspectes",
+      "url": "https://www.zataz.com/leboncoin-et-vinted-des-notifications-suspectes/",
+      "source": "Zataz"
+     },
+     {
+      "title": "Cyberattaques : les supermarchés européens perturbés",
+      "url": "https://www.zataz.com/cyberattaques-les-supermarches-europeens-perturbes/",
+      "source": "Zataz"
+     },
+     {
+      "title": "Cyberattaques : des sites français ciblés par des pirates",
+      "url": "https://www.zataz.com/cyberattaques-des-sites-francais-cibles-par-des-pirates/",
+      "source": "Zataz"
+     }
+    ]
+   }
+  ],
+  "memo": {
+   "fil_rouge": "Compromettre un compte de service cloud suffit à infiltrer des centaines de locataires M365 ; sécuriser les identités d’application est prioritaire.",
+   "a_retenir": [
+    "Les fournisseurs de services managés qui utilisent ConnectWise Cloud Backup et leurs clients sont potentiellement exposés.",
+    "Les hackers utilisent des identités d’application légitimes pour accéder aux boîtes aux lettres, SharePoint et Teams des locataires M365.",
+    "Bloquez immédiatement l’accès au service Cloud Backup et vérifiez les comptes Microsoft 365 pour toute activité suspecte."
+   ],
+   "concept": {
+    "nom": "Usurpation d’identité d’application",
+    "explication": "L’usurpation d’identité d’application consiste à prendre le contrôle d’un compte de service légitime pour agir comme l’application elle‑même. Imaginez un employé qui obtient la carte d’accès d’un collègue et entre dans son bureau ; il peut alors lire et modifier tout ce qui s’y trouve. Dans l’incident ConnectWise, les attaquants ont détourné ces comptes pour se connecter à 173 locataires M365 et explorer les données. Cette technique relève de la catégorie « Valid Accounts » du framework MITRE ATT&CK, sous la tactique d’accès persistant."
+   },
+   "quiz": [
+    {
+     "question": "Quel service cloud a été compromis pour toucher les locataires M365 ?",
+     "reponse": "Le service de sauvegarde cloud de ConnectWise."
+    },
+    {
+     "question": "Quelle mesure immédiate doit être appliquée aux comptes Microsoft 365 ?",
+     "reponse": "Bloquer l’accès au service compromis et vérifier les comptes pour toute activité anormale."
+    }
+   ]
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Compromettre un compte de service cloud suffit à infiltrer des centaines de locataires M365 ; sécuriser les identités d’application est prioritaire.</p>\n<p>• Les fournisseurs de services managés qui utilisent ConnectWise Cloud Backup et leurs clients sont potentiellement exposés.</p>\n<p>• Les hackers utilisent des identités d’application légitimes pour accéder aux boîtes aux lettres, SharePoint et Teams des locataires M365.</p>\n<p>• Bloquez immédiatement l’accès au service Cloud Backup et vérifiez les comptes Microsoft 365 pour toute activité suspecte.</p>\n<h3>Le concept du jour</h3>\n<p>Usurpation d’identité d’application : L’usurpation d’identité d’application consiste à prendre le contrôle d’un compte de service légitime pour agir comme l’application elle‑même. Imaginez un employé qui obtient la carte d’accès d’un collègue et entre dans son bureau ; il peut alors lire et modifier tout ce qui s’y trouve. Dans l’incident ConnectWise, les attaquants ont détourné ces comptes pour se connecter à 173 locataires M365 et explorer les données. Cette technique relève de la catégorie « Valid Accounts » du framework MITRE ATT&amp;CK, sous la tactique d’accès persistant.</p>\n<h3>Quiz</h3>\n<p>• Quel service cloud a été compromis pour toucher les locataires M365 ? → Le service de sauvegarde cloud de ConnectWise.</p>\n<p>• Quelle mesure immédiate doit être appliquée aux comptes Microsoft 365 ? → Bloquer l’accès au service compromis et vérifier les comptes pour toute activité anormale.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/\">Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html\">Hackers Use Compromised ConnectWise Credential to Sign In to 173 Microsoft 365 Tenants</a> — The Hacker News</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/\">Drupal patches critical RCE flaws, warns exploits may emerge soon</a> — BleepingComputer</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://www.zataz.com/phishing-une-operation-frappe-trois-kits-pirate/\">Phishing : une opération frappe trois kits pirate</a> — Zataz</p>\n<h3>Outils, recherche et divers</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html\">MALFEX npm Package &#x27;imgdecode&#x27; Hides Shellcode Loader in Windows Native Addon</a> — The Hacker News</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.zataz.com/leboncoin-et-vinted-des-notifications-suspectes/\">Leboncoin et Vinted : des notifications suspectes</a> — Zataz</p>\n<p>• <a href=\"https://www.zataz.com/cyberattaques-les-supermarches-europeens-perturbes/\">Cyberattaques : les supermarchés européens perturbés</a> — Zataz</p>\n<p>• <a href=\"https://www.zataz.com/cyberattaques-des-sites-francais-cibles-par-des-pirates/\">Cyberattaques : des sites français ciblés par des pirates</a> — Zataz</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+ },
+ {
   "date": "2026-10-17",
   "title": "CyberVeille du 17/10/2026",
   "guid": "cyberveille-2026-10-17",
