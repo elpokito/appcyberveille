@@ -9,12 +9,40 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Sun, 18 Oct 2026 05:21:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 05:32:28 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 19/10/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-10-19</guid>
+      <pubDate>Mon, 19 Oct 2026 05:32:28 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-19/cyberveille-2026-10-19.mp3" length="2648110" type="audio/mpeg"/>
+      <itunes:duration>00:05:31</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-19.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Un WAF compromis devient la porte d’entrée ; patchez-le immédiatement et limitez ses privilèges d’exécution.</p>
+<p>• SiteGuard Server Edition souffre d’une injection de commandes système, touchant les organisations qui l’utilisent comme première ligne de défense.</p>
+<p>• L’injection permet aux attaquants d’exécuter des instructions avec les privilèges root ou SYSTEM, ouvrant la voie à l’escalade et aux mouvements latéraux.</p>
+<p>• Les équipes doivent vérifier l’exposition, appliquer les correctifs du fournisseur et restreindre les privilèges d’exécution du processus WAF.</p>
+<h3>Le concept du jour</h3>
+<p>Injection de commandes système : L’injection de commandes système consiste à insérer des instructions arbitraires dans une application qui les exécute ensuite sur le système d’exploitation. Imaginez un formulaire web où l’on peut coller une commande Linux ; le serveur la lance comme s’il s’agissait d’un administrateur. Dans le cas du WAF SiteGuard, les hackers ont contourné le filtrage, injecté la commande et obtenu un accès root ou SYSTEM. Cette technique relève de la catégorie MITRE ATT&amp;CK « Command and Scripting Interpreter » et correspond à la catégorie OWASP « Injection ».</p>
+<h3>Quiz</h3>
+<p>• Quel produit WAF est concerné par la faille critique ? → SiteGuard Server Edition.</p>
+<p>• Quel niveau de privilège les attaquants peuvent-ils obtenir grâce à l’injection ? → Les privilèges les plus élevés, root ou SYSTEM.</p>
+<h3>À la une</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/">Hackers exploit SiteGuard WAF flaw to run commands as admins</a> — BleepingComputer</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://www.zataz.com/fuite-de-donnees-la-fftir-de-nouveau-ciblee/">Fuite de données : la FFTir de nouveau ciblée ?</a> — Zataz</p>
+<h3>Menaces et groupes d&#x27;attaquants</h3>
+<p>• <a href="https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html">ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenants</a> — The Hacker News</p>
+<h3>En bref</h3>
+<p>• <a href="https://www.zataz.com/la-chine-veut-controler-ses-exportations-dia/">La Chine veut contrôler ses exportations d’IA</a> — Zataz</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 18/10/2026</title>
       <guid isPermaLink="false">cyberveille-2026-10-18</guid>

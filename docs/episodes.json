@@ -1,5 +1,79 @@
 [
  {
+  "date": "2026-10-19",
+  "title": "CyberVeille du 19/10/2026",
+  "guid": "cyberveille-2026-10-19",
+  "seconds": 331,
+  "bytes": 2648110,
+  "chapters": "chapters/2026-10-19.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Hackers exploit SiteGuard WAF flaw to run commands as admins",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Fuite de données : la FFTir de nouveau ciblée ?",
+      "url": "https://www.zataz.com/fuite-de-donnees-la-fftir-de-nouveau-ciblee/",
+      "source": "Zataz"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenants",
+      "url": "https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "La Chine veut contrôler ses exportations d’IA",
+      "url": "https://www.zataz.com/la-chine-veut-controler-ses-exportations-dia/",
+      "source": "Zataz"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Un WAF compromis devient la porte d’entrée ; patchez-le immédiatement et limitez ses privilèges d’exécution.",
+   "a_retenir": [
+    "SiteGuard Server Edition souffre d’une injection de commandes système, touchant les organisations qui l’utilisent comme première ligne de défense.",
+    "L’injection permet aux attaquants d’exécuter des instructions avec les privilèges root ou SYSTEM, ouvrant la voie à l’escalade et aux mouvements latéraux.",
+    "Les équipes doivent vérifier l’exposition, appliquer les correctifs du fournisseur et restreindre les privilèges d’exécution du processus WAF."
+   ],
+   "concept": {
+    "nom": "Injection de commandes système",
+    "explication": "L’injection de commandes système consiste à insérer des instructions arbitraires dans une application qui les exécute ensuite sur le système d’exploitation. Imaginez un formulaire web où l’on peut coller une commande Linux ; le serveur la lance comme s’il s’agissait d’un administrateur. Dans le cas du WAF SiteGuard, les hackers ont contourné le filtrage, injecté la commande et obtenu un accès root ou SYSTEM. Cette technique relève de la catégorie MITRE ATT&CK « Command and Scripting Interpreter » et correspond à la catégorie OWASP « Injection »."
+   },
+   "quiz": [
+    {
+     "question": "Quel produit WAF est concerné par la faille critique ?",
+     "reponse": "SiteGuard Server Edition."
+    },
+    {
+     "question": "Quel niveau de privilège les attaquants peuvent-ils obtenir grâce à l’injection ?",
+     "reponse": "Les privilèges les plus élevés, root ou SYSTEM."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-10-19.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-19/cyberveille-2026-10-19.mp3"
+ },
+ {
   "date": "2026-10-18",
   "title": "CyberVeille du 18/10/2026",
   "guid": "cyberveille-2026-10-18",
