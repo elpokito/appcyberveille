@@ -9,12 +9,54 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Mon, 19 Oct 2026 05:32:28 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 05:37:38 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 20/10/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-10-20</guid>
+      <pubDate>Tue, 20 Oct 2026 05:37:38 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-20/cyberveille-2026-10-20.mp3" length="4105082" type="audio/mpeg"/>
+      <itunes:duration>00:08:33</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-20.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Désactiver le Wi‑Fi du routeur lorsqu’il n’est pas utilisé limite l’exposition d’une faille firmware qui permet une prise de contrôle totale.</p>
+<p>• Les routeurs Broadcom vulnérables permettent à un attaquant à portée radio d’exécuter du code root, désactivez le Wi‑Fi pour réduire le risque.</p>
+<p>• Les serveurs NGINX non patchés exposent un risque critique d’exécution de code, appliquez immédiatement les correctifs hors cycle.</p>
+<p>• Le plugin Rank Math PRO compromis installe une porte dérobée auto‑restaurante, remplacez-le ou supprimez‑le sans tarder.</p>
+<h3>Le concept du jour</h3>
+<p>Exécution de code à distance : L’exécution de code à distance désigne la capacité d’un attaquant à faire tourner des instructions sur un système cible sans y être physiquement présent. Imaginez pouvoir prendre le contrôle du tableau de bord d’une voiture depuis l’extérieur : vous pouvez alors diriger le véhicule à votre guise. Dans le cas du firmware Wi‑Fi Broadcom et des failles NGINX, l’attaquant injecte du code qui s’exécute avec les privilèges du système, ouvrant la porte à d’autres actions malveillantes. Cette technique correspond à la tactique MITRE ATT&amp;CK « Execution » et, dans le cadre OWASP, relève de la catégorie « Security Misconfiguration ».</p>
+<h3>Quiz</h3>
+<p>• Quel geste simple peut réduire le risque d’exploitation de la faille Wi‑Fi Broadcom ? → Désactiver le Wi‑Fi du routeur lorsqu’il n’est pas utilisé.</p>
+<p>• Quelle action immédiate est requise pour les serveurs NGINX affectés ? → Installer sans délai les correctifs publiés.</p>
+<h3>À la une</h3>
+<p>• <a href="https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html">Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers</a> — The Hacker News</p>
+<h3>Alertes et failles critiques</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/f5-releases-out-of-band-patches-for-critical-nginx-vulnerabilities/">F5 releases out-of-band patches for critical NGINX vulnerabilities</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-october-windows-server-updates-cause-exchange-issues/">Microsoft: October Windows Server updates break Exchange sign-in, mail flow</a> — BleepingComputer</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://thehackernews.com/2026/10/popular-wordpress-seo-plugin-rank-math.html">Popular WordPress SEO Plugin Rank Math PRO Hijacked to Deliver Self-Restoring Backdoor</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/wordpress-seo-plugin-rank-math-compromised-to-backdoor-websites/">WordPress SEO plugin Rank Math compromised to backdoor websites</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/10/opencode-console-breach-may-have.html">OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/">OpenCode hack exposes API keys amid AI distillation attacks</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/nikkei-discloses-third-data-breach-in-a-month-18m-records-exposed/">Nikkei discloses third data breach in a month, 1.8M records exposed</a> — BleepingComputer</p>
+<h3>Menaces et groupes d&#x27;attaquants</h3>
+<p>• <a href="https://thehackernews.com/2026/10/fake-web3-accelerator-uses-npm-packages.html">Fake Web3 Accelerator Uses npm Packages to Spread Malware and Hijack AI Agent Traffic</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html">Hackers Use New ROMULUS ClickFix Platform to Deliver LegionLoader and Other Malware</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/ghostaction-attackers-plant-credential.html">GhostAction Attackers Plant Credential Stealer Disguised as Font in 94 GitHub Repositories</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/hackers-exploit-plex2shell-flaws-to.html">Hackers Exploit Plex2Shell Flaws to Install Crypto Miners and Linux Proxy Backdoor</a> — The Hacker News</p>
+<h3>En bref</h3>
+<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1337/">Multiples vulnérabilités dans Juniper Networks Session Smart Router (19 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1338/">Vulnérabilité dans Mattermost Server (19 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1339/">Multiples vulnérabilités dans Stormshield Network Security (19 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1340/">Multiples vulnérabilités dans Roundcube Webmail (19 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/bullhorn-takes-staffing-platform-offline-to-contain-cyberattack/">Bullhorn takes staffing platform offline to contain cyberattack</a> — BleepingComputer</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 19/10/2026</title>
       <guid isPermaLink="false">cyberveille-2026-10-19</guid>

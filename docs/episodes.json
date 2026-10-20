@@ -1,5 +1,149 @@
 [
  {
+  "date": "2026-10-20",
+  "title": "CyberVeille du 20/10/2026",
+  "guid": "cyberveille-2026-10-20",
+  "seconds": 513,
+  "bytes": 4105082,
+  "chapters": "chapters/2026-10-20.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers",
+      "url": "https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "F5 releases out-of-band patches for critical NGINX vulnerabilities",
+      "url": "https://www.bleepingcomputer.com/news/security/f5-releases-out-of-band-patches-for-critical-nginx-vulnerabilities/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Microsoft: October Windows Server updates break Exchange sign-in, mail flow",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-october-windows-server-updates-cause-exchange-issues/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Popular WordPress SEO Plugin Rank Math PRO Hijacked to Deliver Self-Restoring Backdoor",
+      "url": "https://thehackernews.com/2026/10/popular-wordpress-seo-plugin-rank-math.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "WordPress SEO plugin Rank Math compromised to backdoor websites",
+      "url": "https://www.bleepingcomputer.com/news/security/wordpress-seo-plugin-rank-math-compromised-to-backdoor-websites/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys",
+      "url": "https://thehackernews.com/2026/10/opencode-console-breach-may-have.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "OpenCode hack exposes API keys amid AI distillation attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Nikkei discloses third data breach in a month, 1.8M records exposed",
+      "url": "https://www.bleepingcomputer.com/news/security/nikkei-discloses-third-data-breach-in-a-month-18m-records-exposed/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Fake Web3 Accelerator Uses npm Packages to Spread Malware and Hijack AI Agent Traffic",
+      "url": "https://thehackernews.com/2026/10/fake-web3-accelerator-uses-npm-packages.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Hackers Use New ROMULUS ClickFix Platform to Deliver LegionLoader and Other Malware",
+      "url": "https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "GhostAction Attackers Plant Credential Stealer Disguised as Font in 94 GitHub Repositories",
+      "url": "https://thehackernews.com/2026/10/ghostaction-attackers-plant-credential.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Hackers Exploit Plex2Shell Flaws to Install Crypto Miners and Linux Proxy Backdoor",
+      "url": "https://thehackernews.com/2026/10/hackers-exploit-plex2shell-flaws-to.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans Juniper Networks Session Smart Router (19 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1337/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans Mattermost Server (19 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1338/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Stormshield Network Security (19 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1339/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Roundcube Webmail (19 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1340/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Bullhorn takes staffing platform offline to contain cyberattack",
+      "url": "https://www.bleepingcomputer.com/news/security/bullhorn-takes-staffing-platform-offline-to-contain-cyberattack/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Désactiver le Wi‑Fi du routeur lorsqu’il n’est pas utilisé limite l’exposition d’une faille firmware qui permet une prise de contrôle totale.",
+   "a_retenir": [
+    "Les routeurs Broadcom vulnérables permettent à un attaquant à portée radio d’exécuter du code root, désactivez le Wi‑Fi pour réduire le risque.",
+    "Les serveurs NGINX non patchés exposent un risque critique d’exécution de code, appliquez immédiatement les correctifs hors cycle.",
+    "Le plugin Rank Math PRO compromis installe une porte dérobée auto‑restaurante, remplacez-le ou supprimez‑le sans tarder."
+   ],
+   "concept": {
+    "nom": "Exécution de code à distance",
+    "explication": "L’exécution de code à distance désigne la capacité d’un attaquant à faire tourner des instructions sur un système cible sans y être physiquement présent. Imaginez pouvoir prendre le contrôle du tableau de bord d’une voiture depuis l’extérieur : vous pouvez alors diriger le véhicule à votre guise. Dans le cas du firmware Wi‑Fi Broadcom et des failles NGINX, l’attaquant injecte du code qui s’exécute avec les privilèges du système, ouvrant la porte à d’autres actions malveillantes. Cette technique correspond à la tactique MITRE ATT&CK « Execution » et, dans le cadre OWASP, relève de la catégorie « Security Misconfiguration »."
+   },
+   "quiz": [
+    {
+     "question": "Quel geste simple peut réduire le risque d’exploitation de la faille Wi‑Fi Broadcom ?",
+     "reponse": "Désactiver le Wi‑Fi du routeur lorsqu’il n’est pas utilisé."
+    },
+    {
+     "question": "Quelle action immédiate est requise pour les serveurs NGINX affectés ?",
+     "reponse": "Installer sans délai les correctifs publiés."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-10-20.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-20/cyberveille-2026-10-20.mp3"
+ },
+ {
   "date": "2026-10-19",
   "title": "CyberVeille du 19/10/2026",
   "guid": "cyberveille-2026-10-19",

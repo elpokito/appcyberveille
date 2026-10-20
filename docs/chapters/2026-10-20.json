@@ -1,0 +1,49 @@
+{
+ "version": "1.2.0",
+ "chapters": [
+  {
+   "startTime": 0.0,
+   "title": "Introduction"
+  },
+  {
+   "startTime": 29.99,
+   "title": "Rappel"
+  },
+  {
+   "startTime": 64.32,
+   "title": "À la une"
+  },
+  {
+   "startTime": 131.4,
+   "title": "Alertes et failles critiques"
+  },
+  {
+   "startTime": 208.55,
+   "title": "Incidents et fuites de données"
+  },
+  {
+   "startTime": 283.03,
+   "title": "Menaces et groupes d'attaquants"
+  },
+  {
+   "startTime": 379.31,
+   "title": "En bref"
+  },
+  {
+   "startTime": 401.5,
+   "title": "Le concept du jour"
+  },
+  {
+   "startTime": 436.38,
+   "title": "À retenir"
+  },
+  {
+   "startTime": 464.82,
+   "title": "Quiz"
+  },
+  {
+   "startTime": 498.96,
+   "title": "Conclusion"
+  }
+ ]
+}
