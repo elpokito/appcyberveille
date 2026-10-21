@@ -1,5 +1,179 @@
 [
  {
+  "date": "2026-10-21",
+  "title": "CyberVeille du 21/10/2026",
+  "guid": "cyberveille-2026-10-21",
+  "seconds": 589,
+  "bytes": 4713146,
+  "chapters": "chapters/2026-10-21.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "PHP warns admins of two critical flaws, emergency patches coming tomorrow",
+      "url": "https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "PHP2Shell: Two Unpatched Critical PHP RCE Flaws (CVSS 9.2) Trigger Emergency Security Alert",
+      "url": "https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "CVE-2026-110936 — Siemens Software Center exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110936",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "ClickFix Attackers Exploit Siemens Software Center Flaw to Deploy Remote Access Trojan",
+      "url": "https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution",
+      "url": "https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "CVE-2026-106931 — EG Secure Solutions SiteGuard Server Edition exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106931",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-96656 — Plex Media Server exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96656",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "Eight eMudhra CA Keys Compromised, Triggering Emergency Fixes Across Browsers and Software",
+      "url": "https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+      "url": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Pegasus Spyware Infection Confirmed on Serbian University Rector's iPhone Days Before Election",
+      "url": "https://thehackernews.com/2026/10/pegasus-spyware-infection-confirmed-on.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA",
+      "url": "https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Hackers Hijack Five OVHcloud CLI Releases to Distribute Secret-Stealing Malware",
+      "url": "https://thehackernews.com/2026/10/hackers-hijack-five-ovhcloud-cli.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "OVHcloud CLI releases backdoored on GitHub to steal developer secrets",
+      "url": "https://www.bleepingcomputer.com/news/security/ovhcloud-cli-releases-backdoored-on-github-to-steal-developer-secrets/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Russian APT28 Breaches NATO Naval Shipbuilder in NATO Country, Deploys New Reflective Loader",
+      "url": "https://thehackernews.com/2026/10/russian-apt28-breaches-nato-naval.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Hackers Use Autonomous AI Agents to Breach Company Websites, Target Over 1,200 Sites",
+      "url": "https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Zeabur shutting down after second security breach in two months",
+      "url": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Stolen UpdraftCentral keys used to backdoor WordPress sites",
+      "url": "https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "ConnectWise Resets Credentials as Cloud Backup Remains Offline After Security Incident",
+      "url": "https://thehackernews.com/2026/10/connectwise-resets-credentials-as-cloud.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Ahold Delhaize: Cyberattack affects services across US and Europe",
+      "url": "https://www.bleepingcomputer.com/news/security/ahold-delhaize-cyberattack-affects-services-across-us-and-europe/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "DHS bans DeepSeek products across US federal civilian agencies",
+      "url": "https://www.bleepingcomputer.com/news/security/dhs-bans-deepseek-products-across-us-federal-civilian-agencies/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Arnaque Netflix à 1 € : le cadeau qui piège vos données",
+      "url": "https://www.zataz.com/arnaque-netflix-a-1-e-le-cadeau-qui-piege-vos-donnees/",
+      "source": "Zataz"
+     },
+     {
+      "title": "Caméras de surveillance : contrôlez qui vous regarde",
+      "url": "https://www.zataz.com/cameras-de-surveillance-controlez-qui-vous-regarde/",
+      "source": "Zataz"
+     },
+     {
+      "title": "Windows Server 2025 gets support for quick machine recovery",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-server-2025-gets-support-for-quick-machine-recovery/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Appliquez immédiatement le correctif d’urgence aux serveurs PHP 8.2‑8.5 : une faille critique permet l’exécution de code à distance.",
+   "a_retenir": [
+    "Les administrateurs de sites PHP 8.2‑8.5 doivent déployer le patch dès 14 h UTC et redémarrer le service.",
+    "Siemens Software Center est vulnérable à un « uncontrolled search path element », qui autorise le chargement d’une DLL malveillante avec les privilèges du logiciel.",
+    "Le logiciel espion Pegasus a infecté un iPhone via une faille zéro‑clic, aucune action de l’utilisateur n’est requise."
+   ],
+   "concept": {
+    "nom": "uncontrolled search path element",
+    "explication": "C’est une faille où le programme charge une bibliothèque dynamique depuis un répertoire contrôlé par l’attaquant, comme s’il cherchait un fichier dans le mauvais dossier. Imaginez un magasin qui choisirait le premier produit trouvé sur une étagère désordonnée, même s’il provient d’un voleur. Dans le cas de Siemens, l’attaquant place une DLL malveillante dans le chemin de recherche, obtenant ainsi l’exécution de code. Cette technique relève de la tactique MITRE ATT&CK de détournement de l’ordre de recherche des DLL."
+   },
+   "quiz": [
+    {
+     "question": "Quel correctif doit être appliqué cet après‑midi aux serveurs PHP supportés ?",
+     "reponse": "Le correctif d’urgence pour les deux vulnérabilités critiques des versions PHP 8.2 à 8.5."
+    },
+    {
+     "question": "Quelle technique permet à un attaquant authentifié de déposer une DLL malveillante dans Siemens Software Center ?",
+     "reponse": "L’exploitation d’un « uncontrolled search path element », c’est‑à‑dire le détournement de l’ordre de recherche des DLL."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-10-21.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-21/cyberveille-2026-10-21.mp3"
+ },
+ {
   "date": "2026-10-20",
   "title": "CyberVeille du 20/10/2026",
   "guid": "cyberveille-2026-10-20",
