@@ -1,5 +1,139 @@
 [
  {
+  "date": "2026-10-22",
+  "title": "CyberVeille du 22/10/2026",
+  "guid": "cyberveille-2026-10-22",
+  "seconds": 596,
+  "bytes": 4769786,
+  "chapters": "chapters/2026-10-22.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Critical GitLab Flaw (CVSS 10.0) Could Allow Unauthenticated RCE Across 12 Years of Releases",
+      "url": "https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "Microsoft says October updates didn’t actually fix VPN issues",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-didnt-actually-fix-vpn-issues-caused-by-windows-updates/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "CISA Orders Federal Agencies to Patch Exploited Plex2Shell, Siemens, and SiteGuard Flaws",
+      "url": "https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "PHP Issues Emergency Patches for Two Critical PHP2Shell RCE Flaws as Exploit Attempts Emerge",
+      "url": "https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "CISA: SafePay ransomware hit over 600 critical infrastructure orgs",
+      "url": "https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Une ministre française ciblée par un logiciel espion",
+      "url": "https://www.zataz.com/agnes-pannier-runacher-ciblee-par-un-logiciel-espion/",
+      "source": "Zataz"
+     },
+     {
+      "title": "Japan's Onamae Desktop Cloud hacked, up to 27,000 servers affected",
+      "url": "https://www.bleepingcomputer.com/news/security/japans-onamae-desktop-cloud-hacked-up-to-27-000-servers-affected/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Lazarus hackers use post-quantum cryptography for malware delivery",
+      "url": "https://www.bleepingcomputer.com/news/security/lazarus-hackers-use-post-quantum-cryptography-for-malware-delivery/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "ClickFix has never been bigger, and AI tools are its most convincing lure yet",
+      "url": "https://www.bleepingcomputer.com/news/security/clickfix-has-never-been-bigger-and-ai-tools-are-its-most-convincing-lure-yet/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections",
+      "url": "https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "[Màj] Multiples vulnérabilités dans PHP (21 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-014/",
+      "source": "CERT-FR Alertes"
+     },
+     {
+      "title": "Multiples vulnérabilités dans les produits StormShield (21 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans MongoDB PHP Driver (21 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1347/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Mattermost Server (21 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1348/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Generative AI Is Erasing Behavioral Tells, Weakening Behavior-Only Detection, Proofpoint Reports",
+      "url": "https://thehackernews.com/2026/10/generative-ai-is-erasing-behavioral.html",
+      "source": "The Hacker News"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Mettez à jour sans délai tout logiciel exposé ; même un correctif antérieur peut laisser une faille critique exploitable.",
+   "a_retenir": [
+    "Les administrateurs de serveurs GitLab auto‑hébergés doivent installer la version supérieure à 19.2 immédiatement.",
+    "Les serveurs PHP doivent passer aux versions 8.5.12, 8.4.27, 8.3.36 ou 8.2.35 pour corriger les failles PHP2Shell.",
+    "Les correctifs d’octobre 2026 pour Always On VPN sous Windows 11 ne résolvent pas le problème ; surveillez les prochains patches."
+   ],
+   "concept": {
+    "nom": "Cryptographie post‑quantique",
+    "explication": "La cryptographie post‑quantique désigne des algorithmes résistants aux attaques d’ordinateurs quantiques. Imaginez remplacer un cadenas à clé traditionnelle par un verrou qui ne peut être ouvert que par un outil que les ordinateurs quantiques ne possèdent pas encore. Le groupe Lazarus utilise cette technique pour chiffrer la livraison de leurs malwares, rendant l’interception du trafic beaucoup plus difficile. Cette approche relève de la tactique MITRE ATT&CK « Obfuscated Files or Information » et correspond à la catégorie OWASP « Security Misconfiguration »."
+   },
+   "quiz": [
+    {
+     "question": "Quel produit GitLab auto‑hébergé doit être mis à jour pour éliminer la faille critique ?",
+     "reponse": "Toutes les versions antérieures à la version corrigée supérieure à 19.2."
+    },
+    {
+     "question": "Quelle famille de vulnérabilités PHP a fait l’objet de correctifs d’urgence en octobre ?",
+     "reponse": "Les failles appelées PHP2Shell, permettant l’exécution de code à distance."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-10-22.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-22/cyberveille-2026-10-22.mp3"
+ },
+ {
   "date": "2026-10-21",
   "title": "CyberVeille du 21/10/2026",
   "guid": "cyberveille-2026-10-21",
@@ -944,7 +1078,7 @@
     }
    ]
   },
-  "audio": "audio/cyberveille-2026-10-15.mp3",
+  "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-15/cyberveille-2026-10-15.mp3"
  }
 ]

@@ -9,12 +9,52 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Wed, 21 Oct 2026 05:40:21 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 05:42:01 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 22/10/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-10-22</guid>
+      <pubDate>Thu, 22 Oct 2026 05:42:01 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-22/cyberveille-2026-10-22.mp3" length="4769786" type="audio/mpeg"/>
+      <itunes:duration>00:09:56</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-22.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Mettez à jour sans délai tout logiciel exposé ; même un correctif antérieur peut laisser une faille critique exploitable.</p>
+<p>• Les administrateurs de serveurs GitLab auto‑hébergés doivent installer la version supérieure à 19.2 immédiatement.</p>
+<p>• Les serveurs PHP doivent passer aux versions 8.5.12, 8.4.27, 8.3.36 ou 8.2.35 pour corriger les failles PHP2Shell.</p>
+<p>• Les correctifs d’octobre 2026 pour Always On VPN sous Windows 11 ne résolvent pas le problème ; surveillez les prochains patches.</p>
+<h3>Le concept du jour</h3>
+<p>Cryptographie post‑quantique : La cryptographie post‑quantique désigne des algorithmes résistants aux attaques d’ordinateurs quantiques. Imaginez remplacer un cadenas à clé traditionnelle par un verrou qui ne peut être ouvert que par un outil que les ordinateurs quantiques ne possèdent pas encore. Le groupe Lazarus utilise cette technique pour chiffrer la livraison de leurs malwares, rendant l’interception du trafic beaucoup plus difficile. Cette approche relève de la tactique MITRE ATT&amp;CK « Obfuscated Files or Information » et correspond à la catégorie OWASP « Security Misconfiguration ».</p>
+<h3>Quiz</h3>
+<p>• Quel produit GitLab auto‑hébergé doit être mis à jour pour éliminer la faille critique ? → Toutes les versions antérieures à la version corrigée supérieure à 19.2.</p>
+<p>• Quelle famille de vulnérabilités PHP a fait l’objet de correctifs d’urgence en octobre ? → Les failles appelées PHP2Shell, permettant l’exécution de code à distance.</p>
+<h3>À la une</h3>
+<p>• <a href="https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html">Critical GitLab Flaw (CVSS 10.0) Could Allow Unauthenticated RCE Across 12 Years of Releases</a> — The Hacker News</p>
+<h3>Alertes et failles critiques</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-didnt-actually-fix-vpn-issues-caused-by-windows-updates/">Microsoft says October updates didn’t actually fix VPN issues</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html">CISA Orders Federal Agencies to Patch Exploited Plex2Shell, Siemens, and SiteGuard Flaws</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html">PHP Issues Emergency Patches for Two Critical PHP2Shell RCE Flaws as Exploit Attempts Emerge</a> — The Hacker News</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/">CISA: SafePay ransomware hit over 600 critical infrastructure orgs</a> — BleepingComputer</p>
+<p>• <a href="https://www.zataz.com/agnes-pannier-runacher-ciblee-par-un-logiciel-espion/">Une ministre française ciblée par un logiciel espion</a> — Zataz</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/japans-onamae-desktop-cloud-hacked-up-to-27-000-servers-affected/">Japan&#x27;s Onamae Desktop Cloud hacked, up to 27,000 servers affected</a> — BleepingComputer</p>
+<h3>Menaces et groupes d&#x27;attaquants</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/lazarus-hackers-use-post-quantum-cryptography-for-malware-delivery/">Lazarus hackers use post-quantum cryptography for malware delivery</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/clickfix-has-never-been-bigger-and-ai-tools-are-its-most-convincing-lure-yet/">ClickFix has never been bigger, and AI tools are its most convincing lure yet</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html">Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections</a> — The Hacker News</p>
+<h3>En bref</h3>
+<p>• <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-014/">[Màj] Multiples vulnérabilités dans PHP (21 octobre 2026)</a> — CERT-FR Alertes</p>
+<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/">Multiples vulnérabilités dans les produits StormShield (21 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1347/">Vulnérabilité dans MongoDB PHP Driver (21 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1348/">Multiples vulnérabilités dans Mattermost Server (21 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://thehackernews.com/2026/10/generative-ai-is-erasing-behavioral.html">Generative AI Is Erasing Behavioral Tells, Weakening Behavior-Only Detection, Proofpoint Reports</a> — The Hacker News</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 21/10/2026</title>
       <guid isPermaLink="false">cyberveille-2026-10-21</guid>
