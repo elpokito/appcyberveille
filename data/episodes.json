@@ -1,5 +1,151 @@
 [
  {
+  "date": "2026-10-23",
+  "title": "CyberVeille du 23/10/2026",
+  "guid": "cyberveille-2026-10-23",
+  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-23/cyberveille-2026-10-23.mp3",
+  "bytes": 4389928,
+  "seconds": 549,
+  "pub_date": "Fri, 23 Oct 2026 05:39:24 +0000",
+  "chapters_path": "chapters/2026-10-23.json",
+  "asset": "cyberveille-2026-10-23.mp3",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Arista Warns of Critical VeloCloud SQL Injection Zero-Day Exploited in Attacks",
+      "url": "https://thehackernews.com/2026/10/arista-warns-of-critical-velocloud-sql.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Arista patches new VeloCloud Orchestrator zero-day exploited in attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/arista-patches-new-velocloud-orchestrator-zero-day-exploited-in-attacks/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "Two CVSS 9.0 Linux KSMBD RCE Flaws Disclosed on Public Mailing Lists Before Kernel Fixes",
+      "url": "https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Node.js Brotli Decoder Bug Could Allow Remote Code Execution in All Supported Versions",
+      "url": "https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "New QPACK Flaws Can Crash HTTP/3 Servers, Trigger Up to 4,000-Fold Memory Amplification",
+      "url": "https://thehackernews.com/2026/10/new-qpack-flaws-can-crash-http3-servers.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "OpenCode Flaw Lets Malicious MCP Servers Execute Code During Sign-In on Windows and WSL",
+      "url": "https://thehackernews.com/2026/10/opencode-flaw-lets-malicious-mcp.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Capcom confirms data breach affecting 11.7 million accounts",
+      "url": "https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Railway Says Intruder May Have Accessed Customer Secrets, Urges Credential Rotation",
+      "url": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "LiteLLM Suspects GitHub Token Leak in AI Gateway Logs Behind Malicious Package Release",
+      "url": "https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "INTERPOL Arrests 1,462 Suspects, Disrupts 10,909 Cybercrime Networks in Global Crackdown",
+      "url": "https://thehackernews.com/2026/10/interpol-arrests-1462-suspects-disrupts.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Authorities disrupt nearly 11,000 cybercrime networks in Africa",
+      "url": "https://www.bleepingcomputer.com/news/security/authorities-disrupt-nearly-11-000-cybercrime-networks-in-africa/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Réglementation et institutions",
+    "links": [
+     {
+      "title": "Meta Ordered to Pay $25 Billion After Court Finds 43 Million Privacy Violations",
+      "url": "https://thehackernews.com/2026/10/meta-ordered-to-pay-25-billion-after.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans les produits Cisco (22 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1360/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans les produits Mozilla (22 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1361/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans GitLab (22 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1363/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Machine speed attacks require machine speed detection and response",
+      "url": "https://www.bleepingcomputer.com/news/security/machine-speed-attacks-require-machine-speed-detection-and-response/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "memo": {
+   "fil_rouge": "Appliquez immédiatement les correctifs dès qu’une faille critique est annoncée, surtout sur les points de gestion centralisés.",
+   "a_retenir": [
+    "Une injection SQL dans VeloCloud Orchestrator permettait à un compte lecture seule d’obtenir le contrôle total du réseau.",
+    "Les failles KSMBD sur Linux offrent une exécution de code à distance sans aucune authentification préalable.",
+    "Des paquets Python compromis ont été diffusés sur Docker Hub et PyPI, il faut remplacer immédiatement ces versions."
+   ],
+   "concept": {
+    "nom": "Injection SQL",
+    "explication": "L’injection SQL consiste à insérer du code malveillant dans des requêtes de base de données, comme on glisserait une fausse instruction dans une commande. Dans le cas du VeloCloud Orchestrator, un attaquant pouvait passer d’un accès lecture seule à un contrôle complet du système. Cette technique correspond à la catégorie « Injection » du modèle OWASP, et à la tactique « Exploitation de vulnérabilité » du framework MITRE ATT&CK."
+   },
+   "quiz": [
+    {
+     "question": "Quel produit a été compromis par une injection SQL permettant l’escalade de privilèges ?",
+     "reponse": "Le VeloCloud Orchestrator d’Arista."
+    },
+    {
+     "question": "Quelle action immédiate les équipes doivent‑elles prendre face aux failles KSMBD ?",
+     "reponse": "Mettre à jour ou appliquer un correctif dès qu’il est disponible, sinon isoler les serveurs concernés."
+    }
+   ]
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Appliquez immédiatement les correctifs dès qu’une faille critique est annoncée, surtout sur les points de gestion centralisés.</p>\n<p>• Une injection SQL dans VeloCloud Orchestrator permettait à un compte lecture seule d’obtenir le contrôle total du réseau.</p>\n<p>• Les failles KSMBD sur Linux offrent une exécution de code à distance sans aucune authentification préalable.</p>\n<p>• Des paquets Python compromis ont été diffusés sur Docker Hub et PyPI, il faut remplacer immédiatement ces versions.</p>\n<h3>Le concept du jour</h3>\n<p>Injection SQL : L’injection SQL consiste à insérer du code malveillant dans des requêtes de base de données, comme on glisserait une fausse instruction dans une commande. Dans le cas du VeloCloud Orchestrator, un attaquant pouvait passer d’un accès lecture seule à un contrôle complet du système. Cette technique correspond à la catégorie « Injection » du modèle OWASP, et à la tactique « Exploitation de vulnérabilité » du framework MITRE ATT&amp;CK.</p>\n<h3>Quiz</h3>\n<p>• Quel produit a été compromis par une injection SQL permettant l’escalade de privilèges ? → Le VeloCloud Orchestrator d’Arista.</p>\n<p>• Quelle action immédiate les équipes doivent‑elles prendre face aux failles KSMBD ? → Mettre à jour ou appliquer un correctif dès qu’il est disponible, sinon isoler les serveurs concernés.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/arista-warns-of-critical-velocloud-sql.html\">Arista Warns of Critical VeloCloud SQL Injection Zero-Day Exploited in Attacks</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/arista-patches-new-velocloud-orchestrator-zero-day-exploited-in-attacks/\">Arista patches new VeloCloud Orchestrator zero-day exploited in attacks</a> — BleepingComputer</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html\">Two CVSS 9.0 Linux KSMBD RCE Flaws Disclosed on Public Mailing Lists Before Kernel Fixes</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html\">Node.js Brotli Decoder Bug Could Allow Remote Code Execution in All Supported Versions</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/new-qpack-flaws-can-crash-http3-servers.html\">New QPACK Flaws Can Crash HTTP/3 Servers, Trigger Up to 4,000-Fold Memory Amplification</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/opencode-flaw-lets-malicious-mcp.html\">OpenCode Flaw Lets Malicious MCP Servers Execute Code During Sign-In on Windows and WSL</a> — The Hacker News</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/\">Capcom confirms data breach affecting 11.7 million accounts</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html\">Railway Says Intruder May Have Accessed Customer Secrets, Urges Credential Rotation</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html\">LiteLLM Suspects GitHub Token Leak in AI Gateway Logs Behind Malicious Package Release</a> — The Hacker News</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/interpol-arrests-1462-suspects-disrupts.html\">INTERPOL Arrests 1,462 Suspects, Disrupts 10,909 Cybercrime Networks in Global Crackdown</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/authorities-disrupt-nearly-11-000-cybercrime-networks-in-africa/\">Authorities disrupt nearly 11,000 cybercrime networks in Africa</a> — BleepingComputer</p>\n<h3>Réglementation et institutions</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/meta-ordered-to-pay-25-billion-after.html\">Meta Ordered to Pay $25 Billion After Court Finds 43 Million Privacy Violations</a> — The Hacker News</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1360/\">Multiples vulnérabilités dans les produits Cisco (22 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1361/\">Vulnérabilité dans les produits Mozilla (22 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1363/\">Multiples vulnérabilités dans GitLab (22 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/machine-speed-attacks-require-machine-speed-detection-and-response/\">Machine speed attacks require machine speed detection and response</a> — BleepingComputer</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+ },
+ {
   "date": "2026-10-22",
   "title": "CyberVeille du 22/10/2026",
   "guid": "cyberveille-2026-10-22",
