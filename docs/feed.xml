@@ -9,12 +9,60 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Fri, 23 Oct 2026 05:39:24 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 05:21:07 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 24/10/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-10-24</guid>
+      <pubDate>Sat, 24 Oct 2026 05:21:07 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-24/cyberveille-2026-10-24.mp3" length="5942329" type="audio/mpeg"/>
+      <itunes:duration>00:12:23</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-24.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Désactivez la fonctionnalité PHP signalée et revoyez vos configurations web ; cela empêche l’exécution de code à distance et l’enrôlement involontaire dans un botnet.</p>
+<p>• Les serveurs PHP mal configurés peuvent exécuter du code à distance ; désactivez immédiatement la fonctionnalité indiquée par l’équipe PHP.</p>
+<p>• Arista VeloCloud Orchestrator souffre d’une injection SQL ; appliquez sans délai les mitigations recommandées par le CISA.</p>
+<p>• Le bootkit BlackX contourne Secure Boot sur les systèmes Windows ; surveillez les mises à jour du firmware et révoquez les clés compromises.</p>
+<h3>Le concept du jour</h3>
+<p>Contournement de Secure Boot (bootkit UEFI) : Le contournement de Secure Boot consiste à charger un code malveillant avant le système d’exploitation en abusant du processus de démarrage UEFI, comme le bootkit BlackX. Imaginez un gardien qui ouvre la porte avant même que le propriétaire n’arrive ; le malware s’installe alors de façon persistante. Cette technique a été utilisée contre des organisations diplomatiques d’Asie centrale, montrant que même les systèmes à jour peuvent être compromis au niveau du firmware. Elle relève de la catégorie MITRE ATT&amp;CK « Persistance » et de la sous‑technique « Implantation de firmware ».</p>
+<h3>Quiz</h3>
+<p>• Quelle fonctionnalité PHP doit être désactivée pour limiter la nouvelle faille d’exécution à distance ? → La fonctionnalité précise recommandée par l’équipe de sécurité PHP.</p>
+<p>• Quel type d’injection affecte Arista VeloCloud Orchestrator ? → Une injection SQL.</p>
+<h3>À la une</h3>
+<p>• <a href="https://thehackernews.com/2026/10/urgent-php-warns-of-another-unpatched.html">PHP Warns of Another Unpatched RCE Risk Two Days After Emergency PHP2Shell Patches</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/php-shares-mitigation-for-new-and-unpatched-rce-vulnerability/">PHP shares mitigation for new RCE vulnerability with no patch</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/10/php2shell-exploit-attempts-hit-millions.html">PHP2Shell Exploit Attempts Hit Millions as Attackers Try to Deploy Mirai Malware</a> — The Hacker News</p>
+<h3>Alertes et failles critiques</h3>
+<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-114625">CVE-2026-114625 — Arista VeloCloud Orchestrator exploitée activement</a> — CISA KEV</p>
+<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-110447">CVE-2026-110447 — Collabora Collabora Online – Built-in CODE Server exploitée activement</a> — CISA KEV</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/hpe-patches-eight-max-severity-rce-and-auth-bypass-aos-flaws/">HPE patches eight max severity RCE and auth bypass AOS flaws</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html">Ruby Fixes Three Regex Engine Bugs Responsible for Four Critical GitLab RCE Flaws</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/critical-x402-sdk-flaw-could-let.html">Critical x402 SDK Flaw Could Let Malicious APIs Drain AI Agents’ Token Balances</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/critical-flaw-in-pythons-popular-pillow.html">Critical Flaw in Python’s Popular Pillow Image Library Allows Code Execution via a Crafted Image</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html">BlackX UEFI Bootkit Bypasses Secure Boot on Patched Windows Systems Missing Revocations</a> — The Hacker News</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/">Quest Diagnostics confirms data breach exposed patient records</a> — BleepingComputer</p>
+<h3>Menaces et groupes d&#x27;attaquants</h3>
+<p>• <a href="https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html">Exposed Infrastructure Reveals How Ransomware Affiliates Used AI Agents to Execute Intrusions</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/russian-linked-hackers-used-new-mesh.html">Russia-Linked Hackers Used New Mesh Network Backdoor in Destructive Ukraine Attack</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/researchers-demonstrate-node2shell-rce.html">Researchers Demonstrate Node2Shell RCE Exploit on Node.js Build Using Crafted Brotli Data</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/hackers-breach-enterprise-firewalls-and.html">Hackers Breach Enterprise Firewalls and VPNs, Exposing Over 70,000 Credentials</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/abandoned-popcorn-time-app-exposed-millions-of-device-to-rce-attacks/">Abandoned Popcorn Time app exposed millions of devices to RCE attacks</a> — BleepingComputer</p>
+<h3>En bref</h3>
+<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1368/">Vulnérabilité dans Mattermost Server (23 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1369/">Multiples vulnérabilités dans les produits HPE Aruba Networking (23 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1370/">Multiples vulnérabilités dans les produits Tenable (23 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1371/">Multiples vulnérabilités dans Microsoft Edge (23 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-january/">Microsoft: Windows Server 2016 reaches end of support in January</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-get-ai-powered-context-aware-phishing-detection/">Microsoft Teams to get AI-powered, context-aware phishing detection</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/you-gave-your-ai-agent-access-but-who-is-giving-it-orders/">You gave your AI agent access, but who is giving it orders?</a> — BleepingComputer</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 23/10/2026</title>
       <guid isPermaLink="false">cyberveille-2026-10-23</guid>
