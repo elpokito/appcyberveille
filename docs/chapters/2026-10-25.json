@@ -1,0 +1,45 @@
+{
+ "version": "1.2.0",
+ "chapters": [
+  {
+   "startTime": 0.0,
+   "title": "Introduction"
+  },
+  {
+   "startTime": 25.19,
+   "title": "Rappel"
+  },
+  {
+   "startTime": 79.09,
+   "title": "À la une"
+  },
+  {
+   "startTime": 149.27,
+   "title": "Incidents et fuites de données"
+  },
+  {
+   "startTime": 172.79,
+   "title": "En bref"
+  },
+  {
+   "startTime": 192.22,
+   "title": "La semaine en bref"
+  },
+  {
+   "startTime": 256.06,
+   "title": "Le concept du jour"
+  },
+  {
+   "startTime": 282.61,
+   "title": "À retenir"
+  },
+  {
+   "startTime": 308.73,
+   "title": "Quiz"
+  },
+  {
+   "startTime": 345.67,
+   "title": "Conclusion"
+  }
+ ]
+}

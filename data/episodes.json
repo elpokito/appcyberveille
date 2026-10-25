@@ -1,5 +1,76 @@
 [
  {
+  "date": "2026-10-25",
+  "title": "CyberVeille du 25/10/2026",
+  "guid": "cyberveille-2026-10-25",
+  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-25/cyberveille-2026-10-25.mp3",
+  "bytes": 2848544,
+  "seconds": 356,
+  "pub_date": "Sun, 25 Oct 2026 05:33:23 +0000",
+  "chapters_path": "chapters/2026-10-25.json",
+  "asset": "cyberveille-2026-10-25.mp3",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Point Vision : des données de patients dérobées",
+      "url": "https://www.zataz.com/point-vision-des-donnees-de-patients-derobees/",
+      "source": "Zataz"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Chimeraz revendique des fuites visant trois partis français, dont celui du groupe présidentiel",
+      "url": "https://www.zataz.com/chimeraz-revendique-des-fuites-visant-trois-partis-francais/",
+      "source": "Zataz"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Google Says Gmail and Photos Data Shared With AI Search Could Be Used for Targeted Ads",
+      "url": "https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "DeepSeek banni des agences fédérales US",
+      "url": "https://www.zataz.com/deepseek-banni-des-agences-federales-civiles-americaines/",
+      "source": "Zataz"
+     }
+    ]
+   }
+  ],
+  "memo": {
+   "fil_rouge": "Protéger les données de santé en profondeur, car leur fuite entraîne des risques humains et légaux majeurs.",
+   "a_retenir": [
+    "Les dossiers médicaux de tous les patients de Point Vision ont été volés, il faut notifier les victimes rapidement.",
+    "Les acteurs malveillants ont exploité une faille d’accès au système, il faut identifier et colmater le vecteur d’intrusion.",
+    "Les partis politiques français ont vu leurs données internes compromises, chaque organisation doit vérifier ses contrôles d’accès."
+   ],
+   "concept": {
+    "nom": "Exfiltration de données",
+    "explication": "L’exfiltration de données désigne le vol de fichiers ou d’informations depuis un système compromis vers l’attaquant. Imaginez un voleur qui s’introduit dans une maison et emporte les dossiers confidentiels avant de s’enfuir. Dans l’incident de Point Vision, les hackers ont extrait les dossiers médicaux des patients, illustrant ce mécanisme. Cette technique correspond à la tactique d’Exfiltration du framework MITRE ATT&CK et à la catégorie Sensitive Data Exposure d’OWASP."
+   },
+   "quiz": [
+    {
+     "question": "Quel type d’information a été dérobé chez Point Vision ?",
+     "reponse": "Les dossiers médicaux des patients, incluant les motifs de rendez‑vous."
+    },
+    {
+     "question": "Quel secteur politique a été visé par le groupe Chimeraz ?",
+     "reponse": "Trois partis politiques français, dont le parti du groupe présidentiel, La France Insoumise et le Parti communiste français."
+    }
+   ]
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Protéger les données de santé en profondeur, car leur fuite entraîne des risques humains et légaux majeurs.</p>\n<p>• Les dossiers médicaux de tous les patients de Point Vision ont été volés, il faut notifier les victimes rapidement.</p>\n<p>• Les acteurs malveillants ont exploité une faille d’accès au système, il faut identifier et colmater le vecteur d’intrusion.</p>\n<p>• Les partis politiques français ont vu leurs données internes compromises, chaque organisation doit vérifier ses contrôles d’accès.</p>\n<h3>Le concept du jour</h3>\n<p>Exfiltration de données : L’exfiltration de données désigne le vol de fichiers ou d’informations depuis un système compromis vers l’attaquant. Imaginez un voleur qui s’introduit dans une maison et emporte les dossiers confidentiels avant de s’enfuir. Dans l’incident de Point Vision, les hackers ont extrait les dossiers médicaux des patients, illustrant ce mécanisme. Cette technique correspond à la tactique d’Exfiltration du framework MITRE ATT&amp;CK et à la catégorie Sensitive Data Exposure d’OWASP.</p>\n<h3>Quiz</h3>\n<p>• Quel type d’information a été dérobé chez Point Vision ? → Les dossiers médicaux des patients, incluant les motifs de rendez‑vous.</p>\n<p>• Quel secteur politique a été visé par le groupe Chimeraz ? → Trois partis politiques français, dont le parti du groupe présidentiel, La France Insoumise et le Parti communiste français.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://www.zataz.com/point-vision-des-donnees-de-patients-derobees/\">Point Vision : des données de patients dérobées</a> — Zataz</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.zataz.com/chimeraz-revendique-des-fuites-visant-trois-partis-francais/\">Chimeraz revendique des fuites visant trois partis français, dont celui du groupe présidentiel</a> — Zataz</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html\">Google Says Gmail and Photos Data Shared With AI Search Could Be Used for Targeted Ads</a> — The Hacker News</p>\n<p>• <a href=\"https://www.zataz.com/deepseek-banni-des-agences-federales-civiles-americaines/\">DeepSeek banni des agences fédérales US</a> — Zataz</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+ },
+ {
   "date": "2026-10-24",
   "title": "CyberVeille du 24/10/2026",
   "guid": "cyberveille-2026-10-24",

@@ -9,12 +9,39 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Sat, 24 Oct 2026 05:21:07 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 05:33:23 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 25/10/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-10-25</guid>
+      <pubDate>Sun, 25 Oct 2026 05:33:23 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-25/cyberveille-2026-10-25.mp3" length="2848544" type="audio/mpeg"/>
+      <itunes:duration>00:05:56</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-25.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Protéger les données de santé en profondeur, car leur fuite entraîne des risques humains et légaux majeurs.</p>
+<p>• Les dossiers médicaux de tous les patients de Point Vision ont été volés, il faut notifier les victimes rapidement.</p>
+<p>• Les acteurs malveillants ont exploité une faille d’accès au système, il faut identifier et colmater le vecteur d’intrusion.</p>
+<p>• Les partis politiques français ont vu leurs données internes compromises, chaque organisation doit vérifier ses contrôles d’accès.</p>
+<h3>Le concept du jour</h3>
+<p>Exfiltration de données : L’exfiltration de données désigne le vol de fichiers ou d’informations depuis un système compromis vers l’attaquant. Imaginez un voleur qui s’introduit dans une maison et emporte les dossiers confidentiels avant de s’enfuir. Dans l’incident de Point Vision, les hackers ont extrait les dossiers médicaux des patients, illustrant ce mécanisme. Cette technique correspond à la tactique d’Exfiltration du framework MITRE ATT&amp;CK et à la catégorie Sensitive Data Exposure d’OWASP.</p>
+<h3>Quiz</h3>
+<p>• Quel type d’information a été dérobé chez Point Vision ? → Les dossiers médicaux des patients, incluant les motifs de rendez‑vous.</p>
+<p>• Quel secteur politique a été visé par le groupe Chimeraz ? → Trois partis politiques français, dont le parti du groupe présidentiel, La France Insoumise et le Parti communiste français.</p>
+<h3>À la une</h3>
+<p>• <a href="https://www.zataz.com/point-vision-des-donnees-de-patients-derobees/">Point Vision : des données de patients dérobées</a> — Zataz</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://www.zataz.com/chimeraz-revendique-des-fuites-visant-trois-partis-francais/">Chimeraz revendique des fuites visant trois partis français, dont celui du groupe présidentiel</a> — Zataz</p>
+<h3>En bref</h3>
+<p>• <a href="https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html">Google Says Gmail and Photos Data Shared With AI Search Could Be Used for Targeted Ads</a> — The Hacker News</p>
+<p>• <a href="https://www.zataz.com/deepseek-banni-des-agences-federales-civiles-americaines/">DeepSeek banni des agences fédérales US</a> — Zataz</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 24/10/2026</title>
       <guid isPermaLink="false">cyberveille-2026-10-24</guid>
