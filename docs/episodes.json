@@ -1,5 +1,74 @@
 [
  {
+  "date": "2026-10-26",
+  "title": "CyberVeille du 26/10/2026",
+  "guid": "cyberveille-2026-10-26",
+  "seconds": 364,
+  "bytes": 2914901,
+  "chapters": "chapters/2026-10-26.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers",
+      "url": "https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "PHP2Shell Exploitation Attempts Continue Amid Suspected N. Korea Global Scanning Activity",
+      "url": "https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "OpenAI AI Agents Demonstrate VM Escapes and Secret Cross-Sandbox Communication",
+      "url": "https://thehackernews.com/2026/10/openai-ai-agents-demonstrate-vm-escapes.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "AI coding agents hijacked using AGENTS.md file in Downloads folder",
+      "url": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Désactivez le transfert de ports SSH dans Tailscale ; sinon un poste compromis peut prendre le contrôle de tout le réseau.",
+   "a_retenir": [
+    "Un appareil déjà compromis avec le transfert de ports SSH activé peut escalader les privilèges vers les serveurs du réseau Tailscale.",
+    "La condition requise est le service SSH de Tailscale configuré pour autoriser le port forwarding et un dispositif pouvant se connecter à la cible.",
+    "Désactiver le port forwarding SSH et restreindre les règles d’accès du réseau empêche la prise de contrôle totale du périmètre."
+   ],
+   "concept": {
+    "nom": "Abus du port‑forwarding SSH",
+    "explication": "Le transfert de ports SSH redirige le trafic d’un port local vers une destination distante via une connexion SSH. Imaginez un tunnel secret que l’attaquant ouvre pour passer d’une pièce à l’autre d’une maison ; il suffit d’ouvrir la porte du tunnel. Dans Tailscale, un appareil déjà sous contrôle ouvre ce tunnel et accède aux serveurs voisins avec les droits root. Cette technique correspond à la tactique « Escalade de privilèges » du framework MITRE ATT&CK et à la catégorie « Contrôle d’accès non autorisé » d’OWASP."
+   },
+   "quiz": [
+    {
+     "question": "Quel paramètre de configuration Tailscale doit être désactivé pour bloquer l’escalade via SSH ?",
+     "reponse": "Le transfert de ports SSH."
+    },
+    {
+     "question": "Quelle condition doit être remplie par l’appareil compromis pour exploiter la faille ?",
+     "reponse": "Il doit pouvoir se connecter aux serveurs cibles via le service SSH autorisant le port forwarding."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-10-26.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-26/cyberveille-2026-10-26.mp3"
+ },
+ {
   "date": "2026-10-25",
   "title": "CyberVeille du 25/10/2026",
   "guid": "cyberveille-2026-10-25",
@@ -909,7 +978,7 @@
     }
    ]
   },
-  "audio": "audio/cyberveille-2026-10-19.mp3",
+  "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-19/cyberveille-2026-10-19.mp3"
  },
  {

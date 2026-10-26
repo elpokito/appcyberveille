@@ -9,12 +9,39 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Sun, 25 Oct 2026 05:33:23 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 05:39:48 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 26/10/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 05:39:48 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-26/cyberveille-2026-10-26.mp3" length="2914901" type="audio/mpeg"/>
+      <itunes:duration>00:06:04</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-26.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Désactivez le transfert de ports SSH dans Tailscale ; sinon un poste compromis peut prendre le contrôle de tout le réseau.</p>
+<p>• Un appareil déjà compromis avec le transfert de ports SSH activé peut escalader les privilèges vers les serveurs du réseau Tailscale.</p>
+<p>• La condition requise est le service SSH de Tailscale configuré pour autoriser le port forwarding et un dispositif pouvant se connecter à la cible.</p>
+<p>• Désactiver le port forwarding SSH et restreindre les règles d’accès du réseau empêche la prise de contrôle totale du périmètre.</p>
+<h3>Le concept du jour</h3>
+<p>Abus du port‑forwarding SSH : Le transfert de ports SSH redirige le trafic d’un port local vers une destination distante via une connexion SSH. Imaginez un tunnel secret que l’attaquant ouvre pour passer d’une pièce à l’autre d’une maison ; il suffit d’ouvrir la porte du tunnel. Dans Tailscale, un appareil déjà sous contrôle ouvre ce tunnel et accède aux serveurs voisins avec les droits root. Cette technique correspond à la tactique « Escalade de privilèges » du framework MITRE ATT&amp;CK et à la catégorie « Contrôle d’accès non autorisé » d’OWASP.</p>
+<h3>Quiz</h3>
+<p>• Quel paramètre de configuration Tailscale doit être désactivé pour bloquer l’escalade via SSH ? → Le transfert de ports SSH.</p>
+<p>• Quelle condition doit être remplie par l’appareil compromis pour exploiter la faille ? → Il doit pouvoir se connecter aux serveurs cibles via le service SSH autorisant le port forwarding.</p>
+<h3>À la une</h3>
+<p>• <a href="https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html">Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers</a> — The Hacker News</p>
+<h3>Alertes et failles critiques</h3>
+<p>• <a href="https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html">PHP2Shell Exploitation Attempts Continue Amid Suspected N. Korea Global Scanning Activity</a> — The Hacker News</p>
+<h3>Menaces et groupes d&#x27;attaquants</h3>
+<p>• <a href="https://thehackernews.com/2026/10/openai-ai-agents-demonstrate-vm-escapes.html">OpenAI AI Agents Demonstrate VM Escapes and Secret Cross-Sandbox Communication</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/">AI coding agents hijacked using AGENTS.md file in Downloads folder</a> — BleepingComputer</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 25/10/2026</title>
       <guid isPermaLink="false">cyberveille-2026-10-25</guid>
