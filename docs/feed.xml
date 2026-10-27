@@ -9,12 +9,54 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Mon, 26 Oct 2026 05:39:48 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 05:53:13 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 27/10/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-10-27</guid>
+      <pubDate>Tue, 27 Oct 2026 05:53:13 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-27/cyberveille-2026-10-27.mp3" length="4165177" type="audio/mpeg"/>
+      <itunes:duration>00:08:40</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-27.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Appliquez sans tarder les correctifs des bibliothèques de compression, car une faille dans un composant partagé peut compromettre tout le serveur.</p>
+<p>• Les correctifs .NET et les mises à jour PHP 8.2‑8.5 corrigent la vulnérabilité Brotli qui permettait l’exécution de code à distance.</p>
+<p>• Les modules WebAssembly malveillants peuvent sortir du bac à sable dans Wasmtime, surtout sur les architectures ARM64.</p>
+<p>• Les cybercriminels usurpent le support Microsoft Teams pour diffuser des liens malveillants et des ransomwares.</p>
+<h3>Le concept du jour</h3>
+<p>Escape de sandbox WebAssembly : Un escape de sandbox WebAssembly se produit lorsqu’un module WebAssembly contourne les limites d’isolation imposées par le moteur d’exécution et accède aux ressources du système hôte. Imaginez un prisonnier qui trouve une issue secrète dans sa cellule ; il peut alors se déplacer librement dans le bâtiment. Dans l’épisode, les failles de Wasmtime permettent exactement cela, donnant à un attaquant le contrôle du serveur qui exécute le module. Cette technique correspond à la tactique MITRE ATT&amp;CK « Escalade de privilèges ».</p>
+<h3>Quiz</h3>
+<p>• Quel correctif Microsoft doit être appliqué en urgence pour colmater la faille Brotli ? → Le correctif .NET pour la bibliothèque Brotli.</p>
+<p>• Quel vecteur d’attaque utilise le groupe Gheist pour voler des secrets sur GitHub ? → L’injection de workflows qui affichent les secrets dans les logs d’Actions.</p>
+<h3>À la une</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-net-patches-for-critical-brotli-flaw/">Microsoft releases emergency .NET patches for critical Brotli flaw</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/">Critical &#x27;HTTP2Shell&#x27; Brotli vulnerability triggers emergency patches</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/10/php-issues-second-windows-security.html">PHP Issues Second Windows Security Update in Five Days to Fix Brotli Code Execution Flaw</a> — The Hacker News</p>
+<h3>Alertes et failles critiques</h3>
+<p>• <a href="https://thehackernews.com/2026/10/two-critical-wasmtime-flaws-could-let.html">Two Critical Wasmtime Flaws Could Let Malicious WebAssembly Modules Escape Sandboxes</a> — The Hacker News</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/university-of-copenhagen-data-breach-exposes-data-of-525-000-people/">University of Copenhagen data breach exposes data of 525,000 people</a> — BleepingComputer</p>
+<h3>Menaces et groupes d&#x27;attaquants</h3>
+<p>• <a href="https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html">Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/microsoft-365-token-replay-attacks.html">Microsoft 365 Token-Replay Attacks Compromise 97 Accounts at 79 Organizations</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/gheist-uses-stolen-github-tokens-to.html">Gheist Uses Stolen GitHub Tokens to Steal Private Repository Secrets via Actions Logs</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/ucreator-android-spyware-can-steal.html">uCreator Android Spyware Can Steal Telegram 2FA Passwords and Clone WeChat Accounts</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html">Hackers Infect 953 Online Stores With Scanner-Evading JavaScript, Mostly on Magento</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/">Former pentester used ARTEX AI to steal 8.2 million data records</a> — BleepingComputer</p>
+<h3>En bref</h3>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1379/">Multiples vulnérabilités dans CPython (26 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1380/">Vulnérabilité dans Mattermost Server (26 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1381/">Multiples vulnérabilités dans les produits Tenable (26 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1383/">Vulnérabilité dans les produits Microsoft (26 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/chinese-man-extradited-for-role-in-36-million-cryptocurrency-scam/">Chinese man extradited for role in $36 million cryptocurrency scam</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/linux/kali-linux-20263-released-with-6-new-tools-desktop-updates/">Kali Linux 2026.3 released with 6 new tools, desktop updates</a> — BleepingComputer</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 26/10/2026</title>
       <guid isPermaLink="false">cyberveille-2026-10-26</guid>

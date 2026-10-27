@@ -1,5 +1,149 @@
 [
  {
+  "date": "2026-10-27",
+  "title": "CyberVeille du 27/10/2026",
+  "guid": "cyberveille-2026-10-27",
+  "seconds": 520,
+  "bytes": 4165177,
+  "chapters": "chapters/2026-10-27.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Microsoft releases emergency .NET patches for critical Brotli flaw",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-net-patches-for-critical-brotli-flaw/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Critical 'HTTP2Shell' Brotli vulnerability triggers emergency patches",
+      "url": "https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "PHP Issues Second Windows Security Update in Five Days to Fix Brotli Code Execution Flaw",
+      "url": "https://thehackernews.com/2026/10/php-issues-second-windows-security.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "Two Critical Wasmtime Flaws Could Let Malicious WebAssembly Modules Escape Sandboxes",
+      "url": "https://thehackernews.com/2026/10/two-critical-wasmtime-flaws-could-let.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "University of Copenhagen data breach exposes data of 525,000 people",
+      "url": "https://www.bleepingcomputer.com/news/security/university-of-copenhagen-data-breach-exposes-data-of-525-000-people/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware",
+      "url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Microsoft 365 Token-Replay Attacks Compromise 97 Accounts at 79 Organizations",
+      "url": "https://thehackernews.com/2026/10/microsoft-365-token-replay-attacks.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Gheist Uses Stolen GitHub Tokens to Steal Private Repository Secrets via Actions Logs",
+      "url": "https://thehackernews.com/2026/10/gheist-uses-stolen-github-tokens-to.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "uCreator Android Spyware Can Steal Telegram 2FA Passwords and Clone WeChat Accounts",
+      "url": "https://thehackernews.com/2026/10/ucreator-android-spyware-can-steal.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Hackers Infect 953 Online Stores With Scanner-Evading JavaScript, Mostly on Magento",
+      "url": "https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Former pentester used ARTEX AI to steal 8.2 million data records",
+      "url": "https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans CPython (26 octobre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1379/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans Mattermost Server (26 octobre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1380/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans les produits Tenable (26 octobre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1381/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans les produits Microsoft (26 octobre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1383/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Chinese man extradited for role in $36 million cryptocurrency scam",
+      "url": "https://www.bleepingcomputer.com/news/security/chinese-man-extradited-for-role-in-36-million-cryptocurrency-scam/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Kali Linux 2026.3 released with 6 new tools, desktop updates",
+      "url": "https://www.bleepingcomputer.com/news/linux/kali-linux-20263-released-with-6-new-tools-desktop-updates/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Appliquez sans tarder les correctifs des bibliothèques de compression, car une faille dans un composant partagé peut compromettre tout le serveur.",
+   "a_retenir": [
+    "Les correctifs .NET et les mises à jour PHP 8.2‑8.5 corrigent la vulnérabilité Brotli qui permettait l’exécution de code à distance.",
+    "Les modules WebAssembly malveillants peuvent sortir du bac à sable dans Wasmtime, surtout sur les architectures ARM64.",
+    "Les cybercriminels usurpent le support Microsoft Teams pour diffuser des liens malveillants et des ransomwares."
+   ],
+   "concept": {
+    "nom": "Escape de sandbox WebAssembly",
+    "explication": "Un escape de sandbox WebAssembly se produit lorsqu’un module WebAssembly contourne les limites d’isolation imposées par le moteur d’exécution et accède aux ressources du système hôte. Imaginez un prisonnier qui trouve une issue secrète dans sa cellule ; il peut alors se déplacer librement dans le bâtiment. Dans l’épisode, les failles de Wasmtime permettent exactement cela, donnant à un attaquant le contrôle du serveur qui exécute le module. Cette technique correspond à la tactique MITRE ATT&CK « Escalade de privilèges »."
+   },
+   "quiz": [
+    {
+     "question": "Quel correctif Microsoft doit être appliqué en urgence pour colmater la faille Brotli ?",
+     "reponse": "Le correctif .NET pour la bibliothèque Brotli."
+    },
+    {
+     "question": "Quel vecteur d’attaque utilise le groupe Gheist pour voler des secrets sur GitHub ?",
+     "reponse": "L’injection de workflows qui affichent les secrets dans les logs d’Actions."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-10-27.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-27/cyberveille-2026-10-27.mp3"
+ },
+ {
   "date": "2026-10-26",
   "title": "CyberVeille du 26/10/2026",
   "guid": "cyberveille-2026-10-26",
@@ -904,7 +1048,7 @@
     }
    ]
   },
-  "audio": "audio/cyberveille-2026-10-20.mp3",
+  "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-20/cyberveille-2026-10-20.mp3"
  },
  {
