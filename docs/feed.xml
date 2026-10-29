@@ -9,12 +9,63 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Wed, 28 Oct 2026 06:34:42 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 06:44:03 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 29/10/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-10-29</guid>
+      <pubDate>Thu, 29 Oct 2026 06:44:03 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-29/cyberveille-2026-10-29.mp3" length="5402425" type="audio/mpeg"/>
+      <itunes:duration>00:11:15</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-29.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Appliquer immédiatement les correctifs de journalisation, de noyau Linux et de Brotli pour empêcher un accès root invisible.</p>
+<p>• Les opérateurs VMware ESX doivent activer les mesures d’atténuation pour rétablir la journalisation des actions administratives.</p>
+<p>• Les équipes Linux doivent installer les correctifs ou contournements du noyau afin d’empêcher l’injection de web‑shells PHP avec élévation root.</p>
+<p>• Les serveurs web qui utilisent la compression Brotli doivent déployer la mitigation Node2Shell pour bloquer l’exécution de code à distance.</p>
+<h3>Le concept du jour</h3>
+<p>Vulnérabilité de compression Brotli (Node2Shell) : La vulnérabilité Brotli permet à un attaquant d’injecter du code malveillant dans les flux HTTP/2 compressés, similaire à un tuyau bouché qui déborde. Dans le contexte du jour, des groupes ont exploité cette faille pour lancer des web‑shells sur des serveurs web. Elle correspond à la technique « Exécution de code à distance » du cadre OWASP.</p>
+<h3>Quiz</h3>
+<p>• Quel type de faille a permis d’injecter des web‑shells PHP avec accès root sur les serveurs Linux ? → Une faiblesse d’initialisation de variable du noyau combinée à des corruptions de cache.</p>
+<p>• Quelle mesure les opérateurs VMware ESX doivent‑ils prendre immédiatement ? → Activer les mesures d’atténuation prescrites pour rétablir la journalisation.</p>
+<h3>À la une</h3>
+<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41709">CVE-2026-41709 — Broadcom VMware ESX exploitée activement</a> — CISA KEV</p>
+<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46300">CVE-2026-46300 — Linux Kernel exploitée activement</a> — CISA KEV</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-now-exploiting-critical-node2shell-flaw/">CISA warns of hackers now exploiting critical Node2Shell flaw</a> — BleepingComputer</p>
+<h3>Alertes et failles critiques</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/">Volt Typhoon hides zero-day attacks using &#x27;Silent Train&#x27; framework</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html">Volt Typhoon Used Covert Silent Train Network in Four Zero-Day Exploitation Campaigns</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/shinyhunters-exploited-oracle.html">ShinyHunters-Exploited Oracle PeopleSoft Zero-Day Turns Out to Be Three Chained Flaws</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/adobe-fixes-8-critical-campaign-classic.html">Adobe Fixes 8 Critical Campaign Classic Flaws Allowing Code Execution and Security Bypass</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/hackers-target-critical-oracle-e.html">Hackers Target Critical Oracle E-Business Suite RCE Flaw Days After Security Patch</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html">Critical 16-Year-Old UEFI Flaw Can Run Code Before Secure Boot on Network-Booting Servers</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/anthropics-unreleased-ai-model-chains.html">Anthropic&#x27;s Unreleased AI Model Chains Flaws Into Working Chrome, Safari, Windows and Linux Exploits</a> — The Hacker News</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html">PHP2Shell Attack Roots 25 Servers, Breaches U.S. Government-Affiliated Network</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/even-after-php2shell-blast-radius-matters-more-than-a-cvss-score/">Even after PHP2Shell, blast radius matters more than a CVSS score</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/">Sony ISP subsidiary data breach exposes 2.5 million customer records</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/nefilim-and-hive-ransomware-affiliate-gets-70-months-in-prison/">Nefilim and Hive ransomware affiliate gets 70 months in prison</a> — BleepingComputer</p>
+<h3>Menaces et groupes d&#x27;attaquants</h3>
+<p>• <a href="https://thehackernews.com/2026/10/fbi-seizes-virtualine-domain-over.html">FBI Seizes Virtualine Domain Over Alleged Criminal Hosting and Bitcoin Money Laundering</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/police-seize-virtualine-bulletproof-service-tied-to-ransowmare-cybercrime/">Police seize Virtualine bulletproof service tied to ransowmare, cybercrime</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/10/american-organizations-under-attack.html">American Organizations Under Attack: Skyw4lker Device Code Phishing Campaign Exposed</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html">Researcher Reveals How Logic Bugs Alone Cracked Microsoft Edge in $175,000 Pwn2Own Win</a> — The Hacker News</p>
+<h3>En bref</h3>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1397/">Vulnérabilité dans CPython (28 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1398/">Multiples vulnérabilités dans Google Chrome (28 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1399/">Multiples vulnérabilités dans les produits Veeam (28 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1401/">Multiples vulnérabilités dans Docker Desktop (28 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://thehackernews.com/2026/10/wazuh-and-ai-for-enhanced-soc-workflows.html">Wazuh and AI for Enhanced SOC Workflows</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/tailscale-patches-ssh-flaws-that-could.html">Tailscale Patches SSH Flaws That Could Let Hacked Devices Gain Root Access on Other Servers</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/google-to-allow-one-tap-android-app.html">Google to Allow One-Tap Android App Installs From Approved Third-Party Stores Outside U.S.</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/discord-to-let-search-engines-index-public-server-messages/">Discord to let search engines index public server messages</a> — BleepingComputer</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 28/10/2026</title>
       <guid isPermaLink="false">cyberveille-2026-10-28</guid>
