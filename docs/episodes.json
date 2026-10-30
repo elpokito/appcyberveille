@@ -1,5 +1,189 @@
 [
  {
+  "date": "2026-10-30",
+  "title": "CyberVeille du 30/10/2026",
+  "guid": "cyberveille-2026-10-30",
+  "seconds": 619,
+  "bytes": 4952761,
+  "chapters": "chapters/2026-10-30.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "CVE-2026-97229 — GitLab Community Edition and Enterprise Edition exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-76418 — Cisco Secure Firewall ASA Software and Cisco Secure FTD Software exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76418",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls",
+      "url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "New Cisco firewall zero-day exploited to crash SSL VPN devices",
+      "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "Hackers Exploited Cisco SD-WAN Flaw to Plant Malware Built to Steal Encryption Keys",
+      "url": "https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Hackers exploit Cisco SD-WAN flaw to deploy custom KeyDrift malware",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "China-Linked Hackers Exploited VMware ESX Zero-Day to Reduce Audit Trail Visibility",
+      "url": "https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Attacker Tried to Exploit Alpine Linux’s GitLab via CVSS 10.0 Flaw Its Ruby Left Open",
+      "url": "https://thehackernews.com/2026/10/attacker-tried-to-exploit-alpine-linuxs.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Telegram Android Flaw Lets Attackers Run Code When Users Answer Voice Calls",
+      "url": "https://thehackernews.com/2026/10/telegram-android-flaw-lets-attackers.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen",
+      "url": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Binance probes potential $5.8 billion crypto-theft hack",
+      "url": "https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Japan Airlines suffers third-party data breach exposing passenger info",
+      "url": "https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Polymarket halts trading after crypto-draining script breach, $2.5M traced",
+      "url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Attackers Exploit PHP2Shell Flaws in Internet-Exposed Palo Alto Networks Management Interfaces",
+      "url": "https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Vulnérabilité dans Mattermost Server (29 octobre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1409/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans les produits NetApp (29 octobre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1410/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Veeam Backup for Microsoft 365 (29 octobre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1411/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans PostgreSQL Anonymizer (29 octobre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1413/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Chrome extensions with 13.4 million installs caught hijacking searches",
+      "url": "https://www.bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Fake crypto app on Apple App Store linked to $23K wallet theft",
+      "url": "https://www.bleepingcomputer.com/news/security/fake-crypto-app-on-apple-app-store-linked-to-23k-wallet-theft/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Hugging Face malware campaign returns to hijack GPUs for crypto mining",
+      "url": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "26,400 Valid Cloud and AI Credentials Found Exposed in Public Gitee Repositories",
+      "url": "https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "CISA warns of Fragnesia Linux flaw chained in PHP2Shell attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Windows 11 KB5127936 update released with 41 changes and fixes",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5127936-update-released-with-41-changes-and-fixes/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Microsoft fixes Remote Desktop failures caused by recent Windows updates",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-remote-desktop-failures-caused-by-recent-windows-updates/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Appliquer immédiatement les correctifs dès qu’une faille critique est annoncée, sinon l’attaquant peut prendre le contrôle du serveur ou le faire planter.",
+   "a_retenir": [
+    "Les équipes DevOps doivent mettre à jour GitLab dès que la mitigation contre l’injection d’expression régulière est disponible.",
+    "Les administrateurs réseau doivent installer le correctif Cisco ASA/FTD pour éviter le redémarrage inattendu du VPN.",
+    "Vérifier que les interfaces de gestion exposées, comme celles de Palo Alto, sont à jour pour bloquer les exploits PHP2Shell."
+   ],
+   "concept": {
+    "nom": "Integer overflow",
+    "explication": "Un integer overflow se produit quand un calcul dépasse la capacité maximale d’un entier, provoquant un débordement qui peut être exploité pour exécuter du code. Imaginez un compteur qui « déborde » comme un odomètre qui repasse à zéro, permettant à l’attaquant d’insérer des instructions malveillantes. Dans le cas de GitLab, l’overflow dans le traitement d’une expression régulière conduit à l’exécution de code à distance. Cette technique relève de la tactique Execution du framework MITRE ATT&CK."
+   },
+   "quiz": [
+    {
+     "question": "Quel produit GitLab doit être corrigé pour bloquer l’exécution de code via une expression régulière malveillante ?",
+     "reponse": "Les éditions GitLab Community et Enterprise."
+    },
+    {
+     "question": "Quelle action immédiate les administrateurs doivent‑ils prendre face à la faille du firewall Cisco ASA/FTD ?",
+     "reponse": "Installer le correctif publié par Cisco."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-10-30.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-30/cyberveille-2026-10-30.mp3"
+ },
+ {
   "date": "2026-10-29",
   "title": "CyberVeille du 29/10/2026",
   "guid": "cyberveille-2026-10-29",
@@ -964,7 +1148,7 @@
     }
    ]
   },
-  "audio": "audio/cyberveille-2026-10-23.mp3",
+  "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-23/cyberveille-2026-10-23.mp3"
  },
  {

@@ -9,12 +9,62 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Thu, 29 Oct 2026 06:44:03 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 06:46:01 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 30/10/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-10-30</guid>
+      <pubDate>Fri, 30 Oct 2026 06:46:01 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-30/cyberveille-2026-10-30.mp3" length="4952761" type="audio/mpeg"/>
+      <itunes:duration>00:10:19</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-30.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Appliquer immédiatement les correctifs dès qu’une faille critique est annoncée, sinon l’attaquant peut prendre le contrôle du serveur ou le faire planter.</p>
+<p>• Les équipes DevOps doivent mettre à jour GitLab dès que la mitigation contre l’injection d’expression régulière est disponible.</p>
+<p>• Les administrateurs réseau doivent installer le correctif Cisco ASA/FTD pour éviter le redémarrage inattendu du VPN.</p>
+<p>• Vérifier que les interfaces de gestion exposées, comme celles de Palo Alto, sont à jour pour bloquer les exploits PHP2Shell.</p>
+<h3>Le concept du jour</h3>
+<p>Integer overflow : Un integer overflow se produit quand un calcul dépasse la capacité maximale d’un entier, provoquant un débordement qui peut être exploité pour exécuter du code. Imaginez un compteur qui « déborde » comme un odomètre qui repasse à zéro, permettant à l’attaquant d’insérer des instructions malveillantes. Dans le cas de GitLab, l’overflow dans le traitement d’une expression régulière conduit à l’exécution de code à distance. Cette technique relève de la tactique Execution du framework MITRE ATT&amp;CK.</p>
+<h3>Quiz</h3>
+<p>• Quel produit GitLab doit être corrigé pour bloquer l’exécution de code via une expression régulière malveillante ? → Les éditions GitLab Community et Enterprise.</p>
+<p>• Quelle action immédiate les administrateurs doivent‑ils prendre face à la faille du firewall Cisco ASA/FTD ? → Installer le correctif publié par Cisco.</p>
+<h3>À la une</h3>
+<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-97229">CVE-2026-97229 — GitLab Community Edition and Enterprise Edition exploitée activement</a> — CISA KEV</p>
+<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76418">CVE-2026-76418 — Cisco Secure Firewall ASA Software and Cisco Secure FTD Software exploitée activement</a> — CISA KEV</p>
+<p>• <a href="https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html">Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/">New Cisco firewall zero-day exploited to crash SSL VPN devices</a> — BleepingComputer</p>
+<h3>Alertes et failles critiques</h3>
+<p>• <a href="https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html">Hackers Exploited Cisco SD-WAN Flaw to Plant Malware Built to Steal Encryption Keys</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/">Hackers exploit Cisco SD-WAN flaw to deploy custom KeyDrift malware</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html">China-Linked Hackers Exploited VMware ESX Zero-Day to Reduce Audit Trail Visibility</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/attacker-tried-to-exploit-alpine-linuxs.html">Attacker Tried to Exploit Alpine Linux’s GitLab via CVSS 10.0 Flaw Its Ruby Left Open</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/10/telegram-android-flaw-lets-attackers.html">Telegram Android Flaw Lets Attackers Run Code When Users Answer Voice Calls</a> — The Hacker News</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://thehackernews.com/2026/10/binance-suffers-security-breach.html">Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/">Binance probes potential $5.8 billion crypto-theft hack</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/">Japan Airlines suffers third-party data breach exposing passenger info</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/">Polymarket halts trading after crypto-draining script breach, $2.5M traced</a> — BleepingComputer</p>
+<h3>Menaces et groupes d&#x27;attaquants</h3>
+<p>• <a href="https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html">Attackers Exploit PHP2Shell Flaws in Internet-Exposed Palo Alto Networks Management Interfaces</a> — The Hacker News</p>
+<h3>En bref</h3>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1409/">Vulnérabilité dans Mattermost Server (29 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1410/">Vulnérabilité dans les produits NetApp (29 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1411/">Multiples vulnérabilités dans Veeam Backup for Microsoft 365 (29 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1413/">Multiples vulnérabilités dans PostgreSQL Anonymizer (29 octobre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches/">Chrome extensions with 13.4 million installs caught hijacking searches</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/fake-crypto-app-on-apple-app-store-linked-to-23k-wallet-theft/">Fake crypto app on Apple App Store linked to $23K wallet theft</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/">Hugging Face malware campaign returns to hijack GPUs for crypto mining</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html">26,400 Valid Cloud and AI Credentials Found Exposed in Public Gitee Repositories</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/">CISA warns of Fragnesia Linux flaw chained in PHP2Shell attacks</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5127936-update-released-with-41-changes-and-fixes/">Windows 11 KB5127936 update released with 41 changes and fixes</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-remote-desktop-failures-caused-by-recent-windows-updates/">Microsoft fixes Remote Desktop failures caused by recent Windows updates</a> — BleepingComputer</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 29/10/2026</title>
       <guid isPermaLink="false">cyberveille-2026-10-29</guid>
