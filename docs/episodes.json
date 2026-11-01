@@ -1,5 +1,69 @@
 [
  {
+  "date": "2026-11-01",
+  "title": "CyberVeille du 01/11/2026",
+  "guid": "cyberveille-2026-11-01",
+  "seconds": 382,
+  "bytes": 3060075,
+  "chapters": "chapters/2026-11-01.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
+      "url": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Chainalysis discloses data breach from \"offensive agentic techniques\"",
+      "url": "https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
+      "url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Northflank security breach leads to abuse of customers' AI API keys",
+      "url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Mettre à jour immédiatement les appareils Android, c’est le moyen le plus sûr d’empêcher qu’un SMS malveillant les bloque.",
+   "a_retenir": [
+    "Tous les smartphones Android non corrigés sont vulnérables à l’exploit « SMS of Death ».",
+    "Un SMS spécialement formaté peut faire planter le téléphone ou couper le service cellulaire sans aucune action de l’utilisateur.",
+    "Installer le correctif dès qu’il est disponible, activer les mises à jour automatiques et bloquer les SMS inconnus jusqu’à la mise à jour."
+   ],
+   "concept": {
+    "nom": "SMS‑triggered denial‑of‑service",
+    "explication": "C’est une attaque où un message texte malformé provoque le plantage du système ou l’interruption du service réseau. Imaginez envoyer un texte qui fait « surcharger » le téléphone comme on surcharge un serveur avec trop de requêtes. Dans le cas du « SMS of Death », le texte exploite une faille du système Android pour déclencher un arrêt brutal. Cette technique correspond à la catégorie « Denial‑of‑Service » du framework MITRE ATT&CK."
+   },
+   "quiz": [
+    {
+     "question": "Quel correctif doit être appliqué pour se protéger contre l’exploit « SMS of Death » ?",
+     "reponse": "Le correctif de sécurité Android qui corrige la faille exploitable par le SMS."
+    },
+    {
+     "question": "Quelle mesure temporaire peut être prise en attendant la mise à jour ?",
+     "reponse": "Désactiver la réception de SMS provenant de sources inconnues."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-11-01.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-01/cyberveille-2026-11-01.mp3"
+ },
+ {
   "date": "2026-10-31",
   "title": "CyberVeille du 31/10/2026",
   "guid": "cyberveille-2026-10-31",
@@ -999,7 +1063,7 @@
     }
    ]
   },
-  "audio": "audio/cyberveille-2026-10-25.mp3",
+  "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-25/cyberveille-2026-10-25.mp3"
  },
  {

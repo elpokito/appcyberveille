@@ -9,12 +9,38 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Sat, 31 Oct 2026 06:33:20 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 07:02:14 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 01/11/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-11-01</guid>
+      <pubDate>Sun, 01 Nov 2026 07:02:14 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-01/cyberveille-2026-11-01.mp3" length="3060075" type="audio/mpeg"/>
+      <itunes:duration>00:06:22</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-11-01.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Mettre à jour immédiatement les appareils Android, c’est le moyen le plus sûr d’empêcher qu’un SMS malveillant les bloque.</p>
+<p>• Tous les smartphones Android non corrigés sont vulnérables à l’exploit « SMS of Death ».</p>
+<p>• Un SMS spécialement formaté peut faire planter le téléphone ou couper le service cellulaire sans aucune action de l’utilisateur.</p>
+<p>• Installer le correctif dès qu’il est disponible, activer les mises à jour automatiques et bloquer les SMS inconnus jusqu’à la mise à jour.</p>
+<h3>Le concept du jour</h3>
+<p>SMS‑triggered denial‑of‑service : C’est une attaque où un message texte malformé provoque le plantage du système ou l’interruption du service réseau. Imaginez envoyer un texte qui fait « surcharger » le téléphone comme on surcharge un serveur avec trop de requêtes. Dans le cas du « SMS of Death », le texte exploite une faille du système Android pour déclencher un arrêt brutal. Cette technique correspond à la catégorie « Denial‑of‑Service » du framework MITRE ATT&amp;CK.</p>
+<h3>Quiz</h3>
+<p>• Quel correctif doit être appliqué pour se protéger contre l’exploit « SMS of Death » ? → Le correctif de sécurité Android qui corrige la faille exploitable par le SMS.</p>
+<p>• Quelle mesure temporaire peut être prise en attendant la mise à jour ? → Désactiver la réception de SMS provenant de sources inconnues.</p>
+<h3>À la une</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/">New Android SMS of Death exploit can remotely crash unpatched phones</a> — BleepingComputer</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/">Chainalysis discloses data breach from &quot;offensive agentic techniques&quot;</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html">Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/">Northflank security breach leads to abuse of customers&#x27; AI API keys</a> — BleepingComputer</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 31/10/2026</title>
       <guid isPermaLink="false">cyberveille-2026-10-31</guid>
