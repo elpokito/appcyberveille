@@ -1,5 +1,89 @@
 [
  {
+  "date": "2026-11-02",
+  "title": "CyberVeille du 02/11/2026",
+  "guid": "cyberveille-2026-11-02",
+  "seconds": 428,
+  "bytes": 3427000,
+  "chapters": "chapters/2026-11-02.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key",
+      "url": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
+      "url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "FBI links $6.3 billion Binance crypto heist to North Korean hackers",
+      "url": "https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
+      "url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Alpine Linux rebuilds GitLab after attempted RCE attack",
+      "url": "https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "NetamLoader Malware Targets Government Windows 10 Systems in Asia via .NET Injection",
+      "url": "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value",
+      "url": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html",
+      "source": "The Hacker News"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Protéger le canal d’administration et la chaîne de confiance des certificats empêche un attaquant d’usurper un client et de prendre le contrôle d’un cloud privé.",
+   "a_retenir": [
+    "Les solutions LXD et MicroCloud peuvent être compromises si un attaquant intercepte le trafic et récupère le certificat public d’un client de confiance.",
+    "Un accès à l’API HTTPS avec un certificat usurpé permet de contrôler tout le cluster et les machines virtuelles hébergées.",
+    "La défense repose sur le chiffrement intégral du trafic d’administration et une gestion stricte des certificats, incluant la révocation rapide."
+   ],
+   "concept": {
+    "nom": "Usurpation d’identité par certificat",
+    "explication": "L’usurpation d’identité par certificat consiste à se faire passer pour un client légitime en présentant son certificat public sans posséder la clé privée. Imaginez un faux badge d’accès qui fonctionne parce que le système ne vérifie que la photo, pas le code secret. Dans l’incident LXD/MicroCloud, l’attaquant a intercepté le certificat public et a accédé à l’API HTTPS, contournant l’authentification. Cette technique correspond à la tactique « Impersonation » du cadre MITRE ATT&CK et à la catégorie « Authentication » d’OWASP."
+   },
+   "quiz": [
+    {
+     "question": "Quel service API a été ciblé pour usurper l’identité du client ?",
+     "reponse": "L’API HTTPS des solutions LXD et MicroCloud."
+    },
+    {
+     "question": "Quelle mesure de défense est primordiale contre ce type d’attaque ?",
+     "reponse": "Chiffrer intégralement le canal d’administration et gérer strictement les certificats, incluant la révocation."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-11-02.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-02/cyberveille-2026-11-02.mp3"
+ },
+ {
   "date": "2026-11-01",
   "title": "CyberVeille du 01/11/2026",
   "guid": "cyberveille-2026-11-01",
@@ -994,7 +1078,7 @@
     }
    ]
   },
-  "audio": "audio/cyberveille-2026-10-26.mp3",
+  "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-26/cyberveille-2026-10-26.mp3"
  },
  {
