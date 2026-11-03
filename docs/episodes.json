@@ -1,5 +1,184 @@
 [
  {
+  "date": "2026-11-03",
+  "title": "CyberVeille du 03/11/2026",
+  "guid": "cyberveille-2026-11-03",
+  "seconds": 668,
+  "bytes": 5347513,
+  "chapters": "chapters/2026-11-03.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Ivanti patches two more Connect Secure zero-days chained in attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Ivanti Connect Secure (02 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1442/",
+      "source": "CERT-FR Avis"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "Synology warns of C3RB3R ransomware attacks targeting NAS devices",
+      "url": "https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Multiples vulnérabilités dans les produits Synology (02 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1435/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers",
+      "url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Attackers Exploit Critical Siemens IoT2050 Flaw to Plant Remote Command Backdoors",
+      "url": "https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Microsoft fixes Smart App Control broken by October Windows update",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-smart-app-control-broken-by-october-windows-update/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials",
+      "url": "https://thehackernews.com/2026/11/attackers-target-unpatched.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "BTCPay Server warns of hot wallet crypto thefts on outdated instances",
+      "url": "https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Fintech platform Sageworks taken offline after suspected cyberattack",
+      "url": "https://www.bleepingcomputer.com/news/security/fintech-platform-sageworks-taken-offline-after-suspected-cyberattack/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Google Disrupts 1.3 Million-Device Android Botnet, Says TV Box Maker Sold Criminal Access",
+      "url": "https://thehackernews.com/2026/11/google-disrupts-13-million-device.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Google disrupts million-device XCPE Android malware botnet, bans TV box maker",
+      "url": "https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Government Linux Servers Targeted With SysGoRAT and Suspected AI-Generated Scripts",
+      "url": "https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment",
+      "url": "https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Hackers disrupt refrigeration systems at European supermarkets",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
+      "url": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Chinese hackers use ARTEX AI in automated attacks against 200 orgs",
+      "url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans Redmine (02 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1434/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Tenable Identity Exposure (02 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1436/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans Traefik (02 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1439/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans Microsoft Visual Studio (02 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1441/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Is Your SOC Ready for AI Agents? A Maturity Check Before You Deploy",
+      "url": "https://thehackernews.com/2026/11/is-your-soc-ready-for-ai-agents.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Tech Firms Dismantle Botnet That Turned 1.3M TV Boxes Into Proxies",
+      "url": "https://krebsonsecurity.com/2026/11/tech-firms-dismantle-botnet-that-turned-1-3m-tv-boxes-into-proxies/",
+      "source": "Krebs on Security"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Appliquer sans délai chaque correctif de passerelle d’accès distant, car une faille non corrigée devient rapidement la porte d’entrée d’une chaîne d’attaques.",
+   "a_retenir": [
+    "Les failles de Connect Secure d’Ivanti permettent exécution de code à distance et élévation de privilèges, il faut patcher immédiatement.",
+    "Les ransomware ciblent les NAS Synology via des vulnérabilités d’exécution de code à distance, les utilisateurs doivent mettre à jour leurs appareils.",
+    "Une faille critique sur les modules IoT Siemens permet l’exécution de code sans authentification, les installations industrielles doivent appliquer le correctif."
+   ],
+   "concept": {
+    "nom": "Escalade de privilèges",
+    "explication": "L’escalade de privilèges est la technique qui permet à un attaquant d’obtenir des droits supérieurs à ceux initialement compromis, comme passer d’un compte limité à un compte administrateur. Imaginez qu’un intrus entre dans une maison par la fenêtre du sous-sol et trouve ensuite la clé du coffre-fort ; il passe alors du simple visiteur au maître des lieux. Dans les incidents d’aujourd’hui, les failles d’Ivanti et de Siemens offrent ce passage vers des privilèges plus élevés. Cette technique correspond à la catégorie « Privilege Escalation » du framework MITRE ATT&CK."
+   },
+   "quiz": [
+    {
+     "question": "Quel produit Ivanti recommande-t-il de mettre à jour immédiatement ?",
+     "reponse": "La passerelle d’accès distant Connect Secure."
+    },
+    {
+     "question": "Quelle famille d’appareils est visée par le ransomware C3RB3R ?",
+     "reponse": "Les NAS Synology."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-11-03.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-03/cyberveille-2026-11-03.mp3"
+ },
+ {
   "date": "2026-11-02",
   "title": "CyberVeille du 02/11/2026",
   "guid": "cyberveille-2026-11-02",
@@ -1009,7 +1188,7 @@
     }
    ]
   },
-  "audio": "audio/cyberveille-2026-10-27.mp3",
+  "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-27/cyberveille-2026-10-27.mp3"
  },
  {
