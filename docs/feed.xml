@@ -9,12 +9,56 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Tue, 03 Nov 2026 07:31:38 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 07:10:44 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 04/11/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-11-04</guid>
+      <pubDate>Wed, 04 Nov 2026 07:10:44 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-04/cyberveille-2026-11-04.mp3" length="4329529" type="audio/mpeg"/>
+      <itunes:duration>00:09:01</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-11-04.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Sécuriser chaque étape de mise à jour empêche les attaquants d’exploiter les fenêtres de temps pour prendre le contrôle.</p>
+<p>• Un site WordPress en auto‑mise à jour peut être compromis par une condition de course pendant l’upgrade.</p>
+<p>• Barracuda expose deux failles combinées qui permettent de contourner l’autorisation et d’obtenir un accès root.</p>
+<p>• Les NAS Synology non mis à jour restent vulnérables à un ransomware qui chiffre les données.</p>
+<h3>Le concept du jour</h3>
+<p>Race condition (condition de course) : Une race condition survient quand un programme vérifie une condition puis agit, mais l’état change entre les deux moments. Imaginez un guichet où le caissier regarde votre billet avant de le valider, mais un autre client le remplace entre les deux étapes. Dans le cas de WordPress, l’attaquant injecte du code pendant que le serveur vérifie puis applique les fichiers de mise à jour. Cette technique correspond à l’étape « Exploitation for Privilege Escalation » du framework MITRE ATT&amp;CK et relève de la catégorie « Security Misconfiguration » de l’OWASP Top 10.</p>
+<h3>Quiz</h3>
+<p>• Quelle vulnérabilité WordPress exploite la fenêtre de mise à jour pour injecter du code ? → Une condition de course de type time‑of‑check time‑of‑use.</p>
+<p>• Quel type d’appareil est ciblé par le ransomware qui exploite une faille non corrigée du DSM ? → Les serveurs NAS Synology.</p>
+<h3>À la une</h3>
+<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119977">CVE-2026-119977 — WordPress WordPress Core exploitée activement</a> — CISA KEV</p>
+<h3>Alertes et failles critiques</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/barracuda-warns-of-critical-flaws-allowing-root-access-to-devices/">Barracuda warns of critical flaws allowing root access to devices</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html">Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/11/synology-nas-devices-targeted-in.html">Synology NAS Devices Targeted in Ransomware Attacks Exploiting Patched DSM Flaw</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html">Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html">cPGuard Update Channel Hijacked to Backdoor Linux Servers and Collect Password Hashes</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/hackers-hijack-cpguard-autoupdate-to-deploy-backdoor-steal-data/">Hackers hijack cPGuard autoupdate to deploy backdoor, steal data</a> — BleepingComputer</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/">UK school estate hit by 3AM ransomware in suspected AI-assisted attack</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/harvard-university-data-breach-exposed-info-of-851-000-accounts/">Harvard University data breach exposed info of 851,000 accounts</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/11/chainstack-reports-production-systems.html">Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/workos-says-attacker-used-artex-ai-to-breach-internal-sales-app/">WorkOS says attacker used ARTEX AI to breach internal sales app</a> — BleepingComputer</p>
+<h3>Menaces et groupes d&#x27;attaquants</h3>
+<p>• <a href="https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html">Russia-Aligned Gorbag Hackers Exploit WinRAR Flaw to Deploy Data-Stealing Malware</a> — The Hacker News</p>
+<h3>En bref</h3>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1443/">Multiples vulnérabilités dans Google Android (03 novembre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1445/">Multiples vulnérabilités dans PostgreSQL (03 novembre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1446/">Multiples vulnérabilités dans NetApp ONTAP 9 (03 novembre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html">Google Warns LLMjacking Attacks Are Costing Some Enterprises Up to $1 Million in Cloud Charges</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/">Google: LLMjacking attacks rack up $1 million in cloud AI charges</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/google/google-adds-new-250-000-cloud-vrp-reward-for-root-in-cloud-bugs/">Google adds new $250,000 Cloud VRP reward for Root-in-Cloud bugs</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/11/the-4-elements-of-exposure.html">The 4 Elements of Exposure Prioritization and How to Operationalize Them</a> — The Hacker News</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 03/11/2026</title>
       <guid isPermaLink="false">cyberveille-2026-11-03</guid>

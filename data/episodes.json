@@ -1,5 +1,161 @@
 [
  {
+  "date": "2026-11-04",
+  "title": "CyberVeille du 04/11/2026",
+  "guid": "cyberveille-2026-11-04",
+  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-04/cyberveille-2026-11-04.mp3",
+  "bytes": 4329529,
+  "seconds": 541,
+  "pub_date": "Wed, 04 Nov 2026 07:10:44 +0000",
+  "chapters_path": "chapters/2026-11-04.json",
+  "asset": "cyberveille-2026-11-04.mp3",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "CVE-2026-119977 — WordPress WordPress Core exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119977",
+      "source": "CISA KEV"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "Barracuda warns of critical flaws allowing root access to devices",
+      "url": "https://www.bleepingcomputer.com/news/security/barracuda-warns-of-critical-flaws-allowing-root-access-to-devices/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access",
+      "url": "https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Synology NAS Devices Targeted in Ransomware Attacks Exploiting Patched DSM Flaw",
+      "url": "https://thehackernews.com/2026/11/synology-nas-devices-targeted-in.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing",
+      "url": "https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "cPGuard Update Channel Hijacked to Backdoor Linux Servers and Collect Password Hashes",
+      "url": "https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Hackers hijack cPGuard autoupdate to deploy backdoor, steal data",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-cpguard-autoupdate-to-deploy-backdoor-steal-data/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "UK school estate hit by 3AM ransomware in suspected AI-assisted attack",
+      "url": "https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Harvard University data breach exposed info of 851,000 accounts",
+      "url": "https://www.bleepingcomputer.com/news/security/harvard-university-data-breach-exposed-info-of-851-000-accounts/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes",
+      "url": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "WorkOS says attacker used ARTEX AI to breach internal sales app",
+      "url": "https://www.bleepingcomputer.com/news/security/workos-says-attacker-used-artex-ai-to-breach-internal-sales-app/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Russia-Aligned Gorbag Hackers Exploit WinRAR Flaw to Deploy Data-Stealing Malware",
+      "url": "https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans Google Android (03 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1443/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans PostgreSQL (03 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1445/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans NetApp ONTAP 9 (03 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1446/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Google Warns LLMjacking Attacks Are Costing Some Enterprises Up to $1 Million in Cloud Charges",
+      "url": "https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Google: LLMjacking attacks rack up $1 million in cloud AI charges",
+      "url": "https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Google adds new $250,000 Cloud VRP reward for Root-in-Cloud bugs",
+      "url": "https://www.bleepingcomputer.com/news/google/google-adds-new-250-000-cloud-vrp-reward-for-root-in-cloud-bugs/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "The 4 Elements of Exposure Prioritization and How to Operationalize Them",
+      "url": "https://thehackernews.com/2026/11/the-4-elements-of-exposure.html",
+      "source": "The Hacker News"
+     }
+    ]
+   }
+  ],
+  "memo": {
+   "fil_rouge": "Sécuriser chaque étape de mise à jour empêche les attaquants d’exploiter les fenêtres de temps pour prendre le contrôle.",
+   "a_retenir": [
+    "Un site WordPress en auto‑mise à jour peut être compromis par une condition de course pendant l’upgrade.",
+    "Barracuda expose deux failles combinées qui permettent de contourner l’autorisation et d’obtenir un accès root.",
+    "Les NAS Synology non mis à jour restent vulnérables à un ransomware qui chiffre les données."
+   ],
+   "concept": {
+    "nom": "Race condition (condition de course)",
+    "explication": "Une race condition survient quand un programme vérifie une condition puis agit, mais l’état change entre les deux moments. Imaginez un guichet où le caissier regarde votre billet avant de le valider, mais un autre client le remplace entre les deux étapes. Dans le cas de WordPress, l’attaquant injecte du code pendant que le serveur vérifie puis applique les fichiers de mise à jour. Cette technique correspond à l’étape « Exploitation for Privilege Escalation » du framework MITRE ATT&CK et relève de la catégorie « Security Misconfiguration » de l’OWASP Top 10."
+   },
+   "quiz": [
+    {
+     "question": "Quelle vulnérabilité WordPress exploite la fenêtre de mise à jour pour injecter du code ?",
+     "reponse": "Une condition de course de type time‑of‑check time‑of‑use."
+    },
+    {
+     "question": "Quel type d’appareil est ciblé par le ransomware qui exploite une faille non corrigée du DSM ?",
+     "reponse": "Les serveurs NAS Synology."
+    }
+   ]
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Sécuriser chaque étape de mise à jour empêche les attaquants d’exploiter les fenêtres de temps pour prendre le contrôle.</p>\n<p>• Un site WordPress en auto‑mise à jour peut être compromis par une condition de course pendant l’upgrade.</p>\n<p>• Barracuda expose deux failles combinées qui permettent de contourner l’autorisation et d’obtenir un accès root.</p>\n<p>• Les NAS Synology non mis à jour restent vulnérables à un ransomware qui chiffre les données.</p>\n<h3>Le concept du jour</h3>\n<p>Race condition (condition de course) : Une race condition survient quand un programme vérifie une condition puis agit, mais l’état change entre les deux moments. Imaginez un guichet où le caissier regarde votre billet avant de le valider, mais un autre client le remplace entre les deux étapes. Dans le cas de WordPress, l’attaquant injecte du code pendant que le serveur vérifie puis applique les fichiers de mise à jour. Cette technique correspond à l’étape « Exploitation for Privilege Escalation » du framework MITRE ATT&amp;CK et relève de la catégorie « Security Misconfiguration » de l’OWASP Top 10.</p>\n<h3>Quiz</h3>\n<p>• Quelle vulnérabilité WordPress exploite la fenêtre de mise à jour pour injecter du code ? → Une condition de course de type time‑of‑check time‑of‑use.</p>\n<p>• Quel type d’appareil est ciblé par le ransomware qui exploite une faille non corrigée du DSM ? → Les serveurs NAS Synology.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-119977\">CVE-2026-119977 — WordPress WordPress Core exploitée activement</a> — CISA KEV</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/barracuda-warns-of-critical-flaws-allowing-root-access-to-devices/\">Barracuda warns of critical flaws allowing root access to devices</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html\">Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/synology-nas-devices-targeted-in.html\">Synology NAS Devices Targeted in Ransomware Attacks Exploiting Patched DSM Flaw</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html\">Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html\">cPGuard Update Channel Hijacked to Backdoor Linux Servers and Collect Password Hashes</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/hackers-hijack-cpguard-autoupdate-to-deploy-backdoor-steal-data/\">Hackers hijack cPGuard autoupdate to deploy backdoor, steal data</a> — BleepingComputer</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/\">UK school estate hit by 3AM ransomware in suspected AI-assisted attack</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/harvard-university-data-breach-exposed-info-of-851-000-accounts/\">Harvard University data breach exposed info of 851,000 accounts</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/chainstack-reports-production-systems.html\">Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/workos-says-attacker-used-artex-ai-to-breach-internal-sales-app/\">WorkOS says attacker used ARTEX AI to breach internal sales app</a> — BleepingComputer</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html\">Russia-Aligned Gorbag Hackers Exploit WinRAR Flaw to Deploy Data-Stealing Malware</a> — The Hacker News</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1443/\">Multiples vulnérabilités dans Google Android (03 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1445/\">Multiples vulnérabilités dans PostgreSQL (03 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1446/\">Multiples vulnérabilités dans NetApp ONTAP 9 (03 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html\">Google Warns LLMjacking Attacks Are Costing Some Enterprises Up to $1 Million in Cloud Charges</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/\">Google: LLMjacking attacks rack up $1 million in cloud AI charges</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/google/google-adds-new-250-000-cloud-vrp-reward-for-root-in-cloud-bugs/\">Google adds new $250,000 Cloud VRP reward for Root-in-Cloud bugs</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/the-4-elements-of-exposure.html\">The 4 Elements of Exposure Prioritization and How to Operationalize Them</a> — The Hacker News</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+ },
+ {
   "date": "2026-11-03",
   "title": "CyberVeille du 03/11/2026",
   "guid": "cyberveille-2026-11-03",
