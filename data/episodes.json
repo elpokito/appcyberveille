@@ -1,5 +1,196 @@
 [
  {
+  "date": "2026-11-05",
+  "title": "CyberVeille du 05/11/2026",
+  "guid": "cyberveille-2026-11-05",
+  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-05/cyberveille-2026-11-05.mp3",
+  "bytes": 5933689,
+  "seconds": 742,
+  "pub_date": "Thu, 05 Nov 2026 07:40:28 +0000",
+  "chapters_path": "chapters/2026-11-05.json",
+  "asset": "cyberveille-2026-11-05.mp3",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "CVE-2024-27834 — Apple Multiple Products exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27834",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "Hackers Exploit Patched Apple Flaw to Deliver Info-Stealing Malware, CISA Says",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "Google Issues Patches for Critical Android Flaw That Could Allow RCE Without User Interaction",
+      "url": "https://thehackernews.com/2026/11/google-patches-critical-android-flaw.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Debian and Ubuntu APT Flaw Lets MitM Attackers Swap Verified Packages and Run Code as Root",
+      "url": "https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Critical Rails Flaw Lets Attackers Write Server Files via Crafted ImageMagick Uploads",
+      "url": "https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Ruby on Rails (04 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1452/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Zyxel fixes zero-day exploited to hack nearly 1,000 network switches",
+      "url": "https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Xen Hypervisor Flaws Let One Malicious VM Read and Write Any Other VM's Memory",
+      "url": "https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Hackers use n-day exploits in zero-click attacks on iOS, Android devices",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-use-n-day-exploits-in-zero-click-attacks-on-ios-android-devices/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits",
+      "url": "https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run",
+      "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Cyberattack disrupts blood storage refrigeration systems in France",
+      "url": "https://www.bleepingcomputer.com/news/security/cyberattack-disrupts-blood-storage-refrigeration-systems-in-france/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "DreamHost confirms data breach exposed FTP logins and webmail sessions",
+      "url": "https://www.bleepingcomputer.com/news/security/dreamhost-confirms-data-breach-exposed-ftp-logins-and-webmail-sessions/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "SonicWall warns of unpatched flaws in end-of-life GMS software",
+      "url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-unpatched-flaws-in-end-of-life-gms-software/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "SonicWall Won't Patch EoL GMS Flaws That Could Expose Files, Alter Database Records",
+      "url": "https://thehackernews.com/2026/11/sonicwall-wont-patch-eol-gms-flaws-that.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Russian Police Arrest 3 Suspected VasyGrek Hackers, Dismantle Criminal Infrastructure",
+      "url": "https://thehackernews.com/2026/11/russian-police-arrest-3-suspected.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "China-Aligned Hackers Hijack Sogou Input Method DNS Requests to Deploy DarkVigil Backdoor",
+      "url": "https://thehackernews.com/2026/11/china-aligned-hackers-hijack-sogou.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Google Calendar phishing campaign hijacks sessions, bypasses MFA",
+      "url": "https://www.bleepingcomputer.com/news/security/google-calendar-phishing-campaign-hijacks-sessions-bypasses-mfa/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans Apache Zookeeper (04 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1448/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans les produits Citrix (04 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1449/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Google Chrome (04 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1450/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans les produits HPE Aruba Networking (04 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1451/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Radio With No Radar: Why Agent Runtime Security Fails Without the Layers Beneath It",
+      "url": "https://thehackernews.com/2026/11/radio-with-no-radar-why-agent-runtime.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "US charges two Canadians accused of hacking US universities",
+      "url": "https://www.bleepingcomputer.com/news/security/us-charges-two-canadians-accused-of-hacking-us-universities/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Researchers Uncover Prompt Adware Hidden in OpenAI Codex Jailbreak Toolkit",
+      "url": "https://thehackernews.com/2026/11/researchers-uncover-prompt-adware.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "NIKKE PC game launcher hacked to spread remote access, data-stealing malware",
+      "url": "https://www.bleepingcomputer.com/news/security/nikke-pc-game-launcher-hacked-to-spread-remote-access-data-stealing-malware/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "memo": {
+   "fil_rouge": "Appliquer sans délai les correctifs Apple, Android, APT et Xen, c’est le meilleur moyen d’empêcher les acteurs malveillés d’exploiter leurs failles.",
+   "a_retenir": [
+    "Les systèmes Apple (iOS, macOS, etc.) sont vulnérables à une faille d’authentification qui laisse passer des logiciels espions.",
+    "La faille d’APT sur Debian/Ubuntu permet à un attaquant d’injecter du code root lors de téléchargements interrompus.",
+    "Deux vulnérités Xen donnent à une VM la capacité de lire/écrire la mémoire d’autres VM, y compris du dom0."
+   ],
+   "concept": {
+    "nom": "Pointer Authentication (PA)",
+    "explication": "La Pointer Authentication ajoute une signature cryptographique aux pointeurs afin d’empêcher leur altération. Imaginez un ticket de métro signé : si le ticket est modifié, le contrôle le rejette. La faille Apple supprime ou falsifie cette signature, ouvrant la porte à l’injection de code. Cette technique relève de la catégorie « Modification de la chaîne d’approvisionnement » du MITRE ATT&CK et du contrôle « Sécurisation du code natif » d’OWASP."
+   },
+   "quiz": [
+    {
+     "question": "Quel type d’attaque permet à une VM Xen de compromettre d’autres VM ?",
+     "reponse": "Accès non autorisé à la mémoire d’autres VM."
+    },
+    {
+     "question": "Quelle mesure doit être prise immédiatement contre la faille APT sur Debian/Ubuntu ?",
+     "reponse": "Appliquer le correctif qui désactive le redémarrage automatique des téléchargements échoués."
+    }
+   ]
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Appliquer sans délai les correctifs Apple, Android, APT et Xen, c’est le meilleur moyen d’empêcher les acteurs malveillés d’exploiter leurs failles.</p>\n<p>• Les systèmes Apple (iOS, macOS, etc.) sont vulnérables à une faille d’authentification qui laisse passer des logiciels espions.</p>\n<p>• La faille d’APT sur Debian/Ubuntu permet à un attaquant d’injecter du code root lors de téléchargements interrompus.</p>\n<p>• Deux vulnérités Xen donnent à une VM la capacité de lire/écrire la mémoire d’autres VM, y compris du dom0.</p>\n<h3>Le concept du jour</h3>\n<p>Pointer Authentication (PA) : La Pointer Authentication ajoute une signature cryptographique aux pointeurs afin d’empêcher leur altération. Imaginez un ticket de métro signé : si le ticket est modifié, le contrôle le rejette. La faille Apple supprime ou falsifie cette signature, ouvrant la porte à l’injection de code. Cette technique relève de la catégorie « Modification de la chaîne d’approvisionnement » du MITRE ATT&amp;CK et du contrôle « Sécurisation du code natif » d’OWASP.</p>\n<h3>Quiz</h3>\n<p>• Quel type d’attaque permet à une VM Xen de compromettre d’autres VM ? → Accès non autorisé à la mémoire d’autres VM.</p>\n<p>• Quelle mesure doit être prise immédiatement contre la faille APT sur Debian/Ubuntu ? → Appliquer le correctif qui désactive le redémarrage automatique des téléchargements échoués.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2024-27834\">CVE-2024-27834 — Apple Multiple Products exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html\">Hackers Exploit Patched Apple Flaw to Deliver Info-Stealing Malware, CISA Says</a> — The Hacker News</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://thehackernews.com/2026/11/google-patches-critical-android-flaw.html\">Google Issues Patches for Critical Android Flaw That Could Allow RCE Without User Interaction</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html\">Debian and Ubuntu APT Flaw Lets MitM Attackers Swap Verified Packages and Run Code as Root</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html\">Critical Rails Flaw Lets Attackers Write Server Files via Crafted ImageMagick Uploads</a> — The Hacker News</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1452/\">Multiples vulnérabilités dans Ruby on Rails (04 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/\">Zyxel fixes zero-day exploited to hack nearly 1,000 network switches</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html\">Xen Hypervisor Flaws Let One Malicious VM Read and Write Any Other VM&#x27;s Memory</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/hackers-use-n-day-exploits-in-zero-click-attacks-on-ios-android-devices/\">Hackers use n-day exploits in zero-click attacks on iOS, Android devices</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html\">APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html\">OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run</a> — The Hacker News</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/cyberattack-disrupts-blood-storage-refrigeration-systems-in-france/\">Cyberattack disrupts blood storage refrigeration systems in France</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/dreamhost-confirms-data-breach-exposed-ftp-logins-and-webmail-sessions/\">DreamHost confirms data breach exposed FTP logins and webmail sessions</a> — BleepingComputer</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-unpatched-flaws-in-end-of-life-gms-software/\">SonicWall warns of unpatched flaws in end-of-life GMS software</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/sonicwall-wont-patch-eol-gms-flaws-that.html\">SonicWall Won&#x27;t Patch EoL GMS Flaws That Could Expose Files, Alter Database Records</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/russian-police-arrest-3-suspected.html\">Russian Police Arrest 3 Suspected VasyGrek Hackers, Dismantle Criminal Infrastructure</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/china-aligned-hackers-hijack-sogou.html\">China-Aligned Hackers Hijack Sogou Input Method DNS Requests to Deploy DarkVigil Backdoor</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/google-calendar-phishing-campaign-hijacks-sessions-bypasses-mfa/\">Google Calendar phishing campaign hijacks sessions, bypasses MFA</a> — BleepingComputer</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1448/\">Multiples vulnérabilités dans Apache Zookeeper (04 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1449/\">Multiples vulnérabilités dans les produits Citrix (04 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1450/\">Multiples vulnérabilités dans Google Chrome (04 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1451/\">Multiples vulnérabilités dans les produits HPE Aruba Networking (04 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/radio-with-no-radar-why-agent-runtime.html\">Radio With No Radar: Why Agent Runtime Security Fails Without the Layers Beneath It</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/us-charges-two-canadians-accused-of-hacking-us-universities/\">US charges two Canadians accused of hacking US universities</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/researchers-uncover-prompt-adware.html\">Researchers Uncover Prompt Adware Hidden in OpenAI Codex Jailbreak Toolkit</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/nikke-pc-game-launcher-hacked-to-spread-remote-access-data-stealing-malware/\">NIKKE PC game launcher hacked to spread remote access, data-stealing malware</a> — BleepingComputer</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+ },
+ {
   "date": "2026-11-04",
   "title": "CyberVeille du 04/11/2026",
   "guid": "cyberveille-2026-11-04",
