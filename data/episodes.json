@@ -1,5 +1,136 @@
 [
  {
+  "date": "2026-11-06",
+  "title": "CyberVeille du 06/11/2026",
+  "guid": "cyberveille-2026-11-06",
+  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-06/cyberveille-2026-11-06.mp3",
+  "bytes": 4062457,
+  "seconds": 508,
+  "pub_date": "Fri, 06 Nov 2026 07:51:15 +0000",
+  "chapters_path": "chapters/2026-11-06.json",
+  "asset": "cyberveille-2026-11-06.mp3",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Vulnérabilité dans OpenSSH (05 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-015/",
+      "source": "CERT-FR Alertes"
+     },
+     {
+      "title": "OpenSSH Issues Emergency Fix for Flaw Letting Long Passwords Bypass SSH Auth on Alpine Linux",
+      "url": "https://thehackernews.com/2026/11/openssh-issues-emergency-fix-for-flaw.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "OpenSSH flaw lets attackers log into password-disabled Linux accounts",
+      "url": "https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "Zyxel GS1900 Patch Fails to Block Zero-Day Exploit Allowing Root Command Execution",
+      "url": "https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Multiples vulnérabilités dans MongoDB (05 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1462/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans les produits Siemens (05 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1464/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "GhostMap Android flaw lets malicious app trigger persistent boot loop",
+      "url": "https://www.bleepingcomputer.com/news/security/ghostmap-android-flaw-lets-malicious-app-trigger-persistent-boot-loop/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "DigiCert data breach exposes customer information, identity documents",
+      "url": "https://www.bleepingcomputer.com/news/security/digicert-data-breach-exposes-customer-information-identity-documents/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "CERT-In Flags AI-Driven Attacks as Backdoored ARTEX Exposes 62 Consoles to Root Access",
+      "url": "https://thehackernews.com/2026/11/backdoored-docker-image-for-artex-ai.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "FBI, CISA warn of cyberattacks targeting refrigeration systems",
+      "url": "https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Apple to Start Scanning Publicly Shared iCloud Photos and Files for Harmful Content",
+      "url": "https://thehackernews.com/2026/11/apple-to-start-scanning-publicly-shared.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "ThreatsDay: Apache OFBiz RCE, DreamHost Breach, DeFi Site Hijacks + 17 More Stories",
+      "url": "https://thehackernews.com/2026/11/threatsday-apache-ofbiz-rce-dreamhost.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "5 Active Cyber Threats That Put US Enterprises at Risk in October 2026",
+      "url": "https://thehackernews.com/2026/11/5-active-cyber-threats-that-put-us.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Fake OpenAI, SpaceX events used to steal Microsoft, Google accounts",
+      "url": "https://www.bleepingcomputer.com/news/security/fake-openai-spacex-events-used-to-steal-microsoft-google-accounts/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "memo": {
+   "fil_rouge": "Appliquez immédiatement le correctif OpenSSH 10.6p2 sur les serveurs Alpine Linux pour bloquer le contournement d’authentification par mot de passe excessif.",
+   "a_retenir": [
+    "Les serveurs Alpine Linux compilés avec musl et sans PAM sont exposés à la faille.",
+    "Un mot de passe de 257 à 1 024 octets suffit à être accepté comme authentification valide.",
+    "Installez la version 10.6p2 d’OpenSSH et vérifiez que les paquets proviennent bien de cette version."
+   ],
+   "concept": {
+    "nom": "Password length overflow",
+    "explication": "Un password length overflow se produit lorsqu’un champ de mot de passe accepte plus de caractères que prévu, débordant ainsi la mémoire et altérant le processus d’authentification. Imaginez un tiroir trop petit où l’on glisse une planche trop longue, forçant le tiroir à s’ouvrir de travers ; de même, le serveur accepte la chaîne excessive comme valide. Dans le cas d’OpenSSH, cette anomalie permet de contourner l’authentification et d’obtenir un accès non autorisé. Elle correspond à la tactique MITRE ATT&CK « Exploitation pour élévation de privilèges »."
+   },
+   "quiz": [
+    {
+     "question": "Quel correctif OpenSSH doit être appliqué pour stopper la faille sur Alpine Linux ?",
+     "reponse": "La version 10.6p2 d’OpenSSH."
+    },
+    {
+     "question": "Quelle condition de configuration rend les serveurs vulnérables à cette attaque ?",
+     "reponse": "Utiliser la bibliothèque musl sans support PAM ou avec PAM désactivé."
+    }
+   ]
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Appliquez immédiatement le correctif OpenSSH 10.6p2 sur les serveurs Alpine Linux pour bloquer le contournement d’authentification par mot de passe excessif.</p>\n<p>• Les serveurs Alpine Linux compilés avec musl et sans PAM sont exposés à la faille.</p>\n<p>• Un mot de passe de 257 à 1 024 octets suffit à être accepté comme authentification valide.</p>\n<p>• Installez la version 10.6p2 d’OpenSSH et vérifiez que les paquets proviennent bien de cette version.</p>\n<h3>Le concept du jour</h3>\n<p>Password length overflow : Un password length overflow se produit lorsqu’un champ de mot de passe accepte plus de caractères que prévu, débordant ainsi la mémoire et altérant le processus d’authentification. Imaginez un tiroir trop petit où l’on glisse une planche trop longue, forçant le tiroir à s’ouvrir de travers ; de même, le serveur accepte la chaîne excessive comme valide. Dans le cas d’OpenSSH, cette anomalie permet de contourner l’authentification et d’obtenir un accès non autorisé. Elle correspond à la tactique MITRE ATT&amp;CK « Exploitation pour élévation de privilèges ».</p>\n<h3>Quiz</h3>\n<p>• Quel correctif OpenSSH doit être appliqué pour stopper la faille sur Alpine Linux ? → La version 10.6p2 d’OpenSSH.</p>\n<p>• Quelle condition de configuration rend les serveurs vulnérables à cette attaque ? → Utiliser la bibliothèque musl sans support PAM ou avec PAM désactivé.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-015/\">Vulnérabilité dans OpenSSH (05 novembre 2026)</a> — CERT-FR Alertes</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/openssh-issues-emergency-fix-for-flaw.html\">OpenSSH Issues Emergency Fix for Flaw Letting Long Passwords Bypass SSH Auth on Alpine Linux</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/\">OpenSSH flaw lets attackers log into password-disabled Linux accounts</a> — BleepingComputer</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html\">Zyxel GS1900 Patch Fails to Block Zero-Day Exploit Allowing Root Command Execution</a> — The Hacker News</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1462/\">Multiples vulnérabilités dans MongoDB (05 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1464/\">Multiples vulnérabilités dans les produits Siemens (05 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/ghostmap-android-flaw-lets-malicious-app-trigger-persistent-boot-loop/\">GhostMap Android flaw lets malicious app trigger persistent boot loop</a> — BleepingComputer</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/digicert-data-breach-exposes-customer-information-identity-documents/\">DigiCert data breach exposes customer information, identity documents</a> — BleepingComputer</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://thehackernews.com/2026/11/backdoored-docker-image-for-artex-ai.html\">CERT-In Flags AI-Driven Attacks as Backdoored ARTEX Exposes 62 Consoles to Root Access</a> — The Hacker News</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/\">FBI, CISA warn of cyberattacks targeting refrigeration systems</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/apple-to-start-scanning-publicly-shared.html\">Apple to Start Scanning Publicly Shared iCloud Photos and Files for Harmful Content</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/threatsday-apache-ofbiz-rce-dreamhost.html\">ThreatsDay: Apache OFBiz RCE, DreamHost Breach, DeFi Site Hijacks + 17 More Stories</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/5-active-cyber-threats-that-put-us.html\">5 Active Cyber Threats That Put US Enterprises at Risk in October 2026</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/fake-openai-spacex-events-used-to-steal-microsoft-google-accounts/\">Fake OpenAI, SpaceX events used to steal Microsoft, Google accounts</a> — BleepingComputer</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+ },
+ {
   "date": "2026-11-05",
   "title": "CyberVeille du 05/11/2026",
   "guid": "cyberveille-2026-11-05",

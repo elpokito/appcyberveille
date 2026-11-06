@@ -9,12 +9,51 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Thu, 05 Nov 2026 07:40:28 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 07:51:15 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 06/11/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-11-06</guid>
+      <pubDate>Fri, 06 Nov 2026 07:51:15 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-06/cyberveille-2026-11-06.mp3" length="4062457" type="audio/mpeg"/>
+      <itunes:duration>00:08:28</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-11-06.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Appliquez immédiatement le correctif OpenSSH 10.6p2 sur les serveurs Alpine Linux pour bloquer le contournement d’authentification par mot de passe excessif.</p>
+<p>• Les serveurs Alpine Linux compilés avec musl et sans PAM sont exposés à la faille.</p>
+<p>• Un mot de passe de 257 à 1 024 octets suffit à être accepté comme authentification valide.</p>
+<p>• Installez la version 10.6p2 d’OpenSSH et vérifiez que les paquets proviennent bien de cette version.</p>
+<h3>Le concept du jour</h3>
+<p>Password length overflow : Un password length overflow se produit lorsqu’un champ de mot de passe accepte plus de caractères que prévu, débordant ainsi la mémoire et altérant le processus d’authentification. Imaginez un tiroir trop petit où l’on glisse une planche trop longue, forçant le tiroir à s’ouvrir de travers ; de même, le serveur accepte la chaîne excessive comme valide. Dans le cas d’OpenSSH, cette anomalie permet de contourner l’authentification et d’obtenir un accès non autorisé. Elle correspond à la tactique MITRE ATT&amp;CK « Exploitation pour élévation de privilèges ».</p>
+<h3>Quiz</h3>
+<p>• Quel correctif OpenSSH doit être appliqué pour stopper la faille sur Alpine Linux ? → La version 10.6p2 d’OpenSSH.</p>
+<p>• Quelle condition de configuration rend les serveurs vulnérables à cette attaque ? → Utiliser la bibliothèque musl sans support PAM ou avec PAM désactivé.</p>
+<h3>À la une</h3>
+<p>• <a href="https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-015/">Vulnérabilité dans OpenSSH (05 novembre 2026)</a> — CERT-FR Alertes</p>
+<p>• <a href="https://thehackernews.com/2026/11/openssh-issues-emergency-fix-for-flaw.html">OpenSSH Issues Emergency Fix for Flaw Letting Long Passwords Bypass SSH Auth on Alpine Linux</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/">OpenSSH flaw lets attackers log into password-disabled Linux accounts</a> — BleepingComputer</p>
+<h3>Alertes et failles critiques</h3>
+<p>• <a href="https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html">Zyxel GS1900 Patch Fails to Block Zero-Day Exploit Allowing Root Command Execution</a> — The Hacker News</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1462/">Multiples vulnérabilités dans MongoDB (05 novembre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1464/">Multiples vulnérabilités dans les produits Siemens (05 novembre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/ghostmap-android-flaw-lets-malicious-app-trigger-persistent-boot-loop/">GhostMap Android flaw lets malicious app trigger persistent boot loop</a> — BleepingComputer</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/digicert-data-breach-exposes-customer-information-identity-documents/">DigiCert data breach exposes customer information, identity documents</a> — BleepingComputer</p>
+<h3>Menaces et groupes d&#x27;attaquants</h3>
+<p>• <a href="https://thehackernews.com/2026/11/backdoored-docker-image-for-artex-ai.html">CERT-In Flags AI-Driven Attacks as Backdoored ARTEX Exposes 62 Consoles to Root Access</a> — The Hacker News</p>
+<h3>En bref</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/">FBI, CISA warn of cyberattacks targeting refrigeration systems</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/11/apple-to-start-scanning-publicly-shared.html">Apple to Start Scanning Publicly Shared iCloud Photos and Files for Harmful Content</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/11/threatsday-apache-ofbiz-rce-dreamhost.html">ThreatsDay: Apache OFBiz RCE, DreamHost Breach, DeFi Site Hijacks + 17 More Stories</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/11/5-active-cyber-threats-that-put-us.html">5 Active Cyber Threats That Put US Enterprises at Risk in October 2026</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/fake-openai-spacex-events-used-to-steal-microsoft-google-accounts/">Fake OpenAI, SpaceX events used to steal Microsoft, Google accounts</a> — BleepingComputer</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 05/11/2026</title>
       <guid isPermaLink="false">cyberveille-2026-11-05</guid>
