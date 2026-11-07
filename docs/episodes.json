@@ -1,5 +1,159 @@
 [
  {
+  "date": "2026-11-07",
+  "title": "CyberVeille du 07/11/2026",
+  "guid": "cyberveille-2026-11-07",
+  "seconds": 571,
+  "bytes": 4569220,
+  "chapters": "chapters/2026-11-07.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "CVE-2026-19868 — SonicWall SonicOS SSLVPN exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19868",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "D-Link warns of multiple zero-days in DGS-3130 Series switches",
+      "url": "https://www.bleepingcomputer.com/news/security/d-link-warns-of-multiple-zero-days-in-dgs-3130-series-switches/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It",
+      "url": "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
+      "url": "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Chainalysis Breach Exposes All Users' Credentials, Forces Shutdown of Key Services",
+      "url": "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Chainalysis says breach exposed credentials for all customers",
+      "url": "https://www.bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "QNAP says hackers breaching NAS devices in Plex2Shell attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Runaway AI hacking agent behind WorkOS breach after escaping sandbox",
+      "url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Malicious Browser Extensions Could Use Claude Dispatch to Run Code on Users' Computers",
+      "url": "https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Fake security tools on GitHub push backdoors and infostealers",
+      "url": "https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Outils, recherche et divers",
+    "links": [
+     {
+      "title": "OpenAI Launches GPT-6 Cyber After AI Helps Find 81 Firefox Flaws, 948 Linux Exploits",
+      "url": "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "OpenAI's new GPT-6 Cyber AI finds 81 Firefox flaws, 948 Linux bugs",
+      "url": "https://www.bleepingcomputer.com/news/security/openais-new-gpt-6-cyber-ai-finds-81-firefox-flaws-948-linux-bugs/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans le noyau Linux d'Ubuntu (06 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1469/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans les produits IBM (06 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1472/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans les produits VMware (06 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1474/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Mattermost Server (06 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1479/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "MetaMask says recent attack didn't affect wallet infrastructure",
+      "url": "https://www.bleepingcomputer.com/news/security/metamask-says-recent-attack-didnt-affect-wallet-infrastructure/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Une faille d’authentification à facteur unique peut annuler la MFA ; appliquez les correctifs dès qu’ils sont publiés.",
+   "a_retenir": [
+    "Les administrateurs de pare‑feu SonicWall doivent installer le correctif SSL‑VPN pour bloquer le contournement MFA.",
+    "Les switchs D‑Link DGS‑3130 doivent être configurés avec les services inutiles désactivés et l’accès réseau restreint.",
+    "Les utilisateurs de Paint doivent télécharger le correctif depuis le Microsoft Store, pas via Windows Update."
+   ],
+   "concept": {
+    "nom": "Bypass d’authentification multifacteur (MFA)",
+    "explication": "Le bypass MFA consiste à exploiter une faiblesse qui permet de passer outre la deuxième couche de vérification, comme si l’on trouvait une porte dérobée derrière le verrou principal. Dans le cas du SSL‑VPN SonicWall, un attaquant avec des identifiants valides pour un autre mode d’authentification contourne les contrôles SAML et la MFA. Cette technique correspond à la tactique « Exploitation des mécanismes d’authentification » du framework MITRE ATT&CK et à la catégorie « Broken Authentication » d’OWASP."
+   },
+   "quiz": [
+    {
+     "question": "Quel produit SonicWall doit être corrigé pour empêcher le contournement MFA ?",
+     "reponse": "Le pare‑feu SonicOS, composant SSL‑VPN."
+    },
+    {
+     "question": "Quelle mesure d’atténuation est recommandée pour les switchs D‑Link DGS‑3130 ?",
+     "reponse": "Désactiver les services non indispensables et restreindre l’accès réseau aux switches."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-11-07.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-07/cyberveille-2026-11-07.mp3"
+ },
+ {
   "date": "2026-11-06",
   "title": "CyberVeille du 06/11/2026",
   "guid": "cyberveille-2026-11-06",
@@ -964,7 +1118,7 @@
     }
    ]
   },
-  "audio": "audio/cyberveille-2026-10-31.mp3",
+  "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-31/cyberveille-2026-10-31.mp3"
  },
  {
