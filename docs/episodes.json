@@ -1,5 +1,69 @@
 [
  {
+  "date": "2026-11-08",
+  "title": "CyberVeille du 08/11/2026",
+  "guid": "cyberveille-2026-11-08",
+  "seconds": 345,
+  "bytes": 2763648,
+  "chapters": "chapters/2026-11-08.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Hackers pull off $133 million French bank heist via service provider",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Claude Code's “Don't Ask Again” File Exposes Passwords and Keys in 1,122 Public Copies on GitHub",
+      "url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "CTM360 Exposes Fake Gift Card Scams Exploiting Trusted Brands",
+      "url": "https://www.bleepingcomputer.com/news/security/ctm360-exposes-fake-gift-card-scams-exploiting-trusted-brands/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Sécuriser les fournisseurs et surveiller les accès externes est indispensable pour empêcher la chaîne d’approvisionnement de devenir porte d’entrée des cybercriminels.",
+   "a_retenir": [
+    "Les banques sont ciblées via leurs prestataires, ce qui peut entraîner des transactions frauduleuses massives.",
+    "Des mots de passe et clés d’API peuvent être publiés accidentellement sur des dépôts publics, exposant les systèmes.",
+    "Les escrocs usurpent l’identité de marques ou de célébrités pour vendre de fausses cartes‑cadeaux et collecter des données."
+   ],
+   "concept": {
+    "nom": "Attaque de chaîne d'approvisionnement",
+    "explication": "Une attaque de chaîne d'approvisionnement consiste à compromettre un tiers qui fournit des services ou du code à une cible principale, comme le prestataire du Crédit Mutuel Arkéa. Imaginez un sous‑contrat qui, une fois infiltré, ouvre une porte dérobée dans le bâtiment principal. Dans l’épisode, les hackers ont exploité le fournisseur pour lancer des virements frauduleux, illustrant le risque. Cette technique relève de la catégorie « Compromise de la chaîne d'approvisionnement » du framework MITRE ATT&CK."
+   },
+   "quiz": [
+    {
+     "question": "Quel type d’attaque a permis aux hackers de lancer des transactions frauduleuses contre le Crédit Mutuel Arkéa ?",
+     "reponse": "Une attaque de chaîne d'approvisionnement via un prestataire de services."
+    },
+    {
+     "question": "Quelle mauvaise pratique a conduit à la fuite de mots de passe et clés d’API sur GitHub ?",
+     "reponse": "L’activation de l’option « Yes, and don’t ask again » qui enregistre les secrets dans les dépôts publics."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-11-08.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-08/cyberveille-2026-11-08.mp3"
+ },
+ {
   "date": "2026-11-07",
   "title": "CyberVeille du 07/11/2026",
   "guid": "cyberveille-2026-11-07",
@@ -949,7 +1013,7 @@
     }
    ]
   },
-  "audio": "audio/cyberveille-2026-11-01.mp3",
+  "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-01/cyberveille-2026-11-01.mp3"
  },
  {

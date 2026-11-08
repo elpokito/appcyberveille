@@ -1,0 +1,45 @@
+{
+ "version": "1.2.0",
+ "chapters": [
+  {
+   "startTime": 0.0,
+   "title": "Introduction"
+  },
+  {
+   "startTime": 28.53,
+   "title": "Rappel"
+  },
+  {
+   "startTime": 83.19,
+   "title": "À la une"
+  },
+  {
+   "startTime": 130.07,
+   "title": "Menaces et groupes d'attaquants"
+  },
+  {
+   "startTime": 157.82,
+   "title": "En bref"
+  },
+  {
+   "startTime": 172.75,
+   "title": "La semaine en bref"
+  },
+  {
+   "startTime": 236.69,
+   "title": "Le concept du jour"
+  },
+  {
+   "startTime": 265.88,
+   "title": "À retenir"
+  },
+  {
+   "startTime": 291.37,
+   "title": "Quiz"
+  },
+  {
+   "startTime": 330.71,
+   "title": "Conclusion"
+  }
+ ]
+}
