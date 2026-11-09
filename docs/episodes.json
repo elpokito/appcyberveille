@@ -1,5 +1,99 @@
 [
  {
+  "date": "2026-11-09",
+  "title": "CyberVeille du 09/11/2026",
+  "guid": "cyberveille-2026-11-09",
+  "seconds": 397,
+  "bytes": 3174573,
+  "chapters": "chapters/2026-11-09.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation",
+      "url": "https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Iris Ohyama data cloud breach exposes info of 7.7 million customers",
+      "url": "https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses",
+      "url": "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "NoName vise Free, La Poste Mobile et Danfoss",
+      "url": "https://www.zataz.com/noname-vise-free-la-poste-mobile-et-danfoss/",
+      "source": "Zataz"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Un pirate revendique le vol de millions de données d’automobilistes français",
+      "url": "https://www.zataz.com/sgs-un-pirate-revendique-259-millions-de-lignes-volees/",
+      "source": "Zataz"
+     },
+     {
+      "title": "Alain Afflelou : des données clients et bancaires exposées ?",
+      "url": "https://www.zataz.com/alain-afflelou-des-donnees-clients-et-bancaires-exposees/",
+      "source": "Zataz"
+     },
+     {
+      "title": "DataSuckers : trois suspects arrêtés après une fuite",
+      "url": "https://www.zataz.com/datasuckers-trois-suspects-arretes-apres-une-fuite/",
+      "source": "Zataz"
+     },
+     {
+      "title": "Un géant de l’informatique visé par une revendication de vol de données",
+      "url": "https://www.zataz.com/un-geant-de-linformatique-vise-par-une-revendication-de-vol-de-donnees/",
+      "source": "Zataz"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Un contournement de MFA sur les firewalls SonicWall ouvre la porte à la prise de contrôle totale du réseau.",
+   "a_retenir": [
+    "Tous les dispositifs SonicWall SonicOS sont exposés ; vérifiez immédiatement la version et appliquez les correctifs.",
+    "Un attaquant qui contourne le MFA peut accéder à l’interface d’administration et modifier les règles de filtrage.",
+    "Le MFA n’est plus efficace si la faille d’« authentication reinforcement » est exploitée ; renforcez la surveillance des accès admin."
+   ],
+   "concept": {
+    "nom": "Authentication Reinforcement Bypass",
+    "explication": "C’est une technique qui exploite une faiblesse dans le renforcement de l’authentification pour neutraliser le MFA, comme si l’on retirait la serrure d’une porte déjà verrouillée. Dans le cas de SonicWall, l’attaquant contourne le second facteur et accède à la console d’administration du pare‑feu. Cette méthode correspond à la tactique « Credential Access » du framework MITRE ATT&CK et à la catégorie « Broken Authentication » d’OWASP."
+   },
+   "quiz": [
+    {
+     "question": "Quel produit SonicWall est concerné par la faille d’« authentication reinforcement » ?",
+     "reponse": "Les déploiements de SonicWall SonicOS."
+    },
+    {
+     "question": "Quelle action immédiate les équipes doivent‑elles réaliser face à cette vulnérabilité ?",
+     "reponse": "Vérifier la version du firmware et appliquer les correctifs ou mitigations publiés."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-11-09.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-09/cyberveille-2026-11-09.mp3"
+ },
+ {
   "date": "2026-11-08",
   "title": "CyberVeille du 08/11/2026",
   "guid": "cyberveille-2026-11-08",
@@ -949,7 +1043,7 @@
     }
    ]
   },
-  "audio": "audio/cyberveille-2026-11-02.mp3",
+  "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-02/cyberveille-2026-11-02.mp3"
  },
  {

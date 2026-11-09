@@ -1,5 +1,101 @@
 [
  {
+  "date": "2026-11-09",
+  "title": "CyberVeille du 09/11/2026",
+  "guid": "cyberveille-2026-11-09",
+  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-09/cyberveille-2026-11-09.mp3",
+  "bytes": 3174573,
+  "seconds": 397,
+  "pub_date": "Mon, 09 Nov 2026 07:30:25 +0000",
+  "chapters_path": "chapters/2026-11-09.json",
+  "asset": "cyberveille-2026-11-09.mp3",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation",
+      "url": "https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Iris Ohyama data cloud breach exposes info of 7.7 million customers",
+      "url": "https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses",
+      "url": "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "NoName vise Free, La Poste Mobile et Danfoss",
+      "url": "https://www.zataz.com/noname-vise-free-la-poste-mobile-et-danfoss/",
+      "source": "Zataz"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Un pirate revendique le vol de millions de données d’automobilistes français",
+      "url": "https://www.zataz.com/sgs-un-pirate-revendique-259-millions-de-lignes-volees/",
+      "source": "Zataz"
+     },
+     {
+      "title": "Alain Afflelou : des données clients et bancaires exposées ?",
+      "url": "https://www.zataz.com/alain-afflelou-des-donnees-clients-et-bancaires-exposees/",
+      "source": "Zataz"
+     },
+     {
+      "title": "DataSuckers : trois suspects arrêtés après une fuite",
+      "url": "https://www.zataz.com/datasuckers-trois-suspects-arretes-apres-une-fuite/",
+      "source": "Zataz"
+     },
+     {
+      "title": "Un géant de l’informatique visé par une revendication de vol de données",
+      "url": "https://www.zataz.com/un-geant-de-linformatique-vise-par-une-revendication-de-vol-de-donnees/",
+      "source": "Zataz"
+     }
+    ]
+   }
+  ],
+  "memo": {
+   "fil_rouge": "Un contournement de MFA sur les firewalls SonicWall ouvre la porte à la prise de contrôle totale du réseau.",
+   "a_retenir": [
+    "Tous les dispositifs SonicWall SonicOS sont exposés ; vérifiez immédiatement la version et appliquez les correctifs.",
+    "Un attaquant qui contourne le MFA peut accéder à l’interface d’administration et modifier les règles de filtrage.",
+    "Le MFA n’est plus efficace si la faille d’« authentication reinforcement » est exploitée ; renforcez la surveillance des accès admin."
+   ],
+   "concept": {
+    "nom": "Authentication Reinforcement Bypass",
+    "explication": "C’est une technique qui exploite une faiblesse dans le renforcement de l’authentification pour neutraliser le MFA, comme si l’on retirait la serrure d’une porte déjà verrouillée. Dans le cas de SonicWall, l’attaquant contourne le second facteur et accède à la console d’administration du pare‑feu. Cette méthode correspond à la tactique « Credential Access » du framework MITRE ATT&CK et à la catégorie « Broken Authentication » d’OWASP."
+   },
+   "quiz": [
+    {
+     "question": "Quel produit SonicWall est concerné par la faille d’« authentication reinforcement » ?",
+     "reponse": "Les déploiements de SonicWall SonicOS."
+    },
+    {
+     "question": "Quelle action immédiate les équipes doivent‑elles réaliser face à cette vulnérabilité ?",
+     "reponse": "Vérifier la version du firmware et appliquer les correctifs ou mitigations publiés."
+    }
+   ]
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Un contournement de MFA sur les firewalls SonicWall ouvre la porte à la prise de contrôle totale du réseau.</p>\n<p>• Tous les dispositifs SonicWall SonicOS sont exposés ; vérifiez immédiatement la version et appliquez les correctifs.</p>\n<p>• Un attaquant qui contourne le MFA peut accéder à l’interface d’administration et modifier les règles de filtrage.</p>\n<p>• Le MFA n’est plus efficace si la faille d’« authentication reinforcement » est exploitée ; renforcez la surveillance des accès admin.</p>\n<h3>Le concept du jour</h3>\n<p>Authentication Reinforcement Bypass : C’est une technique qui exploite une faiblesse dans le renforcement de l’authentification pour neutraliser le MFA, comme si l’on retirait la serrure d’une porte déjà verrouillée. Dans le cas de SonicWall, l’attaquant contourne le second facteur et accède à la console d’administration du pare‑feu. Cette méthode correspond à la tactique « Credential Access » du framework MITRE ATT&amp;CK et à la catégorie « Broken Authentication » d’OWASP.</p>\n<h3>Quiz</h3>\n<p>• Quel produit SonicWall est concerné par la faille d’« authentication reinforcement » ? → Les déploiements de SonicWall SonicOS.</p>\n<p>• Quelle action immédiate les équipes doivent‑elles réaliser face à cette vulnérabilité ? → Vérifier la version du firmware et appliquer les correctifs ou mitigations publiés.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html\">CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation</a> — The Hacker News</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/\">Iris Ohyama data cloud breach exposes info of 7.7 million customers</a> — BleepingComputer</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html\">U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses</a> — The Hacker News</p>\n<p>• <a href=\"https://www.zataz.com/noname-vise-free-la-poste-mobile-et-danfoss/\">NoName vise Free, La Poste Mobile et Danfoss</a> — Zataz</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.zataz.com/sgs-un-pirate-revendique-259-millions-de-lignes-volees/\">Un pirate revendique le vol de millions de données d’automobilistes français</a> — Zataz</p>\n<p>• <a href=\"https://www.zataz.com/alain-afflelou-des-donnees-clients-et-bancaires-exposees/\">Alain Afflelou : des données clients et bancaires exposées ?</a> — Zataz</p>\n<p>• <a href=\"https://www.zataz.com/datasuckers-trois-suspects-arretes-apres-une-fuite/\">DataSuckers : trois suspects arrêtés après une fuite</a> — Zataz</p>\n<p>• <a href=\"https://www.zataz.com/un-geant-de-linformatique-vise-par-une-revendication-de-vol-de-donnees/\">Un géant de l’informatique visé par une revendication de vol de données</a> — Zataz</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+ },
+ {
   "date": "2026-11-08",
   "title": "CyberVeille du 08/11/2026",
   "guid": "cyberveille-2026-11-08",
