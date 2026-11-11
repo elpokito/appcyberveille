@@ -1,5 +1,216 @@
 [
  {
+  "date": "2026-11-11",
+  "title": "CyberVeille du 11/11/2026",
+  "guid": "cyberveille-2026-11-11",
+  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-11/cyberveille-2026-11-11.mp3",
+  "bytes": 5774056,
+  "seconds": 722,
+  "pub_date": "Wed, 11 Nov 2026 07:29:32 +0000",
+  "chapters_path": "chapters/2026-11-11.json",
+  "asset": "cyberveille-2026-11-11.mp3",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "CVE-2026-124194 — Microsoft Office exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124194",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-111793 — Openwave Messaging Limited Webtop Media Transcoder exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111793",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-20320 — Cisco BroadWorks exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20320",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-111560 — Barracuda Networks Multiple Products exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111560",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-116606 — Barracuda Networks Barracuda Email Security Gateway (ESG) exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116606",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-125350 — Google Chromium exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125350",
+      "source": "CISA KEV"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "Microsoft November 2026 Patch Tuesday fixes 1,235 flaws, Outlook zero-day",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Microsoft Fixes Nearly 1,100 Security Vulnerabilities",
+      "url": "https://krebsonsecurity.com/2026/11/microsoft-fixes-nearly-1100-security-vulnerabilities/",
+      "source": "Krebs on Security"
+     },
+     {
+      "title": "Hackers now exploit critical Barracuda ESG flaws to gain root access",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-barracuda-email-security-gateway-flaws-to-get-root-access/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Critical Xen Orchestra auth bypass flaw exploited to hijack VM servers",
+      "url": "https://www.bleepingcomputer.com/news/security/critical-xen-orchestra-auth-bypass-flaw-exploited-to-hijack-vm-servers/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Hackers Exploit Critical Xen Orchestra Auth Bypass Flaw to Gain Admin Access",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "SAP Patches Four CVSS 10.0 Flaws, Including Two Enabling Remote Code Execution",
+      "url": "https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Multiples vulnérabilités dans les produits Apple (10 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1487/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Windows 11 KB5132061 & KB5131087 cumulative updates released",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5132061-and-kb5131087-cumulative-updates-released/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Apple Patches iMessage Group Chat Privacy Flaws and Bluetooth Pairing Vulnerabilities",
+      "url": "https://thehackernews.com/2026/11/apple-patches-imessage-group-chat.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Git Patches Flaw That Lets Malicious Repositories Execute Code During Recursive Clones",
+      "url": "https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Japanese furniture giant Nitori says hackers stole 37.6M customer records",
+      "url": "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Railway breach leads to $740,000 in fraudulent AI charges",
+      "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Binance warns of iOS flaw that could leak crypto wallet secrets",
+      "url": "https://www.bleepingcomputer.com/news/security/binance-warns-of-ios-flaw-that-could-leak-crypto-wallet-secrets/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Turla hackers use new Cereal malware to spy on govt Exchange servers",
+      "url": "https://www.bleepingcomputer.com/news/security/turla-hackers-use-new-ceral-malware-to-spy-on-govt-exchange-servers/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Russian Turla Hackers Use New Cereal Malware to Steal Emails From Government Exchange Servers",
+      "url": "https://thehackernews.com/2026/11/russian-turla-hackers-use-new-cereal.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Three China-Nexus Espionage Campaigns Linked Through Sparrow Malware Ecosystem",
+      "url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Blind Eagle Uses Fake Court Notices to Deliver Remote Access Trojan Across Latin America",
+      "url": "https://thehackernews.com/2026/11/blind-eagle-uses-fake-court-notices-to.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Attackers Exploit AhsayCBS Flaws to Deploy Sandbox-Evading Python Backdoor",
+      "url": "https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Réglementation et institutions",
+    "links": [
+     {
+      "title": "France Blames Iran for Sabotage Attack on Refrigeration Controllers at About 700 Retail Sites",
+      "url": "https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans Google Chrome (10 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1488/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Mozilla Firefox (10 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1490/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans le greffon OpenID Connect OpenID Provider (OIDC OP) pour Shibboleth (10 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1491/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans Atlassian Confluence Data Center (10 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1492/",
+      "source": "CERT-FR Avis"
+     }
+    ]
+   }
+  ],
+  "memo": {
+   "fil_rouge": "Appliquez immédiatement les correctifs dès qu’une faille est signalée comme exploitée, sinon l’attaquant peut prendre le contrôle du système.",
+   "a_retenir": [
+    "Outlook vulnérable permet l’exécution de code à distance via un courriel ; bloquez le mail et mettez à jour le client.",
+    "Barracuda Email Security Gateway autorise l’injection de commandes OS avec privilèges root ; déployez le correctif et limitez les accès.",
+    "Cisco BroadWorks souffre d’une faille XML External Entity qui divulgue la configuration ; appliquez la mitigation et surveillez les logs XML."
+   ],
+   "concept": {
+    "nom": "XML External Entity (XXE)",
+    "explication": "Une XXE est une vulnérabilité où un parseur XML accepte des références à des entités externes, permettant à l’attaquant de lire ou d’écrire des fichiers du serveur. Imaginez un formulaire qui, au lieu d’afficher du texte, charge un fichier système grâce à une balise « <!ENTITY ». Dans le cas de Cisco BroadWorks, cette faille a exposé la configuration sensible. Elle correspond à la catégorie OWASP « Injection »."
+   },
+   "quiz": [
+    {
+     "question": "Quel produit Microsoft a vu une faille zero‑day permettant l’exécution de code à distance depuis un courriel ?",
+     "reponse": "Microsoft Outlook."
+    },
+    {
+     "question": "Quelle technique d’attaque a été exploitée dans Cisco BroadWorks pour divulguer la configuration ?",
+     "reponse": "Une faille de type XML External Entity."
+    }
+   ]
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Appliquez immédiatement les correctifs dès qu’une faille est signalée comme exploitée, sinon l’attaquant peut prendre le contrôle du système.</p>\n<p>• Outlook vulnérable permet l’exécution de code à distance via un courriel ; bloquez le mail et mettez à jour le client.</p>\n<p>• Barracuda Email Security Gateway autorise l’injection de commandes OS avec privilèges root ; déployez le correctif et limitez les accès.</p>\n<p>• Cisco BroadWorks souffre d’une faille XML External Entity qui divulgue la configuration ; appliquez la mitigation et surveillez les logs XML.</p>\n<h3>Le concept du jour</h3>\n<p>XML External Entity (XXE) : Une XXE est une vulnérabilité où un parseur XML accepte des références à des entités externes, permettant à l’attaquant de lire ou d’écrire des fichiers du serveur. Imaginez un formulaire qui, au lieu d’afficher du texte, charge un fichier système grâce à une balise « &lt;!ENTITY ». Dans le cas de Cisco BroadWorks, cette faille a exposé la configuration sensible. Elle correspond à la catégorie OWASP « Injection ».</p>\n<h3>Quiz</h3>\n<p>• Quel produit Microsoft a vu une faille zero‑day permettant l’exécution de code à distance depuis un courriel ? → Microsoft Outlook.</p>\n<p>• Quelle technique d’attaque a été exploitée dans Cisco BroadWorks pour divulguer la configuration ? → Une faille de type XML External Entity.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-124194\">CVE-2026-124194 — Microsoft Office exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-111793\">CVE-2026-111793 — Openwave Messaging Limited Webtop Media Transcoder exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-20320\">CVE-2026-20320 — Cisco BroadWorks exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-111560\">CVE-2026-111560 — Barracuda Networks Multiple Products exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-116606\">CVE-2026-116606 — Barracuda Networks Barracuda Email Security Gateway (ESG) exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-125350\">CVE-2026-125350 — Google Chromium exploitée activement</a> — CISA KEV</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/\">Microsoft November 2026 Patch Tuesday fixes 1,235 flaws, Outlook zero-day</a> — BleepingComputer</p>\n<p>• <a href=\"https://krebsonsecurity.com/2026/11/microsoft-fixes-nearly-1100-security-vulnerabilities/\">Microsoft Fixes Nearly 1,100 Security Vulnerabilities</a> — Krebs on Security</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/hackers-exploit-barracuda-email-security-gateway-flaws-to-get-root-access/\">Hackers now exploit critical Barracuda ESG flaws to gain root access</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/critical-xen-orchestra-auth-bypass-flaw-exploited-to-hijack-vm-servers/\">Critical Xen Orchestra auth bypass flaw exploited to hijack VM servers</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html\">Hackers Exploit Critical Xen Orchestra Auth Bypass Flaw to Gain Admin Access</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html\">SAP Patches Four CVSS 10.0 Flaws, Including Two Enabling Remote Code Execution</a> — The Hacker News</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1487/\">Multiples vulnérabilités dans les produits Apple (10 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5132061-and-kb5131087-cumulative-updates-released/\">Windows 11 KB5132061 &amp; KB5131087 cumulative updates released</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/apple-patches-imessage-group-chat.html\">Apple Patches iMessage Group Chat Privacy Flaws and Bluetooth Pairing Vulnerabilities</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html\">Git Patches Flaw That Lets Malicious Repositories Execute Code During Recursive Clones</a> — The Hacker News</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/\">Japanese furniture giant Nitori says hackers stole 37.6M customer records</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/\">Railway breach leads to $740,000 in fraudulent AI charges</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/binance-warns-of-ios-flaw-that-could-leak-crypto-wallet-secrets/\">Binance warns of iOS flaw that could leak crypto wallet secrets</a> — BleepingComputer</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/turla-hackers-use-new-ceral-malware-to-spy-on-govt-exchange-servers/\">Turla hackers use new Cereal malware to spy on govt Exchange servers</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/russian-turla-hackers-use-new-cereal.html\">Russian Turla Hackers Use New Cereal Malware to Steal Emails From Government Exchange Servers</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html\">Three China-Nexus Espionage Campaigns Linked Through Sparrow Malware Ecosystem</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/blind-eagle-uses-fake-court-notices-to.html\">Blind Eagle Uses Fake Court Notices to Deliver Remote Access Trojan Across Latin America</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html\">Attackers Exploit AhsayCBS Flaws to Deploy Sandbox-Evading Python Backdoor</a> — The Hacker News</p>\n<h3>Réglementation et institutions</h3>\n<p>• <a href=\"https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html\">France Blames Iran for Sabotage Attack on Refrigeration Controllers at About 700 Retail Sites</a> — The Hacker News</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1488/\">Multiples vulnérabilités dans Google Chrome (10 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1490/\">Multiples vulnérabilités dans Mozilla Firefox (10 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1491/\">Multiples vulnérabilités dans le greffon OpenID Connect OpenID Provider (OIDC OP) pour Shibboleth (10 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1492/\">Vulnérabilité dans Atlassian Confluence Data Center (10 novembre 2026)</a> — CERT-FR Avis</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+ },
+ {
   "date": "2026-11-10",
   "title": "CyberVeille du 10/11/2026",
   "guid": "cyberveille-2026-11-10",
