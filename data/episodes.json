@@ -1,5 +1,146 @@
 [
  {
+  "date": "2026-11-12",
+  "title": "CyberVeille du 12/11/2026",
+  "guid": "cyberveille-2026-11-12",
+  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-12/cyberveille-2026-11-12.mp3",
+  "bytes": 4835449,
+  "seconds": 604,
+  "pub_date": "Thu, 12 Nov 2026 07:58:05 +0000",
+  "chapters_path": "chapters/2026-11-12.json",
+  "asset": "cyberveille-2026-11-12.mp3",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Hackers use AntiFox AI agents in AWS credential-theft attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "AntiFox AI Pentesting Platform Linked to Attacks That Accessed AWS Production Secrets",
+      "url": "https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "Microsoft Patches 1,259 Flaws, Including Exploited Outlook Bug That May Expose NTLMv2 Hashes",
+      "url": "https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Critical Zoom Workplace Flaw Could Allow Unauthenticated Remote Privilege Escalation",
+      "url": "https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "N-able releases security hotfixes for zero-day vulnerabilities",
+      "url": "https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Maersk confirms data breach as WhiteArmor ransomware demands $5 million",
+      "url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Active ScreenConnect attacks breach MSPs, impact dozens of organizations",
+      "url": "https://www.bleepingcomputer.com/news/security/active-screenconnect-attacks-breach-msps-impact-dozens-of-organizations/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Over 35,000 Grok-Built Apps Exposed Online, Some Leaking Confidential Data and Passwords",
+      "url": "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Baker Tilly notifies clients of data breach at third-party provider",
+      "url": "https://www.bleepingcomputer.com/news/security/baker-tilly-notifies-clients-of-data-breach-at-third-party-provider/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Hackers Target Qlik Sense Servers With Reverse Shells, Stage ActiveMQ and Veeam Exploits",
+      "url": "https://thehackernews.com/2026/11/hackers-target-qlik-sense-servers-with.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Attacker Used 4,837 Hijacked GitHub Accounts to Run a CI Secret Stealer in 1,806+ Repositories",
+      "url": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Who Runs the Ransomware Group Qilin?",
+      "url": "https://krebsonsecurity.com/2026/11/who-runs-the-ransomware-group-qilin/",
+      "source": "Krebs on Security"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Microsoft fixes Exchange sign-ins broken by Windows Server updates",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-exchange-sign-ins-broken-by-october-windows-server-updates/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Microsoft fixes audio issues caused by September security updates",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-usb-audio-issues-caused-by-september-security-updates/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Microsoft Researchers Show AI Agents Can Be Backdoored by Editing Fewer Than 10 Neurons",
+      "url": "https://thehackernews.com/2026/11/microsoft-researchers-show-ai-agents.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "eBPF Rootkits: Why Underground Actors Are Taking Notice",
+      "url": "https://www.bleepingcomputer.com/news/security/ebpf-rootkits-why-underground-actors-are-taking-notice/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "memo": {
+   "fil_rouge": "Détecter et bloquer toute instance AntiFox non autorisée dans le cloud, c’est empêcher la compromission massive des credentials AWS.",
+   "a_retenir": [
+    "Identifier et isoler immédiatement les machines AntiFox déployées sans approbation.",
+    "Révoquer sans délai les clés d’accès AWS volées et les remplacer par de nouveaux identifiants.",
+    "Surveiller les déplacements latéraux et les accès aux secrets de production après une fuite de credentials."
+   ],
+   "concept": {
+    "nom": "Hijacking d’instance cloud",
+    "explication": "Le hijacking d’instance cloud consiste à prendre le contrôle d’une machine virtuelle légitime hébergée dans un environnement cloud pour y exécuter des actions malveillantes. Imaginez qu’un voleur s’empare d’une voiture de location déjà en circulation : il peut alors se rendre où il veut sans que la société de location ne le sache. Dans le cas d’AntiFox, les attaquants détournent des instances auto‑gérées pour voler des identifiants AWS et se déplacer latéralement. Cette technique relève de la catégorie Credential Access et de la tactique Lateral Movement du framework MITRE ATT&CK, ainsi que du contrôle d’accès inadéquat décrit dans la catégorie Broken Access Control d’OWASP."
+   },
+   "quiz": [
+    {
+     "question": "Quel outil open‑source a été détourné pour infiltrer les environnements AWS ?",
+     "reponse": "AntiFox, la plateforme d’agentic penetration testing."
+    },
+    {
+     "question": "Quelle mesure immédiate doit être prise sur les clés AWS compromises ?",
+     "reponse": "Les révoquer immédiatement et en émettre de nouvelles."
+    }
+   ]
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Détecter et bloquer toute instance AntiFox non autorisée dans le cloud, c’est empêcher la compromission massive des credentials AWS.</p>\n<p>• Identifier et isoler immédiatement les machines AntiFox déployées sans approbation.</p>\n<p>• Révoquer sans délai les clés d’accès AWS volées et les remplacer par de nouveaux identifiants.</p>\n<p>• Surveiller les déplacements latéraux et les accès aux secrets de production après une fuite de credentials.</p>\n<h3>Le concept du jour</h3>\n<p>Hijacking d’instance cloud : Le hijacking d’instance cloud consiste à prendre le contrôle d’une machine virtuelle légitime hébergée dans un environnement cloud pour y exécuter des actions malveillantes. Imaginez qu’un voleur s’empare d’une voiture de location déjà en circulation : il peut alors se rendre où il veut sans que la société de location ne le sache. Dans le cas d’AntiFox, les attaquants détournent des instances auto‑gérées pour voler des identifiants AWS et se déplacer latéralement. Cette technique relève de la catégorie Credential Access et de la tactique Lateral Movement du framework MITRE ATT&amp;CK, ainsi que du contrôle d’accès inadéquat décrit dans la catégorie Broken Access Control d’OWASP.</p>\n<h3>Quiz</h3>\n<p>• Quel outil open‑source a été détourné pour infiltrer les environnements AWS ? → AntiFox, la plateforme d’agentic penetration testing.</p>\n<p>• Quelle mesure immédiate doit être prise sur les clés AWS compromises ? → Les révoquer immédiatement et en émettre de nouvelles.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/\">Hackers use AntiFox AI agents in AWS credential-theft attacks</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html\">AntiFox AI Pentesting Platform Linked to Attacks That Accessed AWS Production Secrets</a> — The Hacker News</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html\">Microsoft Patches 1,259 Flaws, Including Exploited Outlook Bug That May Expose NTLMv2 Hashes</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html\">Critical Zoom Workplace Flaw Could Allow Unauthenticated Remote Privilege Escalation</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities/\">N-able releases security hotfixes for zero-day vulnerabilities</a> — BleepingComputer</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/\">Maersk confirms data breach as WhiteArmor ransomware demands $5 million</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/active-screenconnect-attacks-breach-msps-impact-dozens-of-organizations/\">Active ScreenConnect attacks breach MSPs, impact dozens of organizations</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html\">Over 35,000 Grok-Built Apps Exposed Online, Some Leaking Confidential Data and Passwords</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/baker-tilly-notifies-clients-of-data-breach-at-third-party-provider/\">Baker Tilly notifies clients of data breach at third-party provider</a> — BleepingComputer</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://thehackernews.com/2026/11/hackers-target-qlik-sense-servers-with.html\">Hackers Target Qlik Sense Servers With Reverse Shells, Stage ActiveMQ and Veeam Exploits</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html\">Attacker Used 4,837 Hijacked GitHub Accounts to Run a CI Secret Stealer in 1,806+ Repositories</a> — The Hacker News</p>\n<p>• <a href=\"https://krebsonsecurity.com/2026/11/who-runs-the-ransomware-group-qilin/\">Who Runs the Ransomware Group Qilin?</a> — Krebs on Security</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-exchange-sign-ins-broken-by-october-windows-server-updates/\">Microsoft fixes Exchange sign-ins broken by Windows Server updates</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-usb-audio-issues-caused-by-september-security-updates/\">Microsoft fixes audio issues caused by September security updates</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/microsoft-researchers-show-ai-agents.html\">Microsoft Researchers Show AI Agents Can Be Backdoored by Editing Fewer Than 10 Neurons</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/ebpf-rootkits-why-underground-actors-are-taking-notice/\">eBPF Rootkits: Why Underground Actors Are Taking Notice</a> — BleepingComputer</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+ },
+ {
   "date": "2026-11-11",
   "title": "CyberVeille du 11/11/2026",
   "guid": "cyberveille-2026-11-11",

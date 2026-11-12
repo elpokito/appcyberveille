@@ -9,12 +9,53 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Wed, 11 Nov 2026 07:29:32 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 07:58:05 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 12/11/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-11-12</guid>
+      <pubDate>Thu, 12 Nov 2026 07:58:05 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-12/cyberveille-2026-11-12.mp3" length="4835449" type="audio/mpeg"/>
+      <itunes:duration>00:10:04</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-11-12.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Détecter et bloquer toute instance AntiFox non autorisée dans le cloud, c’est empêcher la compromission massive des credentials AWS.</p>
+<p>• Identifier et isoler immédiatement les machines AntiFox déployées sans approbation.</p>
+<p>• Révoquer sans délai les clés d’accès AWS volées et les remplacer par de nouveaux identifiants.</p>
+<p>• Surveiller les déplacements latéraux et les accès aux secrets de production après une fuite de credentials.</p>
+<h3>Le concept du jour</h3>
+<p>Hijacking d’instance cloud : Le hijacking d’instance cloud consiste à prendre le contrôle d’une machine virtuelle légitime hébergée dans un environnement cloud pour y exécuter des actions malveillantes. Imaginez qu’un voleur s’empare d’une voiture de location déjà en circulation : il peut alors se rendre où il veut sans que la société de location ne le sache. Dans le cas d’AntiFox, les attaquants détournent des instances auto‑gérées pour voler des identifiants AWS et se déplacer latéralement. Cette technique relève de la catégorie Credential Access et de la tactique Lateral Movement du framework MITRE ATT&amp;CK, ainsi que du contrôle d’accès inadéquat décrit dans la catégorie Broken Access Control d’OWASP.</p>
+<h3>Quiz</h3>
+<p>• Quel outil open‑source a été détourné pour infiltrer les environnements AWS ? → AntiFox, la plateforme d’agentic penetration testing.</p>
+<p>• Quelle mesure immédiate doit être prise sur les clés AWS compromises ? → Les révoquer immédiatement et en émettre de nouvelles.</p>
+<h3>À la une</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/">Hackers use AntiFox AI agents in AWS credential-theft attacks</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html">AntiFox AI Pentesting Platform Linked to Attacks That Accessed AWS Production Secrets</a> — The Hacker News</p>
+<h3>Alertes et failles critiques</h3>
+<p>• <a href="https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html">Microsoft Patches 1,259 Flaws, Including Exploited Outlook Bug That May Expose NTLMv2 Hashes</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html">Critical Zoom Workplace Flaw Could Allow Unauthenticated Remote Privilege Escalation</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities/">N-able releases security hotfixes for zero-day vulnerabilities</a> — BleepingComputer</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/">Maersk confirms data breach as WhiteArmor ransomware demands $5 million</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/active-screenconnect-attacks-breach-msps-impact-dozens-of-organizations/">Active ScreenConnect attacks breach MSPs, impact dozens of organizations</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html">Over 35,000 Grok-Built Apps Exposed Online, Some Leaking Confidential Data and Passwords</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/baker-tilly-notifies-clients-of-data-breach-at-third-party-provider/">Baker Tilly notifies clients of data breach at third-party provider</a> — BleepingComputer</p>
+<h3>Menaces et groupes d&#x27;attaquants</h3>
+<p>• <a href="https://thehackernews.com/2026/11/hackers-target-qlik-sense-servers-with.html">Hackers Target Qlik Sense Servers With Reverse Shells, Stage ActiveMQ and Veeam Exploits</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html">Attacker Used 4,837 Hijacked GitHub Accounts to Run a CI Secret Stealer in 1,806+ Repositories</a> — The Hacker News</p>
+<p>• <a href="https://krebsonsecurity.com/2026/11/who-runs-the-ransomware-group-qilin/">Who Runs the Ransomware Group Qilin?</a> — Krebs on Security</p>
+<h3>En bref</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-exchange-sign-ins-broken-by-october-windows-server-updates/">Microsoft fixes Exchange sign-ins broken by Windows Server updates</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-usb-audio-issues-caused-by-september-security-updates/">Microsoft fixes audio issues caused by September security updates</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/11/microsoft-researchers-show-ai-agents.html">Microsoft Researchers Show AI Agents Can Be Backdoored by Editing Fewer Than 10 Neurons</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/ebpf-rootkits-why-underground-actors-are-taking-notice/">eBPF Rootkits: Why Underground Actors Are Taking Notice</a> — BleepingComputer</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 11/11/2026</title>
       <guid isPermaLink="false">cyberveille-2026-11-11</guid>
