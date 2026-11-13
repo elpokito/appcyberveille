@@ -1,5 +1,177 @@
 [
  {
+  "date": "2026-11-13",
+  "title": "CyberVeille du 13/11/2026",
+  "guid": "cyberveille-2026-11-13",
+  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-13/cyberveille-2026-11-13.mp3",
+  "bytes": 4807173,
+  "seconds": 601,
+  "pub_date": "Fri, 13 Nov 2026 07:35:05 +0000",
+  "chapters_path": "chapters/2026-11-13.json",
+  "asset": "cyberveille-2026-11-13.mp3",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "New Windows SignDrop zero-day gives hackers SYSTEM privileges",
+      "url": "https://www.bleepingcomputer.com/news/security/new-windows-signdrop-zero-day-gives-hackers-system-privileges/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
+      "url": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "New N-central Exploits Work Against Patched Servers, Enable Root RCE and Windows SYSTEM Access",
+      "url": "https://thehackernews.com/2026/11/new-n-central-exploits-work-against.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Hackers Exploit N-central Flaws to Infect 21 Servers, Including 19 Running Hotfix 2",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "New N-able \"4EverAble2Shell\" zero-day exploited hours after PoC released",
+      "url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Apache HTTP Server patches critical HTTP/2 remote code execution flaw",
+      "url": "https://www.bleepingcomputer.com/news/security/apache-http-server-patches-critical-http-2-remote-code-execution-flaw/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Node.js Fixes 16 Flaws, Including HTTP/2 Bugs That Crash Servers and Leak Other Connections' Data",
+      "url": "https://thehackernews.com/2026/11/nodejs-fixes-16-flaws-including-http2.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Critical Pre-Auth MongoDB Flaw (CVE-2026-118383) Can Crash Lagging Servers on Failover",
+      "url": "https://thehackernews.com/2026/11/critical-pre-auth-mongodb-flaw-cve-2026.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Critical Red Hat Quay Flaw Lets Attackers Read and Overwrite All Private Container Images in a Registry",
+      "url": "https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Google Cloud Warns Three AMD Turin CPU Flaws Could Leak Data Across Processes in VMs",
+      "url": "https://thehackernews.com/2026/11/google-cloud-warns-three-amd-turin-cpu.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Massive Microsoft 365 outage disrupts Outlook, Teams, Copilot worldwide",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/massive-microsoft-365-outage-disrupts-outlook-teams-copilot-worldwide/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Hackers compromise 4,800 GitHub accounts to steal cloud credentials",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Hackers plant GSocket on Linux servers for persistent access",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-plant-gsocket-on-linux-servers-for-persistent-access/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "SCKit Malware Turns ScreenConnect Support Sessions Into Potential MSP Attack Paths",
+      "url": "https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "New worm-like 'SCKit' malware targets MSPs in ScreenConnect attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Calendar Invites and Live Proxies: Inside a Google Session Hijacking Campaign",
+      "url": "https://thehackernews.com/2026/11/calendar-invites-and-live-proxies.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Police dismantle Gootloader, CastleRAT, StealC malware infrastructure",
+      "url": "https://www.bleepingcomputer.com/news/security/police-dismantles-gootloader-castlerat-stealc-malware-infrastructure/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans Google Chrome (12 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1498/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans les produits Fortinet (12 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1499/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Apache HTTP Server (12 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1500/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans HPE Aruba Networking Private 5G Core (12 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1503/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "ThreatsDay: 59 Linux Kernel Bugs, Falcon Spyware, GSocket Backdoors + 17 More Stories",
+      "url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Apify rotates API tokens, prompts 2FA resets after breach",
+      "url": "https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "186 Fake AI Domains Redirect Users to ClickFix Lures, Browser Malware, and Search Hijackers",
+      "url": "https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html",
+      "source": "The Hacker News"
+     }
+    ]
+   }
+  ],
+  "memo": {
+   "fil_rouge": "Un pilote système vulnérable peut transformer un simple compte utilisateur en administrateur ; surveillez et corrigez immédiatement ces failles.",
+   "a_retenir": [
+    "SignDrop exploite le pilote Common Log File System pour élever un utilisateur local au niveau SYSTEM.",
+    "4EverAble2Shell et Agent2Shell donnent un accès root lorsqu’une API Legacy de N‑central est exposée à Internet.",
+    "Les correctifs HTTP/2 d’Apache et de Node.js sont critiques car ils permettent l’exécution de code à distance sans aucune interaction."
+   ],
+   "concept": {
+    "nom": "HTTP/2 Request Smuggling",
+    "explication": "Le request smuggling consiste à envoyer des requêtes HTTP malformées que le serveur et le proxy interprètent différemment, ouvrant une porte aux contournements de sécurité. C’est comme deux caissiers lisant la même note mais découpant les lignes différemment, l’un accepte ce que l’autre ignore. Dans les vulnérabilités HTTP/2 d’Apache et de Node.js, cette technique permet d’injecter du code qui s’exécute sur le serveur. Elle relève de la catégorie « Contrôle d’accès non autorisé » du cadre OWASP."
+   },
+   "quiz": []
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Un pilote système vulnérable peut transformer un simple compte utilisateur en administrateur ; surveillez et corrigez immédiatement ces failles.</p>\n<p>• SignDrop exploite le pilote Common Log File System pour élever un utilisateur local au niveau SYSTEM.</p>\n<p>• 4EverAble2Shell et Agent2Shell donnent un accès root lorsqu’une API Legacy de N‑central est exposée à Internet.</p>\n<p>• Les correctifs HTTP/2 d’Apache et de Node.js sont critiques car ils permettent l’exécution de code à distance sans aucune interaction.</p>\n<h3>Le concept du jour</h3>\n<p>HTTP/2 Request Smuggling : Le request smuggling consiste à envoyer des requêtes HTTP malformées que le serveur et le proxy interprètent différemment, ouvrant une porte aux contournements de sécurité. C’est comme deux caissiers lisant la même note mais découpant les lignes différemment, l’un accepte ce que l’autre ignore. Dans les vulnérabilités HTTP/2 d’Apache et de Node.js, cette technique permet d’injecter du code qui s’exécute sur le serveur. Elle relève de la catégorie « Contrôle d’accès non autorisé » du cadre OWASP.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/new-windows-signdrop-zero-day-gives-hackers-system-privileges/\">New Windows SignDrop zero-day gives hackers SYSTEM privileges</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html\">New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access</a> — The Hacker News</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://thehackernews.com/2026/11/new-n-central-exploits-work-against.html\">New N-central Exploits Work Against Patched Servers, Enable Root RCE and Windows SYSTEM Access</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html\">Hackers Exploit N-central Flaws to Infect 21 Servers, Including 19 Running Hotfix 2</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/\">New N-able &quot;4EverAble2Shell&quot; zero-day exploited hours after PoC released</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/apache-http-server-patches-critical-http-2-remote-code-execution-flaw/\">Apache HTTP Server patches critical HTTP/2 remote code execution flaw</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/nodejs-fixes-16-flaws-including-http2.html\">Node.js Fixes 16 Flaws, Including HTTP/2 Bugs That Crash Servers and Leak Other Connections&#x27; Data</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/critical-pre-auth-mongodb-flaw-cve-2026.html\">Critical Pre-Auth MongoDB Flaw (CVE-2026-118383) Can Crash Lagging Servers on Failover</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html\">Critical Red Hat Quay Flaw Lets Attackers Read and Overwrite All Private Container Images in a Registry</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/google-cloud-warns-three-amd-turin-cpu.html\">Google Cloud Warns Three AMD Turin CPU Flaws Could Leak Data Across Processes in VMs</a> — The Hacker News</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/microsoft/massive-microsoft-365-outage-disrupts-outlook-teams-copilot-worldwide/\">Massive Microsoft 365 outage disrupts Outlook, Teams, Copilot worldwide</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/\">Hackers compromise 4,800 GitHub accounts to steal cloud credentials</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/hackers-plant-gsocket-on-linux-servers-for-persistent-access/\">Hackers plant GSocket on Linux servers for persistent access</a> — BleepingComputer</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html\">SCKit Malware Turns ScreenConnect Support Sessions Into Potential MSP Attack Paths</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/\">New worm-like &#x27;SCKit&#x27; malware targets MSPs in ScreenConnect attacks</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/calendar-invites-and-live-proxies.html\">Calendar Invites and Live Proxies: Inside a Google Session Hijacking Campaign</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/police-dismantles-gootloader-castlerat-stealc-malware-infrastructure/\">Police dismantle Gootloader, CastleRAT, StealC malware infrastructure</a> — BleepingComputer</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1498/\">Multiples vulnérabilités dans Google Chrome (12 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1499/\">Multiples vulnérabilités dans les produits Fortinet (12 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1500/\">Multiples vulnérabilités dans Apache HTTP Server (12 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1503/\">Multiples vulnérabilités dans HPE Aruba Networking Private 5G Core (12 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html\">ThreatsDay: 59 Linux Kernel Bugs, Falcon Spyware, GSocket Backdoors + 17 More Stories</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach/\">Apify rotates API tokens, prompts 2FA resets after breach</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html\">186 Fake AI Domains Redirect Users to ClickFix Lures, Browser Malware, and Search Hijackers</a> — The Hacker News</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+ },
+ {
   "date": "2026-11-12",
   "title": "CyberVeille du 12/11/2026",
   "guid": "cyberveille-2026-11-12",
