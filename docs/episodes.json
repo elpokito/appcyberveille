@@ -1,5 +1,174 @@
 [
  {
+  "date": "2026-11-14",
+  "title": "CyberVeille du 14/11/2026",
+  "guid": "cyberveille-2026-11-14",
+  "seconds": 612,
+  "bytes": 4898809,
+  "chapters": "chapters/2026-11-14.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "CVE-2026-123039 — Check Point Multiple Products exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123039",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "Check Point warns of zero-day flaw exploited for root access",
+      "url": "https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Check Point gateways hacked via PHP2Shell to deploy VMware ESXi wiper",
+      "url": "https://www.bleepingcomputer.com/news/security/check-point-gateways-hacked-via-php2shell-to-deploy-vmware-esxi-wiper/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "CVE-2026-114713 — UnrealIRCd UnrealIRCd exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114713",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
+      "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Trezor confirms crypto-stealing implants in three wallets, releases fix",
+      "url": "https://www.bleepingcomputer.com/news/cryptocurrency/trezor-confirms-crypto-stealing-implants-in-three-wallets-releases-fix/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Trezor Confirms Hidden Implants in CryptoBilis-Sold Wallets That Can Steal Recovery Phrases",
+      "url": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Microsoft confirms Windows activation failures after November updates",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-windows-activation-failures-after-november-updates/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Microsoft says November security updates cause printing issues",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-november-security-updates-cause-printing-issues/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "FBI Says North Korean Hackers Stole Over $400 Million in Crypto Using Deepfake Video Calls",
+      "url": "https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Police arrest 354 suspects in dark web cybercrime crackdown",
+      "url": "https://www.bleepingcomputer.com/news/security/police-arrest-354-vendors-buyers-in-global-cybercrime-crackdown/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "German military drone operations disrupted by cyberattack",
+      "url": "https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Operation Endgame Takes Down Gootloader, CastleRAT and StealC Servers, Seizes 6.4M Stolen Logins",
+      "url": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "SilentAir Hijacks Asian Telecom Networks to Intercept SMS 2FA Codes and Spy on Taiwanese Users",
+      "url": "https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "New Mior and Skyfall Attacks Let Rogue Cloud Hosts Steal Secrets From AMD SEV-SNP VMs",
+      "url": "https://thehackernews.com/2026/11/new-mior-and-skyfall-attacks-let-rogue.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans Apple HomeView Software (13 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1526/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans VMware Tanzu Greenplum (13 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1527/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans les produits Citrix (13 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1528/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans PostgreSQL (13 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1530/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "How one AI agent exposed five critical enterprise security gaps",
+      "url": "https://www.bleepingcomputer.com/news/security/how-one-ai-agent-exposed-five-critical-enterprise-security-gaps/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "When an AI Agent Goes Wrong, Can You Stop It?",
+      "url": "https://thehackernews.com/2026/11/when-ai-agent-goes-wrong-can-you-stop-it.html",
+      "source": "The Hacker News"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Une mauvaise configuration de socket locale peut transformer une simple faille en accès root persistant, capable d’effacer des serveurs entiers.",
+   "a_retenir": [
+    "Les firewalls et serveurs de gestion Check Point sont touchés ; appliquer immédiatement les correctifs publiés.",
+    "UnrealIRCd permet l’injection de commandes serveur‑à‑serveur ; désactiver les modules inutiles et mettre à jour.",
+    "Le groupe SilentAir intercepte les SMS 2FA des opérateurs télécoms asiatiques ; surveiller les anomalies de vérification."
+   ],
+   "concept": {
+    "nom": "Escalade de privilèges via socket",
+    "explication": "Une socket Unix est un point de communication interne au système qui, s’il est mal protégé, permet à n’importe quel processus d’envoyer des commandes. Imaginez une porte de service laissée ouverte : n’importe qui peut entrer et donner des ordres. Dans le cas de Check Point, le démon DynamicCLI écoute sur une socket accessible à tous et tourne en root, offrant ainsi une escalade de privilèges. Cette technique correspond à la tactique « Escalade de privilèges » du framework MITRE ATT&CK et à la catégorie « Contrôle d’accès inadéquat » d’OWASP."
+   },
+   "quiz": [
+    {
+     "question": "Quel produit Check Point a été compromis à cause d’une socket mal configurée ?",
+     "reponse": "Le pare‑feu, le serveur de gestion multi‑domaines et les plateformes scalables."
+    },
+    {
+     "question": "Quelle technique utilise le groupe SilentAir pour espionner les communications ?",
+     "reponse": "L’interception des appels et des SMS de vérification à deux facteurs."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-11-14.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-14/cyberveille-2026-11-14.mp3"
+ },
+ {
   "date": "2026-11-13",
   "title": "CyberVeille du 13/11/2026",
   "guid": "cyberveille-2026-11-13",
@@ -1015,7 +1184,7 @@
     }
    ]
   },
-  "audio": "audio/cyberveille-2026-11-07.mp3",
+  "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-07/cyberveille-2026-11-07.mp3"
  },
  {
@@ -3970,254 +4139,5 @@
   },
   "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-16/cyberveille-2026-10-16.mp3"
- },
- {
-  "date": "2026-10-15",
-  "title": "CyberVeille du 15/10/2026",
-  "guid": "cyberveille-2026-10-15",
-  "seconds": 776,
-  "bytes": 6205892,
-  "chapters": "chapters/2026-10-15.json",
-  "sources": [
-   {
-    "rubric": "À la une",
-    "links": [
-     {
-      "title": "CVE-2026-76519 — Cisco Secure Email Gateway exploitée activement",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519",
-      "source": "CISA KEV"
-     },
-     {
-      "title": "Cisco patches new Secure Email Gateway zero-day exploited in attacks",
-      "url": "https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "Cisco Warns of Active Attacks Exploiting New Critical Secure Email Gateway Vulnerability",
-      "url": "https://thehackernews.com/2026/10/cisco-warns-of-active-attacks.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "Vulnérabilité dans Cisco AsyncOS Software pour Secure Email Gateway (15 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1325/",
-      "source": "CERT-FR Avis"
-     }
-    ]
-   },
-   {
-    "rubric": "Alertes et failles critiques",
-    "links": [
-     {
-      "title": "CVE-2026-96951 — Microsoft Windows exploitée activement",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951",
-      "source": "CISA KEV"
-     },
-     {
-      "title": "Microsoft Patches Record 1,413 Flaws, Including Exploited Windows Shell Bug",
-      "url": "https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "Microsoft fixes VPN issues caused by September Windows updates",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-vpn-issues-caused-by-september-windows-updates/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "Microsoft fixes bug causing Windows black screens, Explorer crashes",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-causing-windows-black-screens-explorer-crashes/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "CVE-2026-104935 — Ivanti Connect Secure exploitée activement",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
-      "source": "CISA KEV"
-     },
-     {
-      "title": "Vulnérabilité dans Ivanti Connect Secure (ICS) (14 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-013/",
-      "source": "CERT-FR Alertes"
-     },
-     {
-      "title": "CISA Urges Immediate Ivanti Connect Secure Updates as Honeypots Log 105 Exploit Attempts",
-      "url": "https://thehackernews.com/2026/10/cisa-urges-immediate-ivanti-connect.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "CVE-2026-0322 — Palo Alto Networks PAN-OS exploitée activement",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0322",
-      "source": "CISA KEV"
-     },
-     {
-      "title": "Palo Alto Networks warns of PAN-OS RCE flaw exploited in attacks",
-      "url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "Palo Alto Networks Patches PAN-OS Authenticated RCE Flaw Amid Active Exploitation",
-      "url": "https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "CVE-2026-105134 — Ahsay AhsayCBS exploitée activement",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134",
-      "source": "CISA KEV"
-     },
-     {
-      "title": "AhsayCBS Flaws Exploited to Deploy Web Shells Get New Fixes After Incomplete Patches",
-      "url": "https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "Silent Lynx Exploits WinRAR Flaw to Deploy Reverse Shell in CIS Government Attacks",
-      "url": "https://thehackernews.com/2026/10/silent-lynx-exploits-winrar-flaw-to.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "CVE-2026-21589 — Atlassian Multiple Products exploitée activement",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21589",
-      "source": "CISA KEV"
-     },
-     {
-      "title": "Drupal Patches Critical Field UI Flaw With Unauthenticated RCE Path via Contributed Modules",
-      "url": "https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "Next.js Ships Out-of-Band Patch for Two Critical RCE Flaws in Caching and SVG Processing",
-      "url": "https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "Langflow's Critical Authenticated RCE Flaw Targeted in 1,423 Honeypot Exploit Attempts",
-      "url": "https://thehackernews.com/2026/10/langflows-critical-authenticated-rce.html",
-      "source": "The Hacker News"
-     }
-    ]
-   },
-   {
-    "rubric": "Incidents et fuites de données",
-    "links": [
-     {
-      "title": "GhostAction Compromises About 1,900 GitHub Accounts, Targets Over 30,000 Repositories",
-      "url": "https://thehackernews.com/2026/10/ghostaction-compromises-about-1900.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "UK Legal Aid Agency: Hackers stole records dating back to 1978",
-      "url": "https://www.bleepingcomputer.com/news/security/uk-legal-aid-agency-hackers-stole-records-dating-back-to-1978/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "Ledger asks sellers across Asia to halt sales after supply-chain attack",
-      "url": "https://www.bleepingcomputer.com/news/security/ledger-asks-sellers-across-asia-to-halt-sales-after-supply-chain-attack/",
-      "source": "BleepingComputer"
-     }
-    ]
-   },
-   {
-    "rubric": "Menaces et groupes d'attaquants",
-    "links": [
-     {
-      "title": "FBI raids DPRK IT worker laptop farms in Texas, US nationals arrested",
-      "url": "https://www.bleepingcomputer.com/news/security/fbi-raids-dprk-it-worker-laptop-farms-in-texas-us-nationals-arrested/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "Police arrests 95 suspects in international CSAM crackdown action",
-      "url": "https://www.bleepingcomputer.com/news/security/police-arrests-95-suspects-in-child-sexual-abuse-material-crackdown/",
-      "source": "BleepingComputer"
-     }
-    ]
-   },
-   {
-    "rubric": "En bref",
-    "links": [
-     {
-      "title": "Multiples vulnérabilités dans les produits Adobe (14 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1301/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Multiples vulnérabilités dans Xen (14 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1302/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Vulnérabilité dans Symantec Endpoint Detection and Response (14 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1303/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Vulnérabilité dans Zabbix (14 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1309/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Hackers Backdoor Nextcloud Servers Through Critical Flaw in Collabora’s Built-in CODE App",
-      "url": "https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "Hackers exploit Collabora RCE flaw to backdoor Nextcloud servers",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-collabora-rce-flaw-to-backdoor-nextcloud-servers/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory",
-      "url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "AI-Found Linux Kernel Flaw Gives Local Users Root, and Can Break a Guest Out to the Host",
-      "url": "https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "The Blind Spots of Agentic Pentesting and How to Close Them",
-      "url": "https://www.bleepingcomputer.com/news/security/the-blind-spots-of-agentic-pentesting-and-how-to-close-them/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "Is AI pentesting as good as a human pentester?",
-      "url": "https://www.bleepingcomputer.com/news/security/is-ai-pentesting-as-good-as-a-human-pentester/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "Fake Arch Linux packages push malware with root privileges",
-      "url": "https://www.bleepingcomputer.com/news/security/fake-arch-linux-packages-push-malware-with-root-privileges/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "Citizen Lab Traces Zero-Click Candiru Spyware Infections at Al Jazeera to Targeted Online Ads",
-      "url": "https://thehackernews.com/2026/10/citizen-lab-traces-zero-click-candiru.html",
-      "source": "The Hacker News"
-     }
-    ]
-   }
-  ],
-  "fiche": {
-   "fil_rouge": "Patchez sans délai les filtres de messagerie critiques, sinon ils deviennent porte d’entrée.",
-   "a_retenir": [
-    "Les appliances Cisco Secure Email Gateway peuvent être compromises via une traversée de chemin relatif, appliquez le correctif sans tarder.",
-    "Ivanti Connect Secure et PAN‑OS sont exploités pour exécution de commandes à distance, mettez à jour ces passerelles d’accès.",
-    "Les vulnérabilités d’injection de commandes affectent Windows, Ahsay et d’autres produits, activez les correctifs dès le Patch Tuesday."
-   ],
-   "concept": {
-    "nom": "Escalade de privilèges",
-    "explication": "L’injection de commandes consiste à insérer du code malveillant dans une requête que le système exécute sans le filtrer. Imaginez un formulaire où l’on peut ajouter « ; rm -rf / » qui serait exécuté comme une commande système. Dans les alertes du jour, plusieurs produits (Windows shell, Ivanti, PAN‑OS, Ahsay) permettent à un attaquant non authentifié d’obtenir des droits root grâce à cette faille. Cette technique correspond à la tactique Exécution de code du framework MITRE ATT&CK et à la catégorie Injection du Top 10 OWASP."
-   },
-   "quiz": [
-    {
-     "question": "Quel produit de messagerie a été compromis par une traversée de chemin relatif?",
-     "reponse": "Cisco Secure Email Gateway."
-    },
-    {
-     "question": "Quelle tactique MITRE ATT&CK décrit l’injection de commandes permettant d’obtenir des privilèges élevés?",
-     "reponse": "Exécution de code."
-    }
-   ]
-  },
-  "audio": null,
-  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-15/cyberveille-2026-10-15.mp3"
  }
 ]
