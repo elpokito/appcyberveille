@@ -9,12 +9,34 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Sat, 14 Nov 2026 07:18:27 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 07:24:23 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 15/11/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-11-15</guid>
+      <pubDate>Sun, 15 Nov 2026 07:24:23 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-15/cyberveille-2026-11-15.mp3" length="2554814" type="audio/mpeg"/>
+      <itunes:duration>00:05:19</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-11-15.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Une extension malveillante dans un marketplace d’IA peut transformer un outil de productivité en porte dérobée, d’où l’importance de vérifier chaque plugin.</p>
+<p>• Les développeurs utilisant Cursor ont vu leurs dépôts GitHub compromis après l’installation de l’extension Claude Code.</p>
+<p>• L’intrusion a commencé par le vol d’identifiants chez le fournisseur d’infrastructure Fireworks AI.</p>
+<p>• Après détection, Cursor a retiré l’extension, réinitialisé les comptes et conseillé de révoquer les autorisations et de changer les mots de passe.</p>
+<h3>Le concept du jour</h3>
+<p>Injection de commandes : L’injection de commandes consiste à faire exécuter du code arbitraire par une application qui ne filtre pas correctement les entrées. Imaginez que l’on glisse une phrase cachée dans un formulaire, comme on insère une mauvaise note dans un examen, qui déclenche l’exécution d’une instruction système. Dans le cas de Claude Code, l’extension exécute du code à distance, ce qui correspond à une forme d’injection de commandes. Cette technique relève de la catégorie « Contrôle d’exécution » du framework MITRE ATT&amp;CK et du risque « Injection » d’OWASP.</p>
+<h3>Quiz</h3>
+<p>• Quel fournisseur d’infrastructure a été compromis pour obtenir les accès initiaux ? → Fireworks AI.</p>
+<p>• Quelle action immédiate les utilisateurs de Cursor doivent‑ils faire après l’incident ? → Révoquer les autorisations de Claude Code et changer leurs mots de passe.</p>
+<h3>À la une</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/">Cursor confirms security breach led to malicious Claude Code extension</a> — BleepingComputer</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 14/11/2026</title>
       <guid isPermaLink="false">cyberveille-2026-11-14</guid>
@@ -1212,30 +1234,6 @@
 <p>• <a href="https://www.bleepingcomputer.com/news/microsoft/kb5127648-windows-security-update-may-break-smart-app-control/">Microsoft: October Windows update may break Smart App Control</a> — BleepingComputer</p>
 <p>• <a href="https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html">CERT-In Warns AI Agents Accessed Sensitive Data at Indian Organizations During Testing</a> — The Hacker News</p>
 <p>• <a href="https://www.bleepingcomputer.com/news/security/employees-using-personal-chatgpt-at-work-heres-what-it-admins-need-to-do/">Employees using personal ChatGPT at work? Here&#x27;s what IT admins need to do</a> — BleepingComputer</p>
-<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
-    </item>
-    <item>
-      <title>CyberVeille du 16/10/2026</title>
-      <guid isPermaLink="false">cyberveille-2026-10-16</guid>
-      <pubDate>Fri, 16 Oct 2026 05:19:39 +0000</pubDate>
-      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-16/cyberveille-2026-10-16.mp3" length="1993993" type="audio/mpeg"/>
-      <itunes:duration>00:04:09</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-16.json" type="application/json+chapters"/>
-      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
-<p>Fil rouge : Appliquez les correctifs dès qu’ils sont disponibles et désactivez les fonctions non essentielles pour protéger les composants d’infrastructure critiques.</p>
-<p>• Les failles F5 permettent l’exécution de code à distance et la compromission du trafic réseau, il faut patcher immédiatement.</p>
-<p>• Les vulnérabilités Moodle sont des XSS qui peuvent modifier les cours et voler les données des étudiants, il faut désactiver les entrées non filtrées.</p>
-<p>• Le vecteur d’attaque des deux produits ne nécessite aucun accès préalable, donc sécurisez l’exposition depuis l’extérieur.</p>
-<h3>Le concept du jour</h3>
-<p>Cross‑Site Scripting (XSS) : Le XSS est une faille qui permet à un attaquant d’injecter du code JavaScript dans une page affichée à d’autres utilisateurs, comme un graffiti numérique sur un tableau blanc partagé. Dans le cas de Moodle, l’injection permet de modifier l’affichage des cours ou de voler des informations d’étudiants. Cette technique correspond à la catégorie « Injection » du OWASP Top 10 et à la tactique « Execution » du framework MITRE ATT&amp;CK.</p>
-<h3>Quiz</h3>
-<p>• Quel produit F5 expose les organisations à une exécution de code à distance depuis l’extérieur du réseau ? → Les dispositifs de répartition de trafic de la gamme F5.</p>
-<p>• Quelle faille Moodle exploite‑t‑elle pour injecter du code à distance ? → Une faille de type injection de script côté client.</p>
-<h3>À la une</h3>
-<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1317/">Multiples vulnérabilités dans les produits F5 (15 octobre 2026)</a> — CERT-FR Avis</p>
-<h3>Alertes et failles critiques</h3>
-<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1318/">Multiples vulnérabilités dans Moodle (15 octobre 2026)</a> — CERT-FR Avis</p>
 <p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
     </item>
   </channel>

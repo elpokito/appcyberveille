@@ -1,5 +1,51 @@
 [
  {
+  "date": "2026-11-15",
+  "title": "CyberVeille du 15/11/2026",
+  "guid": "cyberveille-2026-11-15",
+  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-15/cyberveille-2026-11-15.mp3",
+  "bytes": 2554814,
+  "seconds": 319,
+  "pub_date": "Sun, 15 Nov 2026 07:24:23 +0000",
+  "chapters_path": "chapters/2026-11-15.json",
+  "asset": "cyberveille-2026-11-15.mp3",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Cursor confirms security breach led to malicious Claude Code extension",
+      "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "memo": {
+   "fil_rouge": "Une extension malveillante dans un marketplace d’IA peut transformer un outil de productivité en porte dérobée, d’où l’importance de vérifier chaque plugin.",
+   "a_retenir": [
+    "Les développeurs utilisant Cursor ont vu leurs dépôts GitHub compromis après l’installation de l’extension Claude Code.",
+    "L’intrusion a commencé par le vol d’identifiants chez le fournisseur d’infrastructure Fireworks AI.",
+    "Après détection, Cursor a retiré l’extension, réinitialisé les comptes et conseillé de révoquer les autorisations et de changer les mots de passe."
+   ],
+   "concept": {
+    "nom": "Injection de commandes",
+    "explication": "L’injection de commandes consiste à faire exécuter du code arbitraire par une application qui ne filtre pas correctement les entrées. Imaginez que l’on glisse une phrase cachée dans un formulaire, comme on insère une mauvaise note dans un examen, qui déclenche l’exécution d’une instruction système. Dans le cas de Claude Code, l’extension exécute du code à distance, ce qui correspond à une forme d’injection de commandes. Cette technique relève de la catégorie « Contrôle d’exécution » du framework MITRE ATT&CK et du risque « Injection » d’OWASP."
+   },
+   "quiz": [
+    {
+     "question": "Quel fournisseur d’infrastructure a été compromis pour obtenir les accès initiaux ?",
+     "reponse": "Fireworks AI."
+    },
+    {
+     "question": "Quelle action immédiate les utilisateurs de Cursor doivent‑ils faire après l’incident ?",
+     "reponse": "Révoquer les autorisations de Claude Code et changer leurs mots de passe."
+    }
+   ]
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Une extension malveillante dans un marketplace d’IA peut transformer un outil de productivité en porte dérobée, d’où l’importance de vérifier chaque plugin.</p>\n<p>• Les développeurs utilisant Cursor ont vu leurs dépôts GitHub compromis après l’installation de l’extension Claude Code.</p>\n<p>• L’intrusion a commencé par le vol d’identifiants chez le fournisseur d’infrastructure Fireworks AI.</p>\n<p>• Après détection, Cursor a retiré l’extension, réinitialisé les comptes et conseillé de révoquer les autorisations et de changer les mots de passe.</p>\n<h3>Le concept du jour</h3>\n<p>Injection de commandes : L’injection de commandes consiste à faire exécuter du code arbitraire par une application qui ne filtre pas correctement les entrées. Imaginez que l’on glisse une phrase cachée dans un formulaire, comme on insère une mauvaise note dans un examen, qui déclenche l’exécution d’une instruction système. Dans le cas de Claude Code, l’extension exécute du code à distance, ce qui correspond à une forme d’injection de commandes. Cette technique relève de la catégorie « Contrôle d’exécution » du framework MITRE ATT&amp;CK et du risque « Injection » d’OWASP.</p>\n<h3>Quiz</h3>\n<p>• Quel fournisseur d’infrastructure a été compromis pour obtenir les accès initiaux ? → Fireworks AI.</p>\n<p>• Quelle action immédiate les utilisateurs de Cursor doivent‑ils faire après l’incident ? → Révoquer les autorisations de Claude Code et changer leurs mots de passe.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/\">Cursor confirms security breach led to malicious Claude Code extension</a> — BleepingComputer</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+ },
+ {
   "date": "2026-11-14",
   "title": "CyberVeille du 14/11/2026",
   "guid": "cyberveille-2026-11-14",
@@ -4143,61 +4189,5 @@
    ]
   },
   "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Appliquer immédiatement les correctifs des vulnérabilités zero‑day empêche que des outils légitimes deviennent des portes d’entrée pour les attaquants.</p>\n<p>• Les clients de BeyondTrust Remote Support doivent installer le correctif dès qu’il est disponible pour bloquer l’usurpation d’authentification.</p>\n<p>• Les administrateurs Fortinet avec droits en lecture‑écriture doivent restreindre l’accès CLI afin d’éviter la traversée de répertoires.</p>\n<p>• Les équipes doivent surveiller les alertes de mise à jour de logiciels critiques et déployer les mitigations recommandées par le fournisseur.</p>\n<h3>Le concept du jour</h3>\n<p>Traversée de répertoires (Directory Traversal) : La traversée de répertoires permet à un attaquant d’accéder à des fichiers en dehors du répertoire autorisé en manipulant les chemins d’accès. Imaginez un visiteur qui contourne la porte d’entrée d’un bâtiment en passant par une fenêtre ouverte ; il lit ou modifie des pièces qui ne lui sont pas destinées. Dans le cas de Fortinet, un profil admin peut écrire ou supprimer des fichiers arbitraires via des commandes CLI, ouvrant la voie à l’exécution de code ou à la compromission du système. Cette technique correspond à la catégorie « Contrôle d’accès » du cadre OWASP.</p>\n<h3>Quiz</h3>\n<p>• Quel produit BeyondTrust a été ciblé par une usurpation d’authentification ? → BeyondTrust Remote Support.</p>\n<p>• Quelle vulnérabilité permet à un attaquant authentifié d’écrire des fichiers arbitraires sur les appareils Fortinet ? → Une faille de traversée de répertoires.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-102764\">CVE-2026-102764 — BeyondTrust Remote Support exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/\">BeyondTrust patches zero-day exploited in attacks since August</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/china-linked-hackers-exploited.html\">China-Linked Hackers Exploited BeyondTrust Zero-Day to Take Over Remote Support Servers</a> — The Hacker News</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2025-61624\">CVE-2025-61624 — Fortinet Multiple Products exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/attackers-exploit-fortios-flaw-to.html\">PEERSTITCH Malware Deployed via FortiOS Flaw Bypasses Checks on Tagged VPN Sessions</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/\">Critical BlockStrap flaw lets hackers run code on Magento servers</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/attackers-tampered-with-aomei.html\">Attackers Tampered with AOMEI Backupper&#x27;s Update Servers for Minutes to Deliver a Backdoor</a> — The Hacker News</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/bae-systems-cyberattack-disrupts-us-federal-court-operations/\">BAE Systems cyberattack disrupts US federal court operations</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/burger-king-japan-data-breach-exposes-11-million-customer-records/\">Burger King Japan data breach exposes 11 million customer records</a> — BleepingComputer</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1327/\">Multiples vulnérabilités dans Moxa AIG-302 Series (16 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1328/\">Multiples vulnérabilités dans les produits Mattermost (16 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1329/\">Multiples vulnérabilités dans Google Chrome (16 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1331/\">Multiples vulnérabilités dans Microsoft Office (16 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/ai-decision-models-and-their-impact-on.html\">AI Decision Models and Their Impact on AI SOC Platforms</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/openai-research-model-spent-3rd-party.html\">OpenAI Research Model Spent 3rd-Party Test ETH Without Permission to Deploy Smart Contract</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/uat-11985-uses-fake-event-invites-to.html\">UAT-11985 Uses Fake Event Invites to Target Taiwan Research Affiliates With Google AitM Phishing</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/\">Targeted ads installed Candiru spyware in zero-click attacks</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/microsoft/kb5127648-windows-security-update-may-break-smart-app-control/\">Microsoft: October Windows update may break Smart App Control</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html\">CERT-In Warns AI Agents Accessed Sensitive Data at Indian Organizations During Testing</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/employees-using-personal-chatgpt-at-work-heres-what-it-admins-need-to-do/\">Employees using personal ChatGPT at work? Here&#x27;s what IT admins need to do</a> — BleepingComputer</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
- },
- {
-  "date": "2026-10-16",
-  "title": "CyberVeille du 16/10/2026",
-  "guid": "cyberveille-2026-10-16",
-  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-16/cyberveille-2026-10-16.mp3",
-  "bytes": 1993993,
-  "seconds": 249,
-  "pub_date": "Fri, 16 Oct 2026 05:19:39 +0000",
-  "chapters_path": "chapters/2026-10-16.json",
-  "asset": "cyberveille-2026-10-16.mp3",
-  "sources": [
-   {
-    "rubric": "À la une",
-    "links": [
-     {
-      "title": "Multiples vulnérabilités dans les produits F5 (15 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1317/",
-      "source": "CERT-FR Avis"
-     }
-    ]
-   },
-   {
-    "rubric": "Alertes et failles critiques",
-    "links": [
-     {
-      "title": "Multiples vulnérabilités dans Moodle (15 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1318/",
-      "source": "CERT-FR Avis"
-     }
-    ]
-   }
-  ],
-  "memo": {
-   "fil_rouge": "Appliquez les correctifs dès qu’ils sont disponibles et désactivez les fonctions non essentielles pour protéger les composants d’infrastructure critiques.",
-   "a_retenir": [
-    "Les failles F5 permettent l’exécution de code à distance et la compromission du trafic réseau, il faut patcher immédiatement.",
-    "Les vulnérabilités Moodle sont des XSS qui peuvent modifier les cours et voler les données des étudiants, il faut désactiver les entrées non filtrées.",
-    "Le vecteur d’attaque des deux produits ne nécessite aucun accès préalable, donc sécurisez l’exposition depuis l’extérieur."
-   ],
-   "concept": {
-    "nom": "Cross‑Site Scripting (XSS)",
-    "explication": "Le XSS est une faille qui permet à un attaquant d’injecter du code JavaScript dans une page affichée à d’autres utilisateurs, comme un graffiti numérique sur un tableau blanc partagé. Dans le cas de Moodle, l’injection permet de modifier l’affichage des cours ou de voler des informations d’étudiants. Cette technique correspond à la catégorie « Injection » du OWASP Top 10 et à la tactique « Execution » du framework MITRE ATT&CK."
-   },
-   "quiz": [
-    {
-     "question": "Quel produit F5 expose les organisations à une exécution de code à distance depuis l’extérieur du réseau ?",
-     "reponse": "Les dispositifs de répartition de trafic de la gamme F5."
-    },
-    {
-     "question": "Quelle faille Moodle exploite‑t‑elle pour injecter du code à distance ?",
-     "reponse": "Une faille de type injection de script côté client."
-    }
-   ]
-  },
-  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Appliquez les correctifs dès qu’ils sont disponibles et désactivez les fonctions non essentielles pour protéger les composants d’infrastructure critiques.</p>\n<p>• Les failles F5 permettent l’exécution de code à distance et la compromission du trafic réseau, il faut patcher immédiatement.</p>\n<p>• Les vulnérabilités Moodle sont des XSS qui peuvent modifier les cours et voler les données des étudiants, il faut désactiver les entrées non filtrées.</p>\n<p>• Le vecteur d’attaque des deux produits ne nécessite aucun accès préalable, donc sécurisez l’exposition depuis l’extérieur.</p>\n<h3>Le concept du jour</h3>\n<p>Cross‑Site Scripting (XSS) : Le XSS est une faille qui permet à un attaquant d’injecter du code JavaScript dans une page affichée à d’autres utilisateurs, comme un graffiti numérique sur un tableau blanc partagé. Dans le cas de Moodle, l’injection permet de modifier l’affichage des cours ou de voler des informations d’étudiants. Cette technique correspond à la catégorie « Injection » du OWASP Top 10 et à la tactique « Execution » du framework MITRE ATT&amp;CK.</p>\n<h3>Quiz</h3>\n<p>• Quel produit F5 expose les organisations à une exécution de code à distance depuis l’extérieur du réseau ? → Les dispositifs de répartition de trafic de la gamme F5.</p>\n<p>• Quelle faille Moodle exploite‑t‑elle pour injecter du code à distance ? → Une faille de type injection de script côté client.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1317/\">Multiples vulnérabilités dans les produits F5 (15 octobre 2026)</a> — CERT-FR Avis</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1318/\">Multiples vulnérabilités dans Moodle (15 octobre 2026)</a> — CERT-FR Avis</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
  }
 ]
