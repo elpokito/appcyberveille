@@ -9,12 +9,48 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Sun, 15 Nov 2026 07:24:23 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 07:32:13 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 16/11/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-11-16</guid>
+      <pubDate>Mon, 16 Nov 2026 07:32:13 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-16/cyberveille-2026-11-16.mp3" length="3316653" type="audio/mpeg"/>
+      <itunes:duration>00:06:54</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-11-16.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Intégrer le consentement explicite dès la conception évite amendes colossales et atteintes à la réputation.</p>
+<p>• Meta a été sanctionné pour une fonction Android qui proposait des médias privés sans consentement explicite.</p>
+<p>• TSMC a vu des données personnelles d’employés mises en vente sur le dark web, montrant la vulnérabilité même des géants des semi‑conducteurs.</p>
+<p>• Le FBI a alerté sur l’outil IA ARTEX détourné pour automatiser des attaques, compromettant la chaîne d’approvisionnement ConnectWise.</p>
+<h3>Le concept du jour</h3>
+<p>Fuite de clé d’accès (Key leakage) : Une fuite de clé d’accès se produit lorsqu’une clé d’authentification est exposée ou volée, permettant à un attaquant d’accéder à des services légitimes. Imaginez perdre la clé de votre boîte aux lettres ; quiconque la trouve peut déposer ou lire votre courrier. Dans l’épisode, la clé d’accès de Fireworks AI a été volée et utilisée pour injecter du code malveillant dans l’extension Claude. Cette technique relève de la tactique Credential Access du framework MITRE ATT&amp;CK.</p>
+<h3>Quiz</h3>
+<p>• Quel géant du numérique a été condamné pour avoir proposé des médias privés sans consentement ? → Meta.</p>
+<p>• Quel outil d’intrusion alimenté par l’IA a été détourné pour automatiser des cyberattaques mondiales ? → ARTEX.</p>
+<h3>À la une</h3>
+<p>• <a href="https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html">Italy Fines Meta €805 Million Over Facebook&#x27;s Android Gallery Access Without Explicit Consent</a> — The Hacker News</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/">TSMC employee data breach linked to cloud provider</a> — BleepingComputer</p>
+<p>• <a href="https://www.zataz.com/cyberattaque-maileva-22-millions-de-personnes-touchees/">Cyberattaque Maileva, 22 millions de personnes touchées</a> — Zataz</p>
+<p>• <a href="https://www.zataz.com/metaux-precieux-et-donnees-clients-mises-en-vente/">Métaux précieux et données clients mises en vente</a> — Zataz</p>
+<p>• <a href="https://www.zataz.com/techfive-cite-dans-une-annonce-de-vente-de-donnees/">Techfive cité dans une annonce de vente de données</a> — Zataz</p>
+<p>• <a href="https://www.zataz.com/areas-assurances-vise-par-une-vente-de-donnees/">Aréas Assurances visée par une vente de données</a> — Zataz</p>
+<p>• <a href="https://www.zataz.com/opsysweb-une-fuite-presumee-de-43-millions-de-commandes/">Opsysweb, une fuite présumée de 4,3 millions de commandes</a> — Zataz</p>
+<h3>Menaces et groupes d&#x27;attaquants</h3>
+<p>• <a href="https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html">Cursor Says Stolen Fireworks AI Key Led to Trojanized Claude Code Extension Incident</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/">FBI warns ARTEX AI hacking tool is powering global cyberattacks</a> — BleepingComputer</p>
+<h3>En bref</h3>
+<p>• <a href="https://www.zataz.com/stripe-va-masquer-ses-cles-api-secretes-le-20-novembre/">Stripe va masquer ses clés API secrètes le 20 novembre</a> — Zataz</p>
+<p>• <a href="https://www.zataz.com/le-pirate-qui-audite-la-france/">Le pirate qui « audite » la France</a> — Zataz</p>
+<p>• <a href="https://www.zataz.com/entre-bievre-et-rhone-visee-par-une-revendication-cyber/">Entre Bièvre et Rhône visée par une revendication cyber</a> — Zataz</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 15/11/2026</title>
       <guid isPermaLink="false">cyberveille-2026-11-15</guid>
@@ -1190,50 +1226,6 @@
 <p>• <a href="https://www.zataz.com/leboncoin-et-vinted-des-notifications-suspectes/">Leboncoin et Vinted : des notifications suspectes</a> — Zataz</p>
 <p>• <a href="https://www.zataz.com/cyberattaques-les-supermarches-europeens-perturbes/">Cyberattaques : les supermarchés européens perturbés</a> — Zataz</p>
 <p>• <a href="https://www.zataz.com/cyberattaques-des-sites-francais-cibles-par-des-pirates/">Cyberattaques : des sites français ciblés par des pirates</a> — Zataz</p>
-<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
-    </item>
-    <item>
-      <title>CyberVeille du 17/10/2026</title>
-      <guid isPermaLink="false">cyberveille-2026-10-17</guid>
-      <pubDate>Sat, 17 Oct 2026 05:15:33 +0000</pubDate>
-      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-17/cyberveille-2026-10-17.mp3" length="3729067" type="audio/mpeg"/>
-      <itunes:duration>00:07:46</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-17.json" type="application/json+chapters"/>
-      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
-<p>Fil rouge : Appliquer immédiatement les correctifs des vulnérabilités zero‑day empêche que des outils légitimes deviennent des portes d’entrée pour les attaquants.</p>
-<p>• Les clients de BeyondTrust Remote Support doivent installer le correctif dès qu’il est disponible pour bloquer l’usurpation d’authentification.</p>
-<p>• Les administrateurs Fortinet avec droits en lecture‑écriture doivent restreindre l’accès CLI afin d’éviter la traversée de répertoires.</p>
-<p>• Les équipes doivent surveiller les alertes de mise à jour de logiciels critiques et déployer les mitigations recommandées par le fournisseur.</p>
-<h3>Le concept du jour</h3>
-<p>Traversée de répertoires (Directory Traversal) : La traversée de répertoires permet à un attaquant d’accéder à des fichiers en dehors du répertoire autorisé en manipulant les chemins d’accès. Imaginez un visiteur qui contourne la porte d’entrée d’un bâtiment en passant par une fenêtre ouverte ; il lit ou modifie des pièces qui ne lui sont pas destinées. Dans le cas de Fortinet, un profil admin peut écrire ou supprimer des fichiers arbitraires via des commandes CLI, ouvrant la voie à l’exécution de code ou à la compromission du système. Cette technique correspond à la catégorie « Contrôle d’accès » du cadre OWASP.</p>
-<h3>Quiz</h3>
-<p>• Quel produit BeyondTrust a été ciblé par une usurpation d’authentification ? → BeyondTrust Remote Support.</p>
-<p>• Quelle vulnérabilité permet à un attaquant authentifié d’écrire des fichiers arbitraires sur les appareils Fortinet ? → Une faille de traversée de répertoires.</p>
-<h3>À la une</h3>
-<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102764">CVE-2026-102764 — BeyondTrust Remote Support exploitée activement</a> — CISA KEV</p>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/">BeyondTrust patches zero-day exploited in attacks since August</a> — BleepingComputer</p>
-<p>• <a href="https://thehackernews.com/2026/10/china-linked-hackers-exploited.html">China-Linked Hackers Exploited BeyondTrust Zero-Day to Take Over Remote Support Servers</a> — The Hacker News</p>
-<h3>Alertes et failles critiques</h3>
-<p>• <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-61624">CVE-2025-61624 — Fortinet Multiple Products exploitée activement</a> — CISA KEV</p>
-<p>• <a href="https://thehackernews.com/2026/10/attackers-exploit-fortios-flaw-to.html">PEERSTITCH Malware Deployed via FortiOS Flaw Bypasses Checks on Tagged VPN Sessions</a> — The Hacker News</p>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/">Critical BlockStrap flaw lets hackers run code on Magento servers</a> — BleepingComputer</p>
-<p>• <a href="https://thehackernews.com/2026/10/attackers-tampered-with-aomei.html">Attackers Tampered with AOMEI Backupper&#x27;s Update Servers for Minutes to Deliver a Backdoor</a> — The Hacker News</p>
-<h3>Incidents et fuites de données</h3>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/bae-systems-cyberattack-disrupts-us-federal-court-operations/">BAE Systems cyberattack disrupts US federal court operations</a> — BleepingComputer</p>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/burger-king-japan-data-breach-exposes-11-million-customer-records/">Burger King Japan data breach exposes 11 million customer records</a> — BleepingComputer</p>
-<h3>En bref</h3>
-<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1327/">Multiples vulnérabilités dans Moxa AIG-302 Series (16 octobre 2026)</a> — CERT-FR Avis</p>
-<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1328/">Multiples vulnérabilités dans les produits Mattermost (16 octobre 2026)</a> — CERT-FR Avis</p>
-<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1329/">Multiples vulnérabilités dans Google Chrome (16 octobre 2026)</a> — CERT-FR Avis</p>
-<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1331/">Multiples vulnérabilités dans Microsoft Office (16 octobre 2026)</a> — CERT-FR Avis</p>
-<p>• <a href="https://thehackernews.com/2026/10/ai-decision-models-and-their-impact-on.html">AI Decision Models and Their Impact on AI SOC Platforms</a> — The Hacker News</p>
-<p>• <a href="https://thehackernews.com/2026/10/openai-research-model-spent-3rd-party.html">OpenAI Research Model Spent 3rd-Party Test ETH Without Permission to Deploy Smart Contract</a> — The Hacker News</p>
-<p>• <a href="https://thehackernews.com/2026/10/uat-11985-uses-fake-event-invites-to.html">UAT-11985 Uses Fake Event Invites to Target Taiwan Research Affiliates With Google AitM Phishing</a> — The Hacker News</p>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/">Targeted ads installed Candiru spyware in zero-click attacks</a> — BleepingComputer</p>
-<p>• <a href="https://www.bleepingcomputer.com/news/microsoft/kb5127648-windows-security-update-may-break-smart-app-control/">Microsoft: October Windows update may break Smart App Control</a> — BleepingComputer</p>
-<p>• <a href="https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html">CERT-In Warns AI Agents Accessed Sensitive Data at Indian Organizations During Testing</a> — The Hacker News</p>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/employees-using-personal-chatgpt-at-work-heres-what-it-admins-need-to-do/">Employees using personal ChatGPT at work? Here&#x27;s what IT admins need to do</a> — BleepingComputer</p>
 <p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
     </item>
   </channel>
