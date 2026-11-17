@@ -9,12 +9,63 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Mon, 16 Nov 2026 07:32:13 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 08:48:38 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 17/11/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-11-17</guid>
+      <pubDate>Tue, 17 Nov 2026 08:48:38 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-17/cyberveille-2026-11-17.mp3" length="5868328" type="audio/mpeg"/>
+      <itunes:duration>00:12:13</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-11-17.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Appliquez immédiatement les correctifs du noyau Linux ; un serveur non patché peut être mis hors service par un simple paquet TCP.</p>
+<p>• Les administrateurs Linux doivent vérifier que le noyau installé intègre le correctif NoisyTCP.</p>
+<p>• Les services web (Nginx, Apache) et SSH avec configuration par défaut sont les cibles principales de l’exploitation.</p>
+<p>• Dès la disponibilité d’une mise à jour de distribution, déployez‑la rapidement pour éviter un arrêt de service.</p>
+<h3>Le concept du jour</h3>
+<p>Denial of Service TCP : Cette technique consiste à envoyer un segment TCP spécialement construit pour déclencher un bug du noyau, provoquant le plantage du processus ciblé. Imaginez un mauvais morceau de puzzle qui fait s’effondrer toute la structure lorsqu’on l’insère. Dans le cas de NoisyTCP, le paquet fait crasher Nginx, Apache ou le service SSH, interrompant l’accès. Elle correspond à la tactique « Impact – Service Stop » du framework MITRE ATT&amp;CK, et relève de la catégorie « Denial of Service » du top 10 OWASP.</p>
+<h3>Quiz</h3>
+<p>• Quel type de service est le plus souvent interrompu par NoisyTCP ? → Les serveurs web Nginx, Apache et le service SSH.</p>
+<p>• Quelle action immédiate doit prendre un administrateur face à cette faille ? → Vérifier le noyau et appliquer le correctif fourni par la distribution.</p>
+<h3>À la une</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/linux/new-noisytcp-linux-kernel-flaw-lets-attackers-crash-servers/">New NoisyTCP vulnerability lets attackers crash Linux servers</a> — BleepingComputer</p>
+<h3>Alertes et failles critiques</h3>
+<p>• <a href="https://thehackernews.com/2026/11/six-unpatched-danfoss-refrigeration.html">Six Unpatched Danfoss Refrigeration Controller Flaws Could Allow Remote Takeover Without Login</a> — The Hacker News</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1540/">Multiples vulnérabilités dans Kerberos (16 novembre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1541/">Vulnérabilité dans Git (16 novembre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1542/">Multiples vulnérabilités dans les produits Trend Micro (16 novembre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1545/">Vulnérabilité dans Citrix App Layering (16 novembre 2026)</a> — CERT-FR Avis</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-60-days/">Microsoft: Windows Server 2016 reaches end of support in 60 days</a> — BleepingComputer</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/">Fandango says hackers stole payment card details from checkout pages</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/">Barracuda links cloud breach to ARTEX AI-powered cyberattack</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/">Uber notifies drivers of data breach affecting nearly 150,000 people</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/australian-retail-giant-coles-investigates-cybersecurity-incident/">Australian retail giant Coles investigates cybersecurity incident</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html">Hijacked Optimizely Scripts Served Card Skimmer and iOS Exploit Kits to CNN, BBC and Zoom Visitors</a> — The Hacker News</p>
+<p>• <a href="https://www.zataz.com/expedia-un-pirate-revendique-un-vol-massif-de-donnees/">Expedia : un pirate revendique un vol massif de données</a> — Zataz</p>
+<p>• <a href="https://www.zataz.com/maersk-un-pirate-reclame-5-millions-de-dollars/">Maersk : un pirate réclame 5 millions de dollars</a> — Zataz</p>
+<h3>Menaces et groupes d&#x27;attaquants</h3>
+<p>• <a href="https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html">BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm&#x27;s Code-Signing Server</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/11/retadup-worm-resurfaces-7-years-after.html">Retadup Worm Resurfaces 7 Years After Takedown to Spread CoffeeLoader Malware</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html">Amazon Uncovers AI Agent Campaign Targeting LiteLLM, Dify, and Other Apps for API Keys</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/alleged-inc-lynx-ransomware-affiliate-extradited-to-us-faces-27-years-in-prison/">Ransomware affiliate suspect extradited to US, faces 27 years in prison</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html">N-able Patches 17 N-central Flaws as Attackers Exploit Earlier Bugs to Deploy Crypto Miners</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/11/connectwise-warns-screenconnect-attacks.html">ConnectWise Warns ScreenConnect Attacks Continue as SCKit Targets Unpatched Systems</a> — The Hacker News</p>
+<h3>Réglementation et institutions</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/california-sues-openai-over-ai-agents-escaping-sandboxes-hacking-firms/">California sues OpenAI over AI agents escaping sandboxes, hacking firms</a> — BleepingComputer</p>
+<h3>En bref</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/google-project-zero-cuts-bug-disclosure-deadline-to-30-days-amid-ai-threats/">Google Project Zero cuts bug disclosures to 30 days amid AI threats</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropics-claude-fable-52-blocks-fewer-security-tasks-while-mythos-gets-better-at-finding-bugs/">Anthropic’s Claude Fable 5.2 blocks fewer security tasks, while Mythos gets better at finding bugs</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/">Google warns that fully-automated AI attacks are coming soon</a> — BleepingComputer</p>
+<p>• <a href="https://www.zataz.com/rassemblement-national-une-seconde-fuite-de-donnees/">Rassemblement National : une seconde fuite de données ?</a> — Zataz</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 16/11/2026</title>
       <guid isPermaLink="false">cyberveille-2026-11-16</guid>
@@ -1193,39 +1244,6 @@
 <p>• <a href="https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html">ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenants</a> — The Hacker News</p>
 <h3>En bref</h3>
 <p>• <a href="https://www.zataz.com/la-chine-veut-controler-ses-exportations-dia/">La Chine veut contrôler ses exportations d’IA</a> — Zataz</p>
-<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
-    </item>
-    <item>
-      <title>CyberVeille du 18/10/2026</title>
-      <guid isPermaLink="false">cyberveille-2026-10-18</guid>
-      <pubDate>Sun, 18 Oct 2026 05:21:00 +0000</pubDate>
-      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-18/cyberveille-2026-10-18.mp3" length="3358424" type="audio/mpeg"/>
-      <itunes:duration>00:07:00</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-18.json" type="application/json+chapters"/>
-      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
-<p>Fil rouge : Compromettre un compte de service cloud suffit à infiltrer des centaines de locataires M365 ; sécuriser les identités d’application est prioritaire.</p>
-<p>• Les fournisseurs de services managés qui utilisent ConnectWise Cloud Backup et leurs clients sont potentiellement exposés.</p>
-<p>• Les hackers utilisent des identités d’application légitimes pour accéder aux boîtes aux lettres, SharePoint et Teams des locataires M365.</p>
-<p>• Bloquez immédiatement l’accès au service Cloud Backup et vérifiez les comptes Microsoft 365 pour toute activité suspecte.</p>
-<h3>Le concept du jour</h3>
-<p>Usurpation d’identité d’application : L’usurpation d’identité d’application consiste à prendre le contrôle d’un compte de service légitime pour agir comme l’application elle‑même. Imaginez un employé qui obtient la carte d’accès d’un collègue et entre dans son bureau ; il peut alors lire et modifier tout ce qui s’y trouve. Dans l’incident ConnectWise, les attaquants ont détourné ces comptes pour se connecter à 173 locataires M365 et explorer les données. Cette technique relève de la catégorie « Valid Accounts » du framework MITRE ATT&amp;CK, sous la tactique d’accès persistant.</p>
-<h3>Quiz</h3>
-<p>• Quel service cloud a été compromis pour toucher les locataires M365 ? → Le service de sauvegarde cloud de ConnectWise.</p>
-<p>• Quelle mesure immédiate doit être appliquée aux comptes Microsoft 365 ? → Bloquer l’accès au service compromis et vérifier les comptes pour toute activité anormale.</p>
-<h3>À la une</h3>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/">Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack</a> — BleepingComputer</p>
-<p>• <a href="https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html">Hackers Use Compromised ConnectWise Credential to Sign In to 173 Microsoft 365 Tenants</a> — The Hacker News</p>
-<h3>Alertes et failles critiques</h3>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/">Drupal patches critical RCE flaws, warns exploits may emerge soon</a> — BleepingComputer</p>
-<h3>Menaces et groupes d&#x27;attaquants</h3>
-<p>• <a href="https://www.zataz.com/phishing-une-operation-frappe-trois-kits-pirate/">Phishing : une opération frappe trois kits pirate</a> — Zataz</p>
-<h3>Outils, recherche et divers</h3>
-<p>• <a href="https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html">MALFEX npm Package &#x27;imgdecode&#x27; Hides Shellcode Loader in Windows Native Addon</a> — The Hacker News</p>
-<h3>En bref</h3>
-<p>• <a href="https://www.zataz.com/leboncoin-et-vinted-des-notifications-suspectes/">Leboncoin et Vinted : des notifications suspectes</a> — Zataz</p>
-<p>• <a href="https://www.zataz.com/cyberattaques-les-supermarches-europeens-perturbes/">Cyberattaques : les supermarchés européens perturbés</a> — Zataz</p>
-<p>• <a href="https://www.zataz.com/cyberattaques-des-sites-francais-cibles-par-des-pirates/">Cyberattaques : des sites français ciblés par des pirates</a> — Zataz</p>
 <p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
     </item>
   </channel>
