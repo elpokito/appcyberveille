@@ -1,5 +1,194 @@
 [
  {
+  "date": "2026-11-18",
+  "title": "CyberVeille du 18/11/2026",
+  "guid": "cyberveille-2026-11-18",
+  "seconds": 638,
+  "bytes": 5105017,
+  "chapters": "chapters/2026-11-18.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "Critical Java4Shell flaw allows RCE attacks on major Java applications",
+      "url": "https://www.bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Java4Shell Flaw (CVE-2026-114938) Enables Pre-Auth RCE in Jira, Jenkins, Keycloak and More",
+      "url": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE (CVE-2026-114938) Report Emerges",
+      "url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "CVE-2026-115731 — Perforce Puppet Enterprise exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115731",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "Researchers Claim Two RCE Exploits That Bypass Telegram’s New Android Defenses",
+      "url": "https://thehackernews.com/2026/11/researchers-claim-two-rce-exploits-that.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Microsoft testing Remote Lock for lost or stolen Windows devices",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-remote-lock-for-lost-or-stolen-windows-devices/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Tor releases emergency update amid ongoing DDoS attack",
+      "url": "https://www.bleepingcomputer.com/news/security/tor-releases-emergency-update-amid-ongoing-ddos-attack/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Japan takes Fugaku supercomputer offlline after cyberattack",
+      "url": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Inside Modern Phishing Kits Built to Steal Microsoft 365 Sessions",
+      "url": "https://www.bleepingcomputer.com/news/security/inside-modern-phishing-kits-built-to-steal-microsoft-365-sessions/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization",
+      "url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "New GitDoor and GraphDoor Backdoors Turn GitHub and SharePoint Into Covert C2 Channels",
+      "url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Trigram Campaign Impersonates About 50 AI and Blockchain Brands to Target Devs with Infostealers",
+      "url": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Researchers hijack Hugging Face account for popular Kokoro AI model",
+      "url": "https://www.bleepingcomputer.com/news/security/researchers-hijack-hugging-face-account-for-popular-kokoro-ai-model/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Attackers Compromise Microsoft's Agent Framework PyPI Package to Steal Cloud Credentials",
+      "url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Attackers Used Optimizely to A/B Test Malware on Top Websites",
+      "url": "https://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/",
+      "source": "Krebs on Security"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans Mitel MiCollab (17 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1547/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans GLPI (17 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1548/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Tenable Identity Exposure (17 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1550/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans Juniper Networks Junos OS Evolved (17 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1551/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Cloud keys leaked in Docker Hub images are stolen within seconds",
+      "url": "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Flipper Devices launches $399 ‘Flipper One’ Linux-based multi-tool",
+      "url": "https://www.bleepingcomputer.com/news/hardware/flipper-devices-launches-399-flipper-one-linux-based-multi-tool/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Faux coursiers bancaires : trois équipes interpellées",
+      "url": "https://www.zataz.com/faux-coursiers-bancaires-trois-equipes-interpellees/",
+      "source": "Zataz"
+     },
+     {
+      "title": "Apple Tightens macOS App Permissions to Limit Data Access Amid AI Agent Security Risks",
+      "url": "https://thehackernews.com/2026/11/apple-tightens-macos-app-permissions-to.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Apple reports outages affecting iCloud Mail, AppleCare and more",
+      "url": "https://www.bleepingcomputer.com/news/apple/apple-reports-outages-affecting-icloud-mail-applecare-and-more/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Court clears brothers of $25 million Ethereum crypto heist charges",
+      "url": "https://www.bleepingcomputer.com/news/security/court-clears-brothers-of-25-million-ethereum-crypto-heist-charges/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
+      "url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
+      "source": "The Hacker News"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Appliquez les correctifs Java dès leur sortie ; une faille non corrigée permet une prise de contrôle à distance sans aucune authentification.",
+   "a_retenir": [
+    "Java4Shell touche Jenkins, Jira, Confluence et Keycloak ; un attaquant non authentifié peut exécuter du code à distance.",
+    "Puppet Enterprise souffre d’une désérialisation non fiable ; un certificat d’agent signé permet d’injecter du code sur le serveur.",
+    "Les kits de phishing EvilTokens, Knight Office et Kali365 volent les jetons Microsoft 365 pour accéder aux comptes cloud sans mot de passe."
+   ],
+   "concept": {
+    "nom": "Désérialisation non fiable",
+    "explication": "La désérialisation non fiable consiste à reconstruire un objet à partir de données non fiables, ce qui peut exécuter du code malveillant si le format est manipulé. Imaginez qu’on ouvre un colis dont le contenu aurait été altéré : le déballage déclenche une bombe. Dans le script, Puppet Enterprise est compromis parce qu’un rapport signé peut être désérialisé et exécuter du code. Cette technique correspond à la tactique MITRE ATT&CK « Exécution de code – Désérialisation »."
+   },
+   "quiz": [
+    {
+     "question": "Quelle application Java est exposée à la faille Java4Shell ?",
+     "reponse": "Jenkins, ainsi que Jira, Confluence et Keycloak."
+    },
+    {
+     "question": "Quel type d’attaque permettent les kits EvilTokens ?",
+     "reponse": "Le vol et la réutilisation de jetons d’authentification Microsoft 365 pour accéder aux comptes cloud."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-11-18.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-18/cyberveille-2026-11-18.mp3"
+ },
+ {
   "date": "2026-11-17",
   "title": "CyberVeille du 17/11/2026",
   "guid": "cyberveille-2026-11-17",
@@ -1030,7 +1219,7 @@
     }
    ]
   },
-  "audio": "audio/cyberveille-2026-11-11.mp3",
+  "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-11/cyberveille-2026-11-11.mp3"
  },
  {
@@ -4105,79 +4294,5 @@
   },
   "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-20/cyberveille-2026-10-20.mp3"
- },
- {
-  "date": "2026-10-19",
-  "title": "CyberVeille du 19/10/2026",
-  "guid": "cyberveille-2026-10-19",
-  "seconds": 331,
-  "bytes": 2648110,
-  "chapters": "chapters/2026-10-19.json",
-  "sources": [
-   {
-    "rubric": "À la une",
-    "links": [
-     {
-      "title": "Hackers exploit SiteGuard WAF flaw to run commands as admins",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/",
-      "source": "BleepingComputer"
-     }
-    ]
-   },
-   {
-    "rubric": "Incidents et fuites de données",
-    "links": [
-     {
-      "title": "Fuite de données : la FFTir de nouveau ciblée ?",
-      "url": "https://www.zataz.com/fuite-de-donnees-la-fftir-de-nouveau-ciblee/",
-      "source": "Zataz"
-     }
-    ]
-   },
-   {
-    "rubric": "Menaces et groupes d'attaquants",
-    "links": [
-     {
-      "title": "ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenants",
-      "url": "https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html",
-      "source": "The Hacker News"
-     }
-    ]
-   },
-   {
-    "rubric": "En bref",
-    "links": [
-     {
-      "title": "La Chine veut contrôler ses exportations d’IA",
-      "url": "https://www.zataz.com/la-chine-veut-controler-ses-exportations-dia/",
-      "source": "Zataz"
-     }
-    ]
-   }
-  ],
-  "fiche": {
-   "fil_rouge": "Un WAF compromis devient la porte d’entrée ; patchez-le immédiatement et limitez ses privilèges d’exécution.",
-   "a_retenir": [
-    "SiteGuard Server Edition souffre d’une injection de commandes système, touchant les organisations qui l’utilisent comme première ligne de défense.",
-    "L’injection permet aux attaquants d’exécuter des instructions avec les privilèges root ou SYSTEM, ouvrant la voie à l’escalade et aux mouvements latéraux.",
-    "Les équipes doivent vérifier l’exposition, appliquer les correctifs du fournisseur et restreindre les privilèges d’exécution du processus WAF."
-   ],
-   "concept": {
-    "nom": "Injection de commandes système",
-    "explication": "L’injection de commandes système consiste à insérer des instructions arbitraires dans une application qui les exécute ensuite sur le système d’exploitation. Imaginez un formulaire web où l’on peut coller une commande Linux ; le serveur la lance comme s’il s’agissait d’un administrateur. Dans le cas du WAF SiteGuard, les hackers ont contourné le filtrage, injecté la commande et obtenu un accès root ou SYSTEM. Cette technique relève de la catégorie MITRE ATT&CK « Command and Scripting Interpreter » et correspond à la catégorie OWASP « Injection »."
-   },
-   "quiz": [
-    {
-     "question": "Quel produit WAF est concerné par la faille critique ?",
-     "reponse": "SiteGuard Server Edition."
-    },
-    {
-     "question": "Quel niveau de privilège les attaquants peuvent-ils obtenir grâce à l’injection ?",
-     "reponse": "Les privilèges les plus élevés, root ou SYSTEM."
-    }
-   ]
-  },
-  "audio": null,
-  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-19/cyberveille-2026-10-19.mp3"
  }
 ]
