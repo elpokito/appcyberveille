@@ -1,5 +1,151 @@
 [
  {
+  "date": "2026-11-21",
+  "title": "CyberVeille du 21/11/2026",
+  "guid": "cyberveille-2026-11-21",
+  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-21/cyberveille-2026-11-21.mp3",
+  "bytes": 4394425,
+  "seconds": 549,
+  "pub_date": "Sat, 21 Nov 2026 07:56:49 +0000",
+  "chapters_path": "chapters/2026-11-21.json",
+  "asset": "cyberveille-2026-11-21.mp3",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "CVE-2026-76466 — Cisco Expressway Series exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76466",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "Hackers use autonomous AI tool Cairn to find zero-day, take over server",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "F5 releases emergency patches for critical BIG-IP RCE flaws",
+      "url": "https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
+      "url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Windows 11 KB5132057 update released with 28 changes and fixes",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5132057-update-released-with-28-changes-and-fixes/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
+      "url": "https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Vendor data breach exposes Chase, Visa, Mastercard customer info",
+      "url": "https://www.bleepingcomputer.com/news/security/vendor-data-breach-exposes-chase-visa-mastercard-customer-info/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Bell Canada says 'agentic' hacker stole enterprise customer data",
+      "url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Bazuka Android Malware Uses Fake Screen Overlays to Hide Credential Theft and Device Control",
+      "url": "https://thehackernews.com/2026/11/bazuka-android-malware-uses-fake-screen.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans Moodle (20 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1581/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans les produits Citrix (20 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1582/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Tenable Security Center (20 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1583/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans les produits Palo Alto Networks (20 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1584/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "SonicWall Warns Gen 6 Firewalls Won't Get Security Patches, Even for Critical Flaws",
+      "url": "https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "The Path to AI Autonomy in the SOC",
+      "url": "https://thehackernews.com/2026/11/the-path-to-ai-autonomy-in-soc.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Microsoft now automatically installs Windows 11 26H2 on unmanaged devices",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-now-automatically-installs-windows-11-26h2-on-personal-and-unmanaged-pcs/",
+      "source": "BleepingComputer"
+     }
+    ]
+   }
+  ],
+  "memo": {
+   "fil_rouge": "Appliquer immédiatement les correctifs dès qu’une faille critique expose des accès root, sinon le composant compromis devient porte d’entrée pour un mouvement latéral.",
+   "a_retenir": [
+    "Les appareils Cisco Expressway compromis permettent à un attaquant non authentifié d’exécuter des commandes root via des crédentiels codés en dur.",
+    "Les correctifs urgents de F5 BIG‑IP corrigent des vulnérabilités permettant exécution de code à distance ou déni de service sur les appliances exposées.",
+    "La faille KVM sur processeurs AMD avec virtualisation imbriquée expose la mémoire de l’hôte aux machines virtuelles invitées, risquant la fuite de données clients."
+   ],
+   "concept": {
+    "nom": "Crédentiels codés en dur (hard‑coded credentials)",
+    "explication": "Ce sont des identifiants intégrés directement dans le code d’une application ou d’un dispositif, visibles par quiconque accède au binaire. Imaginez une porte dont la clé est collée sur la poignée : n’importe qui peut l’ouvrir sans forcer. Dans l’incident Cisco, ces crédentiels ont permis à des hackers d’obtenir un accès root sans authentification. Cette technique relève de la catégorie « Credential Access » du framework MITRE ATT&CK, sous la tactique d’« Exploitation de crédentiels »."
+   },
+   "quiz": [
+    {
+     "question": "Quel type d’accès les hackers ont‑ils obtenu sur les appareils Cisco Expressway grâce aux crédentiels codés en dur ?",
+     "reponse": "Un accès root, c’est‑à‑dire des privilèges administratifs complets."
+    },
+    {
+     "question": "Quelle condition matérielle rend la faille KVM exploitable ?",
+     "reponse": "Un processeur AMD avec la virtualisation imbriquée activée."
+    }
+   ]
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Appliquer immédiatement les correctifs dès qu’une faille critique expose des accès root, sinon le composant compromis devient porte d’entrée pour un mouvement latéral.</p>\n<p>• Les appareils Cisco Expressway compromis permettent à un attaquant non authentifié d’exécuter des commandes root via des crédentiels codés en dur.</p>\n<p>• Les correctifs urgents de F5 BIG‑IP corrigent des vulnérabilités permettant exécution de code à distance ou déni de service sur les appliances exposées.</p>\n<p>• La faille KVM sur processeurs AMD avec virtualisation imbriquée expose la mémoire de l’hôte aux machines virtuelles invitées, risquant la fuite de données clients.</p>\n<h3>Le concept du jour</h3>\n<p>Crédentiels codés en dur (hard‑coded credentials) : Ce sont des identifiants intégrés directement dans le code d’une application ou d’un dispositif, visibles par quiconque accède au binaire. Imaginez une porte dont la clé est collée sur la poignée : n’importe qui peut l’ouvrir sans forcer. Dans l’incident Cisco, ces crédentiels ont permis à des hackers d’obtenir un accès root sans authentification. Cette technique relève de la catégorie « Credential Access » du framework MITRE ATT&amp;CK, sous la tactique d’« Exploitation de crédentiels ».</p>\n<h3>Quiz</h3>\n<p>• Quel type d’accès les hackers ont‑ils obtenu sur les appareils Cisco Expressway grâce aux crédentiels codés en dur ? → Un accès root, c’est‑à‑dire des privilèges administratifs complets.</p>\n<p>• Quelle condition matérielle rend la faille KVM exploitable ? → Un processeur AMD avec la virtualisation imbriquée activée.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-76466\">CVE-2026-76466 — Cisco Expressway Series exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html\">Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network</a> — The Hacker News</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/\">Hackers use autonomous AI tool Cairn to find zero-day, take over server</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws/\">F5 releases emergency patches for critical BIG-IP RCE flaws</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html\">Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5132057-update-released-with-28-changes-and-fixes/\">Windows 11 KB5132057 update released with 28 changes and fixes</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html\">WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams</a> — The Hacker News</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/vendor-data-breach-exposes-chase-visa-mastercard-customer-info/\">Vendor data breach exposes Chase, Visa, Mastercard customer info</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/\">Bell Canada says &#x27;agentic&#x27; hacker stole enterprise customer data</a> — BleepingComputer</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://thehackernews.com/2026/11/bazuka-android-malware-uses-fake-screen.html\">Bazuka Android Malware Uses Fake Screen Overlays to Hide Credential Theft and Device Control</a> — The Hacker News</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1581/\">Multiples vulnérabilités dans Moodle (20 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1582/\">Multiples vulnérabilités dans les produits Citrix (20 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1583/\">Multiples vulnérabilités dans Tenable Security Center (20 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1584/\">Vulnérabilité dans les produits Palo Alto Networks (20 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html\">SonicWall Warns Gen 6 Firewalls Won&#x27;t Get Security Patches, Even for Critical Flaws</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/the-path-to-ai-autonomy-in-soc.html\">The Path to AI Autonomy in the SOC</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/microsoft/microsoft-now-automatically-installs-windows-11-26h2-on-personal-and-unmanaged-pcs/\">Microsoft now automatically installs Windows 11 26H2 on unmanaged devices</a> — BleepingComputer</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+ },
+ {
   "date": "2026-11-20",
   "title": "CyberVeille du 20/11/2026",
   "guid": "cyberveille-2026-11-20",
@@ -4253,141 +4399,5 @@
    ]
   },
   "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Appliquez immédiatement les correctifs dès qu’une faille critique est annoncée, surtout sur les points de gestion centralisés.</p>\n<p>• Une injection SQL dans VeloCloud Orchestrator permettait à un compte lecture seule d’obtenir le contrôle total du réseau.</p>\n<p>• Les failles KSMBD sur Linux offrent une exécution de code à distance sans aucune authentification préalable.</p>\n<p>• Des paquets Python compromis ont été diffusés sur Docker Hub et PyPI, il faut remplacer immédiatement ces versions.</p>\n<h3>Le concept du jour</h3>\n<p>Injection SQL : L’injection SQL consiste à insérer du code malveillant dans des requêtes de base de données, comme on glisserait une fausse instruction dans une commande. Dans le cas du VeloCloud Orchestrator, un attaquant pouvait passer d’un accès lecture seule à un contrôle complet du système. Cette technique correspond à la catégorie « Injection » du modèle OWASP, et à la tactique « Exploitation de vulnérabilité » du framework MITRE ATT&amp;CK.</p>\n<h3>Quiz</h3>\n<p>• Quel produit a été compromis par une injection SQL permettant l’escalade de privilèges ? → Le VeloCloud Orchestrator d’Arista.</p>\n<p>• Quelle action immédiate les équipes doivent‑elles prendre face aux failles KSMBD ? → Mettre à jour ou appliquer un correctif dès qu’il est disponible, sinon isoler les serveurs concernés.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/arista-warns-of-critical-velocloud-sql.html\">Arista Warns of Critical VeloCloud SQL Injection Zero-Day Exploited in Attacks</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/arista-patches-new-velocloud-orchestrator-zero-day-exploited-in-attacks/\">Arista patches new VeloCloud Orchestrator zero-day exploited in attacks</a> — BleepingComputer</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html\">Two CVSS 9.0 Linux KSMBD RCE Flaws Disclosed on Public Mailing Lists Before Kernel Fixes</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html\">Node.js Brotli Decoder Bug Could Allow Remote Code Execution in All Supported Versions</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/new-qpack-flaws-can-crash-http3-servers.html\">New QPACK Flaws Can Crash HTTP/3 Servers, Trigger Up to 4,000-Fold Memory Amplification</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/opencode-flaw-lets-malicious-mcp.html\">OpenCode Flaw Lets Malicious MCP Servers Execute Code During Sign-In on Windows and WSL</a> — The Hacker News</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/\">Capcom confirms data breach affecting 11.7 million accounts</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html\">Railway Says Intruder May Have Accessed Customer Secrets, Urges Credential Rotation</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html\">LiteLLM Suspects GitHub Token Leak in AI Gateway Logs Behind Malicious Package Release</a> — The Hacker News</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/interpol-arrests-1462-suspects-disrupts.html\">INTERPOL Arrests 1,462 Suspects, Disrupts 10,909 Cybercrime Networks in Global Crackdown</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/authorities-disrupt-nearly-11-000-cybercrime-networks-in-africa/\">Authorities disrupt nearly 11,000 cybercrime networks in Africa</a> — BleepingComputer</p>\n<h3>Réglementation et institutions</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/meta-ordered-to-pay-25-billion-after.html\">Meta Ordered to Pay $25 Billion After Court Finds 43 Million Privacy Violations</a> — The Hacker News</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1360/\">Multiples vulnérabilités dans les produits Cisco (22 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1361/\">Vulnérabilité dans les produits Mozilla (22 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1363/\">Multiples vulnérabilités dans GitLab (22 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/machine-speed-attacks-require-machine-speed-detection-and-response/\">Machine speed attacks require machine speed detection and response</a> — BleepingComputer</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
- },
- {
-  "date": "2026-10-22",
-  "title": "CyberVeille du 22/10/2026",
-  "guid": "cyberveille-2026-10-22",
-  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-22/cyberveille-2026-10-22.mp3",
-  "bytes": 4769786,
-  "seconds": 596,
-  "pub_date": "Thu, 22 Oct 2026 05:42:01 +0000",
-  "chapters_path": "chapters/2026-10-22.json",
-  "asset": "cyberveille-2026-10-22.mp3",
-  "sources": [
-   {
-    "rubric": "À la une",
-    "links": [
-     {
-      "title": "Critical GitLab Flaw (CVSS 10.0) Could Allow Unauthenticated RCE Across 12 Years of Releases",
-      "url": "https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html",
-      "source": "The Hacker News"
-     }
-    ]
-   },
-   {
-    "rubric": "Alertes et failles critiques",
-    "links": [
-     {
-      "title": "Microsoft says October updates didn’t actually fix VPN issues",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-didnt-actually-fix-vpn-issues-caused-by-windows-updates/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "CISA Orders Federal Agencies to Patch Exploited Plex2Shell, Siemens, and SiteGuard Flaws",
-      "url": "https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "PHP Issues Emergency Patches for Two Critical PHP2Shell RCE Flaws as Exploit Attempts Emerge",
-      "url": "https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html",
-      "source": "The Hacker News"
-     }
-    ]
-   },
-   {
-    "rubric": "Incidents et fuites de données",
-    "links": [
-     {
-      "title": "CISA: SafePay ransomware hit over 600 critical infrastructure orgs",
-      "url": "https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "Une ministre française ciblée par un logiciel espion",
-      "url": "https://www.zataz.com/agnes-pannier-runacher-ciblee-par-un-logiciel-espion/",
-      "source": "Zataz"
-     },
-     {
-      "title": "Japan's Onamae Desktop Cloud hacked, up to 27,000 servers affected",
-      "url": "https://www.bleepingcomputer.com/news/security/japans-onamae-desktop-cloud-hacked-up-to-27-000-servers-affected/",
-      "source": "BleepingComputer"
-     }
-    ]
-   },
-   {
-    "rubric": "Menaces et groupes d'attaquants",
-    "links": [
-     {
-      "title": "Lazarus hackers use post-quantum cryptography for malware delivery",
-      "url": "https://www.bleepingcomputer.com/news/security/lazarus-hackers-use-post-quantum-cryptography-for-malware-delivery/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "ClickFix has never been bigger, and AI tools are its most convincing lure yet",
-      "url": "https://www.bleepingcomputer.com/news/security/clickfix-has-never-been-bigger-and-ai-tools-are-its-most-convincing-lure-yet/",
-      "source": "BleepingComputer"
-     },
-     {
-      "title": "Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections",
-      "url": "https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html",
-      "source": "The Hacker News"
-     }
-    ]
-   },
-   {
-    "rubric": "En bref",
-    "links": [
-     {
-      "title": "[Màj] Multiples vulnérabilités dans PHP (21 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-014/",
-      "source": "CERT-FR Alertes"
-     },
-     {
-      "title": "Multiples vulnérabilités dans les produits StormShield (21 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Vulnérabilité dans MongoDB PHP Driver (21 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1347/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Multiples vulnérabilités dans Mattermost Server (21 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1348/",
-      "source": "CERT-FR Avis"
-     },
-     {
-      "title": "Generative AI Is Erasing Behavioral Tells, Weakening Behavior-Only Detection, Proofpoint Reports",
-      "url": "https://thehackernews.com/2026/10/generative-ai-is-erasing-behavioral.html",
-      "source": "The Hacker News"
-     }
-    ]
-   }
-  ],
-  "memo": {
-   "fil_rouge": "Mettez à jour sans délai tout logiciel exposé ; même un correctif antérieur peut laisser une faille critique exploitable.",
-   "a_retenir": [
-    "Les administrateurs de serveurs GitLab auto‑hébergés doivent installer la version supérieure à 19.2 immédiatement.",
-    "Les serveurs PHP doivent passer aux versions 8.5.12, 8.4.27, 8.3.36 ou 8.2.35 pour corriger les failles PHP2Shell.",
-    "Les correctifs d’octobre 2026 pour Always On VPN sous Windows 11 ne résolvent pas le problème ; surveillez les prochains patches."
-   ],
-   "concept": {
-    "nom": "Cryptographie post‑quantique",
-    "explication": "La cryptographie post‑quantique désigne des algorithmes résistants aux attaques d’ordinateurs quantiques. Imaginez remplacer un cadenas à clé traditionnelle par un verrou qui ne peut être ouvert que par un outil que les ordinateurs quantiques ne possèdent pas encore. Le groupe Lazarus utilise cette technique pour chiffrer la livraison de leurs malwares, rendant l’interception du trafic beaucoup plus difficile. Cette approche relève de la tactique MITRE ATT&CK « Obfuscated Files or Information » et correspond à la catégorie OWASP « Security Misconfiguration »."
-   },
-   "quiz": [
-    {
-     "question": "Quel produit GitLab auto‑hébergé doit être mis à jour pour éliminer la faille critique ?",
-     "reponse": "Toutes les versions antérieures à la version corrigée supérieure à 19.2."
-    },
-    {
-     "question": "Quelle famille de vulnérabilités PHP a fait l’objet de correctifs d’urgence en octobre ?",
-     "reponse": "Les failles appelées PHP2Shell, permettant l’exécution de code à distance."
-    }
-   ]
-  },
-  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Mettez à jour sans délai tout logiciel exposé ; même un correctif antérieur peut laisser une faille critique exploitable.</p>\n<p>• Les administrateurs de serveurs GitLab auto‑hébergés doivent installer la version supérieure à 19.2 immédiatement.</p>\n<p>• Les serveurs PHP doivent passer aux versions 8.5.12, 8.4.27, 8.3.36 ou 8.2.35 pour corriger les failles PHP2Shell.</p>\n<p>• Les correctifs d’octobre 2026 pour Always On VPN sous Windows 11 ne résolvent pas le problème ; surveillez les prochains patches.</p>\n<h3>Le concept du jour</h3>\n<p>Cryptographie post‑quantique : La cryptographie post‑quantique désigne des algorithmes résistants aux attaques d’ordinateurs quantiques. Imaginez remplacer un cadenas à clé traditionnelle par un verrou qui ne peut être ouvert que par un outil que les ordinateurs quantiques ne possèdent pas encore. Le groupe Lazarus utilise cette technique pour chiffrer la livraison de leurs malwares, rendant l’interception du trafic beaucoup plus difficile. Cette approche relève de la tactique MITRE ATT&amp;CK « Obfuscated Files or Information » et correspond à la catégorie OWASP « Security Misconfiguration ».</p>\n<h3>Quiz</h3>\n<p>• Quel produit GitLab auto‑hébergé doit être mis à jour pour éliminer la faille critique ? → Toutes les versions antérieures à la version corrigée supérieure à 19.2.</p>\n<p>• Quelle famille de vulnérabilités PHP a fait l’objet de correctifs d’urgence en octobre ? → Les failles appelées PHP2Shell, permettant l’exécution de code à distance.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html\">Critical GitLab Flaw (CVSS 10.0) Could Allow Unauthenticated RCE Across 12 Years of Releases</a> — The Hacker News</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/microsoft/microsoft-didnt-actually-fix-vpn-issues-caused-by-windows-updates/\">Microsoft says October updates didn’t actually fix VPN issues</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html\">CISA Orders Federal Agencies to Patch Exploited Plex2Shell, Siemens, and SiteGuard Flaws</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html\">PHP Issues Emergency Patches for Two Critical PHP2Shell RCE Flaws as Exploit Attempts Emerge</a> — The Hacker News</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/\">CISA: SafePay ransomware hit over 600 critical infrastructure orgs</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.zataz.com/agnes-pannier-runacher-ciblee-par-un-logiciel-espion/\">Une ministre française ciblée par un logiciel espion</a> — Zataz</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/japans-onamae-desktop-cloud-hacked-up-to-27-000-servers-affected/\">Japan&#x27;s Onamae Desktop Cloud hacked, up to 27,000 servers affected</a> — BleepingComputer</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/lazarus-hackers-use-post-quantum-cryptography-for-malware-delivery/\">Lazarus hackers use post-quantum cryptography for malware delivery</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/clickfix-has-never-been-bigger-and-ai-tools-are-its-most-convincing-lure-yet/\">ClickFix has never been bigger, and AI tools are its most convincing lure yet</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html\">Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections</a> — The Hacker News</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-014/\">[Màj] Multiples vulnérabilités dans PHP (21 octobre 2026)</a> — CERT-FR Alertes</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/\">Multiples vulnérabilités dans les produits StormShield (21 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1347/\">Vulnérabilité dans MongoDB PHP Driver (21 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1348/\">Multiples vulnérabilités dans Mattermost Server (21 octobre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://thehackernews.com/2026/10/generative-ai-is-erasing-behavioral.html\">Generative AI Is Erasing Behavioral Tells, Weakening Behavior-Only Detection, Proofpoint Reports</a> — The Hacker News</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
  }
 ]
