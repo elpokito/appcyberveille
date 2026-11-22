@@ -9,12 +9,49 @@
     <atom:link href="https://elpokito.github.io/appcyberveille/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Podcast quotidien et automatique de veille en cybersécurité, en français. Résumés générés par IA à partir de sources publiques (CERT-FR, CISA, presse spécialisée) : vérifiez toujours l&#x27;information à la source.</description>
     <language>fr</language>
-    <lastBuildDate>Sat, 21 Nov 2026 07:56:49 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 07:43:05 +0000</lastBuildDate>
     <itunes:author>CyberVeille</itunes:author>
     <itunes:image href="https://elpokito.github.io/appcyberveille/cover.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>Yes</itunes:block>
+    <item>
+      <title>CyberVeille du 22/11/2026</title>
+      <guid isPermaLink="false">cyberveille-2026-11-22</guid>
+      <pubDate>Sun, 22 Nov 2026 07:43:05 +0000</pubDate>
+      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-22/cyberveille-2026-11-22.mp3" length="4950715" type="audio/mpeg"/>
+      <itunes:duration>00:10:19</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-11-22.json" type="application/json+chapters"/>
+      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
+<p>Fil rouge : Désactiver immédiatement les fonctions d’écriture hors du répertoire de stockage dans MONAI Label pour éviter l’escalade root.</p>
+<p>• Les hôpitaux et universités utilisant MONAI Label 0.8.5 ou antérieure sont exposés à une écriture hors‑répertoire.</p>
+<p>• Une faille zero‑day a permis à des acteurs liés à la Chine d’obtenir un accès root sans compte.</p>
+<p>• Appliquer les correctifs fournis, désactiver le mode par défaut et vérifier les permissions d’accès.</p>
+<h3>Le concept du jour</h3>
+<p>Traversal de répertoire (Directory Traversal) : Le traversal de répertoire est une vulnérabilité qui permet à un attaquant d’accéder ou d’écrire des fichiers en dehors du répertoire prévu, comme s’il « sortait » du dossier sécurisé. Imaginez un lecteur de cartes qui accepterait un chemin contenant « ../ », vous permettant de remonter l’arborescence et d’ouvrir n’importe quel fichier. Dans l’épisode, les hackers ont exploité ce défaut pour placer des fichiers hors du stockage de MONAI Label et prendre le contrôle du serveur. Cette technique correspond à la catégorie « Contrôle d’accès inadéquat » du référentiel OWASP.</p>
+<h3>Quiz</h3>
+<p>• Quel logiciel open‑source d’imagerie médicale a été compromis par une écriture hors du répertoire ? → MONAI Label.</p>
+<p>• Quelle mesure immédiate les administrateurs doivent‑ils appliquer pour se protéger ? → Désactiver le mode d’écriture hors du répertoire et appliquer le correctif fourni.</p>
+<h3>À la une</h3>
+<p>• <a href="https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html">Attackers&#x27; AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access</a> — The Hacker News</p>
+<h3>Alertes et failles critiques</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/">Microsoft Entra Connect Health flaw exploited to steal tenant data</a> — BleepingComputer</p>
+<p>• <a href="https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html">GnuPG Warns Critical GPGME Flaw Could Expose App Data via Malicious OpenPGP Keys</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html">Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html">Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge</a> — The Hacker News</p>
+<h3>Incidents et fuites de données</h3>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/">FBI reportedly hacked again, this time targeting nationwide police database</a> — BleepingComputer</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/">Rackspace Spot breach let hackers access customer Kubernetes secrets</a> — BleepingComputer</p>
+<h3>Menaces et groupes d&#x27;attaquants</h3>
+<p>• <a href="https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html">A Single Malicious Webpage Let Researchers Hijack Meta Muse and Access Private Chats</a> — The Hacker News</p>
+<p>• <a href="https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/">BADBOX botnet returns with record-breaking 40 billion daily ad requests</a> — BleepingComputer</p>
+<h3>En bref</h3>
+<p>• <a href="https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html">Signal Blocks AI Agents From Reading Private Chats via Screenshots on Android and iOS</a> — The Hacker News</p>
+<p>• <a href="https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html">OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms</a> — The Hacker News</p>
+<p>• <a href="https://www.zataz.com/cyberattaques-la-boite-de-pandora-est-elle-ouverte-avec-lia-artex/">Cyberattaques : la boîte de Pandora est-elle ouverte avec l’IA ARTEX</a> — Zataz</p>
+<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
+    </item>
     <item>
       <title>CyberVeille du 21/11/2026</title>
       <guid isPermaLink="false">cyberveille-2026-11-21</guid>
@@ -1234,48 +1271,6 @@
 <p>• <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-january/">Microsoft: Windows Server 2016 reaches end of support in January</a> — BleepingComputer</p>
 <p>• <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-get-ai-powered-context-aware-phishing-detection/">Microsoft Teams to get AI-powered, context-aware phishing detection</a> — BleepingComputer</p>
 <p>• <a href="https://www.bleepingcomputer.com/news/security/you-gave-your-ai-agent-access-but-who-is-giving-it-orders/">You gave your AI agent access, but who is giving it orders?</a> — BleepingComputer</p>
-<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
-    </item>
-    <item>
-      <title>CyberVeille du 23/10/2026</title>
-      <guid isPermaLink="false">cyberveille-2026-10-23</guid>
-      <pubDate>Fri, 23 Oct 2026 05:39:24 +0000</pubDate>
-      <enclosure url="https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-23/cyberveille-2026-10-23.mp3" length="4389928" type="audio/mpeg"/>
-      <itunes:duration>00:09:09</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <podcast:chapters url="https://elpokito.github.io/appcyberveille/chapters/2026-10-23.json" type="application/json+chapters"/>
-      <description><![CDATA[<h3>L&#x27;essentiel à retenir</h3>
-<p>Fil rouge : Appliquez immédiatement les correctifs dès qu’une faille critique est annoncée, surtout sur les points de gestion centralisés.</p>
-<p>• Une injection SQL dans VeloCloud Orchestrator permettait à un compte lecture seule d’obtenir le contrôle total du réseau.</p>
-<p>• Les failles KSMBD sur Linux offrent une exécution de code à distance sans aucune authentification préalable.</p>
-<p>• Des paquets Python compromis ont été diffusés sur Docker Hub et PyPI, il faut remplacer immédiatement ces versions.</p>
-<h3>Le concept du jour</h3>
-<p>Injection SQL : L’injection SQL consiste à insérer du code malveillant dans des requêtes de base de données, comme on glisserait une fausse instruction dans une commande. Dans le cas du VeloCloud Orchestrator, un attaquant pouvait passer d’un accès lecture seule à un contrôle complet du système. Cette technique correspond à la catégorie « Injection » du modèle OWASP, et à la tactique « Exploitation de vulnérabilité » du framework MITRE ATT&amp;CK.</p>
-<h3>Quiz</h3>
-<p>• Quel produit a été compromis par une injection SQL permettant l’escalade de privilèges ? → Le VeloCloud Orchestrator d’Arista.</p>
-<p>• Quelle action immédiate les équipes doivent‑elles prendre face aux failles KSMBD ? → Mettre à jour ou appliquer un correctif dès qu’il est disponible, sinon isoler les serveurs concernés.</p>
-<h3>À la une</h3>
-<p>• <a href="https://thehackernews.com/2026/10/arista-warns-of-critical-velocloud-sql.html">Arista Warns of Critical VeloCloud SQL Injection Zero-Day Exploited in Attacks</a> — The Hacker News</p>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/arista-patches-new-velocloud-orchestrator-zero-day-exploited-in-attacks/">Arista patches new VeloCloud Orchestrator zero-day exploited in attacks</a> — BleepingComputer</p>
-<h3>Alertes et failles critiques</h3>
-<p>• <a href="https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html">Two CVSS 9.0 Linux KSMBD RCE Flaws Disclosed on Public Mailing Lists Before Kernel Fixes</a> — The Hacker News</p>
-<p>• <a href="https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html">Node.js Brotli Decoder Bug Could Allow Remote Code Execution in All Supported Versions</a> — The Hacker News</p>
-<p>• <a href="https://thehackernews.com/2026/10/new-qpack-flaws-can-crash-http3-servers.html">New QPACK Flaws Can Crash HTTP/3 Servers, Trigger Up to 4,000-Fold Memory Amplification</a> — The Hacker News</p>
-<p>• <a href="https://thehackernews.com/2026/10/opencode-flaw-lets-malicious-mcp.html">OpenCode Flaw Lets Malicious MCP Servers Execute Code During Sign-In on Windows and WSL</a> — The Hacker News</p>
-<h3>Incidents et fuites de données</h3>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/">Capcom confirms data breach affecting 11.7 million accounts</a> — BleepingComputer</p>
-<p>• <a href="https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html">Railway Says Intruder May Have Accessed Customer Secrets, Urges Credential Rotation</a> — The Hacker News</p>
-<p>• <a href="https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html">LiteLLM Suspects GitHub Token Leak in AI Gateway Logs Behind Malicious Package Release</a> — The Hacker News</p>
-<h3>Menaces et groupes d&#x27;attaquants</h3>
-<p>• <a href="https://thehackernews.com/2026/10/interpol-arrests-1462-suspects-disrupts.html">INTERPOL Arrests 1,462 Suspects, Disrupts 10,909 Cybercrime Networks in Global Crackdown</a> — The Hacker News</p>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/authorities-disrupt-nearly-11-000-cybercrime-networks-in-africa/">Authorities disrupt nearly 11,000 cybercrime networks in Africa</a> — BleepingComputer</p>
-<h3>Réglementation et institutions</h3>
-<p>• <a href="https://thehackernews.com/2026/10/meta-ordered-to-pay-25-billion-after.html">Meta Ordered to Pay $25 Billion After Court Finds 43 Million Privacy Violations</a> — The Hacker News</p>
-<h3>En bref</h3>
-<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1360/">Multiples vulnérabilités dans les produits Cisco (22 octobre 2026)</a> — CERT-FR Avis</p>
-<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1361/">Vulnérabilité dans les produits Mozilla (22 octobre 2026)</a> — CERT-FR Avis</p>
-<p>• <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1363/">Multiples vulnérabilités dans GitLab (22 octobre 2026)</a> — CERT-FR Avis</p>
-<p>• <a href="https://www.bleepingcomputer.com/news/security/machine-speed-attacks-require-machine-speed-detection-and-response/">Machine speed attacks require machine speed detection and response</a> — BleepingComputer</p>
 <p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>]]></description>
     </item>
   </channel>
