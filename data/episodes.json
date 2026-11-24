@@ -1,5 +1,176 @@
 [
  {
+  "date": "2026-11-24",
+  "title": "CyberVeille du 24/11/2026",
+  "guid": "cyberveille-2026-11-24",
+  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-24/cyberveille-2026-11-24.mp3",
+  "bytes": 4630009,
+  "seconds": 579,
+  "pub_date": "Tue, 24 Nov 2026 10:39:10 +0000",
+  "chapters_path": "chapters/2026-11-24.json",
+  "asset": "cyberveille-2026-11-24.mp3",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "CVE-2026-133968 — Project MONAI MONAI Label exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133968",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-134624 — N-able MailAssure exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134624",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
+      "url": "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "Microsoft Azure flaw exploited to steal customers' API credentials",
+      "url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "AI-Assisted Cyber Attacks Trigger Unauthorized Payments at Indian Banks and Fintech Firms",
+      "url": "https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions",
+      "url": "https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
+      "url": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
+      "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Cyberattaque contre AAAEP : 585 000 personnes exposées ?",
+      "url": "https://www.zataz.com/cyberattaque-contre-aaaep-585-000-personnes-exposees/",
+      "source": "Zataz"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
+      "url": "https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "WHMCS SQL Injection Could Expose Customer Data and Admin Password Hashes without Login",
+      "url": "https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "BlackHatSect0r : phishing bancaire, extorsion et industrie",
+      "url": "https://www.zataz.com/blackhatsect0r-phishing-bancaire-extorsion-et-industrie/",
+      "source": "Zataz"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans SPIP (23 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1599/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans les produits Palo Alto Networks (23 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1600/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans Laravel (23 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1601/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Multiples vulnérabilités dans Roundcube Webmail (23 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1602/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "BlackHat Sector : une IA offensive à louer pour 500 €",
+      "url": "https://www.zataz.com/blackhat-sector-une-ia-offensive-a-louer-pour-500-e/",
+      "source": "Zataz"
+     },
+     {
+      "title": "Cyberespionnage en Bulgarie, 62 millions de pages volées",
+      "url": "https://www.zataz.com/cyberespionnage-en-bulgarie-62-millions-de-pages-volees/",
+      "source": "Zataz"
+     },
+     {
+      "title": "Courtiers en or piratés, dix personnes mises en examen",
+      "url": "https://www.zataz.com/courtiers-en-or-pirates-dix-personnes-mises-en-examen/",
+      "source": "Zataz"
+     }
+    ]
+   }
+  ],
+  "memo": {
+   "fil_rouge": "Appliquez immédiatement les correctifs ; même un produit de niche peut devenir une porte d’entrée critique.",
+   "a_retenir": [
+    "MONAI Label permet à un attaquant non authentifié d’écrire des fichiers hors du répertoire prévu, créant un point d’exécution de code à distance.",
+    "N‑able MailAssure souffre d’un SSRF via un compte API authentifié, donnant accès aux services internes et à l’injection de données.",
+    "La faille d’Azure API Management expose les identifiants d’API stockés, facilitant le vol de secrets d’accès dans le cloud."
+   ],
+   "concept": {
+    "nom": "Server‑Side Request Forgery (SSRF)",
+    "explication": "Le SSRF est une vulnérabilité où l’application effectue des requêtes HTTP vers des adresses contrôlées par l’attaquant, contournant les contrôles réseau. Imaginez un serveur qui, au lieu d’envoyer un mail, est trompé pour appeler votre propre machine interne ; l’attaquant peut alors scanner ou injecter des données dans le réseau interne. Dans le sujet du jour, le SSRF de N‑able MailAssume permet de toucher des bases de données ou services internes. Cette technique correspond à la catégorie « Attaques de réseau interne » du framework MITRE ATT&CK."
+   },
+   "quiz": [
+    {
+     "question": "Quelle vulnérabilité de MONAI Label permet l’exécution de code à distance ?",
+     "reponse": "L’écriture arbitraire de fichiers hors du répertoire prévu."
+    },
+    {
+     "question": "Quel type d’attaque a été exploité dans Azure API Management pour voler des secrets ?",
+     "reponse": "Le vol d’identifiants d’API stockés, une compromission de secrets d’accès."
+    }
+   ]
+  },
+  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Appliquez immédiatement les correctifs ; même un produit de niche peut devenir une porte d’entrée critique.</p>\n<p>• MONAI Label permet à un attaquant non authentifié d’écrire des fichiers hors du répertoire prévu, créant un point d’exécution de code à distance.</p>\n<p>• N‑able MailAssure souffre d’un SSRF via un compte API authentifié, donnant accès aux services internes et à l’injection de données.</p>\n<p>• La faille d’Azure API Management expose les identifiants d’API stockés, facilitant le vol de secrets d’accès dans le cloud.</p>\n<h3>Le concept du jour</h3>\n<p>Server‑Side Request Forgery (SSRF) : Le SSRF est une vulnérabilité où l’application effectue des requêtes HTTP vers des adresses contrôlées par l’attaquant, contournant les contrôles réseau. Imaginez un serveur qui, au lieu d’envoyer un mail, est trompé pour appeler votre propre machine interne ; l’attaquant peut alors scanner ou injecter des données dans le réseau interne. Dans le sujet du jour, le SSRF de N‑able MailAssume permet de toucher des bases de données ou services internes. Cette technique correspond à la catégorie « Attaques de réseau interne » du framework MITRE ATT&amp;CK.</p>\n<h3>Quiz</h3>\n<p>• Quelle vulnérabilité de MONAI Label permet l’exécution de code à distance ? → L’écriture arbitraire de fichiers hors du répertoire prévu.</p>\n<p>• Quel type d’attaque a été exploité dans Azure API Management pour voler des secrets ? → Le vol d’identifiants d’API stockés, une compromission de secrets d’accès.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-133968\">CVE-2026-133968 — Project MONAI MONAI Label exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-134624\">CVE-2026-134624 — N-able MailAssure exploitée activement</a> — CISA KEV</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html\">N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html\">Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day</a> — The Hacker News</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/\">Microsoft Azure flaw exploited to steal customers&#x27; API credentials</a> — BleepingComputer</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html\">Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html\">Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html\">AI-Assisted Cyber Attacks Trigger Unauthorized Payments at Indian Banks and Fintech Firms</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html\">Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions</a> — The Hacker News</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/\">Spanish LaLiga confirms hackers stole soccer fans’ personal data</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/\">South Korea’s power giant KEPCO confirms data breach impacting 1.5 million</a> — BleepingComputer</p>\n<p>• <a href=\"https://www.zataz.com/cyberattaque-contre-aaaep-585-000-personnes-exposees/\">Cyberattaque contre AAAEP : 585 000 personnes exposées ?</a> — Zataz</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html\">Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access</a> — The Hacker News</p>\n<p>• <a href=\"https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html\">WHMCS SQL Injection Could Expose Customer Data and Admin Password Hashes without Login</a> — The Hacker News</p>\n<p>• <a href=\"https://www.zataz.com/blackhatsect0r-phishing-bancaire-extorsion-et-industrie/\">BlackHatSect0r : phishing bancaire, extorsion et industrie</a> — Zataz</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1599/\">Multiples vulnérabilités dans SPIP (23 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1600/\">Multiples vulnérabilités dans les produits Palo Alto Networks (23 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1601/\">Vulnérabilité dans Laravel (23 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1602/\">Multiples vulnérabilités dans Roundcube Webmail (23 novembre 2026)</a> — CERT-FR Avis</p>\n<p>• <a href=\"https://www.zataz.com/blackhat-sector-une-ia-offensive-a-louer-pour-500-e/\">BlackHat Sector : une IA offensive à louer pour 500 €</a> — Zataz</p>\n<p>• <a href=\"https://www.zataz.com/cyberespionnage-en-bulgarie-62-millions-de-pages-volees/\">Cyberespionnage en Bulgarie, 62 millions de pages volées</a> — Zataz</p>\n<p>• <a href=\"https://www.zataz.com/courtiers-en-or-pirates-dix-personnes-mises-en-examen/\">Courtiers en or piratés, dix personnes mises en examen</a> — Zataz</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
+ },
+ {
   "date": "2026-11-23",
   "title": "CyberVeille du 23/11/2026",
   "guid": "cyberveille-2026-11-23",
@@ -4198,76 +4369,5 @@
    ]
   },
   "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Désactivez le transfert de ports SSH dans Tailscale ; sinon un poste compromis peut prendre le contrôle de tout le réseau.</p>\n<p>• Un appareil déjà compromis avec le transfert de ports SSH activé peut escalader les privilèges vers les serveurs du réseau Tailscale.</p>\n<p>• La condition requise est le service SSH de Tailscale configuré pour autoriser le port forwarding et un dispositif pouvant se connecter à la cible.</p>\n<p>• Désactiver le port forwarding SSH et restreindre les règles d’accès du réseau empêche la prise de contrôle totale du périmètre.</p>\n<h3>Le concept du jour</h3>\n<p>Abus du port‑forwarding SSH : Le transfert de ports SSH redirige le trafic d’un port local vers une destination distante via une connexion SSH. Imaginez un tunnel secret que l’attaquant ouvre pour passer d’une pièce à l’autre d’une maison ; il suffit d’ouvrir la porte du tunnel. Dans Tailscale, un appareil déjà sous contrôle ouvre ce tunnel et accède aux serveurs voisins avec les droits root. Cette technique correspond à la tactique « Escalade de privilèges » du framework MITRE ATT&amp;CK et à la catégorie « Contrôle d’accès non autorisé » d’OWASP.</p>\n<h3>Quiz</h3>\n<p>• Quel paramètre de configuration Tailscale doit être désactivé pour bloquer l’escalade via SSH ? → Le transfert de ports SSH.</p>\n<p>• Quelle condition doit être remplie par l’appareil compromis pour exploiter la faille ? → Il doit pouvoir se connecter aux serveurs cibles via le service SSH autorisant le port forwarding.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html\">Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers</a> — The Hacker News</p>\n<h3>Alertes et failles critiques</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html\">PHP2Shell Exploitation Attempts Continue Amid Suspected N. Korea Global Scanning Activity</a> — The Hacker News</p>\n<h3>Menaces et groupes d&#x27;attaquants</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/openai-ai-agents-demonstrate-vm-escapes.html\">OpenAI AI Agents Demonstrate VM Escapes and Secret Cross-Sandbox Communication</a> — The Hacker News</p>\n<p>• <a href=\"https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/\">AI coding agents hijacked using AGENTS.md file in Downloads folder</a> — BleepingComputer</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
- },
- {
-  "date": "2026-10-25",
-  "title": "CyberVeille du 25/10/2026",
-  "guid": "cyberveille-2026-10-25",
-  "url": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-25/cyberveille-2026-10-25.mp3",
-  "bytes": 2848544,
-  "seconds": 356,
-  "pub_date": "Sun, 25 Oct 2026 05:33:23 +0000",
-  "chapters_path": "chapters/2026-10-25.json",
-  "asset": "cyberveille-2026-10-25.mp3",
-  "sources": [
-   {
-    "rubric": "À la une",
-    "links": [
-     {
-      "title": "Point Vision : des données de patients dérobées",
-      "url": "https://www.zataz.com/point-vision-des-donnees-de-patients-derobees/",
-      "source": "Zataz"
-     }
-    ]
-   },
-   {
-    "rubric": "Incidents et fuites de données",
-    "links": [
-     {
-      "title": "Chimeraz revendique des fuites visant trois partis français, dont celui du groupe présidentiel",
-      "url": "https://www.zataz.com/chimeraz-revendique-des-fuites-visant-trois-partis-francais/",
-      "source": "Zataz"
-     }
-    ]
-   },
-   {
-    "rubric": "En bref",
-    "links": [
-     {
-      "title": "Google Says Gmail and Photos Data Shared With AI Search Could Be Used for Targeted Ads",
-      "url": "https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "DeepSeek banni des agences fédérales US",
-      "url": "https://www.zataz.com/deepseek-banni-des-agences-federales-civiles-americaines/",
-      "source": "Zataz"
-     }
-    ]
-   }
-  ],
-  "memo": {
-   "fil_rouge": "Protéger les données de santé en profondeur, car leur fuite entraîne des risques humains et légaux majeurs.",
-   "a_retenir": [
-    "Les dossiers médicaux de tous les patients de Point Vision ont été volés, il faut notifier les victimes rapidement.",
-    "Les acteurs malveillants ont exploité une faille d’accès au système, il faut identifier et colmater le vecteur d’intrusion.",
-    "Les partis politiques français ont vu leurs données internes compromises, chaque organisation doit vérifier ses contrôles d’accès."
-   ],
-   "concept": {
-    "nom": "Exfiltration de données",
-    "explication": "L’exfiltration de données désigne le vol de fichiers ou d’informations depuis un système compromis vers l’attaquant. Imaginez un voleur qui s’introduit dans une maison et emporte les dossiers confidentiels avant de s’enfuir. Dans l’incident de Point Vision, les hackers ont extrait les dossiers médicaux des patients, illustrant ce mécanisme. Cette technique correspond à la tactique d’Exfiltration du framework MITRE ATT&CK et à la catégorie Sensitive Data Exposure d’OWASP."
-   },
-   "quiz": [
-    {
-     "question": "Quel type d’information a été dérobé chez Point Vision ?",
-     "reponse": "Les dossiers médicaux des patients, incluant les motifs de rendez‑vous."
-    },
-    {
-     "question": "Quel secteur politique a été visé par le groupe Chimeraz ?",
-     "reponse": "Trois partis politiques français, dont le parti du groupe présidentiel, La France Insoumise et le Parti communiste français."
-    }
-   ]
-  },
-  "description_html": "<h3>L&#x27;essentiel à retenir</h3>\n<p>Fil rouge : Protéger les données de santé en profondeur, car leur fuite entraîne des risques humains et légaux majeurs.</p>\n<p>• Les dossiers médicaux de tous les patients de Point Vision ont été volés, il faut notifier les victimes rapidement.</p>\n<p>• Les acteurs malveillants ont exploité une faille d’accès au système, il faut identifier et colmater le vecteur d’intrusion.</p>\n<p>• Les partis politiques français ont vu leurs données internes compromises, chaque organisation doit vérifier ses contrôles d’accès.</p>\n<h3>Le concept du jour</h3>\n<p>Exfiltration de données : L’exfiltration de données désigne le vol de fichiers ou d’informations depuis un système compromis vers l’attaquant. Imaginez un voleur qui s’introduit dans une maison et emporte les dossiers confidentiels avant de s’enfuir. Dans l’incident de Point Vision, les hackers ont extrait les dossiers médicaux des patients, illustrant ce mécanisme. Cette technique correspond à la tactique d’Exfiltration du framework MITRE ATT&amp;CK et à la catégorie Sensitive Data Exposure d’OWASP.</p>\n<h3>Quiz</h3>\n<p>• Quel type d’information a été dérobé chez Point Vision ? → Les dossiers médicaux des patients, incluant les motifs de rendez‑vous.</p>\n<p>• Quel secteur politique a été visé par le groupe Chimeraz ? → Trois partis politiques français, dont le parti du groupe présidentiel, La France Insoumise et le Parti communiste français.</p>\n<h3>À la une</h3>\n<p>• <a href=\"https://www.zataz.com/point-vision-des-donnees-de-patients-derobees/\">Point Vision : des données de patients dérobées</a> — Zataz</p>\n<h3>Incidents et fuites de données</h3>\n<p>• <a href=\"https://www.zataz.com/chimeraz-revendique-des-fuites-visant-trois-partis-francais/\">Chimeraz revendique des fuites visant trois partis français, dont celui du groupe présidentiel</a> — Zataz</p>\n<h3>En bref</h3>\n<p>• <a href=\"https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html\">Google Says Gmail and Photos Data Shared With AI Search Could Be Used for Targeted Ads</a> — The Hacker News</p>\n<p>• <a href=\"https://www.zataz.com/deepseek-banni-des-agences-federales-civiles-americaines/\">DeepSeek banni des agences fédérales US</a> — Zataz</p>\n<p>Résumés générés automatiquement par IA à partir des sources ci-dessus : vérifiez toujours l&#x27;information à la source.</p>"
  }
 ]
