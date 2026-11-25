@@ -1,5 +1,189 @@
 [
  {
+  "date": "2026-11-25",
+  "title": "CyberVeille du 25/11/2026",
+  "guid": "cyberveille-2026-11-25",
+  "seconds": 619,
+  "bytes": 4949881,
+  "chapters": "chapters/2026-11-25.json",
+  "sources": [
+   {
+    "rubric": "À la une",
+    "links": [
+     {
+      "title": "CVE-2026-132224 — Optimizely Web Experimentation exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132224",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-131914 — Idunno AntiCsrf exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131914",
+      "source": "CISA KEV"
+     },
+     {
+      "title": "CVE-2026-132165 — Drupal Core exploitée activement",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132165",
+      "source": "CISA KEV"
+     }
+    ]
+   },
+   {
+    "rubric": "Alertes et failles critiques",
+    "links": [
+     {
+      "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
+      "url": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Microsoft Fixes Azure API Management Classic Flaw as Actor Targets Customer Secrets",
+      "url": "https://thehackernews.com/2026/11/microsoft-fixes-azure-api-management.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Microsoft confirms authentication issues after November updates",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-authentication-issues-after-november-updates/",
+      "source": "BleepingComputer"
+     }
+    ]
+   },
+   {
+    "rubric": "Incidents et fuites de données",
+    "links": [
+     {
+      "title": "McDonald's Japan data breach exposes customer location information",
+      "url": "https://www.bleepingcomputer.com/news/security/mcdonalds-japan-data-breach-exposes-customer-location-information/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "European Commission confirms data theft in EU Academy breach",
+      "url": "https://www.bleepingcomputer.com/news/security/european-commission-confirms-data-theft-in-eu-academy-breach/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Radware discloses breach exposing customer cloud access keys",
+      "url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Rackspace shuts down Spot cloud platform after security breach",
+      "url": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Turnitin discloses cyberattack affecting customer-facing systems",
+      "url": "https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "CHU de Bordeaux et SIG Sauer ciblés par ScarlettGroup",
+      "url": "https://www.zataz.com/chu-de-bordeaux-et-sig-sauer-cibles-par-scarlettgroup/",
+      "source": "Zataz"
+     }
+    ]
+   },
+   {
+    "rubric": "Menaces et groupes d'attaquants",
+    "links": [
+     {
+      "title": "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
+      "url": "https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "New Inception extortion gang launches large-scale vishing campaign",
+      "url": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Hackers compromise Check Point Servers in 22 organizations",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
+      "url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
+      "url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
+      "source": "The Hacker News"
+     },
+     {
+      "title": "Hackers reportedly breached CIA intelligence analysis system",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Iran-Aligned Volant Manticore Uses IPFS-Based KuboShell Backdoor in Espionage Campaigns",
+      "url": "https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html",
+      "source": "The Hacker News"
+     }
+    ]
+   },
+   {
+    "rubric": "En bref",
+    "links": [
+     {
+      "title": "Multiples vulnérabilités dans Postfix (24 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1610/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans Google Chrome (24 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1608/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans Laravel (24 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1609/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "Vulnérabilité dans les produits F5 (24 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1612/",
+      "source": "CERT-FR Avis"
+     },
+     {
+      "title": "New Shirudo tool uses AI to shield unpatched Linux systems from exploits",
+      "url": "https://www.bleepingcomputer.com/news/security/new-shirudo-tool-uses-ai-to-shield-unpatched-linux-systems-from-exploits/",
+      "source": "BleepingComputer"
+     },
+     {
+      "title": "Google Researcher Shows How a Single Bit Change in .NET Files Bypassed Windows Code Integrity",
+      "url": "https://thehackernews.com/2026/11/google-researcher-shows-how-single-bit.html",
+      "source": "The Hacker News"
+     }
+    ]
+   }
+  ],
+  "fiche": {
+   "fil_rouge": "Appliquez les correctifs dès qu’ils sont disponibles pour les plateformes Web largement déployées, sinon vous exposez vos utilisateurs à des scripts malveillants.",
+   "a_retenir": [
+    "Optimizely Web Experimentation permet l’injection JavaScript, donc corrigez immédiatement la faille d’inscription.",
+    "Idunno AntiCsrf souffre d’une désérialisation non fiable, arrêtez son usage ou migrez vers une version sécurisée.",
+    "Drupal Core expose une exécution de code via install.php, appliquez les mesures d’atténuation du projet sans tarder."
+   ],
+   "concept": {
+    "nom": "Vishing",
+    "explication": "Le vishing est le phishing réalisé par appel téléphonique, où l’attaquant se fait passer pour une entité légitime afin de soutirer des identifiants. Imaginez un faux appel du service IT qui vous demande votre mot de passe SSO ; c’est la même technique que le phishing par email, mais par la voix. Dans l’épisode, le groupe INCEPTION utilise le vishing pour récupérer des identifiants SSO de grandes entreprises. Cette technique relève de la catégorie « Ingénierie sociale » du cadre MITRE ATT&CK."
+   },
+   "quiz": [
+    {
+     "question": "Quelle plateforme Web a été signalée avec une injection de code JavaScript dans le processus d’inscription ?",
+     "reponse": "Optimizely Web Experimentation."
+    },
+    {
+     "question": "Quel groupe d’extorsion a changé de nom et utilise le vishing pour voler des identifiants SSO ?",
+     "reponse": "Le groupe INCEPTION, anciennement lié à ShinyHunters."
+    }
+   ]
+  },
+  "audio": "audio/cyberveille-2026-11-25.mp3",
+  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-25/cyberveille-2026-11-25.mp3"
+ },
+ {
   "date": "2026-11-24",
   "title": "CyberVeille du 24/11/2026",
   "guid": "cyberveille-2026-11-24",
@@ -1039,7 +1223,7 @@
     }
    ]
   },
-  "audio": "audio/cyberveille-2026-11-18.mp3",
+  "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-11-18/cyberveille-2026-11-18.mp3"
  },
  {
@@ -4240,74 +4424,5 @@
   },
   "audio": null,
   "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-27/cyberveille-2026-10-27.mp3"
- },
- {
-  "date": "2026-10-26",
-  "title": "CyberVeille du 26/10/2026",
-  "guid": "cyberveille-2026-10-26",
-  "seconds": 364,
-  "bytes": 2914901,
-  "chapters": "chapters/2026-10-26.json",
-  "sources": [
-   {
-    "rubric": "À la une",
-    "links": [
-     {
-      "title": "Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers",
-      "url": "https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html",
-      "source": "The Hacker News"
-     }
-    ]
-   },
-   {
-    "rubric": "Alertes et failles critiques",
-    "links": [
-     {
-      "title": "PHP2Shell Exploitation Attempts Continue Amid Suspected N. Korea Global Scanning Activity",
-      "url": "https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html",
-      "source": "The Hacker News"
-     }
-    ]
-   },
-   {
-    "rubric": "Menaces et groupes d'attaquants",
-    "links": [
-     {
-      "title": "OpenAI AI Agents Demonstrate VM Escapes and Secret Cross-Sandbox Communication",
-      "url": "https://thehackernews.com/2026/10/openai-ai-agents-demonstrate-vm-escapes.html",
-      "source": "The Hacker News"
-     },
-     {
-      "title": "AI coding agents hijacked using AGENTS.md file in Downloads folder",
-      "url": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/",
-      "source": "BleepingComputer"
-     }
-    ]
-   }
-  ],
-  "fiche": {
-   "fil_rouge": "Désactivez le transfert de ports SSH dans Tailscale ; sinon un poste compromis peut prendre le contrôle de tout le réseau.",
-   "a_retenir": [
-    "Un appareil déjà compromis avec le transfert de ports SSH activé peut escalader les privilèges vers les serveurs du réseau Tailscale.",
-    "La condition requise est le service SSH de Tailscale configuré pour autoriser le port forwarding et un dispositif pouvant se connecter à la cible.",
-    "Désactiver le port forwarding SSH et restreindre les règles d’accès du réseau empêche la prise de contrôle totale du périmètre."
-   ],
-   "concept": {
-    "nom": "Abus du port‑forwarding SSH",
-    "explication": "Le transfert de ports SSH redirige le trafic d’un port local vers une destination distante via une connexion SSH. Imaginez un tunnel secret que l’attaquant ouvre pour passer d’une pièce à l’autre d’une maison ; il suffit d’ouvrir la porte du tunnel. Dans Tailscale, un appareil déjà sous contrôle ouvre ce tunnel et accède aux serveurs voisins avec les droits root. Cette technique correspond à la tactique « Escalade de privilèges » du framework MITRE ATT&CK et à la catégorie « Contrôle d’accès non autorisé » d’OWASP."
-   },
-   "quiz": [
-    {
-     "question": "Quel paramètre de configuration Tailscale doit être désactivé pour bloquer l’escalade via SSH ?",
-     "reponse": "Le transfert de ports SSH."
-    },
-    {
-     "question": "Quelle condition doit être remplie par l’appareil compromis pour exploiter la faille ?",
-     "reponse": "Il doit pouvoir se connecter aux serveurs cibles via le service SSH autorisant le port forwarding."
-    }
-   ]
-  },
-  "audio": null,
-  "stream": "https://github.com/elpokito/appcyberveille/releases/download/ep-2026-10-26/cyberveille-2026-10-26.mp3"
  }
 ]
